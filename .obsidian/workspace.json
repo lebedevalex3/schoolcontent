@@ -11,14 +11,10 @@
             "id": "02cdb5f3f99ee84b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Geometry/GMT.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "GMT"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -183,9 +179,21 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "8164f3b507572168",
+  "active": "02cdb5f3f99ee84b",
   "lastOpenFiles": [
     "Geometry/GMT.md",
-    "Geometry"
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-common.sty",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-color.sty",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-bw.sty",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/README.md",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-color.tex",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-color.pdf",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-bw.tex",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-bw.pdf",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/figures.tex",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/content.tex",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/geometry-gmt-with-three-figures/style-common.sty",
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/geometry-gmt-with-three-figures/README.md",
+    "Geometry/GMT/GMT.md"
   ]
 }

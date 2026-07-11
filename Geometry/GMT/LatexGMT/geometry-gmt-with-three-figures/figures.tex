@@ -1,0 +1,625 @@
+% =================================================
+% TikZ-рисунки документа
+%
+% Геометрия каждого рисунка хранится здесь один раз.
+% Цвета и линии задаются в style-color.sty или style-bw.sty.
+% =================================================
+
+
+% =================================================
+% Рисунок 1.
+% От нескольких подходящих точек к окружности
+% =================================================
+
+\newcommand{\gmtcirclefigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=0.95,
+			transform shape,
+			every node/.style={
+				font=\footnotesize
+			}
+			]
+			
+			\def\radius{2.2}
+			
+			% -----------------------------------------
+			% Левая часть
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+				
+				\node[
+				gmt heading,
+				font=\small\bfseries\sffamily,
+				text width=5.2cm,
+				align=center
+				] at (0,3.2)
+				{Отмечены несколько подходящих точек};
+				
+				\draw[gmt auxiliary]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt center,
+				label={
+					[gmt center label]
+					below left:$O$
+				}
+				] (O1) at (0,0) {};
+				
+				\coordinate (M1) at (25:\radius);
+				\coordinate (M2) at (105:\radius);
+				\coordinate (M3) at (195:\radius);
+				\coordinate (M4) at (295:\radius);
+				
+				\draw[gmt radius] (O1) -- (M1);
+				\draw[gmt radius] (O1) -- (M2);
+				\draw[gmt radius] (O1) -- (M3);
+				\draw[gmt radius] (O1) -- (M4);
+				
+				\node[
+				gmt point,
+				label={
+					[gmt point label]
+					above right:$M_1$
+				}
+				] at (M1) {};
+				
+				\node[
+				gmt point,
+				label={
+					[gmt point label]
+					above left:$M_2$
+				}
+				] at (M2) {};
+				
+				\node[
+				gmt point,
+				label={
+					[gmt point label]
+					below left:$M_3$
+				}
+				] at (M3) {};
+				
+				\node[
+				gmt point,
+				label={
+					[gmt point label]
+					below right:$M_4$
+				}
+				] at (M4) {};
+				
+				\node[
+				above,
+				midway,
+				gmt radius label
+				] at ($(O1)!0.5!(M1)$)
+				{$R$};
+				
+				\node[
+				gmt caption,
+				text width=5.1cm,
+				align=center
+				] at (0,-2.85)
+				{Все отмеченные точки удовлетворяют\\[2pt]
+					условию \(OM=R\)};
+				
+			\end{scope}
+			
+			% -----------------------------------------
+			% Переход
+			% -----------------------------------------
+			\draw[gmt arrow]
+			(3.15,0) -- (4.15,0);
+			
+			\node[
+			gmt transition text,
+			text width=1.8cm,
+			align=center
+			] at (3.65,0.65)
+			{отметим\\все точки};
+			
+			% -----------------------------------------
+			% Правая часть
+			% -----------------------------------------
+			\begin{scope}[shift={(7.3,0)}]
+				
+				\node[
+				gmt heading,
+				font=\small\bfseries\sffamily,
+				text width=4.8cm,
+				align=center
+				] at (0,3.2)
+				{Получается окружность};
+				
+				\draw[gmt main circle]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt center,
+				label={
+					[gmt center label]
+					below left:$O$
+				}
+				] (O2) at (0,0) {};
+				
+				\coordinate (M) at (35:\radius);
+				
+				\draw[gmt radius]
+				(O2) -- (M);
+				
+				\node[
+				gmt point,
+				label={
+					[gmt point label]
+					above right:$M$
+				}
+				] at (M) {};
+				
+				\node[
+				above,
+				midway,
+				gmt radius label
+				] at ($(O2)!0.5!(M)$)
+				{$R$};
+				
+				\node[
+				gmt caption,
+				text width=5.1cm,
+				align=center
+				] at (0,-2.85)
+				{Все точки \(M\), для которых \(OM=R\),\\[2pt]
+					образуют окружность};
+				
+			\end{scope}
+			
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+% =================================================
+% Рисунок 2.
+% Сравнение условий OM<R, OM=R, OM<=R, OM>R
+% =================================================
+
+\newcommand{\gmtdistancecomparisonfigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			scale=0.95,
+			transform shape,
+			every node/.style={
+				font=\footnotesize
+			}
+			]
+			
+			% -----------------------------------------
+			% Основные параметры
+			% -----------------------------------------
+			\def\radius{1.25}
+			\def\panelshift{3.7}
+			
+			% -----------------------------------------
+			% 1. OM < R
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+				
+				\node[
+				gmt distance heading
+				] at (0,2.05)
+				{\(OM<R\)};
+				
+				% Внутренняя область входит,
+				% окружность не входит.
+				\fill[
+				gmt distance inside fill
+				]
+				(0,0) circle (\radius);
+				
+				\draw[
+				gmt distance excluded boundary
+				]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt distance center,
+				label={
+					[gmt distance center label]
+					below left:$O$
+				}
+				] (O1) at (0,0) {};
+				
+				\coordinate (M1) at (35:0.72);
+				
+				\draw[
+				gmt distance radius
+				]
+				(O1) -- (M1);
+				
+				\node[
+				gmt distance point,
+				label={
+					[gmt distance point label]
+					above right:$M$
+				}
+				] at (M1) {};
+				
+				\node[
+				gmt distance caption,
+				text width=2.8cm,
+				align=center
+				] at (0,-1.75)
+				{внутренняя область\\без границы};
+				
+			\end{scope}
+			
+			% -----------------------------------------
+			% 2. OM = R
+			% -----------------------------------------
+			\begin{scope}[shift={(\panelshift,0)}]
+				
+				\node[
+				gmt distance heading
+				] at (0,2.05)
+				{\(OM=R\)};
+				
+				% Входит только окружность.
+				\draw[
+				gmt distance boundary,
+				line width=1.1pt
+				]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt distance center,
+				label={
+					[gmt distance center label]
+					below left:$O$
+				}
+				] (O2) at (0,0) {};
+				
+				\coordinate (M2) at (35:\radius);
+				
+				\draw[
+				gmt distance radius
+				]
+				(O2) -- (M2);
+				
+				\node[
+				gmt distance point,
+				label={
+					[gmt distance point label]
+					above right:$M$
+				}
+				] at (M2) {};
+				
+				\node[
+				gmt distance caption,
+				text width=2.8cm,
+				align=center
+				] at (0,-1.75)
+				{только\\окружность};
+				
+			\end{scope}
+			
+			% -----------------------------------------
+			% 3. OM <= R
+			% -----------------------------------------
+			\begin{scope}[shift={(2*\panelshift,0)}]
+				
+				\node[
+				gmt distance heading
+				] at (0,2.05)
+				{\(OM\leq R\)};
+				
+				% Входят внутренняя область
+				% и окружность.
+				\fill[
+				gmt distance inside fill
+				]
+				(0,0) circle (\radius);
+				
+				\draw[
+				gmt distance boundary,
+				line width=1.1pt
+				]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt distance center,
+				label={
+					[gmt distance center label]
+					below left:$O$
+				}
+				] (O3) at (0,0) {};
+				
+				\coordinate (M3) at (35:0.72);
+				
+				\draw[
+				gmt distance radius
+				]
+				(O3) -- (M3);
+				
+				\node[
+				gmt distance point,
+				label={
+					[gmt distance point label]
+					above right:$M$
+				}
+				] at (M3) {};
+				
+				\node[
+				gmt distance caption,
+				text width=2.8cm,
+				align=center
+				] at (0,-1.75)
+				{круг вместе\\с границей};
+				
+			\end{scope}
+			
+			% -----------------------------------------
+			% 4. OM > R
+			% -----------------------------------------
+			\begin{scope}[shift={(3*\panelshift,0)}]
+				
+				\node[
+				gmt distance heading
+				] at (0,2.05)
+				{\(OM>R\)};
+				
+				% Показывается ограниченная часть
+				% внешней области.
+				\fill[
+				gmt distance outside fill,
+				even odd rule
+				]
+				(-1.65,-1.55)
+				rectangle
+				(1.65,1.55)
+				
+				(0,0)
+				circle
+				(\radius);
+				
+				% Окружность не входит.
+				\draw[
+				gmt distance excluded boundary
+				]
+				(0,0) circle (\radius);
+				
+				\node[
+				gmt distance center,
+				label={
+					[gmt distance center label]
+					below left:$O$
+				}
+				] (O4) at (0,0) {};
+				
+				\coordinate (M4) at (25:1.48);
+				
+				\draw[
+				gmt distance radius
+				]
+				(O4) -- (M4);
+				
+				\node[
+				gmt distance point,
+				label={
+					[gmt distance point label]
+					above right:$M$
+				}
+				] at (M4) {};
+				
+				\node[
+				gmt distance caption,
+				text width=2.8cm,
+				align=center
+				] at (0,-1.75)
+				{внешняя область\\без границы};
+				
+			\end{scope}
+			
+		\end{tikzpicture}
+	\end{center}
+}
+
+% =================================================
+% Рисунок 3.
+% Полуокружность, круг и окружность:
+% пропущенные и лишние точки
+% =================================================
+
+\newcommand{\gmtextraandmissingpointsfigure}{%
+	\begin{center}
+		\resizebox{\textwidth}{!}{%
+			\begin{tikzpicture}[
+				scale=1,
+				every node/.style={font=\small}
+			]
+
+				\def\radius{1.3}
+				\def\shiftx{4.6}
+
+				% -----------------------------------------
+				% 1. Полуокружность
+				% -----------------------------------------
+				\begin{scope}[shift={(0,0)}]
+
+					\node[gmt error heading] at (0,2.35)
+						{Полуокружность};
+
+					% Вся окружность как вспомогательная.
+					\draw[gmt helper boundary]
+						(0,0) circle (\radius);
+
+					% Отмеченная полуокружность.
+					\draw[
+						gmt correct boundary,
+						line width=1.1pt
+					]
+						(-\radius,0)
+						arc[
+							start angle=180,
+							end angle=0,
+							radius=\radius
+						];
+
+					% Центр.
+					\node[
+						gmt error center,
+						label={
+							[gmt error center label]
+							below left:$O$
+						}
+					] (O1) at (0,0) {};
+
+					% Точки на отмеченной полуокружности.
+					\coordinate (M1) at (140:\radius);
+					\coordinate (M2) at (90:\radius);
+					\coordinate (M3) at (40:\radius);
+
+					\node[gmt correct point] at (M1) {};
+					\node[gmt correct point] at (M2) {};
+					\node[gmt correct point] at (M3) {};
+
+					% Пропущенные точки.
+					\coordinate (P1) at (220:\radius);
+					\coordinate (P2) at (270:\radius);
+					\coordinate (P3) at (320:\radius);
+
+					\node[gmt highlighted error point] at (P1) {};
+					\node[gmt highlighted error point] at (P2) {};
+					\node[gmt highlighted error point] at (P3) {};
+
+					\draw[gmt error callout arrow]
+						(1.6,-0.85) -- (P3);
+
+					\node[
+						gmt error callout text,
+						text width=2.2cm
+					] at (2.7,-0.85)
+						{пропущенные\\точки};
+
+					\node[
+						gmt error caption,
+						text width=3.2cm
+					] at (0,-2.0)
+						{Не все точки,\\для которых \(OM=R\),\\отмечены.};
+
+				\end{scope}
+
+				% -----------------------------------------
+				% 2. Круг
+				% -----------------------------------------
+				\begin{scope}[shift={(\shiftx,0)}]
+
+					\node[gmt error heading] at (0,2.35)
+						{Круг};
+
+					% Область круга.
+					\fill[gmt extra region]
+						(0,0) circle (\radius);
+
+					\draw[
+						gmt correct boundary,
+						line width=1.1pt
+					]
+						(0,0) circle (\radius);
+
+					% Центр.
+					\node[
+						gmt error center,
+						label={
+							[gmt error center label]
+							below left:$O$
+						}
+					] (O2) at (0,0) {};
+
+					% Точки на окружности.
+					\coordinate (B1) at (130:\radius);
+					\coordinate (B2) at (40:\radius);
+
+					\node[gmt correct point] at (B1) {};
+					\node[gmt correct point] at (B2) {};
+
+					% Лишние точки внутри круга.
+					\coordinate (L1) at (25:0.55);
+					\coordinate (L2) at (155:0.65);
+					\coordinate (L3) at (260:0.5);
+
+					\node[gmt highlighted error point] at (L1) {};
+					\node[gmt highlighted error point] at (L2) {};
+					\node[gmt highlighted error point] at (L3) {};
+
+					\draw[gmt error callout arrow]
+						(1.55,-0.55) -- (L1);
+
+					\node[
+						gmt error callout text,
+						text width=2.1cm
+					] at (2.65,-0.55)
+						{лишние\\точки};
+
+					\node[
+						gmt error caption,
+						text width=3.2cm
+					] at (0,-2.0)
+						{Круг содержит лишние точки,\\для которых \(OM<R\).};
+
+				\end{scope}
+
+				% -----------------------------------------
+				% 3. Окружность
+				% -----------------------------------------
+				\begin{scope}[shift={(2*\shiftx,0)}]
+
+					\node[gmt success heading] at (0,2.35)
+						{Окружность};
+
+					\draw[
+						gmt correct boundary,
+						line width=1.1pt
+					]
+						(0,0) circle (\radius);
+
+					% Центр.
+					\node[
+						gmt error center,
+						label={
+							[gmt error center label]
+							below left:$O$
+						}
+					] (O3) at (0,0) {};
+
+					% Точка M и радиус.
+					\coordinate (M) at (35:\radius);
+
+					\draw[gmt error radius]
+						(O3) -- (M);
+
+					\node[
+						gmt correct point,
+						label={
+							[gmt error point label]
+							above right:$M$
+						}
+					] at (M) {};
+
+					% Ещё несколько точек окружности.
+					\node[gmt correct point] at (140:\radius) {};
+					\node[gmt correct point] at (250:\radius) {};
+
+					\node[
+						gmt success caption,
+						text width=3.4cm
+					] at (0,-2.0)
+						{Нет лишних и\\пропущенных точек.\\
+						\textbf{Это искомое ГМТ.}};
+
+				\end{scope}
+
+			\end{tikzpicture}
+		}
+	\end{center}
+}
+

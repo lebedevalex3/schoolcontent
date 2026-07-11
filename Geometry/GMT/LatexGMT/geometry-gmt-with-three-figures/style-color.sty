@@ -1,0 +1,296 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style-color}[2026/07/11 Color geometry handout style]
+
+% =================================================
+% Палитра
+% =================================================
+\definecolor{Primary}{HTML}{2F5D8A}
+\definecolor{PrimaryLight}{HTML}{EEF4FA}
+\definecolor{Secondary}{HTML}{3E7C72}
+\definecolor{SecondaryLight}{HTML}{EEF7F5}
+\definecolor{Accent}{HTML}{A35F20}
+\definecolor{AccentLight}{HTML}{FFF5E9}
+\definecolor{GrayText}{HTML}{666666}
+\definecolor{GrayLine}{HTML}{D9DEE4}
+\definecolor{GrayLight}{HTML}{F6F7F9}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=Primary,
+	urlcolor=Primary
+}
+
+% =================================================
+% TikZ: рисунок «от точек к окружности»
+% =================================================
+\tikzset{
+	gmt point/.style={circle,fill=Secondary,draw=Secondary,inner sep=1.8pt},
+	gmt center/.style={circle,fill=Primary,draw=Primary,inner sep=2.2pt},
+	gmt radius/.style={draw=Primary,thin},
+	gmt auxiliary/.style={draw=Primary!45,dashed,thin},
+	gmt main circle/.style={draw=Primary,very thick},
+	gmt arrow/.style={-{Stealth[length=3mm]},very thick,draw=Accent},
+	gmt heading/.style={font=\bfseries\sffamily,text=Primary},
+	gmt caption/.style={align=center,text=GrayText},
+	gmt transition text/.style={align=center,font=\small\sffamily,text=Accent},
+	gmt point label/.style={text=Secondary},
+	gmt center label/.style={text=Primary},
+	gmt radius label/.style={text=Primary}
+}
+
+% =================================================
+% TikZ: сравнение OM<R, OM=R, OM<=R, OM>R
+% =================================================
+\tikzset{
+	gmt distance point/.style={circle,fill=Secondary,draw=Secondary,inner sep=1.5pt},
+	gmt distance center/.style={circle,fill=Primary,draw=Primary,inner sep=1.7pt},
+	gmt distance boundary/.style={draw=Primary,thick},
+	gmt distance excluded boundary/.style={draw=Primary,thick,dashed},
+	gmt distance radius/.style={draw=Primary,thin},
+	gmt distance inside fill/.style={fill=PrimaryLight},
+	gmt distance outside fill/.style={fill=AccentLight},
+	gmt distance heading/.style={font=\bfseries\sffamily,text=Primary},
+	gmt distance caption/.style={align=center,text=GrayText},
+	gmt distance point label/.style={text=Secondary},
+	gmt distance center label/.style={text=Primary}
+}
+
+
+
+% =================================================
+% TikZ: пропущенные и лишние точки
+% =================================================
+\tikzset{
+	gmt correct point/.style={circle,fill=Secondary,draw=Secondary,inner sep=1.4pt},
+	gmt error center/.style={circle,fill=Primary,draw=Primary,inner sep=1.6pt},
+	gmt correct boundary/.style={draw=Primary,thick},
+	gmt helper boundary/.style={draw=Primary!45,dashed,thin},
+	gmt highlighted error point/.style={
+		circle,
+		draw=Accent,
+		fill=white,
+		line width=0.65pt,
+		inner sep=1.7pt
+	},
+	gmt error radius/.style={draw=Primary,thin},
+	gmt extra region/.style={fill=AccentLight},
+	gmt error heading/.style={font=\bfseries\sffamily,text=Accent},
+	gmt success heading/.style={font=\bfseries\sffamily,text=Secondary},
+	gmt error caption/.style={align=center,text=GrayText},
+	gmt success caption/.style={align=center,text=GrayText},
+	gmt error callout arrow/.style={-{Stealth[length=2.5mm]},draw=Accent,thin},
+	gmt error callout text/.style={align=left,text=Accent},
+	gmt error center label/.style={text=Primary},
+	gmt error point label/.style={text=Secondary}
+}
+
+% =================================================
+% Учебные блоки
+% =================================================
+\newtcolorbox{definitionbox}[1][Определение]{
+	enhanced,
+	breakable,
+	colback=PrimaryLight,
+	colframe=Primary,
+	boxrule=0.8pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=4mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=white,
+	colbacktitle=Primary,
+	attach boxed title to top left={xshift=5mm,yshift=-2.5mm},
+	boxed title style={
+		colback=Primary,
+		colframe=Primary,
+		boxrule=0pt,
+		arc=1.5mm,
+		left=3mm,
+		right=3mm,
+		top=1.5mm,
+		bottom=1.5mm
+	},
+	before skip=1.2em,
+	after skip=1.2em
+}
+
+\newtcolorbox{propertybox}[1][Основное свойство]{
+	enhanced,
+	breakable,
+	colback=SecondaryLight,
+	colframe=Secondary,
+	boxrule=0.8pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=4mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\fontsize{13.5pt}{16pt}\selectfont\bfseries\sffamily,
+	coltitle=white,
+	colbacktitle=Secondary,
+	attach boxed title to top left={xshift=5mm,yshift=-2.5mm},
+	boxed title style={
+		colback=Secondary,
+		colframe=Secondary,
+		boxrule=0pt,
+		arc=1.5mm,
+		left=3mm,
+		right=3mm,
+		top=1.5mm,
+		bottom=1.5mm
+	},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{attentionbox}[1][Обратите внимание]{
+	enhanced,
+	breakable,
+	colback=GrayLight,
+	colframe=GrayLight,
+	boxrule=0pt,
+	borderline west={3pt}{0pt}{Primary},
+	arc=0mm,
+	left=5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Primary,
+	colbacktitle=GrayLight,
+	attach title to upper,
+	after title={\par\vspace{0.4em}},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{notebox}[1][Важно]{
+	enhanced,
+	breakable,
+	colback=GrayLight,
+	colframe=GrayLight,
+	boxrule=0pt,
+	borderline west={2.5pt}{0pt}{Primary},
+	arc=0mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Primary,
+	colbacktitle=GrayLight,
+	attach title to upper,
+	after title={\par\vspace{0.35em}},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{importantbox}[1][Важно]{
+	enhanced,
+	breakable,
+	colback=GrayLight,
+	colframe=GrayLight,
+	boxrule=0pt,
+	borderline west={3pt}{0pt}{Primary},
+	arc=0mm,
+	left=5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Primary,
+	colbacktitle=GrayLight,
+	attach title to upper,
+	after title={\par\vspace{0.35em}},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{examplebox}[1][Пример]{
+	enhanced,
+	breakable,
+	colback=white,
+	colframe=GrayLine,
+	boxrule=0.7pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Secondary,
+	colbacktitle=white,
+	attach title to upper,
+	after title={\par\vspace{0.35em}},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{warningbox}[1][Типичная ошибка]{
+	enhanced,
+	breakable,
+	colback=AccentLight,
+	colframe=Accent,
+	boxrule=0.7pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Accent,
+	colbacktitle=AccentLight,
+	attach title to upper,
+	after title={\par\vspace{0.35em}},
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{algorithmbox}[1][План действий]{
+	enhanced,
+	breakable,
+	colback=white,
+	colframe=Primary,
+	boxrule=0.8pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=white,
+	colbacktitle=Primary,
+	before skip=1em,
+	after skip=1em
+}
+
+\newtcolorbox{questionsbox}[1][Вопросы для самопроверки]{
+	enhanced,
+	breakable,
+	colback=GrayLight,
+	colframe=GrayLine,
+	boxrule=0.7pt,
+	arc=2mm,
+	left=4.5mm,
+	right=4.5mm,
+	top=3mm,
+	bottom=3mm,
+	title={#1},
+	fonttitle=\bfseries\sffamily,
+	coltitle=Primary,
+	colbacktitle=GrayLight,
+	attach title to upper,
+	after title={\par\vspace{0.35em}},
+	before skip=1em,
+	after skip=1em
+}
