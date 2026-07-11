@@ -5,6 +5,74 @@
 % Цвета и линии задаются в style-color.sty или style-bw.sty.
 % =================================================
 
+% Библиотеки для новых рисунков (серединный перпендикуляр, биссектриса):
+% угловые дуги \pic{angle=...} и \pic{right angle=...}.
+% calc уже подключён в style-common.sty.
+\usetikzlibrary{angles,quotes}
+
+
+% =================================================
+% Общие стили для рисунков про серединный перпендикуляр
+% и биссектрису угла. Префикс gmtpb отделяет их от стилей
+% gmt * в style-color.sty / style-bw.sty.
+% =================================================
+\tikzset{
+	gmtpb point/.style={
+		circle,
+		fill=black,
+		inner sep=1.5pt
+	},
+	gmtpb main/.style={
+		line width=0.8pt
+	},
+	gmtpb auxiliary/.style={
+		line width=0.65pt,
+		dashed,
+		gray
+	},
+	gmtpb construction/.style={
+		line width=0.65pt
+	},
+	gmtpb label/.style={
+		font=\small
+	},
+	gmtpb caption/.style={
+		font=\small,
+		align=center,
+		text width=5cm
+	}
+}
+
+% =================================================
+% Общие стили для рисунков «расстояние от точки до прямой»
+% и «пересечение двух окружностей». Префикс gmtd отделяет
+% их от стилей gmt * и gmtpb *.
+% =================================================
+\tikzset{
+	gmtd point/.style={
+		circle,
+		fill=black,
+		inner sep=1.3pt
+	},
+	gmtd main line/.style={
+		line width=0.8pt
+	},
+	gmtd auxiliary/.style={
+		draw=black!45,
+		line width=0.65pt,
+		dashed
+	},
+	gmtd diagram title/.style={
+		font=\small\bfseries,
+		align=center
+	},
+	gmtd diagram caption/.style={
+		font=\small,
+		align=center,
+		text width=5.4cm
+	}
+}
+
 
 % =================================================
 % Рисунок 1.
@@ -91,16 +159,15 @@
 				
 				\node[
 				above,
-				midway,
 				gmt radius label
 				] at ($(O1)!0.5!(M1)$)
 				{$R$};
 				
 				\node[
 				gmt caption,
-				text width=5.1cm,
+				text width=6cm,
 				align=center
-				] at (0,-2.85)
+				] at (0,-3.25)
 				{Все отмеченные точки удовлетворяют\\[2pt]
 					условию \(OM=R\)};
 				
@@ -110,7 +177,7 @@
 			% Переход
 			% -----------------------------------------
 			\draw[gmt arrow]
-			(3.15,0) -- (4.15,0);
+			(3.15,-1) -- (4.15,-1);
 			
 			\node[
 			gmt transition text,
@@ -158,16 +225,15 @@
 				
 				\node[
 				above,
-				midway,
 				gmt radius label
 				] at ($(O2)!0.5!(M)$)
 				{$R$};
 				
 				\node[
 				gmt caption,
-				text width=5.1cm,
+				text width=6cm,
 				align=center
-				] at (0,-2.85)
+				] at (0,-3.25)
 				{Все точки \(M\), для которых \(OM=R\),\\[2pt]
 					образуют окружность};
 				
@@ -229,20 +295,20 @@
 				}
 				] (O1) at (0,0) {};
 				
-				\coordinate (M1) at (35:0.72);
-				
-				\draw[
-				gmt distance radius
-				]
-				(O1) -- (M1);
-				
-				\node[
-				gmt distance point,
-				label={
-					[gmt distance point label]
-					above right:$M$
-				}
-				] at (M1) {};
+			\coordinate (M1) at (35:0.55);
+
+			\draw[
+			gmt distance radius
+			]
+			(O1) -- (M1);
+
+			\node[
+			gmt distance point,
+			label={
+				[gmt distance point label]
+				right:$M$
+			}
+			] at (M1) {};
 				
 				\node[
 				gmt distance caption,
@@ -278,20 +344,20 @@
 				}
 				] (O2) at (0,0) {};
 				
-				\coordinate (M2) at (35:\radius);
-				
-				\draw[
-				gmt distance radius
-				]
-				(O2) -- (M2);
-				
-				\node[
-				gmt distance point,
-				label={
-					[gmt distance point label]
-					above right:$M$
-				}
-				] at (M2) {};
+			\coordinate (M2) at (35:\radius);
+
+			\draw[
+			gmt distance radius
+			]
+			(O2) -- (M2);
+
+			\node[
+			gmt distance point,
+			label={
+				[gmt distance point label]
+				right:$M$
+			}
+			] at (M2) {};
 				
 				\node[
 				gmt distance caption,
@@ -333,20 +399,20 @@
 				}
 				] (O3) at (0,0) {};
 				
-				\coordinate (M3) at (35:0.72);
-				
-				\draw[
-				gmt distance radius
-				]
-				(O3) -- (M3);
-				
-				\node[
-				gmt distance point,
-				label={
-					[gmt distance point label]
-					above right:$M$
-				}
-				] at (M3) {};
+			\coordinate (M3) at (35:0.72);
+
+			\draw[
+			gmt distance radius
+			]
+			(O3) -- (M3);
+
+			\node[
+			gmt distance point,
+			label={
+				[gmt distance point label]
+				right:$M$
+			}
+			] at (M3) {};
 				
 				\node[
 				gmt distance caption,
@@ -395,20 +461,20 @@
 				}
 				] (O4) at (0,0) {};
 				
-				\coordinate (M4) at (25:1.48);
-				
-				\draw[
-				gmt distance radius
-				]
-				(O4) -- (M4);
-				
-				\node[
-				gmt distance point,
-				label={
-					[gmt distance point label]
-					above right:$M$
-				}
-				] at (M4) {};
+			\coordinate (M4) at (25:1.48);
+
+			\draw[
+			gmt distance radius
+			]
+			(O4) -- (M4);
+
+			\node[
+			gmt distance point,
+			label={
+				[gmt distance point label]
+				right:$M$
+			}
+			] at (M4) {};
 				
 				\node[
 				gmt distance caption,
@@ -429,197 +495,512 @@
 % пропущенные и лишние точки
 % =================================================
 
+% =================================================
+% Рисунок.
+% Полуокружность, круг и окружность:
+% пропущенные и лишние точки
+% =================================================
+
 \newcommand{\gmtextraandmissingpointsfigure}{%
 	\begin{center}
-		\resizebox{\textwidth}{!}{%
-			\begin{tikzpicture}[
-				scale=1,
-				every node/.style={font=\small}
-			]
+		\begin{tikzpicture}
 
-				\def\radius{1.3}
-				\def\shiftx{4.6}
+			\def\radius{1.15}
 
-				% -----------------------------------------
-				% 1. Полуокружность
-				% -----------------------------------------
-				\begin{scope}[shift={(0,0)}]
+			% =================================================
+			% 1. Полуокружность
+			% =================================================
 
-					\node[gmt error heading] at (0,2.35)
-						{Полуокружность};
+			\begin{scope}[shift={(-3.1,0)}]
 
-					% Вся окружность как вспомогательная.
-					\draw[gmt helper boundary]
-						(0,0) circle (\radius);
+				\node[gmt error heading]
+					at (0,2.15)
+					{Полуокружность};
 
-					% Отмеченная полуокружность.
-					\draw[
-						gmt correct boundary,
-						line width=1.1pt
-					]
-						(-\radius,0)
-						arc[
-							start angle=180,
-							end angle=0,
-							radius=\radius
-						];
+				\draw[gmt helper boundary]
+					(0,0) circle (\radius);
 
-					% Центр.
-					\node[
-						gmt error center,
-						label={
-							[gmt error center label]
-							below left:$O$
-						}
-					] (O1) at (0,0) {};
+				\draw[
+					gmt correct boundary,
+					line width=1.1pt
+				]
+					(-\radius,0)
+					arc[
+						start angle=180,
+						end angle=0,
+						radius=\radius
+					];
 
-					% Точки на отмеченной полуокружности.
-					\coordinate (M1) at (140:\radius);
-					\coordinate (M2) at (90:\radius);
-					\coordinate (M3) at (40:\radius);
+				\node[
+					gmt error center,
+					label={
+						[gmt error center label]
+						below left:$O$
+					}
+				] at (0,0) {};
 
-					\node[gmt correct point] at (M1) {};
-					\node[gmt correct point] at (M2) {};
-					\node[gmt correct point] at (M3) {};
+				\node[gmt correct point]
+					at (140:\radius) {};
 
-					% Пропущенные точки.
-					\coordinate (P1) at (220:\radius);
-					\coordinate (P2) at (270:\radius);
-					\coordinate (P3) at (320:\radius);
+				\node[gmt correct point]
+					at (90:\radius) {};
 
-					\node[gmt highlighted error point] at (P1) {};
-					\node[gmt highlighted error point] at (P2) {};
-					\node[gmt highlighted error point] at (P3) {};
+				\node[gmt correct point]
+					at (40:\radius) {};
 
-					\draw[gmt error callout arrow]
-						(1.6,-0.85) -- (P3);
+				\node[gmt highlighted error point]
+					at (220:\radius) {};
 
-					\node[
-						gmt error callout text,
-						text width=2.2cm
-					] at (2.7,-0.85)
-						{пропущенные\\точки};
+				\node[gmt highlighted error point]
+					at (270:\radius) {};
 
-					\node[
-						gmt error caption,
-						text width=3.2cm
-					] at (0,-2.0)
-						{Не все точки,\\для которых \(OM=R\),\\отмечены.};
+				\node[gmt highlighted error point]
+					at (320:\radius) {};
 
-				\end{scope}
+				\node[
+					gmt error callout text,
+					align=center
+				] at (0,-2.15)
+					{пропущенные точки};
 
-				% -----------------------------------------
-				% 2. Круг
-				% -----------------------------------------
-				\begin{scope}[shift={(\shiftx,0)}]
+				\node[
+					gmt error caption,
+					align=center,
+					text width=4.2cm
+				] at (0,-3.25)
+					{Пропущены точки, которые тоже
+					удовлетворяют условию \(OM=R\).};
 
-					\node[gmt error heading] at (0,2.35)
-						{Круг};
+			\end{scope}
 
-					% Область круга.
-					\fill[gmt extra region]
-						(0,0) circle (\radius);
+			% =================================================
+			% 2. Круг
+			% =================================================
 
-					\draw[
-						gmt correct boundary,
-						line width=1.1pt
-					]
-						(0,0) circle (\radius);
+			\begin{scope}[shift={(3.1,0)}]
 
-					% Центр.
-					\node[
-						gmt error center,
-						label={
-							[gmt error center label]
-							below left:$O$
-						}
-					] (O2) at (0,0) {};
+				\node[gmt error heading]
+					at (0,2.15)
+					{Круг};
 
-					% Точки на окружности.
-					\coordinate (B1) at (130:\radius);
-					\coordinate (B2) at (40:\radius);
+				\fill[gmt extra region]
+					(0,0) circle (\radius);
 
-					\node[gmt correct point] at (B1) {};
-					\node[gmt correct point] at (B2) {};
+				\draw[
+					gmt correct boundary,
+					line width=1.1pt
+				]
+					(0,0) circle (\radius);
 
-					% Лишние точки внутри круга.
-					\coordinate (L1) at (25:0.55);
-					\coordinate (L2) at (155:0.65);
-					\coordinate (L3) at (260:0.5);
+				\node[
+					gmt error center,
+					label={
+						[gmt error center label]
+						below left:$O$
+					}
+				] at (0,0) {};
 
-					\node[gmt highlighted error point] at (L1) {};
-					\node[gmt highlighted error point] at (L2) {};
-					\node[gmt highlighted error point] at (L3) {};
+				\node[gmt correct point]
+					at (135:\radius) {};
 
-					\draw[gmt error callout arrow]
-						(1.55,-0.55) -- (L1);
+				\node[gmt correct point]
+					at (40:\radius) {};
 
-					\node[
-						gmt error callout text,
-						text width=2.1cm
-					] at (2.65,-0.55)
-						{лишние\\точки};
+				\node[gmt highlighted error point]
+					at (25:0.58) {};
 
-					\node[
-						gmt error caption,
-						text width=3.2cm
-					] at (0,-2.0)
-						{Круг содержит лишние точки,\\для которых \(OM<R\).};
+				\node[gmt highlighted error point]
+					at (155:0.68) {};
 
-				\end{scope}
+				\node[gmt highlighted error point]
+					at (260:0.52) {};
 
-				% -----------------------------------------
-				% 3. Окружность
-				% -----------------------------------------
-				\begin{scope}[shift={(2*\shiftx,0)}]
+				\node[
+					gmt error callout text,
+					align=center
+				] at (0,-2.15)
+					{лишние точки};
 
-					\node[gmt success heading] at (0,2.35)
-						{Окружность};
+				\node[
+					gmt error caption,
+					align=center,
+					text width=4.2cm
+				] at (0,-3.25)
+					{Добавлены лишние точки,
+					для которых \(OM<R\).};
 
-					\draw[
-						gmt correct boundary,
-						line width=1.1pt
-					]
-						(0,0) circle (\radius);
+			\end{scope}
 
-					% Центр.
-					\node[
-						gmt error center,
-						label={
-							[gmt error center label]
-							below left:$O$
-						}
-					] (O3) at (0,0) {};
+			% =================================================
+			% 3. Окружность
+			% =================================================
 
-					% Точка M и радиус.
-					\coordinate (M) at (35:\radius);
+			\begin{scope}[shift={(0,-7.7)}]
 
-					\draw[gmt error radius]
-						(O3) -- (M);
+				\node[gmt success heading]
+					at (0,2.15)
+					{Окружность};
 
-					\node[
-						gmt correct point,
-						label={
-							[gmt error point label]
-							above right:$M$
-						}
-					] at (M) {};
+				\draw[
+					gmt correct boundary,
+					line width=1.1pt
+				]
+					(0,0) circle (\radius);
 
-					% Ещё несколько точек окружности.
-					\node[gmt correct point] at (140:\radius) {};
-					\node[gmt correct point] at (250:\radius) {};
+				\node[
+					gmt error center,
+					label={
+						[gmt error center label]
+						below left:$O$
+					}
+				] (O) at (0,0) {};
 
-					\node[
-						gmt success caption,
-						text width=3.4cm
-					] at (0,-2.0)
-						{Нет лишних и\\пропущенных точек.\\
-						\textbf{Это искомое ГМТ.}};
+				\coordinate (M)
+					at (35:\radius);
 
-				\end{scope}
+				\draw[gmt error radius]
+					(O) -- (M);
 
-			\end{tikzpicture}
-		}
+				\node[
+					gmt correct point,
+					label={
+						[gmt error point label]
+						above right:$M$
+					}
+				] at (M) {};
+
+				\node[gmt correct point]
+					at (140:\radius) {};
+
+				\node[gmt correct point]
+					at (250:\radius) {};
+
+				\node[
+					gmt success caption,
+					align=center,
+					text width=4.4cm
+				] at (0,-2.25)
+					{Нет лишних и пропущенных точек.\\
+					\textbf{Это искомое ГМТ.}};
+
+			\end{scope}
+
+		\end{tikzpicture}
 	\end{center}
 }
 
+
+% =================================================
+% Рисунок 4.
+% Серединный перпендикуляр к отрезку
+% =================================================
+
+\newcommand{\gmtperpendicularbisectorfigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			line cap=round,
+			line join=round
+		]
+
+			% -----------------------------------------
+			% Отрезок AB и серединный перпендикуляр
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+
+				\coordinate (A) at (-2.4,0);
+				\coordinate (B) at ( 2.4,0);
+				\coordinate (K) at ( 0,0);
+				\coordinate (M) at ( 0,3.1);
+
+				% Отрезок AB
+				\draw[gmtpb main] (A)--(B);
+
+				% Серединный перпендикуляр
+				\draw[gmtpb main] (0,-0.75)--(0,3.45);
+
+				% Равные отрезки MA и MB
+				\draw[gmtpb main] (M)--(A);
+				\draw[gmtpb main] (M)--(B);
+
+				% Засечки на AK и KB
+				\draw[gmtpb construction]
+					($(A)!0.5!(K)+(0,0.12)$)
+					--
+					($(A)!0.5!(K)+(0,-0.12)$);
+				\draw[gmtpb construction]
+					($(K)!0.5!(B)+(0,0.12)$)
+					--
+					($(K)!0.5!(B)+(0,-0.12)$);
+
+				% Прямой угол
+				\draw[gmtpb construction]
+					($(K)+(0,0.24)$)
+					--
+					($(K)+(0.24,0.24)$)
+					--
+					($(K)+(0.24,0)$);
+
+				% Точки и подписи
+				\node[gmtpb point] at (A) {};
+				\node[gmtpb point] at (B) {};
+				\node[gmtpb point] at (K) {};
+				\node[gmtpb point] at (M) {};
+				\node[gmtpb label,below left=2pt]  at (A) {$A$};
+				\node[gmtpb label,below right=2pt] at (B) {$B$};
+				\node[gmtpb label,below right=3pt] at (K) {$K$};
+				\node[gmtpb label,above left=2pt]  at (M) {$M$};
+
+				% Подпись
+				\node[gmtpb caption] at (0,-1.25)
+					{Серединный перпендикуляр к отрезку $AB$};
+
+			\end{scope}
+
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+% =================================================
+% Рисунок 5.
+% Биссектриса угла
+% =================================================
+
+\newcommand{\gmtbisectorfigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			line cap=round,
+			line join=round
+		]
+
+			% -----------------------------------------
+			% Биссектриса угла и равные расстояния
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+
+				\coordinate (O) at (0,0);
+				\coordinate (A) at (4.4,0);
+				\coordinate (B) at (65:4.15);
+
+				% Биссектриса угла
+				\coordinate (M) at (32.5:2.85);
+
+				% Основания перпендикуляров
+				\coordinate (P) at ($(O)!(M)!(A)$);
+				\coordinate (Q) at ($(O)!(M)!(B)$);
+
+				% Стороны угла
+				\draw[gmtpb main] (O)--(A);
+				\draw[gmtpb main] (O)--(B);
+
+				% Биссектриса
+				\draw[gmtpb main] (O)--(M);
+
+				% Перпендикуляры к сторонам
+				\draw[gmtpb auxiliary] (M)--(P);
+				\draw[gmtpb auxiliary] (M)--(Q);
+
+				% Дуги равных углов
+				\pic[
+					draw,
+					angle radius=8mm,
+					angle eccentricity=1.25
+				] {angle=A--O--M};
+
+				\pic[
+					draw,
+					angle radius=8mm,
+					angle eccentricity=1.25
+				] {angle=M--O--B};
+
+				% Прямые углы
+				\pic[
+					draw,
+					angle radius=3.5mm
+				] {right angle=M--P--O};
+
+				\pic[
+					draw,
+					angle radius=3.5mm
+				] {right angle=O--Q--M};
+
+				% Засечки на MP и MQ
+				\coordinate (T_P) at ($(M)!0.5!(P)$);
+				\coordinate (T_Q) at ($(M)!0.5!(Q)$);
+				\draw[gmtpb construction]
+					($(T_P)+(-0.10,0)$)
+					--
+					($(T_P)+(0.10,0)$);
+				\draw[gmtpb construction,rotate around={65:(T_Q)}]
+					($(T_Q)+(-0.10,0)$)
+					--
+					($(T_Q)+(0.10,0)$);
+
+				% Точки
+				\node[gmtpb point] at (O) {};
+				\node[gmtpb point] at (A) {};
+				\node[gmtpb point] at (B) {};
+				\node[gmtpb point] at (M) {};
+				\node[gmtpb point] at (P) {};
+				\node[gmtpb point] at (Q) {};
+
+				% Подписи
+				\node[gmtpb label,below left=2pt]  at (O) {$O$};
+				\node[gmtpb label,below=3pt]       at (A) {$A$};
+				\node[gmtpb label,above=3pt]       at (B) {$B$};
+				\node[gmtpb label,above right=2pt] at (M) {$M$};
+				\node[gmtpb label,below=3pt]       at (P) {$P$};
+				\node[gmtpb label,above right=1pt] at (Q) {$Q$};
+
+				% Подпись
+				\node[gmtpb caption] at (2.15,-1.25)
+					{Биссектриса угла и расстояния от точки до его сторон};
+
+			\end{scope}
+
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+% =================================================
+% Рисунок 6.
+% Расстояние от точки до прямой
+% =================================================
+
+\newcommand{\gmtdistancetolinefigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			font=\small
+		]
+
+			% -----------------------------------------
+			% Точка, прямая, перпендикуляр MH
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+
+				\node[gmtd diagram title] at (0,3.05)
+					{Расстояние от точки до прямой};
+
+				\coordinate (M) at (0,2.05);
+				\coordinate (H) at (0,0);
+
+				% Прямая a
+				\draw[gmtd main line]
+					(-2.6,0) -- (2.6,0)
+					node[right] {$a$};
+
+				% Перпендикуляр MH
+				\draw[gmtd main line]
+					(M) -- (H);
+
+				% Знак прямого угла
+				\draw[line width=0.6pt]
+					($(H)+(-0.18,0)$)
+					-- ($(H)+(-0.18,0.18)$)
+					-- ($(H)+(0,0.18)$);
+
+				% Точки и подписи
+				\node[gmtd point] at (M) {};
+				\node[above right=1pt] at (M) {$M$};
+				\node[gmtd point] at (H) {};
+				\node[below=3pt] at (H) {$H$};
+
+				% Подпись перпендикулярности
+				\node[
+					anchor=west,
+					fill=white,
+					inner sep=1.5pt
+				] at ($(M)!0.52!(H)+(0.08,0)$)
+					{$MH\perp a$};
+
+				% Пояснение
+				\node[gmtd diagram caption] at (0,-1.45)
+					{Расстояние от точки \(M\) до прямой \(a\)
+					 равно длине перпендикуляра \(MH\).};
+
+			\end{scope}
+
+		\end{tikzpicture}
+	\end{center}
+}
+
+
+% =================================================
+% Рисунок 7.
+% Пересечение двух окружностей
+% =================================================
+
+\newcommand{\gmtcirclesintersectionfigure}{%
+	\begin{center}
+		\begin{tikzpicture}[
+			font=\small
+		]
+
+			% -----------------------------------------
+			% Две окружности и их общие точки
+			% -----------------------------------------
+			\begin{scope}[shift={(0,0)}]
+
+				\node[gmtd diagram title] at (0,3.05)
+					{Пересечение двух окружностей};
+
+				% Центры
+				\coordinate (A) at (-1.45,0);
+				\coordinate (B) at ( 1.45,0);
+				\def\radiusA{2.05}
+				\def\radiusB{1.55}
+				\def\centerdistance{2.9}
+
+				% Точки пересечения вычисляются из радиусов окружностей,
+				% поэтому маркеры всегда точно лежат на обеих окружностях.
+				\pgfmathsetmacro{\intersectionoffset}{
+					(\radiusA*\radiusA-\radiusB*\radiusB
+					 +\centerdistance*\centerdistance)/(2*\centerdistance)
+				}
+				\pgfmathsetmacro{\intersectionheight}{
+					sqrt(\radiusA*\radiusA
+					 -\intersectionoffset*\intersectionoffset)
+				}
+				\coordinate (M1) at
+					($(A)+(\intersectionoffset,\intersectionheight)$);
+				\coordinate (M2) at
+					($(A)+(\intersectionoffset,-\intersectionheight)$);
+
+				% Окружности
+				\draw[gmtd main line]
+					(A) circle (\radiusA);
+				\draw[gmtd main line]
+					(B) circle (\radiusB);
+
+				% Линия центров
+				\draw[gmtd auxiliary]
+					(A) -- (B);
+
+				% Радиусы к одной точке пересечения
+				\draw[gmtd main line]
+					(A) -- (M1);
+				\draw[gmtd main line]
+					(B) -- (M1);
+
+				% Центры
+				\node[gmtd point] at (A) {};
+				\node[below left=2pt] at (A) {$A$};
+				\node[gmtd point] at (B) {};
+				\node[below right=2pt] at (B) {$B$};
+
+				% Точки пересечения
+				\node[gmtd point] at (M1) {};
+				\node[above=3pt] at (M1) {$M_1$};
+				\node[gmtd point] at (M2) {};
+				\node[below=3pt] at (M2) {$M_2$};
+
+				% Пояснение
+				\node[gmtd diagram caption] at (0,-2.55)
+					{Точки \(M_1\) и \(M_2\) принадлежат обеим окружностям.};
+
+			\end{scope}
+
+		\end{tikzpicture}
+	\end{center}
+}
