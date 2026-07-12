@@ -12,6 +12,13 @@
 \setsansfont{Arimo}
 \setmonofont{DejaVu Sans Mono}
 
+% Явно сообщаем Polyglossia, какие семейства использовать для русского.
+% В некоторых установках macOS шрифты Tinos/Arimo содержат кириллицу,
+% но их OpenType-метаданные не объявляют скрипт Cyrillic.
+\newfontfamily\cyrillicfont{Tinos}
+\newfontfamily\cyrillicfontsf{Arimo}
+\newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+
 % =================================================
 % Геометрия страницы
 % =================================================
