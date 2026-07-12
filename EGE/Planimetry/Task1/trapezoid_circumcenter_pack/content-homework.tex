@@ -1,0 +1,162 @@
+% =================================================
+% Домашняя работа ученика
+% =================================================
+
+\packtitle{Домашняя работа}{Серединные перпендикуляры и скрытая окружность}
+\studentnameblock
+
+\begin{routebox}[Что нужно уметь]
+Перед выполнением вспомните четыре связки:
+\[
+\begin{aligned}
+&\text{середина}+\text{перпендикуляр}
+&&\Longrightarrow \text{серединный перпендикуляр},\\
+&\text{два серединных перпендикуляра}
+&&\Longrightarrow \text{центр описанной окружности},\\
+&\text{центр}+\text{перпендикуляр к хорде}
+&&\Longrightarrow \text{деление хорды пополам},\\
+&\text{вписанный угол}
+&&\Longrightarrow \text{центральный угол вдвое больше}.
+\end{aligned}
+\]
+\end{routebox}
+
+\begin{selfcheck}[Что проверить после выполнения]
+\begin{itemize}
+  \item[\checkbox] В задачах 1–2 я не путал перпендикуляр с серединным
+  перпендикуляром.
+  \item[\checkbox] В задачах 3 и 5 я указал общую дугу для вписанного и
+  центрального углов.
+  \item[\checkbox] В задаче 6 я продолжил боковые стороны трапеции.
+  \item[\checkbox] В задаче 7 я не ссылался на внешний вид рисунка.
+  \item[\checkbox] В задаче 8 получена формула, которая при
+  \(\alpha=64^\circ\) даёт \(71^\circ\).
+\end{itemize}
+\end{selfcheck}
+
+\section{Базовые конструкции}
+
+\begin{homeworktask}[Серединный перпендикуляр][1]
+Точка \(K\) — середина отрезка \(PQ\). Через \(K\) проведена прямая,
+перпендикулярная \(PQ\), и на ней взята точка \(O\). Докажите, что
+\[
+OP=OQ.
+\]
+\answerline[2]
+\end{homeworktask}
+
+\Needspace{15\baselineskip}
+\begin{homeworktask}[Центр описанной окружности][2]
+В треугольнике \(XYZ\) серединные перпендикуляры к сторонам \(XY\) и
+\(XZ\) пересекаются в точке \(O\).
+
+\begin{enumerate}
+  \item Докажите, что \(OY=OZ\).
+  \item Как называется точка \(O\)?
+\end{enumerate}
+\answerline[4]
+\end{homeworktask}
+
+\begin{homeworktask}[Центральный и вписанный углы][3]
+Точки \(A,B,C\) лежат на окружности с центром \(O\). Известно, что
+\[
+\angle ACB=57^\circ.
+\]
+Найдите \(\angle AOB\) и углы при основании равнобедренного треугольника
+\(AOB\).
+\answerline[4]
+\end{homeworktask}
+
+\newpage
+\begin{homeworktask}[Расстояние от центра до хорды][4]
+В окружности с центром \(O\) проведена хорда \(BC\). Перпендикуляр
+\(OE\) опущен на \(BC\). Известно, что
+\[
+BC=12\text{ см},
+\qquad
+OE=6\text{ см}.
+\]
+Найдите \(\angle OBC\).
+
+\begin{hintbox}
+Сначала объясните, почему \(BE=EC\).
+\end{hintbox}
+\answerline[4]
+\end{homeworktask}
+
+\section{Комбинируем идеи}
+
+\begin{homeworktask}[Два угла из разных конструкций][5]
+В треугольнике \(BNC\) точка \(M\) — центр описанной окружности.
+Известно, что
+\[
+\angle BCN=62^\circ,
+\qquad
+\operatorname{dist}(M,BC)=\frac12BC.
+\]
+Луч \(BM\) проходит внутри угла \(NBC\). Найдите \(\angle NBC\).
+
+\begin{hintbox}
+Получите \(45^\circ\) из прямоугольного треугольника у стороны \(BC\),
+а второй угол — из равнобедренного треугольника \(BMN\).
+\end{hintbox}
+\answerline[5]
+\end{homeworktask}
+
+\Needspace{24\baselineskip}
+\begin{homeworktask}[Аналог основной задачи][6]
+В трапеции \(ABCD\) выполнено
+\[
+AD\parallel BC,
+\qquad
+BC=2AD.
+\]
+Внутри трапеции взята точка \(M\) так, что
+\[
+\angle BAM=\angle CDM=90^\circ.
+\]
+Расстояние от точки \(M\) до прямой \(BC\) равно \(AD\), а
+\[
+\angle BCD=68^\circ.
+\]
+Найдите \(\angle ABC\).
+\answerline[9]
+\end{homeworktask}
+
+\Needspace{22\baselineskip}
+\section{Анализ и обобщение}
+
+\begin{homeworktask}[Найдите ошибку][7]
+После достроения трапеции до треугольника \(BNC\) ученик опустил
+\(ME\perp BC\) и написал:
+
+\begin{quote}
+«Так как через точку \(M\) к прямой \(BC\) можно провести только один
+перпендикуляр, то точки \(N,M,E\) лежат на одной прямой».
+\end{quote}
+
+Объясните ошибку. Какое дополнительное утверждение потребовалось бы доказать,
+чтобы рассуждение стало верным?
+\answerline[3]
+\end{homeworktask}
+
+\begin{homeworktask}[Общая формула][8]
+В условиях задачи 6 заменим \(68^\circ\) на произвольный угол
+\[
+\angle BCD=\alpha.
+\]
+Выразите \(\angle ABC\) через \(\alpha\).
+
+Заполните маршрут:
+\[
+\angle MBC=\shortanswer{18mm},
+\qquad
+\angle MBN=\shortanswer{28mm},
+\]
+\[
+\angle ABC=\boxed{\shortanswer{42mm}}.
+\]
+\answerline[2]
+\end{homeworktask}
+
+

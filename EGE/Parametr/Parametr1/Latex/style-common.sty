@@ -1,0 +1,190 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style-common}[2026/07/11 Common parameter handout style v3]
+
+% =================================================
+% Язык и шрифты
+% =================================================
+\RequirePackage{fontspec}
+\RequirePackage{polyglossia}
+\setdefaultlanguage{russian}
+
+\setmainfont{Tinos}
+\setsansfont{Arimo}
+\setmonofont{DejaVu Sans Mono}
+
+% =================================================
+% Геометрия страницы
+% =================================================
+\RequirePackage[
+  a4paper,
+  left=24mm,
+  right=24mm,
+  top=22mm,
+  bottom=23mm,
+  headheight=26pt,
+  headsep=7mm
+]{geometry}
+
+% =================================================
+% Математика, таблицы, списки
+% =================================================
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{colortbl}
+\RequirePackage{enumitem}
+
+% =================================================
+% Служебные пакеты
+% =================================================
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{fancyhdr}
+\RequirePackage{microtype}
+\RequirePackage{hyperref}
+\RequirePackage{needspace}
+\RequirePackage{titlesec}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  positioning,
+  patterns.meta,
+  decorations.pathreplacing
+}
+
+% =================================================
+% Общая типографика
+% =================================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\linespread{1.14}
+
+% Единый ритм вокруг выключных формул.
+\setlength{\abovedisplayskip}{0.72em}
+\setlength{\belowdisplayskip}{0.72em}
+\setlength{\abovedisplayshortskip}{0.42em}
+\setlength{\belowdisplayshortskip}{0.52em}
+\allowdisplaybreaks[1]
+
+\setlist[itemize]{
+  leftmargin=1.65em,
+  itemsep=0.32em,
+  topsep=0.4em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\setlist[enumerate]{
+  leftmargin=2em,
+  itemsep=0.42em,
+  topsep=0.45em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\mainfontsize}{%
+  \fontsize{13.5pt}{16.8pt}\selectfont
+}
+
+\newcommand{\methodname}[1]{\textbf{\sffamily #1}}
+\newcommand{\excluded}[1]{\textcolor{Accent}{\boldsymbol{#1}}}
+
+% Небольшой векторный знак для предупреждений.
+\newcommand{\warningicon}{%
+  \tikz[baseline=-0.65ex]{%
+    \node[
+      circle,
+      fill=Accent,
+      draw=Accent,
+      text=white,
+      font=\bfseries\sffamily\footnotesize,
+      inner sep=1.15pt
+    ] {!};%
+  }%
+}
+
+% Выразительный заголовок шага без тяжёлой рамки.
+\newcommand{\stepheading}[2]{%
+  \Needspace{5\baselineskip}%
+  \par\addvspace{1.15em}%
+  \noindent
+  \tikz[baseline=(step.base)]{%
+    \node[
+      fill=Primary,
+      text=white,
+      rounded corners=1mm,
+      inner xsep=5pt,
+      inner ysep=2.6pt,
+      font=\bfseries\sffamily
+    ] (step) {#1};%
+  }%
+  \hspace{0.55em}%
+  {\large\bfseries\sffamily\color{Secondary}#2}%
+  \par\nobreak\vspace{0.38em}%
+}
+
+% =================================================
+% Заголовки
+% =================================================
+\newcommand{\SectionFont}{%
+  \Large\bfseries\sffamily\color{Primary}%
+  \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+}
+
+\newcommand{\SubsectionFont}{%
+  \large\bfseries\sffamily\color{Secondary}%
+  \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+}
+
+\titleformat{\section}
+  {\SectionFont}
+  {\thesection.}
+  {0.65em}
+  {}
+
+\titleformat{\subsection}
+  {\SubsectionFont}
+  {}
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\sffamily\raggedright}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\section}{0pt}{1.9em}{0.75em}
+\titlespacing*{\subsection}{0pt}{1.25em}{0.48em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.35em}
+
+% =================================================
+% Колонтитулы
+% =================================================
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{%
+  \footnotesize\sffamily\color{GrayText} Алгебра. Уравнения с параметром
+}
+
+\fancyhead[R]{%
+  \footnotesize\sffamily\color{GrayText} Рациональное уравнение с модулем
+}
+
+\fancyfoot[C]{\small\color{GrayText}\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{%
+    \color{GrayLine}\leaders\hrule height \headrulewidth\hfill
+  }
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyfoot[C]{\small\color{GrayText}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}

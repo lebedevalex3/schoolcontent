@@ -1,0 +1,311 @@
+% =================================================
+% Рисунки к учебному комплекту
+% Все координаты основной конфигурации согласованы.
+% =================================================
+
+% -------------------------------------------------
+% 1. Исходная трапеция
+% -------------------------------------------------
+\newcommand{\trapezoidproblemfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.72,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (A) at ($(B)!0.5!(N)$);
+  \coordinate (D) at ($(C)!0.5!(N)$);
+  \coordinate (M) at (4,4);
+
+  \draw[geo main] (A)--(B)--(C)--(D)--cycle;
+  \draw[geo radius] (A)--(M)--(D);
+
+  \node[geo point,label={[geo label]above left:$A$}] at (A) {};
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]above right:$D$}] at (D) {};
+  \node[geo center point,label={[geo label]below:$M$}] at (M) {};
+
+  \pic[geo right angle] {right angle=B--A--M};
+  \pic[geo right angle] {right angle=M--D--C};
+  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=8mm,angle eccentricity=1.32]
+    {angle=D--C--B};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 2. Достроение трапеции до треугольника
+% -------------------------------------------------
+\newcommand{\hiddentrianglefigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.55,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (A) at ($(B)!0.5!(N)$);
+  \coordinate (D) at ($(C)!0.5!(N)$);
+
+  \draw[geo main] (B)--(N)--(C)--cycle;
+  \draw[geo strong] (A)--(D);
+
+  \node[geo point,label={[geo label]left:$A$}] at (A) {};
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]right:$D$}] at (D) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 3. Средняя линия: та же конфигурация и масштаб
+% -------------------------------------------------
+\newcommand{\midlinefigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.66,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (A) at ($(B)!0.5!(N)$);
+  \coordinate (D) at ($(C)!0.5!(N)$);
+
+  \draw[geo main] (B)--(N)--(C)--cycle;
+  \draw[geo highlight] (A)--(D);
+
+  \node[geo point,label={[geo label]left:$A$}] at (A) {};
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]right:$D$}] at (D) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+
+  % Равные части стороны BN
+  \draw[geo equal mark] ($(B)!0.58!(A)$) ++(-0.11,0.04) -- ++(0.22,-0.08);
+  \draw[geo equal mark] ($(A)!0.42!(N)$) ++(-0.11,0.04) -- ++(0.22,-0.08);
+  % Равные части стороны CN (двойные засечки)
+  \draw[geo equal mark] ($(C)!0.58!(D)$) ++(-0.10,-0.05) -- ++(0.20,0.10);
+  \draw[geo equal mark] ($(C)!0.58!(D)$) ++(-0.16,-0.08) -- ++(0.20,0.10);
+  \draw[geo equal mark] ($(D)!0.42!(N)$) ++(-0.10,-0.05) -- ++(0.20,0.10);
+  \draw[geo equal mark] ($(D)!0.42!(N)$) ++(-0.16,-0.08) -- ++(0.20,0.10);
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 4. Серединный перпендикуляр
+% -------------------------------------------------
+\newcommand{\perpendicularbisectorfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.86,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (N) at (6,0);
+  \coordinate (A) at (3,0);
+  \coordinate (M) at (3,3.1);
+
+  \draw[geo main] (B)--(N);
+  \draw[geo highlight] (A)--(M);
+  \draw[geo radius] (M)--(B) (M)--(N);
+
+  \node[geo point,label={[geo label]below:$A$}] at (A) {};
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$N$}] at (N) {};
+  \node[geo center point,label={[geo label]above:$M$}] at (M) {};
+
+  \pic[geo right angle] {right angle=B--A--M};
+  \draw[geo equal mark] (1.47,0.13)--(1.47,-0.13);
+  \draw[geo equal mark] (4.53,0.13)--(4.53,-0.13);
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 5. Центр описанной окружности
+% -------------------------------------------------
+\newcommand{\circumcenterfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.60,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (A) at ($(B)!0.5!(N)$);
+  \coordinate (D) at ($(C)!0.5!(N)$);
+  \coordinate (M) at (4,4);
+
+  \draw[geo circle] (M) circle[radius=5.657];
+  \draw[geo main] (B)--(N)--(C)--cycle;
+  \draw[geo auxiliary] (A)--(M) (D)--(M);
+  \draw[geo radius] (M)--(B) (M)--(N) (M)--(C);
+
+  \node[geo point,label={[geo label]left:$A$}] at (A) {};
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]right:$D$}] at (D) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+  \node[geo center point,label={[geo label]below right:$M$}] at (M) {};
+
+  \pic[geo right angle,angle radius=3.6mm] {right angle=B--A--M};
+  \pic[geo right angle,angle radius=3.6mm] {right angle=M--D--C};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 6. Перпендикуляр ME к BC
+% -------------------------------------------------
+\newcommand{\perpendicularmefigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.82,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (M) at (4,3.5);
+  \coordinate (E) at (4,0);
+
+  \draw[geo main] (B)--(C);
+  \draw[geo radius] (M)--(B) (M)--(C);
+  \draw[geo highlight] (M)--(E);
+
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo center point,label={[geo label]above:$M$}] at (M) {};
+  \node[geo point,label={[geo label]below:$E$}] at (E) {};
+
+  \pic[geo right angle] {right angle=B--E--M};
+  \draw[geo equal mark] (2,0.13)--(2,-0.13);
+  \draw[geo equal mark] (6,0.13)--(6,-0.13);
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 7. Прямоугольный равнобедренный треугольник BME
+% -------------------------------------------------
+\newcommand{\trianglebmefigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.82,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (E) at (4,0);
+  \coordinate (M) at (4,4);
+
+  \draw[geo main] (B)--(E)--(M)--cycle;
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$E$}] at (E) {};
+  \node[geo center point,label={[geo label]above:$M$}] at (M) {};
+
+  \pic[geo right angle] {right angle=B--E--M};
+  \pic[geo angle,"$45^\circ$"{geo angle label},angle radius=8mm,angle eccentricity=1.28]
+    {angle=E--B--M};
+  \node[below] at ($(B)!0.5!(E)$) {$a$};
+  \node[right] at ($(E)!0.5!(M)$) {$a$};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 8. Центральный и вписанный углы
+% -------------------------------------------------
+\newcommand{\centralinscribedfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.60,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (M) at (4,4);
+
+  \draw[geo circle] (M) circle[radius=5.657];
+  \draw[geo main] (B)--(C)--(N)--cycle;
+  \draw[geo radius] (M)--(B) (M)--(N);
+
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+  \node[geo center point,label={[geo label]below right:$M$}] at (M) {};
+
+  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=8mm,angle eccentricity=1.35]
+    {angle=B--C--N};
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=10mm,angle eccentricity=1.24]
+    {angle=B--M--N};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 9. Равнобедренный треугольник BMN
+% -------------------------------------------------
+\newcommand{\trianglebmnfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.68,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (M) at (4,4);
+  \coordinate (N) at (3.31,9.615);
+
+  \draw[geo main] (B)--(M)--(N)--cycle;
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo center point,label={[geo label]right:$M$}] at (M) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=1.30]
+    {angle=B--M--N};
+  \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=1.28]
+    {angle=M--B--N};
+  \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=7mm,angle eccentricity=1.28]
+    {angle=B--N--M};
+
+  \draw[geo equal mark] ($(M)!0.48!(B)$) ++(-0.10,0.10)--++(0.20,-0.20);
+  \draw[geo equal mark] ($(M)!0.48!(N)$) ++(-0.10,-0.02)--++(0.20,0.04);
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% 10. Итоговое сложение углов
+% -------------------------------------------------
+\newcommand{\anglesumfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.70,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (M) at (4,4);
+
+  \draw[geo main] (B)--(N);
+  \draw[geo main] (B)--(C);
+  \draw[geo highlight] (B)--(M);
+
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo center point,label={[geo label]right:$M$}] at (M) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+
+  \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=9mm,angle eccentricity=1.28]
+    {angle=N--B--M};
+  \pic[geo angle,"$45^\circ$"{geo angle label},angle radius=15mm,angle eccentricity=1.18]
+    {angle=M--B--C};
+  \pic[draw=Primary,line width=0.75pt,"$71^\circ$"{geo angle label},angle radius=22mm,angle eccentricity=1.10]
+    {angle=N--B--C};
+\end{tikzpicture}
+\end{center}%
+}
+
+% -------------------------------------------------
+% Дополнительная схема для ошибки N,M,E
+% -------------------------------------------------
+\newcommand{\collinearityerrorfigure}{%
+\begin{center}
+\begin{tikzpicture}[scale=0.66,every node/.style={geo label}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (N) at (3.31,9.615);
+  \coordinate (M) at (4,4);
+  \coordinate (E) at (4,0);
+  \draw[geo main] (B)--(N)--(C)--cycle;
+  \draw[geo highlight] (M)--(E);
+  \draw[geo construction] (N)--(M);
+  \node[geo point,label={[geo label]below left:$B$}] at (B) {};
+  \node[geo point,label={[geo label]below right:$C$}] at (C) {};
+  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+  \node[geo center point,label={[geo label]right:$M$}] at (M) {};
+  \node[geo point,label={[geo label]below:$E$}] at (E) {};
+  \pic[geo right angle] {right angle=B--E--M};
+  \node[font=\bfseries\sffamily\Large,text=Accent] at (5.85,5.7) {$\times$};
+\end{tikzpicture}
+\end{center}%
+}

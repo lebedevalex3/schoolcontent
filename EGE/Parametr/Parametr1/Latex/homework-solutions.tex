@@ -1,0 +1,260 @@
+\clearpage
+\homeworktitle{Решения и комментарии}{Версия для учителя}
+
+\begin{teacheranswer}[Задание 1]
+  Дробь равна нулю, когда её числитель равен нулю, а знаменатель отличен
+  от нуля. Из числителя получаем \(x=2\) и \(x=-3\). Но при \(x=2\)
+  знаменатель равен нулю. Поэтому
+  \[
+    \boxed{x=-3}.
+  \]
+\end{teacheranswer}
+
+\begin{criterionbox}
+  Проверяется понимание того, что ноль числителя ещё не обязательно является
+  корнем исходной дроби.
+\end{criterionbox}
+
+\begin{teacheranswer}[Задание 2]
+  Раскрываем модуль:
+  \[
+    2|x|-x=
+    \begin{cases}
+      x, & x\ge 0,\\
+      -3x, & x<0.
+    \end{cases}
+  \]
+  При \(x\ge0\) получаем \(x=b\), поэтому требуется \(b\ge0\). При
+  \(x<0\) получаем \(x=-\dfrac b3\), поэтому требуется \(b>0\).
+
+  Следовательно,
+  \[
+    \begin{array}{c|c}
+      b<0 & 0\text{ корней},\\
+      b=0 & 1\text{ корень},\\
+      b>0 & 2\text{ корня}.
+    \end{array}
+  \]
+\end{teacheranswer}
+
+\begin{criterionbox}
+  Проверяется умение одновременно учитывать формулу ветви и условие,
+  на котором эта ветвь рассматривается.
+\end{criterionbox}
+
+\clearpage
+\section*{Решение задания 3}
+
+\begin{teacheranswer}[Шаг 1. Исследуем числитель]
+  Уравнение числителя имеет вид
+  \[
+    2|x|-x=a+1.
+  \]
+  При \(x\ge0\):
+  \[
+    \begin{cases}
+      2x-x=a+1,\\
+      x\ge0
+    \end{cases}
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      x_1=a+1,\\
+      a\ge-1.
+    \end{cases}
+  \]
+  При \(x<0\):
+  \[
+    \begin{cases}
+      -2x-x=a+1,\\
+      x<0
+    \end{cases}
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      x_2=-\dfrac{a+1}{3},\\
+      a>-1.
+    \end{cases}
+  \]
+  Поэтому числитель имеет два различных нуля тогда и только тогда, когда
+  \[
+    a>-1.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Шаг 2. Проверяем знаменатель]
+  Для \(x_1=a+1\):
+  \[
+    \begin{aligned}
+      x_1^2-x_1-a
+      &=(a+1)^2-(a+1)-a\\
+      &=a^2.
+    \end{aligned}
+  \]
+  Первый ноль числителя обращает знаменатель в ноль при \(a=0\).
+
+  Для \(x_2=-\dfrac{a+1}{3}\):
+  \[
+    \begin{aligned}
+      x_2^2-x_2-a
+      &=\frac{(a+1)^2}{9}+\frac{a+1}{3}-a\\
+      &=\frac{(a-2)^2}{9}.
+    \end{aligned}
+  \]
+  Второй ноль числителя обращает знаменатель в ноль при \(a=2\).
+
+  Значит,
+  \[
+    \boxed{a\in(-1,+\infty)\setminus\{0,2\}}.
+  \]
+\end{teacheranswer}
+
+\clearpage
+\section*{Решение задания 4}
+
+\begin{teacheranswer}[Шаг 1. Исследуем числитель]
+  Из уравнения
+  \[
+    3|x|-x=a+2
+  \]
+  получаем:
+  \[
+    x_1=\frac{a+2}{2}\quad(x\ge0),
+    \qquad
+    x_2=-\frac{a+2}{4}\quad(x<0).
+  \]
+  Оба нуля существуют и различны при
+  \[
+    a>-2.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Шаг 2. Проверяем знаменатель]
+  Для первого нуля:
+  \[
+    \begin{aligned}
+      x_1^2-x_1-a
+      &=\frac{(a+2)^2}{4}-\frac{a+2}{2}-a\\
+      &=\frac{a(a-2)}4.
+    \end{aligned}
+  \]
+  Поэтому исключаются \(a=0\) и \(a=2\).
+
+  Для второго нуля:
+  \[
+    \begin{aligned}
+      x_2^2-x_2-a
+      &=\frac{(a+2)^2}{16}+\frac{a+2}{4}-a\\
+      &=\frac{(a-2)(a-6)}{16}.
+    \end{aligned}
+  \]
+  Поэтому исключаются \(a=2\) и \(a=6\).
+
+  Окончательно
+  \[
+    \boxed{a\in(-2,+\infty)\setminus\{0,2,6\}}.
+  \]
+\end{teacheranswer}
+
+\begin{criterionbox}
+  Здесь важно заметить, что значение \(a=2\) возникает при проверке обоих
+  нулей, но в окончательном ответе исключается только один раз.
+\end{criterionbox}
+
+\clearpage
+\section*{Решения заданий 5 и 6}
+
+\begin{teacheranswer}[Задание 5. Анализ ошибки]
+  Условие \(a>-2\) необходимо и достаточно только для того, чтобы
+  \emph{числитель} имел два различных нуля. Для исходной дроби нужно ещё
+  проверить, не обращают ли эти значения знаменатель в ноль.
+
+  Из разбора основной задачи известно, что при
+  \[
+    a\in\{-1,0,3,8\}
+  \]
+  один из нулей числителя не является корнем исходного уравнения. Поэтому
+  правильный ответ:
+  \[
+    \boxed{a\in(-2,+\infty)\setminus\{-1,0,3,8\}}.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Задание 6*. Исследуем числитель]
+  Рассмотрим два случая.
+
+  При \(x\ge a\):
+  \[
+    \begin{cases}
+      2(x-a)-x-2=0,\\
+      x\ge a
+    \end{cases}
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      x_1=2a+2,\\
+      a\ge-2.
+    \end{cases}
+  \]
+
+  При \(x<a\):
+  \[
+    \begin{cases}
+      2(a-x)-x-2=0,\\
+      x<a
+    \end{cases}
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      x_2=\dfrac{2a-2}{3},\\
+      a>-2.
+    \end{cases}
+  \]
+
+  Следовательно, числитель имеет два различных нуля при \(a>-2\).
+  Действительно,
+  \[
+    x_1-x_2=\frac{4(a+2)}3>0.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Задание 6*. Проверяем знаменатель]
+  Знаменатель \(x^2-1\) обращается в ноль при \(x=\pm1\).
+
+  Для \(x_1=2a+2\):
+  \[
+    2a+2=-1\Rightarrow a=-\frac32,
+    \qquad
+    2a+2=1\Rightarrow a=-\frac12.
+  \]
+
+  Для \(x_2=\dfrac{2a-2}{3}\):
+  \[
+    \frac{2a-2}{3}=-1\Rightarrow a=-\frac12,
+    \qquad
+    \frac{2a-2}{3}=1\Rightarrow a=\frac52.
+  \]
+
+  Все найденные значения лежат в промежутке \((-2,+\infty)\), поэтому их
+  нужно исключить:
+  \[
+    \boxed{
+      a\in(-2,+\infty)\setminus
+      \left\{-\frac32,-\frac12,\frac52\right\}
+    }.
+  \]
+\end{teacheranswer}
+
+\begin{criterionbox}[Методический смысл задания со звёздочкой]
+  Параметр находится внутри модуля, поэтому изменяется не уровень
+  горизонтальной прямой, а положение точки излома графика. Задание проверяет
+  перенос метода, а не воспроизведение готового алгоритма.
+\end{criterionbox}
+
+\begin{resultbox}[Краткие ответы]
+  \begin{enumerate}[itemsep=0.28em,topsep=0.25em]
+    \item \(x=-3\).
+    \item \(b<0\): 0; \(b=0\): 1; \(b>0\): 2.
+    \item \(a\in(-1,+\infty)\setminus\{0,2\}\).
+    \item \(a\in(-2,+\infty)\setminus\{0,2,6\}\).
+    \item \(a\in(-2,+\infty)\setminus\{-1,0,3,8\}\).
+    \item \(a\in(-2,+\infty)\setminus
+      \left\{-\dfrac32,-\dfrac12,\dfrac52\right\}\).
+  \end{enumerate}
+\end{resultbox}

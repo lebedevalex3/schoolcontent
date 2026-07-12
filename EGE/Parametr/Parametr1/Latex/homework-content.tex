@@ -1,0 +1,139 @@
+\homeworktitle{Домашняя работа}{Рациональные уравнения с модулем и параметром}
+\studentline
+
+\begin{routebox}
+  \textbf{Ключевой факт:}
+  \[
+    \frac{A(x)}{B(x)}=0
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      A(x)=0,\\
+      B(x)\ne 0.
+    \end{cases}
+  \]
+  \textbf{Порядок работы:}
+  \begin{enumerate}[label=\arabic*.,leftmargin=1.8em,itemsep=0.2em,topsep=0.25em]
+    \item исследуйте нули числителя;
+    \item найдите условие нужного количества нулей;
+    \item проверьте каждый найденный ноль в знаменателе;
+    \item объедините условия и аккуратно запишите ответ.
+  \end{enumerate}
+\end{routebox}
+
+\section*{Часть I. Разминка}
+
+\begin{homeworktask}[Ноль дроби]{1}
+  Решите уравнение
+  \[
+    \frac{(x-2)(x+3)}{x-2}=0.
+  \]
+  Коротко объясните, почему один из нулей числителя не является корнем
+  исходного уравнения.
+\end{homeworktask}
+\answerspace{14mm}
+
+\Needspace{18\baselineskip}
+\begin{homeworktask}[Количество корней числителя]{2}
+  Определите количество корней уравнения
+  \[
+    2|x|-x=b
+  \]
+  в зависимости от значения параметра \(b\).
+
+  Сначала представьте левую часть по промежуткам, затем заполните таблицу.
+  \[
+    2|x|-x=
+    \begin{cases}
+      \rule{27mm}{0.4pt}, & x\ge 0,\\[2mm]
+      \rule{27mm}{0.4pt}, & x<0.
+    \end{cases}
+  \]
+
+  \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{0.78\textwidth}{>{\centering\arraybackslash}p{0.3\textwidth}>{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Значение \(b\) & Количество корней \\
+      \midrule
+      \(b<0\) & \rule{30mm}{0.4pt} \\
+      \(b=0\) & \rule{30mm}{0.4pt} \\
+      \(b>0\) & \rule{30mm}{0.4pt} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{homeworktask}
+
+\Needspace{18\baselineskip}
+\section*{Часть II. Обязательные задачи}
+
+\begin{homeworktask}[Близкий аналог разобранной задачи]{3}
+  Найдите все значения параметра \(a\), при каждом из которых уравнение
+  \[
+    \frac{|2x|-x-1-a}{x^2-x-a}=0
+  \]
+  имеет ровно два различных корня.
+
+  \textbf{В решении должны быть явно указаны:}
+  \begin{itemize}[itemsep=0.15em,topsep=0.25em]
+    \item условия, при которых числитель имеет два различных нуля;
+    \item оба нуля числителя;
+    \item результаты их подстановки в знаменатель;
+    \item окончательный ответ по параметру.
+  \end{itemize}
+\end{homeworktask}
+\shortanswerline
+
+\newpage
+\begin{homeworktask}[Самостоятельное применение алгоритма]{4}
+  Найдите все значения параметра \(a\), при каждом из которых уравнение
+  \[
+    \frac{3|x|-x-2-a}{x^2-x-a}=0
+  \]
+  имеет ровно два различных корня.
+\end{homeworktask}
+\solutionmap
+
+\Needspace{16\baselineskip}
+\section*{Часть III. Осмысление и перенос метода}
+
+\begin{homeworktask}[Найдите ошибку]{5}
+  Ученик исследовал исходное уравнение
+  \[
+    \frac{|3x|-2x-2-a}{x^2-2x-a}=0
+  \]
+  и написал:
+
+  \begin{quote}
+    «Числитель имеет два различных нуля при \(a>-2\). Следовательно,
+    ответ: \(a>-2\)».
+  \end{quote}
+
+  Объясните ошибку ученика и запишите правильный ответ.
+\end{homeworktask}
+\answerspace{18mm}
+
+\newpage
+\begin{homeworktask}[Задание со звёздочкой: параметр внутри модуля]{6*}
+  Найдите все значения параметра \(a\), при каждом из которых уравнение
+  \[
+    \frac{2|x-a|-x-2}{x^2-1}=0
+  \]
+  имеет ровно два различных корня.
+
+  \begin{hintbox}
+    Рассмотрите случаи \(x\ge a\) и \(x<a\). Здесь параметр перемещает
+    точку излома графика \(y=2|x-a|\) вдоль оси \(Ox\), поэтому готовый
+    шаблон основной задачи нельзя применять механически.
+  \end{hintbox}
+\end{homeworktask}
+\solutionmap
+
+\begin{selfcheck}
+  \begin{itemize}[label=$\square$,leftmargin=1.7em,itemsep=0.25em,topsep=0.2em]
+    \item Я сохранил условия ветвей при раскрытии модуля.
+    \item Я проверил каждый ноль числителя в знаменателе.
+    \item Я различаю значения переменной \(x\) и значения параметра \(a\).
+    \item В ответе указаны промежуток и все исключаемые точки.
+  \end{itemize}
+\end{selfcheck}

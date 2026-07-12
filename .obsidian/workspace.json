@@ -11,10 +11,14 @@
             "id": "02cdb5f3f99ee84b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "EGE/Parametr/Parametr1/Parametr.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Parametr"
             }
           }
         ]
@@ -181,19 +185,28 @@
   },
   "active": "02cdb5f3f99ee84b",
   "lastOpenFiles": [
+    "EGE/Planimetry/Task1/Без названия 1.md",
+    "EGE/Parametr/Parametr.md",
+    "EGE/Parametr/Parametr1/Latex/main-bw.out",
+    "EGE/Parametr/Parametr1/Latex/main-bw.aux",
+    "EGE/Parametr/Parametr1/Latex/main-bw.log",
+    "EGE/Parametr/Parametr1/Latex/main-color.tex",
+    "EGE/Parametr/Parametr1/Latex/main-color.pdf",
+    "EGE/Parametr/Parametr1/Latex/main-bw.tex",
+    "EGE/Parametr/Parametr1/Latex/main-bw.pdf",
+    "EGE/Parametr/Parametr1/Latex/figures.tex",
+    "EGE/Parametr/Parametr1/Latex/content.tex",
+    "EGE/Parametr/Parametr1/Latex/parameter-three-methods-v3/main-bw.pdf",
+    "EGE/Parametr/Parametr1/Latex/parameter-three-methods-v3/README.md",
+    "EGE/Parametr/Parametr1/Latex/README.md",
+    "EGE/Parametr/Parametr1/parameter-homework-v1/README.md",
+    "EGE/Parametr/Parametr1/Parametr.md",
+    "EGE/Planimetry/Task1/Без названия.md",
+    "EGE/Planimetry/Task1/Task 1.md",
+    "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/README.md",
+    "Geometry/GMT/GMT.md",
     "Geometry/GMT.md",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-common.sty",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-color.sty",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/style-bw.sty",
     "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/README.md",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-color.tex",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-color.pdf",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-bw.tex",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/main-bw.pdf",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/figures.tex",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/content.tex",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/geometry-gmt-with-three-figures/style-common.sty",
-    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/geometry-gmt-with-three-figures/README.md",
-    "Geometry/GMT/GMT.md"
+    "Geometry/GMT/LatexGMT/geometry-gmt-with-three-figures/geometry-gmt-with-three-figures/README.md"
   ]
 }

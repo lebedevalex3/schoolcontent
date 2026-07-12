@@ -1,0 +1,332 @@
+% =================================================
+% Учебный лист ученика
+% =================================================
+
+\packtitle{Скрытый треугольник и окружность}{Учебный маршрут к одной геометрической задаче}
+\studentnameblock
+
+\section{Основная задача}
+
+\begin{problembox}
+В трапеции \(ABCD\) основание \(AD\) в два раза меньше основания \(BC\).
+Внутри трапеции взяли точку \(M\) так, что углы \(BAM\) и \(CDM\) прямые.
+
+\begin{enumerate}
+  \item[а)] Докажите, что \(BM=CM\).
+  \item[б)] Найдите \(\angle ABC\), если \(\angle BCD=64^\circ\), а расстояние
+  от точки \(M\) до прямой \(BC\) равно стороне \(AD\).
+\end{enumerate}
+\end{problembox}
+
+\trapezoidproblemfigure
+
+\begin{questionsbox}[Первое исследование рисунка]
+\begin{enumerate}
+  \item Где в геометрии встречается отрезок, параллельный стороне треугольника
+  и равный половине этой стороны?
+  \item Можно ли включить данную трапецию в более крупный треугольник?
+  \item Как могут помочь прямые углы при точках \(A\) и \(D\)?
+\end{enumerate}
+\end{questionsbox}
+
+\begin{routebox}
+В решении предстоит открыть две скрытые конструкции:
+\[
+\begin{aligned}
+\text{трапеция}
+&\longrightarrow
+\text{треугольник и средняя линия}\\
+&\longrightarrow
+\text{серединные перпендикуляры}\\
+&\longrightarrow
+\text{описанная окружность}.
+\end{aligned}
+\]
+После этого каждый из двух искомых углов будет найден в отдельном
+равнобедренном треугольнике.
+\end{routebox}
+
+\section{Подготовительные задания}
+
+\subsection{Идея 1. Достроить фигуру}
+
+\begin{trainingtask}[A. Скрытый треугольник]
+Боковые стороны трапеции продолжили до пересечения в точке \(N\).
+Получился треугольник \(BNC\).
+
+\hiddentrianglefigure
+
+Объясните, почему треугольники \(NAD\) и \(NBC\) подобны. Запишите
+коэффициент подобия, если \(AD=\frac12BC\).
+\answerline[1]
+\end{trainingtask}
+
+\begin{trainingtask}[B. Как распознать среднюю линию]
+На том же рисунке известно
+\[
+AD\parallel BC,
+\qquad
+AD=\frac12BC.
+\]
+
+\midlinefigure
+
+Докажите, что \(A\) и \(D\) являются серединами сторон \(BN\) и \(CN\).
+Заполните вывод:
+\[
+AB=\shortanswer{26mm},
+\qquad
+CD=\shortanswer{26mm}.
+\]
+\answerline[2]
+\end{trainingtask}
+
+\begin{propertybox}[Обратный признак средней линии]
+Если отрезок соединяет две стороны треугольника, параллелен третьей стороне
+и равен её половине, то его концы являются серединами соответствующих сторон.
+\end{propertybox}
+
+\subsection{Идея 2. Увидеть серединный перпендикуляр}
+
+\begin{trainingtask}[C. Два условия, а не одно]
+Точка \(A\) — середина отрезка \(BN\), а \(AM\perp BN\).
+
+\perpendicularbisectorfigure
+
+\begin{enumerate}
+  \item Как называется прямая \(AM\)?
+  \item Какое равенство расстояний отсюда следует?
+\end{enumerate}
+
+\[
+AM\text{ — }\shortanswer{55mm},
+\qquad
+MB=\shortanswer{20mm}.
+\]
+\end{trainingtask}
+
+\begin{attentionbox}[Логическая дисциплина]
+Одного условия \(AM\perp BN\) недостаточно. Чтобы назвать \(AM\)
+серединным перпендикуляром, необходимо также знать, что \(A\) — середина
+отрезка \(BN\).
+\end{attentionbox}
+
+\Needspace{24\baselineskip}
+\begin{trainingtask}[D. Центр окружности]
+В треугольнике \(BNC\) прямые \(AM\) и \(DM\) являются серединными
+перпендикулярами к сторонам \(BN\) и \(CN\).
+
+\circumcenterfigure
+
+Закончите цепочку:
+\[
+MB=MN,
+\qquad
+MC=MN
+\quad\Longrightarrow\quad
+\boxed{\;MB=\shortanswer{22mm}=\shortanswer{22mm}\;}.
+\]
+Как называется точка \(M\)?
+\answerline[2]
+\end{trainingtask}
+
+\newpage
+\subsection{Идея 3. Получить угол \(45^\circ\)}
+
+\begin{trainingtask}[E. Перпендикуляр к хорде]
+Точка \(M\) равноудалена от точек \(B\) и \(C\). Из неё опустили
+перпендикуляр \(ME\) на \(BC\).
+
+\perpendicularmefigure
+
+Почему \(E\) является серединой \(BC\)?
+\answerline[2]
+
+Если \(BC=2a\), а \(ME=a\), найдите \(BE\) и \(\angle MBC\).
+\answerline[3]
+\end{trainingtask}
+
+\trianglebmefigure
+
+\begin{propertybox}[Полезная микроидея]
+Если катеты прямоугольного треугольника равны, то его острые углы равны
+\(45^\circ\). В нашей задаче
+\[
+BE=\frac12BC=AD=ME.
+\]
+\end{propertybox}
+
+\subsection{Идея 4. Перейти от вписанного угла к центральному}
+
+\begin{trainingtask}[F. Одна дуга — два угла]
+Точки \(B,C,N\) лежат на окружности с центром \(M\), причём
+\(\angle BCN=64^\circ\).
+
+\centralinscribedfigure
+
+\begin{enumerate}
+  \item На какую дугу опирается угол \(\angle BCN\)?
+  \item Какой центральный угол опирается на ту же дугу?
+  \item Найдите этот центральный угол.
+\end{enumerate}
+
+\[
+\angle BMN=\shortanswer{25mm}.
+\]
+\end{trainingtask}
+
+\Needspace{18\baselineskip}
+\begin{trainingtask}[G. Равнобедренный треугольник \(BMN\)]
+Известно, что \(MB=MN\) и \(\angle BMN=128^\circ\).
+
+\trianglebmnfigure
+
+Найдите \(\angle MBN\).
+\answerline[2]
+\end{trainingtask}
+
+\newpage
+\section{Решаем основную задачу}
+
+\subsection{Пункт а. Доказываем равенство \(BM=CM\)}
+
+\begin{stepbox}[Продлите боковые стороны][1]
+Продлите \(AB\) и \(CD\) до пересечения в точке \(N\). Объясните, почему
+\(AD\) является средней линией треугольника \(BNC\).
+\answerline[3]
+\end{stepbox}
+
+\begin{stepbox}[Найдите два серединных перпендикуляра][2]
+Используйте прямые углы \(\angle BAM\) и \(\angle CDM\). Докажите, что
+\(AM\) и \(DM\) являются серединными перпендикулярами к сторонам \(BN\)
+и \(CN\).
+\answerline[4]
+\end{stepbox}
+
+\begin{stepbox}[Определите роль точки \(M\)][3]
+Какую точку треугольника \(BNC\) получили? Запишите равенство трёх радиусов
+и завершите доказательство пункта а).
+\answerline[4]
+\end{stepbox}
+
+\Needspace{8\baselineskip}
+\begin{importantbox}[Промежуточный результат]
+После пункта а) мы знаем больше, чем требовалось:
+\[
+\boxed{MB=MC=MN}.
+\]
+Значит, \(M\) — центр окружности, проходящей через вершины \(B,C,N\).
+Именно этот дополнительный результат понадобится в пункте б).
+\end{importantbox}
+
+\subsection{Пункт б. Находим угол \(ABC\)}
+
+\begin{stepbox}[Опустите перпендикуляр к основанию][4]
+Пусть \(ME\perp BC\). Почему \(E\) — середина \(BC\)? Чему равны
+\(BE\) и \(ME\), если \(AD=a\)?
+\answerline[3]
+\end{stepbox}
+
+\begin{stepbox}[Найдите первый угол][5]
+Докажите, что треугольник \(BME\) прямоугольный равнобедренный. Найдите
+\(\angle MBC\).
+\answerline[3]
+\end{stepbox}
+
+\Needspace{14\baselineskip}
+\begin{stepbox}[Найдите второй угол][6]
+Поскольку \(C,D,N\) лежат на одной прямой,
+\[
+\angle BCN=\angle BCD=64^\circ.
+\]
+Используйте центральный угол \(\angle BMN\) и равнобедренный треугольник
+\(BMN\), чтобы найти \(\angle MBN\).
+\answerline[4]
+\end{stepbox}
+
+\begin{stepbox}[Сложите найденные части][7]
+Луч \(BM\) проходит внутри угла \(NBC=ABC\).
+
+\anglesumfigure
+
+Запишите последнее равенство решения:
+\[
+\angle ABC=\angle NBM+\angle MBC
+=\shortanswer{15mm}+\shortanswer{15mm}
+=\boxed{\shortanswer{18mm}}.
+\]
+\end{stepbox}
+
+\newpage
+\section{Проверяем строгость рассуждения}
+
+\begin{warningbox}[Точки \(N,M,E\) не обязаны лежать на одной прямой]
+Из условия \(ME\perp BC\) следует только то, что \(ME\) — единственный
+перпендикуляр к \(BC\), проходящий через \(M\). Чтобы утверждать, что
+\(N,M,E\) лежат на одной прямой, нужно было бы отдельно доказать
+\(MN\perp BC\). В данной задаче это неверно.
+
+\collinearityerrorfigure
+\end{warningbox}
+
+\begin{algorithmbox}[Как искать скрытую окружность]
+\begin{enumerate}
+  \item Достройте исходную фигуру до треугольника.
+  \item Найдите середины сторон: часто помогает средняя линия.
+  \item Соедините информацию о середине и перпендикуляре.
+  \item Распознайте серединные перпендикуляры.
+  \item Их пересечение объявляйте центром описанной окружности только после
+  проверки обоих условий.
+  \item Используйте равенство радиусов и теорему о центральном и вписанном углах.
+\end{enumerate}
+\end{algorithmbox}
+
+\section{Самостоятельная реконструкция}
+
+\begin{problembox}[Запишите полное решение без подсказок]
+Повторно решите основную задачу, используя только следующие ключевые слова:
+\[
+\begin{gathered}
+\text{средняя линия};\qquad
+\text{серединный перпендикуляр};\\
+\text{центр окружности};\qquad
+\text{вписанный угол}.
+\end{gathered}
+\]
+\end{problembox}
+
+\answerline[10]
+
+\section{Обобщение для сильных учеников}
+
+Пусть вместо \(64^\circ\) дано
+\[
+\angle BCD=\alpha.
+\]
+Остальные условия задачи не меняются. Выразите \(\angle ABC\) через \(\alpha\).
+
+\Needspace{9\baselineskip}
+\begin{hintbox}
+Найдите отдельно
+\[
+\angle MBC
+\qquad\text{и}\qquad
+\angle MBN.
+\]
+Первый угол от \(\alpha\) не зависит.
+\end{hintbox}
+
+\answerline[5]
+
+\begin{selfcheck}
+\begin{itemize}
+  \item[\checkbox] Я использовал оба условия для серединного перпендикуляра:
+  середину и прямой угол.
+  \item[\checkbox] Я объяснил, почему \(M\) — центр описанной окружности.
+  \item[\checkbox] Я не предполагал без доказательства, что \(N,M,E\) лежат
+  на одной прямой.
+  \item[\checkbox] Я указал, на какую общую дугу опираются центральный и
+  вписанный углы.
+  \item[\checkbox] В ответе пункта б) записано \(71^\circ\).
+\end{itemize}
+\end{selfcheck}
