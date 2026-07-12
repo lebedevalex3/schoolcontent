@@ -1,0 +1,127 @@
+% =================================================
+% TikZ-рисунки: полные и рабочие версии
+% =================================================
+
+\newcommand{\parameterlogicfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=8mm and 10mm]
+      \node[par logic condition] (numerator)
+        {Числитель имеет\\два различных нуля};
+      \node[par logic plus, right=5mm of numerator] (plus) {+};
+      \node[par logic condition, right=5mm of plus] (denominator)
+        {Оба нуля не обращают\\знаменатель в ноль};
+      \node[par logic result, below=10mm of plus] (result)
+        {Исходное уравнение имеет\\ровно два различных корня};
+      \draw[par logic arrow] (numerator.south) |- (result.west);
+      \draw[par logic arrow] (denominator.south) |- (result.east);
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\parameterlogicworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=8mm and 10mm]
+      \node[par logic condition] (numerator)
+        {Числитель имеет\\\rule{38mm}{0.45pt}};
+      \node[par logic plus, right=5mm of numerator] (plus) {+};
+      \node[par logic condition, right=5mm of plus] (denominator)
+        {Оба найденных значения\\\rule{43mm}{0.45pt}};
+      \node[par logic result, below=10mm of plus] (result)
+        {Исходное уравнение имеет\\ровно два различных корня};
+      \draw[par logic arrow] (numerator.south) |- (result.west);
+      \draw[par logic arrow] (denominator.south) |- (result.east);
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\parametergraphfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.55cm,y=1.15cm]
+      \draw[par axis] (-1.05,0) -- (4.85,0) node[right] {$x$};
+      \draw[par axis] (0,-1.05) -- (0,4.65) node[above] {$y$};
+      \draw[par graph] (-0.86,4.3) -- (0,0) -- (4.35,4.35);
+      \node[par branch label,anchor=east] at (-0.52,3.35) {$y=-5x$};
+      \node[par branch label,anchor=west] at (3.05,3.25) {$y=x$};
+      \draw[par level negative] (-0.95,-0.68) -- (4.55,-0.68);
+      \node[par level label,anchor=west,text=GrayText] at (3.25,-0.51)
+        {$b<0$: 0 корней};
+      \draw[par level zero] (-0.92,0) -- (4.5,0);
+      \node[par origin intersection] at (0,0) {};
+      \node[par level label,anchor=west,text=Accent] at (3.25,0.22)
+        {$b=0$: 1 корень};
+      \def\blevel{2.35}
+      \def\xleft{-0.47}
+      \def\xright{2.35}
+      \draw[par level positive] (-0.95,\blevel) -- (4.55,\blevel);
+      \node[par intersection] at (\xleft,\blevel) {};
+      \node[par intersection] at (\xright,\blevel) {};
+      \draw[par guide] (\xleft,\blevel) -- (\xleft,0);
+      \draw[par guide] (\xright,\blevel) -- (\xright,0);
+      \node[par graph label,below=4pt] at (\xleft,0) {$-\dfrac b5$};
+      \node[par graph label,below=4pt] at (\xright,0) {$b$};
+      \node[par level label,anchor=west,text=Secondary] at (3.25,2.58)
+        {$b>0$: 2 корня};
+      \node[par graph heading,anchor=west] at (-0.95,4.75)
+        {$y=3|x|-2x$ и горизонтальные прямые $y=b$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\parametergraphworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.55cm,y=1.15cm]
+      \draw[par axis] (-1.05,0) -- (4.85,0) node[right] {$x$};
+      \draw[par axis] (0,-1.05) -- (0,4.65) node[above] {$y$};
+      \draw[par graph] (-0.86,4.3) -- (0,0) -- (4.35,4.35);
+      \node[par branch label,anchor=east] at (-0.52,3.35) {$y=-5x$};
+      \node[par branch label,anchor=west] at (3.05,3.25) {$y=x$};
+      \node[par graph heading,anchor=west] at (-0.95,4.75)
+        {$y=3|x|-2x$};
+      \node[par graph caption,anchor=west,text width=6.4cm] at (1.05,-0.72)
+        {Проведите три горизонтальные прямые: ниже вершины, через вершину и выше вершины.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\parameternumberlinefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.9cm,y=1cm]
+      \draw[par number base] (-3,0) -- (10.5,0);
+      \draw[par number accepted] (-2,0) -- (-1,0);
+      \draw[par number accepted] (-1,0) -- (0,0);
+      \draw[par number accepted] (0,0) -- (3,0);
+      \draw[par number accepted] (3,0) -- (8,0);
+      \draw[par number accepted,-{Stealth[length=2.5mm]}] (8,0) -- (10.35,0);
+      \foreach \x in {-2,-1,0,3,8}{
+        \node[par number excluded] at (\x,0) {};
+        \draw[par number tick] (\x,-0.16) -- (\x,0.16);
+      }
+      \node[par number label,below=4pt] at (-2,0) {$-2$};
+      \node[par number label,below=4pt] at (-1,0) {$-1$};
+      \node[par number label,below=4pt] at (0,0) {$0$};
+      \node[par number label,below=4pt] at (3,0) {$3$};
+      \node[par number label,below=4pt] at (8,0) {$8$};
+      \node[par number label,above=4pt] at (10.2,0) {$+\infty$};
+      \node[par number note,above=8pt] at (-2,0) {граница};
+      \node[par number note,above=8pt,text width=4.9cm] at (3.3,0)
+        {значения, при которых\\знаменатель равен нулю};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\parameterstudentnumberlinefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.9cm,y=1cm]
+      \draw[par number base] (-3,0) -- (10.5,0);
+      \foreach \x in {-2,-1,0,3,8}{
+        \draw[par number tick] (\x,-0.16) -- (\x,0.16);
+      }
+      \node[par number label,below=4pt] at (-2,0) {$-2$};
+      \node[par number label,below=4pt] at (-1,0) {$-1$};
+      \node[par number label,below=4pt] at (0,0) {$0$};
+      \node[par number label,below=4pt] at (3,0) {$3$};
+      \node[par number label,below=4pt] at (8,0) {$8$};
+      \node[par number label,above=4pt] at (10.2,0) {$+\infty$};
+    \end{tikzpicture}
+  \end{center}
+}

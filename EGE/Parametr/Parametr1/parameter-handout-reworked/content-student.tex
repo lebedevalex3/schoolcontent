@@ -1,0 +1,402 @@
+% =================================================
+% Ученический рабочий лист
+% =================================================
+\worksheettitle
+  {Рациональное уравнение с модулем и параметром}
+  {Рабочий лист: открываем решение шаг за шагом}
+\studentnameblock
+
+\begin{problembox}
+  Найдите все значения параметра \(a\), при каждом из которых уравнение
+  \[
+    \frac{|3x|-2x-2-a}{x^2-2x-a}=0
+  \]
+  имеет ровно два различных корня.
+\end{problembox}
+
+\begin{thinkbox}[Цель работы]
+  Не получить готовую формулу, а построить надёжный маршрут решения:
+  найти кандидатов из числителя, проверить условия ветвей модуля и убедиться,
+  что каждый кандидат входит в область определения дроби.
+\end{thinkbox}
+
+\section{Что означает «дробь равна нулю»}
+
+Сравните два уравнения:
+\[
+  \frac{x-2}{x+1}=0,
+  \qquad
+  \frac{x-2}{x-2}=0.
+\]
+
+\begin{fillbox}[Проверьте значение \(x=2\)]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.42}
+    \begin{tabularx}{\textwidth}{
+      >{\centering\arraybackslash}p{0.22\textwidth}
+      >{\centering\arraybackslash}p{0.22\textwidth}
+      >{\centering\arraybackslash}p{0.22\textwidth}
+      >{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Выражение & Числитель & Знаменатель & Является ли \(x=2\) корнем? \\
+      \midrule
+      \(\dfrac{x-2}{x+1}\) & \answerblank[18mm] & \answerblank[18mm] & \answerblank[25mm] \\
+      \addlinespace[0.25em]
+      \(\dfrac{x-2}{x-2}\) & \answerblank[18mm] & \answerblank[18mm] & \answerblank[25mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+Сформулируйте правило:
+\[
+  \frac{A(x)}{B(x)}=0
+  \quad\Longleftrightarrow\quad
+  \begin{cases}
+    A(x)=\answerblank[18mm],\\[1mm]
+    B(x)\answerblank[10mm]0.
+  \end{cases}
+\]
+
+\begin{checkpointbox}[Два слоя основной задачи]
+  Дополните схему словами «два различных нуля» и
+  «не обращают знаменатель в ноль».
+  \parameterlogicworksheetfigure
+\end{checkpointbox}
+
+\begin{thinkbox}[Прогноз до вычислений]
+  После раскрытия модуля числитель задаётся двумя
+  \answerblank[28mm] выражениями. Поэтому на каждой ветви может появиться
+  не более \answerblank[10mm] корня, а всего — не более
+  \answerblank[10mm] корней.
+\end{thinkbox}
+
+\section{Исследуем нули числителя}
+
+Уравнение числителя перепишем так:
+\[
+  3|x|-2x=a+2.
+\]
+
+\begin{fillbox}[Раскройте модуль по двум ветвям]
+  \begin{enumerate}
+    \item При \(x\ge0\): \(|3x|=\answerblank[18mm]\), поэтому
+      \[
+        3x-2x=a+2
+        \quad\Longrightarrow\quad
+        x_1=\answerblank[25mm].
+      \]
+      Условие выбранной ветви:
+      \[
+        a+2\ge0
+        \quad\Longleftrightarrow\quad
+        a\ge\answerblank[14mm].
+      \]
+
+    \item При \(x<0\): \(|3x|=\answerblank[18mm]\), поэтому
+      \[
+        -3x-2x=a+2
+        \quad\Longrightarrow\quad
+        x_2=\answerblank[30mm].
+      \]
+      Условие выбранной ветви:
+      \[
+        -\frac{a+2}{5}<0
+        \quad\Longleftrightarrow\quad
+        a>\answerblank[14mm].
+      \]
+  \end{enumerate}
+\end{fillbox}
+
+Соберите результаты в таблицу.
+
+\begin{center}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\textwidth}{
+    >{\centering\arraybackslash}p{0.15\textwidth}
+    >{\centering\arraybackslash}p{0.25\textwidth}
+    >{\centering\arraybackslash}p{0.25\textwidth}
+    >{\centering\arraybackslash}X}
+    \toprule
+    \rowcolor{TableHeader}
+    Ветвь & Кандидат & Условие ветви & Ограничение на \(a\) \\
+    \midrule
+    \(x\ge0\) & \answerblank[26mm] & \answerblank[25mm] & \answerblank[22mm] \\
+    \addlinespace[0.25em]
+    \(x<0\) & \answerblank[30mm] & \answerblank[25mm] & \answerblank[22mm] \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+\begin{checkpointbox}[Что происходит на границе \(a=-2\)?]
+  Подставьте \(a=-2\) в обе формулы:
+  \[
+    x_1=\answerblank[15mm],
+    \qquad
+    x_2=\answerblank[15mm].
+  \]
+  Отрицательная ветвь требует \(x<0\). Выполняется ли это условие?
+  \choicebox\ да \qquad \choicebox\ нет.
+
+  Следовательно, при \(a=-2\) числитель имеет
+  \answerblank[14mm] ноль, а два различных нуля возникают при
+  \[
+    a\ \answerblank[10mm]\ -2.
+  \]
+\end{checkpointbox}
+
+\begin{reflectionbox}[Промежуточный вывод]
+  Условие \(a>-2\) пока гарантирует только то, что
+  \writinglines{2}
+\end{reflectionbox}
+
+\section{Проверяем найденные значения в знаменателе}
+
+\begin{thinkbox}[Можно ли уже записывать ответ?]
+  \choicebox\ Да. \qquad
+  \choicebox\ Нет, потому что найденные значения могут
+  \writinglines{1}
+\end{thinkbox}
+
+Обозначим знаменатель через
+\[
+  D(x)=x^2-2x-a.
+\]
+
+\stepheading{Шаг 1}{Проверяем \(x_1=a+2\)}
+
+\begin{align*}
+  D(x_1)
+  &=(a+2)^2-2(a+2)-a\\
+  &=\answerblank[42mm]\\
+  &=\answerblank[32mm].
+\end{align*}
+
+Знаменатель равен нулю при
+\[
+  a=\answerblank[14mm]
+  \qquad\text{или}\qquad
+  a=\answerblank[14mm].
+\]
+
+\stepheading{Шаг 2}{Проверяем \(x_2=-\dfrac{a+2}{5}\)}
+
+Начните подстановку и доведите выражение до произведения:
+\[
+  D(x_2)
+  =\frac{(a+2)^2}{25}+\frac{2(a+2)}5-a.
+\]
+\workarea{33mm}
+
+Получите:
+\[
+  D(x_2)=\frac{\answerblank[38mm]}{25}.
+\]
+
+Поэтому знаменатель равен нулю при
+\[
+  a=\answerblank[14mm]
+  \qquad\text{или}\qquad
+  a=\answerblank[14mm].
+\]
+
+\begin{fillbox}[Соберите проверку знаменателя]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.45}
+    \begin{tabularx}{\textwidth}{
+      >{\centering\arraybackslash}p{0.24\textwidth}
+      >{\centering\arraybackslash}p{0.38\textwidth}
+      >{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Кандидат & Знаменатель после подстановки & Исключаемые значения \(a\) \\
+      \midrule
+      \(x_1=a+2\) & \answerblank[38mm] & \answerblank[28mm] \\
+      \addlinespace[0.25em]
+      \(x_2=-\dfrac{a+2}{5}\) & \answerblank[43mm] & \answerblank[28mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+\section{Собираем окончательный ответ}
+
+Заполните две строки:
+\[
+  \text{числитель имеет два нуля при }a\in\answerblank[35mm];
+\]
+\[
+  \text{нужно исключить }a\in\answerblank[47mm].
+\]
+
+На числовой прямой обведите исключаемые точки и выделите допустимые
+промежутки.
+
+\parameterstudentnumberlinefigure
+
+\begin{resultbox}[Запишите ответ самостоятельно]
+  \[
+    a\in\answerblank[90mm].
+  \]
+\end{resultbox}
+
+\begin{checkpointbox}[Проверка на трёх значениях]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.45}
+    \begin{tabularx}{\textwidth}{
+      >{\centering\arraybackslash}p{0.12\textwidth}
+      >{\centering\arraybackslash}p{0.28\textwidth}
+      >{\centering\arraybackslash}p{0.36\textwidth}
+      >{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      \(a\) & Нулей числителя & Что происходит со знаменателем & Корней дроби \\
+      \midrule
+      \(-2\) & \answerblank[12mm] & \answerblank[34mm] & \answerblank[12mm] \\
+      \addlinespace[0.2em]
+      \(-1\) & \answerblank[12mm] & \answerblank[34mm] & \answerblank[12mm] \\
+      \addlinespace[0.2em]
+      \(1\) & \answerblank[12mm] & \answerblank[34mm] & \answerblank[12mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{checkpointbox}
+
+\section{Почему условие \texorpdfstring{\(a>-2\)}{a > -2} видно на графике}
+
+Положим \(b=a+2\). Тогда нули числителя определяются уравнением
+\[
+  3|x|-2x=b.
+\]
+
+\parametergraphworksheetfigure
+
+\begin{fillbox}[Свяжите положение прямой и число пересечений]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.45}
+    \begin{tabularx}{0.92\textwidth}{@{}
+      >{\centering\arraybackslash}p{0.16\textwidth}
+      >{\centering\arraybackslash}p{0.24\textwidth}
+      >{\centering\arraybackslash}p{0.2\textwidth}
+      >{\centering\arraybackslash}X@{}}
+      \toprule
+      \rowcolor{TableHeader}
+      Уровень & Условие на \(a\) & Пересечений & Нулей числителя \\
+      \midrule
+      \(b<0\) & \answerblank[18mm] & \answerblank[10mm] & \answerblank[10mm] \\
+      \addlinespace[0.2em]
+      \(b=0\) & \answerblank[18mm] & \answerblank[10mm] & \answerblank[10mm] \\
+      \addlinespace[0.2em]
+      \(b>0\) & \answerblank[18mm] & \answerblank[10mm] & \answerblank[10mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+\begin{reflectionbox}[Ограничение графического рассуждения]
+  Почему по этому графику нельзя увидеть исключаемые значения
+  \(-1,0,3,8\)?
+  \writinglines{2}
+\end{reflectionbox}
+
+\section{Более короткий способ: ищем общие корни}
+
+Этот раздел показывает, как сразу найти параметры, при которых один из
+нулей числителя запрещён знаменателем.
+
+\begin{fillbox}[Составьте систему]
+  Общий корень должен одновременно удовлетворять условиям
+  \[
+    \begin{cases}
+      |3x|-2x-2-a=\answerblank[10mm],\\
+      x^2-2x-a=\answerblank[10mm].
+    \end{cases}
+  \]
+  Выразите \(a\) из каждого уравнения:
+  \[
+    a=\answerblank[42mm],
+    \qquad
+    a=\answerblank[38mm].
+  \]
+  После приравнивания получите уравнение без параметра:
+  \[
+    x^2=\answerblank[36mm].
+  \]
+\end{fillbox}
+
+\begin{center}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\textwidth}{@{}
+    >{\centering\arraybackslash}p{0.14\textwidth}
+    >{\centering\arraybackslash}p{0.3\textwidth}
+    >{\centering\arraybackslash}p{0.22\textwidth}
+    >{\centering\arraybackslash}X@{}}
+    \toprule
+    \rowcolor{TableHeader}
+    Случай & Уравнение & Общий корень \(x\) & Значение \(a\) \\
+    \midrule
+    \(x\ge0\) & \(x^2-3x+2=0\) & \answerblank[24mm] & \answerblank[24mm] \\
+    \addlinespace[0.25em]
+    \(x<0\) & \(x^2+3x+2=0\) & \answerblank[24mm] & \answerblank[24mm] \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+\begin{reflectionbox}[Смысл метода]
+  Объясните, почему найденные значения параметра нужно не включить, а
+  исключить из условия \(a>-2\).
+  \writinglines{2}
+\end{reflectionbox}
+
+\section{Восстановите полное решение}
+
+Закройте предыдущие страницы и запишите решение основной задачи по четырём
+опорным пунктам:
+
+\begin{practicebox}[Самостоятельная реконструкция]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Найдите два возможных нуля числителя и условия их ветвей.
+    \item Определите, когда числитель имеет ровно два различных нуля.
+    \item Проверьте оба значения в знаменателе.
+    \item Объедините условия и запишите ответ.
+  \end{enumerate}
+  \writinglines{9}
+\end{practicebox}
+
+\section{Перенос метода}
+
+\begin{practicebox}[Задание 1. Близкая модель]
+  Найдите все значения \(a\), при которых уравнение
+  \[
+    \frac{|2x|-x-1-a}{x^2-x-a}=0
+  \]
+  имеет ровно два различных корня.
+  \workarea{58mm}
+  \longanswerline
+\end{practicebox}
+
+\begin{practicebox}[Задание 2. Анализ ошибки]
+  Ученик получил условие \(a>-2\) и сразу записал его в ответ основной
+  задачи.
+
+  На каком этапе решение стало неполным? Является ли условие \(a>-2\)
+  неверным или лишь недостаточным?
+  \writinglines{3}
+\end{practicebox}
+
+\begin{reflectionbox}[Мой алгоритм]
+  Закончите фразу: «Чтобы рациональное уравнение с параметром имело нужное
+  количество корней, я сначала \ldots»
+  \writinglines{4}
+\end{reflectionbox}
+
+\begin{questionsbox}[Перед завершением работы]
+  \begin{itemize}[label=\(\square\)]
+    \item Я сохранил условия ветвей при раскрытии модуля.
+    \item Я различаю нули числителя и корни исходной дроби.
+    \item Я проверил каждый кандидат в знаменателе.
+    \item Я умею объяснить смысл условия \(a>-2\) графически.
+    \item Я могу восстановить решение без готового образца.
+  \end{itemize}
+\end{questionsbox}

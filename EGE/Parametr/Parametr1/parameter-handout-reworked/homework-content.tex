@@ -1,0 +1,157 @@
+\homeworktitle{Домашняя работа}{Рациональные уравнения с модулем и параметром}
+\studentline
+
+\begin{routebox}
+  \textbf{Ключевой факт:}
+  \[
+    \frac{A(x)}{B(x)}=0
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      A(x)=0,\\
+      B(x)\ne0.
+    \end{cases}
+  \]
+  \textbf{Порядок работы:}
+  \begin{enumerate}[label=\arabic*.,leftmargin=1.8em,itemsep=0.2em,topsep=0.25em]
+    \item найдите нули числителя на каждой ветви модуля;
+    \item определите условие нужного количества нулей;
+    \item проверьте каждый кандидат в знаменателе;
+    \item объедините условия и запишите ответ.
+  \end{enumerate}
+\end{routebox}
+
+\section*{Часть I. Разминка}
+
+\begin{homeworktask}[Ноль дроби]{1}
+  Решите уравнение
+  \[
+    \frac{(x-2)(x+3)}{x-2}=0.
+  \]
+  Объясните, почему один из нулей числителя не является корнем дроби.
+\end{homeworktask}
+\answerspace{16mm}
+
+\Needspace{18\baselineskip}
+\begin{homeworktask}[Количество корней числителя]{2}
+  Определите количество корней уравнения
+  \[
+    2|x|-x=b
+  \]
+  в зависимости от \(b\).
+
+  \[
+    2|x|-x=
+    \begin{cases}
+      \rule{27mm}{0.4pt}, & x\ge0,\\[2mm]
+      \rule{27mm}{0.4pt}, & x<0.
+    \end{cases}
+  \]
+
+  \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{0.78\textwidth}{>{\centering\arraybackslash}p{0.3\textwidth}>{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Значение \(b\) & Количество корней \\
+      \midrule
+      \(b<0\) & \rule{30mm}{0.4pt} \\
+      \(b=0\) & \rule{30mm}{0.4pt} \\
+      \(b>0\) & \rule{30mm}{0.4pt} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{homeworktask}
+
+\section*{Часть II. Применяем алгоритм}
+
+\begin{homeworktask}[Подробная опора]{3}
+  Найдите все значения \(a\), при которых уравнение
+  \[
+    \frac{|2x|-x-1-a}{x^2-x-a}=0
+  \]
+  имеет ровно два различных корня.
+\end{homeworktask}
+\structuredsolutionmap
+
+\begin{homeworktask}[Опора сокращается]{4}
+  Найдите все значения \(a\), при которых уравнение
+  \[
+    \frac{3|x|-x-2-a}{x^2-x-a}=0
+  \]
+  имеет ровно два различных корня.
+\end{homeworktask}
+\reducedsolutionmap
+\answerspace{25mm}
+
+\Needspace{18\baselineskip}
+\section*{Часть III. Осмысление}
+
+\begin{homeworktask}[Найдите точный пробел в решении]{5}
+  Ученик написал:
+  \begin{quote}
+    «Числитель уравнения
+    \(
+      \dfrac{|3x|-2x-2-a}{x^2-2x-a}=0
+    \)
+    имеет два различных нуля при \(a>-2\). Следовательно, ответ:
+    \(a>-2\)».
+  \end{quote}
+
+  \begin{enumerate}
+    \item На каком этапе решение стало неполным?
+    \item Условие \(a>-2\) неверно или лишь недостаточно?
+    \item Запишите правильный ответ.
+  \end{enumerate}
+\end{homeworktask}
+\answerspace{20mm}
+
+\begin{homeworktask}[Полная классификация]{6}
+  Для исходного уравнения
+  \[
+    \frac{|3x|-2x-2-a}{x^2-2x-a}=0
+  \]
+  определите количество корней при всех значениях параметра \(a\).
+
+  \begin{center}
+    \renewcommand{\arraystretch}{1.45}
+    \begin{tabularx}{0.9\textwidth}{>{\centering\arraybackslash}p{0.55\textwidth}>{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Значение параметра & Количество корней \\
+      \midrule
+      \(a<-2\) & \rule{24mm}{0.4pt} \\
+      \(a=-2\) & \rule{24mm}{0.4pt} \\
+      \(a\in\{-1,0,3,8\}\) & \rule{24mm}{0.4pt} \\
+      \(a>-2,\ a\notin\{-1,0,3,8\}\) & \rule{24mm}{0.4pt} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{homeworktask}
+
+\newpage
+\section*{Часть IV. Перенос метода}
+
+\begin{homeworktask}[Задание со звёздочкой: параметр внутри модуля]{7*}
+  Найдите все значения параметра \(a\), при каждом из которых уравнение
+  \[
+    \frac{2|x-a|-x-2}{x^2-1}=0
+  \]
+  имеет ровно два различных корня.
+
+  \begin{hintbox}
+    Рассмотрите случаи \(x\ge a\) и \(x<a\). Здесь параметр перемещает
+    точку излома графика вдоль оси \(Ox\), поэтому прежний шаблон нельзя
+    применять механически.
+  \end{hintbox}
+\end{homeworktask}
+\solutionmap
+
+\begin{selfcheck}
+  \begin{itemize}[label=\(\square\),leftmargin=1.7em,itemsep=0.25em,topsep=0.2em]
+    \item Я сохранил условия ветвей модуля.
+    \item Я проверил каждый ноль числителя в знаменателе.
+    \item Я различаю значения переменной \(x\) и параметра \(a\).
+    \item Я постепенно снимал опоры и в задаче 4 построил решение сам.
+    \item В ответе указаны промежуток и все исключаемые точки.
+  \end{itemize}
+\end{selfcheck}

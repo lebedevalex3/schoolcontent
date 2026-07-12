@@ -1,0 +1,144 @@
+\clearpage
+\homeworktitle{Решения и комментарии}{Версия для учителя}
+
+\begin{teacheranswer}[Задание 1]
+  Из числителя получаем \(x=2\) и \(x=-3\). При \(x=2\) знаменатель
+  равен нулю, поэтому это значение запрещено. Ответ:
+  \[
+    \boxed{x=-3}.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Задание 2]
+  \[
+    2|x|-x=
+    \begin{cases}
+      x,&x\ge0,\\
+      -3x,&x<0.
+    \end{cases}
+  \]
+  При \(b<0\) корней нет, при \(b=0\) один корень, при \(b>0\) два.
+\end{teacheranswer}
+
+\section*{Решение задания 3}
+
+\begin{teacheranswer}[Числитель]
+  \[
+    2|x|-x=a+1.
+  \]
+  При \(x\ge0\): \(x_1=a+1\), требуется \(a\ge-1\).
+  При \(x<0\): \(x_2=-\dfrac{a+1}{3}\), требуется \(a>-1\).
+  Два различных нуля возникают при \(a>-1\).
+\end{teacheranswer}
+
+\begin{teacheranswer}[Знаменатель и ответ]
+  \[
+    D(x_1)=(a+1)^2-(a+1)-a=a^2,
+  \]
+  поэтому исключается \(a=0\).
+  \[
+    D(x_2)=\frac{(a+1)^2}{9}+\frac{a+1}{3}-a
+           =\frac{(a-2)^2}{9},
+  \]
+  поэтому исключается \(a=2\). Ответ:
+  \[
+    \boxed{a\in(-1,+\infty)\setminus\{0,2\}}.
+  \]
+\end{teacheranswer}
+
+\section*{Решение задания 4}
+
+\begin{teacheranswer}[Числитель]
+  Из \(3|x|-x=a+2\) получаем
+  \[
+    x_1=\frac{a+2}{2},
+    \qquad
+    x_2=-\frac{a+2}{4}.
+  \]
+  Оба нуля существуют и различны при \(a>-2\).
+\end{teacheranswer}
+
+\begin{teacheranswer}[Знаменатель и ответ]
+  \[
+    D(x_1)=\frac{a(a-2)}4,
+    \qquad
+    D(x_2)=\frac{(a-2)(a-6)}{16}.
+  \]
+  Исключаются \(a=0,2,6\). Ответ:
+  \[
+    \boxed{a\in(-2,+\infty)\setminus\{0,2,6\}}.
+  \]
+\end{teacheranswer}
+
+\begin{criterionbox}
+  Значение \(a=2\) возникает при проверке обоих кандидатов, но в итоговом
+  множестве исключается один раз.
+\end{criterionbox}
+
+\section*{Задания 5 и 6}
+
+\begin{teacheranswer}[Задание 5]
+  Условие \(a>-2\) правильно описывает только число нулей числителя. Решение
+  становится неполным в момент, когда ученик не проверяет эти нули в
+  знаменателе. Правильный ответ:
+  \[
+    \boxed{a\in(-2,+\infty)\setminus\{-1,0,3,8\}}.
+  \]
+\end{teacheranswer}
+
+\begin{teacheranswer}[Задание 6]
+  \[
+    \begin{array}{c|c}
+      a<-2 & 0\text{ корней},\\
+      a=-2 & 1\text{ корень},\\
+      a\in\{-1,0,3,8\} & 1\text{ корень},\\
+      a>-2,\ a\notin\{-1,0,3,8\} & 2\text{ корня}.
+    \end{array}
+  \]
+\end{teacheranswer}
+
+\section*{Решение задания 7*}
+
+\begin{teacheranswer}[Исследуем числитель]
+  При \(x\ge a\):
+  \[
+    2(x-a)-x-2=0
+    \quad\Longrightarrow\quad
+    x_1=2a+2,
+    \qquad a\ge-2.
+  \]
+  При \(x<a\):
+  \[
+    2(a-x)-x-2=0
+    \quad\Longrightarrow\quad
+    x_2=\frac{2a-2}{3},
+    \qquad a>-2.
+  \]
+  Два различных нуля возникают при \(a>-2\).
+\end{teacheranswer}
+
+\begin{teacheranswer}[Проверяем знаменатель]
+  Знаменатель равен нулю при \(x=\pm1\).
+  Для \(x_1=2a+2\) получаем \(a=-\dfrac32,-\dfrac12\).
+  Для \(x_2=\dfrac{2a-2}{3}\) получаем \(a=-\dfrac12,\dfrac52\).
+  Ответ:
+  \[
+    \boxed{
+      a\in(-2,+\infty)\setminus
+      \left\{-\frac32,-\frac12,\frac52\right\}
+    }.
+  \]
+\end{teacheranswer}
+
+\begin{resultbox}[Краткие ответы]
+  \begin{enumerate}
+    \item \(x=-3\).
+    \item \(b<0\): 0; \(b=0\): 1; \(b>0\): 2.
+    \item \(a\in(-1,+\infty)\setminus\{0,2\}\).
+    \item \(a\in(-2,+\infty)\setminus\{0,2,6\}\).
+    \item \(a\in(-2,+\infty)\setminus\{-1,0,3,8\}\).
+    \item \(0,1,1,2\) корня по строкам таблицы.
+    \item \(a\in(-2,+\infty)\setminus
+      \left\{-\dfrac32,-\dfrac12,\dfrac52\right\}\).
+  \end{enumerate}
+\end{resultbox}
