@@ -9,12 +9,19 @@
 \setdefaultlanguage{russian}
 
 \IfFontExistsTF{Times New Roman}
-  {\setmainfont{Times New Roman}}
-  {\setmainfont{Tinos}}
+  {\setmainfont{Times New Roman}%
+   \newfontfamily\cyrillicfont{Times New Roman}}
+  {\setmainfont{Tinos}%
+   % У некоторых установок Tinos отсутствует OpenType-тег Cyrillic,
+   % хотя сами кириллические глифы присутствуют. Явная семья не даёт
+   % Polyglossia ошибочно отклонить такой шрифт.
+   \newfontfamily\cyrillicfont{Tinos}}
 
 \IfFontExistsTF{Arial}
-  {\setsansfont{Arial}}
-  {\setsansfont{Arimo}}
+  {\setsansfont{Arial}%
+   \newfontfamily\cyrillicfontsf{Arial}}
+  {\setsansfont{Arimo}%
+   \newfontfamily\cyrillicfontsf{Arimo}}
 
 \IfFontExistsTF{Consolas}
   {\setmonofont{Consolas}}
@@ -189,6 +196,22 @@
   \begin{tikzpicture}
     \draw[draw=GrayLine] (0,0) rectangle (\linewidth,#1);
   \end{tikzpicture}
+}
+
+\newcommand{\drawingbox}[1][4cm]{%
+  \par\vspace{0.15em}\noindent
+  \begin{tikzpicture}
+    \draw[draw=GrayLine,line width=0.45pt]
+      (0,0) rectangle (\linewidth,#1);
+    \node[
+      anchor=north west,
+      fill=white,
+      inner xsep=1.5mm,
+      inner ysep=0.5mm,
+      font=\scriptsize\sffamily,
+      text=GrayText
+    ] at (2mm,#1) {Чертёж};
+  \end{tikzpicture}%
 }
 
 \newcommand{\logicarrow}{\;\Longrightarrow\;}

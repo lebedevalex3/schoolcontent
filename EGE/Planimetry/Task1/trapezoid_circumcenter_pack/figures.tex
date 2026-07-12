@@ -35,6 +35,7 @@
 
 % -------------------------------------------------
 % 2. Достроение трапеции до треугольника
+% Ученик сам продлевает AB и DC и ставит точку N.
 % -------------------------------------------------
 \newcommand{\hiddentrianglefigure}{%
 \begin{center}
@@ -45,17 +46,17 @@
   \coordinate (A) at ($(B)!0.5!(N)$);
   \coordinate (D) at ($(C)!0.5!(N)$);
 
-  % Продолжения NA и ND — тонкие, вспомогательные
-  \draw[geo main] (A)--(N) (D)--(N);
-
-  % Стороны трапеции ABCD — жирные
+  % Только стороны трапеции — жирные
   \draw[geo strong] (A)--(B)--(C)--(D)--cycle;
 
   \node[geo point,label={[geo label]left:$A$}] at (A) {};
   \node[geo point,label={[geo label]below left:$B$}] at (B) {};
   \node[geo point,label={[geo label]below right:$C$}] at (C) {};
   \node[geo point,label={[geo label]right:$D$}] at (D) {};
-  \node[geo point,label={[geo label]above:$N$}] at (N) {};
+
+  % Невидимая точка выше трапеции — расширяет bounding box,
+  % чтобы ученик мог дорисовать точку N и продолжения AB, DC.
+  \path (3.31, 7);
 \end{tikzpicture}
 \end{center}%
 }
@@ -89,7 +90,7 @@
 % -------------------------------------------------
 \newcommand{\perpendicularbisectorfigure}{%
 \begin{center}
-\begin{tikzpicture}[scale=0.86,every node/.style={geo label}]
+\begin{tikzpicture}[scale=0.72,every node/.style={geo label}]
   \coordinate (B) at (0,0);
   \coordinate (N) at (6,0);
   \coordinate (A) at (3,0);
@@ -116,7 +117,7 @@
 % -------------------------------------------------
 \newcommand{\circumcenterfigure}{%
 \begin{center}
-\begin{tikzpicture}[scale=0.60,every node/.style={geo label}]
+\begin{tikzpicture}[scale=0.48,every node/.style={geo label}]
   \coordinate (B) at (0,0);
   \coordinate (C) at (8,0);
   \coordinate (N) at (3.31,9.615);
@@ -198,7 +199,7 @@
 % -------------------------------------------------
 \newcommand{\centralinscribedfigure}{%
 \begin{center}
-\begin{tikzpicture}[scale=0.60,every node/.style={geo label}]
+\begin{tikzpicture}[scale=0.42,every node/.style={geo label}]
   \coordinate (B) at (0,0);
   \coordinate (C) at (8,0);
   \coordinate (N) at (3.31,9.615);
@@ -214,12 +215,12 @@
   \node[geo center point,label={[geo label]below right:$M$}] at (M) {};
 
   % 64° при C — одной дужкой (данное из условия)
-  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=7mm,angle eccentricity=0.7]
+  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=5mm,angle eccentricity=1.22]
     {angle=N--C--B};
   % 128° при M — двумя дужками (ответ на вопрос 3)
-  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=9mm,angle eccentricity=0.7]
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=5.5mm,angle eccentricity=1.42]
     {angle=N--M--B};
-  \pic[geo angle,angle radius=10mm]
+  \pic[geo angle,angle radius=6.5mm]
     {angle=N--M--B};
 \end{tikzpicture}
 \end{center}%
@@ -230,7 +231,7 @@
 % -------------------------------------------------
 \newcommand{\trianglebmnfigure}{%
 \begin{center}
-\begin{tikzpicture}[scale=0.68,every node/.style={geo label}]
+\begin{tikzpicture}[scale=0.45,every node/.style={geo label}]
   \coordinate (B) at (0,0);
   \coordinate (M) at (4,4);
   \coordinate (N) at (3.31,9.615);
@@ -240,7 +241,7 @@
   \node[geo center point,label={[geo label]right:$M$}] at (M) {};
   \node[geo point,label={[geo label]above:$N$}] at (N) {};
 
-  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=0.7]
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=5mm,angle eccentricity=1.42]
     {angle=N--M--B};
 
   \draw[geo equal mark] ($(M)!0.48!(B)$) ++(-0.10,0.10)--++(0.20,-0.20);
