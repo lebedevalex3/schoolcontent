@@ -45,8 +45,11 @@
   \coordinate (A) at ($(B)!0.5!(N)$);
   \coordinate (D) at ($(C)!0.5!(N)$);
 
-  \draw[geo main] (B)--(N)--(C)--cycle;
-  \draw[geo strong] (A)--(D);
+  % Продолжения NA и ND — тонкие, вспомогательные
+  \draw[geo main] (A)--(N) (D)--(N);
+
+  % Стороны трапеции ABCD — жирные
+  \draw[geo strong] (A)--(B)--(C)--(D)--cycle;
 
   \node[geo point,label={[geo label]left:$A$}] at (A) {};
   \node[geo point,label={[geo label]below left:$B$}] at (B) {};
@@ -77,15 +80,6 @@
   \node[geo point,label={[geo label]below right:$C$}] at (C) {};
   \node[geo point,label={[geo label]right:$D$}] at (D) {};
   \node[geo point,label={[geo label]above:$N$}] at (N) {};
-
-  % Равные части стороны BN
-  \draw[geo equal mark] ($(B)!0.58!(A)$) ++(-0.11,0.04) -- ++(0.22,-0.08);
-  \draw[geo equal mark] ($(A)!0.42!(N)$) ++(-0.11,0.04) -- ++(0.22,-0.08);
-  % Равные части стороны CN (двойные засечки)
-  \draw[geo equal mark] ($(C)!0.58!(D)$) ++(-0.10,-0.05) -- ++(0.20,0.10);
-  \draw[geo equal mark] ($(C)!0.58!(D)$) ++(-0.16,-0.08) -- ++(0.20,0.10);
-  \draw[geo equal mark] ($(D)!0.42!(N)$) ++(-0.10,-0.05) -- ++(0.20,0.10);
-  \draw[geo equal mark] ($(D)!0.42!(N)$) ++(-0.16,-0.08) -- ++(0.20,0.10);
 \end{tikzpicture}
 \end{center}%
 }
@@ -219,10 +213,14 @@
   \node[geo point,label={[geo label]above:$N$}] at (N) {};
   \node[geo center point,label={[geo label]below right:$M$}] at (M) {};
 
-  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=8mm,angle eccentricity=1.35]
-    {angle=B--C--N};
-  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=10mm,angle eccentricity=1.24]
-    {angle=B--M--N};
+  % 64° при C — одной дужкой (данное из условия)
+  \pic[geo angle,"$64^\circ$"{geo angle label},angle radius=7mm,angle eccentricity=0.7]
+    {angle=N--C--B};
+  % 128° при M — двумя дужками (ответ на вопрос 3)
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=9mm,angle eccentricity=0.7]
+    {angle=N--M--B};
+  \pic[geo angle,angle radius=10mm]
+    {angle=N--M--B};
 \end{tikzpicture}
 \end{center}%
 }
@@ -237,17 +235,13 @@
   \coordinate (M) at (4,4);
   \coordinate (N) at (3.31,9.615);
 
-  \draw[geo main] (B)--(M)--(N)--cycle;
+  \draw[geo main] (N)--(M)--(B)--cycle;
   \node[geo point,label={[geo label]below left:$B$}] at (B) {};
   \node[geo center point,label={[geo label]right:$M$}] at (M) {};
   \node[geo point,label={[geo label]above:$N$}] at (N) {};
 
-  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=1.30]
-    {angle=B--M--N};
-  \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=1.28]
-    {angle=M--B--N};
-  \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=7mm,angle eccentricity=1.28]
-    {angle=B--N--M};
+  \pic[geo angle,"$128^\circ$"{geo angle label},angle radius=7.5mm,angle eccentricity=0.7]
+    {angle=N--M--B};
 
   \draw[geo equal mark] ($(M)!0.48!(B)$) ++(-0.10,0.10)--++(0.20,-0.20);
   \draw[geo equal mark] ($(M)!0.48!(N)$) ++(-0.10,-0.02)--++(0.20,0.04);
@@ -275,12 +269,15 @@
   \node[geo center point,label={[geo label]right:$M$}] at (M) {};
   \node[geo point,label={[geo label]above:$N$}] at (N) {};
 
+  % 26° (MBN) — одной дужкой
   \pic[geo angle,"$26^\circ$"{geo angle label},angle radius=9mm,angle eccentricity=1.28]
-    {angle=N--B--M};
+    {angle=M--B--N};
+  % 45° (CBM) — двумя дужками
   \pic[geo angle,"$45^\circ$"{geo angle label},angle radius=15mm,angle eccentricity=1.18]
-    {angle=M--B--C};
-  \pic[draw=Primary,line width=0.75pt,"$71^\circ$"{geo angle label},angle radius=22mm,angle eccentricity=1.10]
-    {angle=N--B--C};
+    {angle=C--B--M};
+  \pic[geo angle,angle radius=14mm]
+    {angle=C--B--M};
+  % 71° (CBN) убрано — это то, что ученик должен сложить
 \end{tikzpicture}
 \end{center}%
 }
