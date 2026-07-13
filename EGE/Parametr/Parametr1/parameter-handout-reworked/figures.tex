@@ -38,7 +38,7 @@
   \begin{center}
     \begin{tikzpicture}[x=1.55cm,y=1.15cm]
       \draw[par axis] (-1.05,0) -- (4.85,0) node[right] {$x$};
-      \draw[par axis] (0,-1.05) -- (0,4.65) node[above] {$y$};
+      \draw[par axis] (0,-1.05) -- (0,4.65) node[left] {$y$};
       \draw[par graph] (-0.86,4.3) -- (0,0) -- (4.35,4.35);
       \node[par branch label,anchor=east] at (-0.52,3.35) {$y=-5x$};
       \node[par branch label,anchor=west] at (3.05,3.25) {$y=x$};
@@ -57,11 +57,9 @@
       \node[par intersection] at (\xright,\blevel) {};
       \draw[par guide] (\xleft,\blevel) -- (\xleft,0);
       \draw[par guide] (\xright,\blevel) -- (\xright,0);
-      \node[par graph label,below=4pt] at (\xleft,0) {$-\dfrac b5$};
-      \node[par graph label,below=4pt] at (\xright,0) {$b$};
       \node[par level label,anchor=west,text=Secondary] at (3.25,2.58)
         {$b>0$: 2 корня};
-      \node[par graph heading,anchor=west] at (-0.95,4.75)
+      \node[par graph heading,anchor=west] at (-0.5,5.75)
         {$y=3|x|-2x$ и горизонтальные прямые $y=b$};
     \end{tikzpicture}
   \end{center}
@@ -71,13 +69,13 @@
   \begin{center}
     \begin{tikzpicture}[x=1.55cm,y=1.15cm]
       \draw[par axis] (-1.05,0) -- (4.85,0) node[right] {$x$};
-      \draw[par axis] (0,-1.05) -- (0,4.65) node[above] {$y$};
+      \draw[par axis] (0,-1.05) -- (0,4.65) node[left] {$y$};
       \draw[par graph] (-0.86,4.3) -- (0,0) -- (4.35,4.35);
       \node[par branch label,anchor=east] at (-0.52,3.35) {$y=-5x$};
       \node[par branch label,anchor=west] at (3.05,3.25) {$y=x$};
-      \node[par graph heading,anchor=west] at (-0.95,4.75)
+      \node[par graph heading,anchor=west,fill=white,inner sep=2pt] at (0.80,4.85)
         {$y=3|x|-2x$};
-      \node[par graph caption,anchor=west,text width=6.4cm] at (1.05,-0.72)
+      \node[par graph caption,anchor=west,text width=6.4cm] at (1.05,-1.0)
         {Проведите три горизонтальные прямые: ниже вершины, через вершину и выше вершины.};
     \end{tikzpicture}
   \end{center}

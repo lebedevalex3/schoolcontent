@@ -222,6 +222,13 @@
   \makebox[#1]{\hrulefill}%
 }
 
+% Пустой бланк для числителя/знаменателя дроби: резервирует ширину, но НЕ
+% рисует линию (иначе она наложится на фракционную черту). Используйте
+% \answerfraction{...} вместо \answerblank{...} внутри \frac/\dfrac.
+\newcommand{\answerfraction}[1][25mm]{%
+  \makebox[#1]{}%
+}
+
 \newcommand{\longanswerline}[1][Ответ]{%
   \par\vspace{0.25em}
   \noindent\textbf{#1:}\ \hrulefill\par
