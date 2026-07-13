@@ -4,24 +4,129 @@
 
 \newcommand{\logchainstudentfigure}{%
   \begin{center}
-    \begin{tikzpicture}[
-      node distance=2mm,
-      box/.style={draw=Primary,fill=PrimaryLight,rounded corners=1.7mm,
-        minimum height=11mm,align=center,font=\small\sffamily,inner xsep=3mm},
-      arrow/.style={-{Stealth[length=2.6mm]},draw=Accent,line width=0.9pt}
-    ]
-      \node[box,minimum width=13mm] (x) {$x$};
-      \node[box,right=of x,minimum width=21mm] (q) {$x^2-4$};
-      \node[box,right=of q,minimum width=25mm] (abs) {$|x^2-4|$};
-      \node[box,right=of abs,text width=31mm] (y) {$y=\lg|x^2-4|$};
-      \node[box,right=of y,text width=24mm] (t) {$t=y^2$};
-      \draw[arrow] (x)--(q);
-      \draw[arrow] (q)--(abs);
-      \draw[arrow] (abs)--(y);
-      \draw[arrow] (y)--(t);
-      \node[font=\footnotesize\sffamily,text=GrayText,align=center,below=5mm of abs]
-        {Сначала сворачиваем выражение, затем возвращаемся\\в обратном порядке, не теряя условий.};
-    \end{tikzpicture}
+    \small
+    \setlength{\fboxsep}{5pt}%
+    \begin{minipage}{0.97\textwidth}
+      \centering
+      \colorbox{PrimaryLight}{%
+        \parbox{0.92\textwidth}{%
+          \centering
+          \(\displaystyle
+            \lg^4((x^2-4)^2)-\lg^2((x^2-4)^4)\ge192
+          \)
+        }%
+      }
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{применяем формулы с модулем}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{%
+        \parbox{0.92\textwidth}{%
+          \centering
+          \(\displaystyle
+            \begin{gathered}
+              \text{После применения формул с модулем:}\\[1mm]
+              \answerblank[118mm]
+            \end{gathered}
+          \)
+        }%
+      }
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{первая замена: \(y=\answerblank[34mm]\)}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{%
+        \parbox{0.92\textwidth}{%
+          \centering
+          \(\displaystyle
+            \begin{gathered}
+              \text{Неравенство относительно }y:\\[1mm]
+              \answerblank[95mm]
+            \end{gathered}
+          \)
+        }%
+      }
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{вторая замена: \(t=\answerblank[18mm]\),
+        \(t\answerblank[8mm]0\)}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{%
+        \parbox{0.92\textwidth}{%
+          \centering
+          \(\displaystyle
+            \begin{gathered}
+              \text{Квадратное неравенство:}\\[1mm]
+              \answerblank[65mm]
+            \end{gathered}
+          \)
+        }%
+      }
+
+      \vspace{2mm}
+      {\sffamily\color{GrayText}После решения возвращаемся в обратном порядке:}
+      \[
+        t\longrightarrow y\longrightarrow
+        \lg|x^2-4|\longrightarrow |x^2-4|\longrightarrow x.
+      \]
+    \end{minipage}
+  \end{center}
+}
+
+\newcommand{\logchainteacherfigure}{%
+  \begin{center}
+    \small
+    \setlength{\fboxsep}{5pt}%
+    \begin{minipage}{0.97\textwidth}
+      \centering
+      \colorbox{PrimaryLight}{\parbox{0.92\textwidth}{\centering
+        \(\displaystyle
+          \lg^4((x^2-4)^2)-\lg^2((x^2-4)^4)\ge192
+        \)}}
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{применяем формулы с модулем}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{\parbox{0.92\textwidth}{\centering
+        \(\displaystyle
+          \bigl(2\lg|x^2-4|\bigr)^4
+          -\bigl(4\lg|x^2-4|\bigr)^2\ge192
+        \)}}
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{первая замена: \(y=\lg|x^2-4|\)}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{\parbox{0.92\textwidth}{\centering
+        \(\displaystyle
+          (2y)^4-(4y)^2\ge192
+          \quad\Longleftrightarrow\quad y^4-y^2-12\ge0
+        \)}}
+
+      \vspace{1mm}
+      {\color{Accent}\(\Downarrow\)}\quad
+      \textsf{вторая замена: \(t=y^2\), \(t\ge0\)}
+      \vspace{1mm}
+
+      \colorbox{PrimaryLight}{\parbox{0.92\textwidth}{\centering
+        \(\displaystyle t^2-t-12\ge0\)}}
+
+      \vspace{2mm}
+      {\sffamily\color{GrayText}После решения возвращаемся в обратном порядке:}
+      \[
+        t\longrightarrow y\longrightarrow
+        \lg|x^2-4|\longrightarrow |x^2-4|\longrightarrow x.
+      \]
+    \end{minipage}
   \end{center}
 }
 

@@ -6,6 +6,33 @@
   {Степени логарифма, модуль и две последовательные замены}
 \studentnameblock
 
+\begin{checkpointbox}[Входная диагностика: 4 минуты]
+  Выполните задания без подробного решения.
+  \begin{enumerate}[label=\textbf{\arabic*.},itemsep=0.35em]
+    \item Вычислите:
+      \[
+        \lg^2 100=\answerblank[24mm].
+      \]
+    \item Найдите область допустимых значений:
+      \[
+        \lg((x-1)^2),\qquad x\in\answerblank[52mm].
+      \]
+    \item Решите неравенство:
+      \[
+        y^2\ge9,\qquad y\in\answerblank[60mm].
+      \]
+    \item Решите неравенство:
+      \[
+        x^2\ge16,\qquad x\in\answerblank[60mm].
+      \]
+  \end{enumerate}
+\end{checkpointbox}
+
+\begin{notebox}[Как использовать диагностику]
+  Это не оценочная работа. Отметьте задания, которые вызвали затруднение,
+  чтобы понять, какой переход нужно повторить перед основной задачей.
+\end{notebox}
+
 \begin{problembox}
   Решите неравенство
   \[
@@ -27,42 +54,43 @@
   \]
 \end{notebox}
 
-\notationtrianglefigure
-
 \section{Учимся читать похожие записи}
 
-\begin{fillbox}[Три разных математических объекта]
-  Заполните пропуски:
-  \[
-    \lg^2 A=\answerblank[38mm],
-    \qquad
-    \lg(A^2)=\answerblank[38mm],
-  \]
-  \[
-    \log_2 A=\answerblank[70mm].
-  \]
+\begin{fillbox}[Что означает число \(2\) в каждой записи?]
+  Заполните таблицу: прочитайте каждую запись и укажите роль числа \(2\).
+  \begin{center}
+    \renewcommand{\arraystretch}{1.65}
+    \begin{tabularx}{0.96\textwidth}{@{}
+      >{\centering\arraybackslash}p{0.18\textwidth}
+      >{\raggedright\arraybackslash}p{0.39\textwidth}
+      >{\raggedright\arraybackslash}X@{}}
+      \toprule
+      \rowcolor{TableHeader}
+      Запись & Как прочитать & Что означает число \(2\) \\
+      \midrule
+      \(\lg^2 A\)
+        & \answerblank[48mm]
+        & \answerblank[43mm] \\
+      \addlinespace[0.35em]
+      \(\lg(A^2)\)
+        & \answerblank[48mm]
+        & \answerblank[43mm] \\
+      \addlinespace[0.35em]
+      \(\log_2 A\)
+        & \answerblank[48mm]
+        & \answerblank[43mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
 \end{fillbox}
 
-\begin{trainingtask}[Проверьте на конкретном числе]
-  Вычислите:
-  \[
-    \lg^2 1000=\answerblank[28mm],
-    \qquad
-    \lg(1000^2)=\answerblank[28mm].
-  \]
-  Равны ли эти выражения? \choicebox\ да \qquad \choicebox\ нет.
+\begin{notebox}[Самопроверка]
+  Сравните свои ответы со схемой. Если обнаружили неточность, исправьте её
+  другим цветом.
+  \notationtrianglefigure
+\end{notebox}
 
-  Объясните, что именно возводится в квадрат в каждой записи.
-  \writinglines{2}
-\end{trainingtask}
 
-\begin{thinkbox}[Маршрут решения]
-  В основной задаче мы будем последовательно выделять всё более простое
-  выражение, а затем возвращаться к исходной переменной.
-  \logchainstudentfigure
-\end{thinkbox}
-
-\newpage
 \section{Область допустимых значений}
 
 Оба аргумента логарифмов должны быть строго положительными. Заполните цепочку:
@@ -94,18 +122,74 @@
 
 \section{Почему появляется модуль}
 
-Для любого \(z\ne0\):
+\stepheading{Шаг 1}{Замечаем проблему на конкретном значении}
+
+Выражение \(x^2-4\) может быть отрицательным. Подставьте \(x=0\):
 \[
-  z^2=|z|^2,
+  x^2-4=\answerblank[16mm],
   \qquad
-  z^4=|z|^4.
+  (x^2-4)^2=\answerblank[16mm]>0.
 \]
-Поскольку \(|z|>0\), можно применять свойство логарифма степени:
+Какое выражение определено при \(x=0\)?
 \[
-  \lg(z^2)=2\lg|z|,
+  \square\; \lg((x^2-4)^2)
   \qquad
-  \lg(z^4)=4\lg|z|.
+  \square\; 2\lg(x^2-4).
 \]
+Объясните, почему второе выражение может не иметь смысла:
+\writinglines{1}
+
+\stepheading{Шаг 2}{Сравниваем положительное и отрицательное значения}
+
+\begin{center}
+  \renewcommand{\arraystretch}{1.55}
+  \begin{tabularx}{0.94\textwidth}{@{}
+    >{\centering\arraybackslash}p{0.12\textwidth}
+    >{\centering\arraybackslash}p{0.22\textwidth}
+    >{\centering\arraybackslash}p{0.33\textwidth}
+    >{\centering\arraybackslash}X@{}}
+    \toprule
+    \rowcolor{TableHeader}
+    \(z\) & \(\lg(z^2)\) & Определено ли \(2\lg z\)? & \(2\lg|z|\) \\
+    \midrule
+    \(10\)  & \(2\) & да  & \(2\) \\
+    \addlinespace[0.25em]
+    \(-10\) & \answerblank[13mm] & \answerblank[18mm] & \answerblank[13mm] \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+Какая формула работает и при положительном, и при отрицательном \(z\)?
+\[
+  \square\; \lg(z^2)=2\lg z
+  \qquad
+  \square\; \lg(z^2)=2\lg|z|.
+\]
+
+\stepheading{Шаг 3}{Выводим общее правило}
+
+Если \(z\ne0\), то \(|z|>0\). Дополните вывод:
+\[
+  z^2=\bigl(\answerblank[16mm]\bigr)^2,
+\]
+\[
+  \lg(z^2)
+  =\lg\bigl((\answerblank[16mm])^2\bigr)
+  =2\lg\answerblank[16mm],
+\]
+\[
+  \lg(z^4)
+  =\lg\bigl((\answerblank[16mm])^4\bigr)
+  =4\lg\answerblank[16mm].
+\]
+
+\begin{notebox}[Почему модуль необходим]
+  Модуль заменяет число \(z\) положительным числом \(|z|\), не изменяя его
+  чётную степень. Поэтому свойство логарифма можно применить, не исключая
+  отрицательные значения \(z\).
+\end{notebox}
+
+\stepheading{Шаг 4}{Применяем правило к основной задаче}
 
 \begin{fillbox}[Применяем правило к нашей задаче]
   \[
@@ -122,12 +206,25 @@
     \lg((x^2-4)^4)=4\lg(x^2-4)
   \]
   требует \(x^2-4>0\) и поэтому не работает на всей ОДЗ исходного выражения.
+  При этом исходные логарифмы определены на всём промежутке \(-2<x<2\);
+  из общей области допустимых значений исключаются только точки \(x=\pm2\).
   Корректная запись содержит \(\lvert x^2-4\rvert\).
 \end{warningbox}
 
+\begin{thinkbox}[Карта преобразования исходного неравенства]
+  Мы выяснили, как правильно преобразовать оба логарифма. Теперь вернёмся к
+  исходному неравенству. Заполняйте карту постепенно по мере решения, а не
+  пытайтесь завершить её сразу.
+  \logchainstudentfigure
+\end{thinkbox}
+
 \section{Первая замена}
 
-Положим
+Какое выражение повторяется в преобразованном неравенстве?
+\[
+  \answerblank[65mm].
+\]
+Обозначим его через \(y\):
 \[
   y=\lg|x^2-4|.
 \]
@@ -166,37 +263,26 @@
   y^4-y^2-\answerblank[14mm]\ge0.
 \]
 
-\section{Вторая замена и степень логарифма}
+\section{Ищем вторую замену}
 
 \begin{fillbox}[Вводим квадрат повторяющегося выражения]
-  Положим
+  Заметим:
   \[
-    t=y^2.
+    y^4=\bigl(\answerblank[16mm]\bigr)^2.
   \]
-  Так как \(y=\lg|x^2-4|\), то
+  Какое выражение повторяется в неравенстве \(y^4-y^2-12\ge0\)?
   \[
-    t=\bigl(\lg|x^2-4|\bigr)^2
-    =\lg^2|x^2-4|.
+    \answerblank[25mm].
   \]
-  Обязательно укажите ограничение:
+  Введите замену и укажите ограничение:
   \[
+    t=\answerblank[20mm],
+    \qquad
     t\answerblank[10mm]0.
   \]
 \end{fillbox}
 
-\begin{notebox}[Как читать замену]
-  \[
-    t=\lg^2|x^2-4|
-  \]
-  означает
-  \[
-    t=\bigl(\lg|x^2-4|\bigr)^2.
-  \]
-  Это \textbf{не} логарифм по основанию \(2\) и \textbf{не}
-  \(\lg\bigl(|x^2-4|^2\bigr)\).
-\end{notebox}
-
-Получаем квадратное неравенство:
+При замене \(t=y^2\) получаем квадратное неравенство:
 \[
   t^2-t-12\ge0.
 \]
@@ -214,8 +300,17 @@
   t\ge\answerblank[14mm].
 \]
 
-\newpage
+
 \section{Возвращаемся к логарифму}
+
+Какое множество задаёт неравенство \(y^2\ge4\)? Отметьте верный вариант:
+\[
+  \square\; y\ge2
+  \qquad
+  \square\; -2\le y\le2
+  \qquad
+  \square\; y\le-2\ \text{или}\ y\ge2.
+\]
 
 \begin{checkpointbox}[Не потеряйте отрицательную ветвь]
   \[
@@ -233,21 +328,24 @@
   \]
 \end{checkpointbox}
 
-Отметьте верный вариант:
-\[
-  \square\; y\ge2
-  \qquad
-  \square\; -2\le y\le2
-  \qquad
-  \square\; y\le-2\ \text{или}\ y\ge2.
-\]
-
 Возвращаемся к \(y=\lg|x^2-4|\):
 \[
   \lg|x^2-4|\le-2
   \qquad\text{или}\qquad
   \lg|x^2-4|\ge2.
 \]
+
+\begin{thinkbox}[Почему знак неравенства сохраняется?]
+  Основание десятичного логарифма равно \(10\). Так как \(10>1\), функция
+  \(u\mapsto\lg u\):
+  \[
+    \square\; \text{возрастает}
+    \qquad
+    \square\; \text{убывает}.
+  \]
+  Поэтому при переходе от логарифма к его аргументу знак неравенства
+  \choicebox\ сохраняется \qquad \choicebox\ меняется.
+\end{thinkbox}
 
 \begin{fillbox}[Переходим от логарифма к его аргументу]
   \begin{center}
@@ -287,6 +385,8 @@
     \qquad\text{или}\qquad
     0<x^2-4\le\frac1{100}.
   \]
+  Почему значение \(x^2-4=0\) не входит ни в один из промежутков?
+  \writinglines{1}
   После прибавления \(4\):
   \[
     \frac{\answerblank[13mm]}{100}\le x^2<4
@@ -405,10 +505,11 @@
   \end{center}
 \end{checkpointbox}
 
-\section{Восстанавливаем решение без подсказок}
+\section{Восстанавливаем решение по краткому плану}
 
 \begin{practicebox}[Полное решение]
-  Запишите решение связным текстом. В решении должны присутствовать:
+  Закройте предыдущие страницы и запишите краткое связное решение. Используйте
+  план только для проверки полноты:
   \begin{enumerate}
     \item расшифровка степени логарифма и ОДЗ;
     \item формулы с модулем;
@@ -417,11 +518,11 @@
     \item обе ветви для \(|x^2-4|\);
     \item точный ответ с радикалами.
   \end{enumerate}
-  \workarea{65mm}
+  \workarea{120mm}
 \end{practicebox}
 
 \begin{questionsbox}[Самопроверка]
-  \begin{itemize}
+  \begin{itemize}[label=\choicebox,leftmargin=2.4em]
     \item Я различаю \(\lg^2 A\), \(\lg(A^2)\) и \(\log_2 A\).
     \item В формулах \(\lg(z^2)=2\lg|z|\) и \(\lg(z^4)=4\lg|z|\) я сохранил модуль.
     \item Я указал \(t\ge0\).
