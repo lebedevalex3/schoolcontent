@@ -1,0 +1,360 @@
+% =================================================
+% Ученический рабочий лист
+% =================================================
+
+\worksheettitle
+  {Логарифм: в какую степень?}
+  {Рабочий лист: открываем новое понятие через степени}
+
+\studentnameblock
+
+\begin{checkpointbox}[Входная диагностика: 4 минуты]
+  Заполните пропуски без калькулятора.
+  \begin{enumerate}[label=\textbf{\arabic*.},itemsep=0.48em]
+    \item \(2^{\answerblank[13mm]}=32\).
+    \item \(10^{\answerblank[13mm]}=0{,}01\).
+    \item \(3^{-2}=\answerblank[22mm]\).
+    \item \(25^{\frac12}=\answerblank[18mm]\).
+  \end{enumerate}
+\end{checkpointbox}
+
+\begin{reflectionbox}[Что уже умеем]
+  Во всех четырёх заданиях показатель степени показывает, сколько раз и
+  каким способом используется основание. Отметьте, какие показатели вы
+  узнали уверенно:
+  \choicebox\ натуральный\qquad
+  \choicebox\ нулевой\qquad
+  \choicebox\ отрицательный\qquad
+  \choicebox\ дробный.
+\end{reflectionbox}
+
+\section{Показатель можно подобрать не всегда}
+
+Сначала решим два уравнения:
+\[
+  2^x=8,
+  \qquad
+  2^x=\frac14.
+\]
+
+\begin{fillbox}[Подберите показатели]
+  \[
+    8=2^{\answerblank[12mm]}
+    \quad\Longrightarrow\quad
+    x=\answerblank[14mm],
+  \]
+  \[
+    \frac14=2^{\answerblank[12mm]}
+    \quad\Longrightarrow\quad
+    x=\answerblank[14mm].
+  \]
+\end{fillbox}
+
+Теперь рассмотрим уравнение
+\[
+  2^x=5.
+\]
+
+\begin{thinkbox}[Оцените корень до введения нового обозначения]
+  Используйте соседние степени двойки:
+  \[
+    2^{\answerblank[12mm]}=4<5<8=2^{\answerblank[12mm]}.
+  \]
+  Поэтому корень уравнения расположен между числами
+  \(\answerblank[12mm]\) и \(\answerblank[12mm]\).
+\end{thinkbox}
+
+\logmotivationworksheetfigure
+
+\begin{checkpointbox}[Что показывает рисунок]
+  \begin{enumerate}
+    \item Сколько точек пересечения имеют графики? \answerblank[18mm]
+    \item Следовательно, сколько корней имеет уравнение \(2^x=5\)?
+      \answerblank[18mm]
+    \item Можно ли по рисунку записать корень точно знакомым числом?
+      \answerblank[25mm]
+  \end{enumerate}
+\end{checkpointbox}
+
+Для точной записи этого корня вводят обозначение
+\[
+  x_0=\log_2 5.
+\]
+
+\begin{reflectionbox}[Проговорите смысл]
+  Дополните фразу:
+
+  \(\log_2 5\) --- это такой \answerblank[34mm] степени числа 2,
+  при котором получается число \answerblank[14mm].
+\end{reflectionbox}
+
+\Needspace{13\baselineskip}
+\section{Определение логарифма}
+
+\begin{fillbox}[Восстановите определение]
+  Логарифмом числа \(b\) по основанию \(a\) называют
+  \answerblank[42mm] степени, в которую нужно возвести число
+  \answerblank[14mm], чтобы получить число \answerblank[14mm].
+\end{fillbox}
+
+\logequivalenceworksheetfigure
+
+\begin{checkpointbox}[Главная формула]
+  Впишите одну и ту же букву в оба пропуска и завершите равносильность:
+  \[
+    \boxed{
+      \log_a b=\answerblank[12mm]
+      \quad\Longleftrightarrow\quad
+      a^{\answerfraction[12mm]}=b
+    }.
+  \]
+\end{checkpointbox}
+
+\begin{fillbox}[Роли чисел в записи]
+  В равенстве \(\log_a b=c\):
+  \begin{itemize}
+    \item \(a\) --- \answerblank[35mm] степени;
+    \item \(b\) --- число, которое нужно \answerblank[38mm];
+    \item \(c\) --- искомый \answerblank[35mm] степени.
+  \end{itemize}
+\end{fillbox}
+
+\begin{notebox}[Условия записи]
+  В вещественных числах логарифм рассматривают при
+  \[
+    a>0,\qquad a\ne1,\qquad b>0.
+  \]
+  В этом комплекте мы используем только корректные основания и аргументы.
+  Причины ограничений будут изучены отдельно.
+\end{notebox}
+
+\section{Переводим запись в обе стороны}
+
+\begin{fillbox}[Из степени в логарифм]
+  По образцу заполните правый столбец.
+
+  \begin{center}
+    \renewcommand{\arraystretch}{1.48}
+    \begin{tabularx}{\textwidth}{
+      >{\centering\arraybackslash}p{0.37\textwidth}
+      >{\centering\arraybackslash}p{0.10\textwidth}
+      >{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Степенная запись & & Логарифмическая запись \\
+      \midrule
+      \(2^3=8\) & \(\Longleftrightarrow\) & \(\log_2 8=3\) \\
+      \(5^2=25\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[9mm]}\answerfraction[16mm]=\answerblank[10mm]\) \\
+      \(10^{-3}=0{,}001\) & \(\Longleftrightarrow\) & \(\lg\answerblank[20mm]=\answerblank[12mm]\) \\
+      \(16^{\frac12}=4\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[10mm]}\answerfraction[13mm]=\answerblank[12mm]\) \\
+      \(\left(\frac13\right)^{-2}=9\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[14mm]}\answerfraction[13mm]=\answerblank[12mm]\) \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+\begin{fillbox}[Из логарифма в степень]
+  \begin{enumerate}
+    \item \(\log_4 64=3\quad\Longleftrightarrow\quad
+      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
+    \item \(\log_7 1=0\quad\Longleftrightarrow\quad
+      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
+    \item \(\log_{25}5=\dfrac12\quad\Longleftrightarrow\quad
+      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
+  \end{enumerate}
+\end{fillbox}
+
+\begin{reflectionbox}[Проверка перевода]
+  При переходе к логарифмической записи основание степени
+  \answerblank[25mm] основанием логарифма, показатель степени
+  \answerblank[25mm] значением логарифма, а результат возведения
+  \answerblank[25mm] аргументом логарифма.
+\end{reflectionbox}
+
+\Needspace{13\baselineskip}
+\section{Вычисляем логарифмы}
+
+\begin{methodintro}[Один вопрос вместо новой формулы]
+  Чтобы вычислить \(\log_a b\), спросите:
+  \begin{center}
+    \textbf{«В какую степень нужно возвести \(a\), чтобы получить \(b\)?»}
+  \end{center}
+\end{methodintro}
+
+\begin{fillbox}[Заполните таблицу рассуждений]
+  \begin{center}
+    \small
+    \renewcommand{\arraystretch}{1.55}
+    \begin{tabularx}{\textwidth}{
+      >{\centering\arraybackslash}p{0.19\textwidth}
+      >{\centering\arraybackslash}p{0.29\textwidth}
+      >{\centering\arraybackslash}p{0.25\textwidth}
+      >{\centering\arraybackslash}X}
+      \toprule
+      \rowcolor{TableHeader}
+      Выражение & Вопрос & Представление числа & Ответ \\
+      \midrule
+      \(\log_2 32\) & \(2^{?}=32\) & \(32=2^5\) & \(5\) \\
+      \(\log_5 1\) & \(5^{?}=1\) & \(1=5^{\answerfraction[8mm]}\) & \answerblank[10mm] \\
+      \(\log_3\dfrac1{27}\) & \(3^{?}=\dfrac1{27}\) & \(\dfrac1{27}=3^{\answerfraction[8mm]}\) & \answerblank[10mm] \\
+      \(\log_9 3\) & \(9^{?}=3\) & \(3=9^{\answerfraction[8mm]}\) & \answerblank[10mm] \\
+      \(\log_{\frac12}8\) & \(\left(\dfrac12\right)^{?}=8\) & \(8=\left(\dfrac12\right)^{\answerfraction[8mm]}\) & \answerblank[10mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+\begin{checkpointbox}[Что заметили]
+  Значение логарифма может быть:
+  \choicebox\ положительным;
+  \quad\choicebox\ нулём;
+  \quad\choicebox\ отрицательным;
+  \quad\choicebox\ дробным.
+\end{checkpointbox}
+
+\section{Решаем простейшие уравнения}
+
+\begin{fillbox}[Уравнение 1: неизвестно число под логарифмом]
+  \[
+    \log_2 x=6
+    \quad\Longleftrightarrow\quad
+    2^{\answerfraction[12mm]}=x
+    \quad\Longrightarrow\quad
+    x=\answerblank[20mm].
+  \]
+\end{fillbox}
+
+\begin{fillbox}[Уравнение 2: под логарифмом выражение]
+  \[
+    \log_5(x+1)=2
+    \quad\Longleftrightarrow\quad
+    x+1=\answerblank[20mm]
+    \quad\Longrightarrow\quad
+    x=\answerblank[20mm].
+  \]
+\end{fillbox}
+
+\begin{fillbox}[Уравнение 3: неизвестен показатель]
+  Уравнение \(3^x=10\) не решается подбором целого показателя. По
+  определению логарифма его точный корень равен
+  \[
+    x=\answerblank[36mm].
+  \]
+\end{fillbox}
+
+\begin{reflectionbox}[Точный ответ]
+  Объясните, почему запись \(x=\log_3 10\) является точным ответом, хотя
+  справа нет привычного целого или дробного числа.
+  \writinglines{2}
+\end{reflectionbox}
+
+\Needspace{12\baselineskip}
+\section{Найдите и исправьте ошибки}
+
+\begin{practicebox}[Ошибка 1]
+  Ученик написал:
+  \[
+    \log_4 64=16,
+    \qquad \text{потому что }4\cdot16=64.
+  \]
+  Какой вопрос нужно было задать? Запишите верное решение.
+  \workarea{30mm}
+\end{practicebox}
+
+\begin{practicebox}[Ошибка 2]
+  Из равенства \(2^5=32\) ученик получил \(\log_{32}2=5\).
+  Объясните, какие роли чисел перепутаны, и запишите верное равенство.
+  \workarea{28mm}
+\end{practicebox}
+
+\begin{practicebox}[Ошибка 3]
+  Ученик утверждает: «Логарифм не может быть отрицательным, потому что
+  степень --- это количество множителей». Опровергните утверждение одним
+  примером.
+  \workarea{28mm}
+\end{practicebox}
+
+\begin{checkpointbox}[Обязательная часть завершена]
+  Вы должны уметь:
+  \begin{itemize}
+    \item объяснить смысл записи \(\log_a b\);
+    \item переводить степенную запись в логарифмическую и обратно;
+    \item вычислять простые логарифмы через представление числа степенью;
+    \item записывать точный корень уравнения \(a^x=b\).
+  \end{itemize}
+\end{checkpointbox}
+
+\newpage
+\section*{Расширение и перенос}
+
+\section{Получаем первые общие равенства}
+
+\begin{fillbox}[Логарифм единицы]
+  Для любого допустимого основания \(a\):
+  \[
+    a^{\answerfraction[12mm]}=1
+    \quad\Longrightarrow\quad
+    \boxed{\log_a1=\answerblank[12mm]}.
+  \]
+\end{fillbox}
+
+\begin{fillbox}[Логарифм основания]
+  \[
+    a^{\answerfraction[12mm]}=a
+    \quad\Longrightarrow\quad
+    \boxed{\log_a a=\answerblank[12mm]}.
+  \]
+\end{fillbox}
+
+\begin{fillbox}[Обобщение]
+  \[
+    a^m=a^m
+    \quad\Longrightarrow\quad
+    \boxed{\log_a a^m=\answerblank[14mm]}.
+  \]
+\end{fillbox}
+
+\section{Восстановите полное рассуждение}
+
+\begin{practicebox}[Задание 1]
+  Вычислите \(\log_{\frac14}64\). Решение должно содержать:
+  \begin{enumerate}
+    \item вопрос о показателе степени;
+    \item представление числа 64 степенью основания \(\dfrac14\);
+    \item проверку полученного ответа.
+  \end{enumerate}
+  \workarea{48mm}
+\end{practicebox}
+
+\begin{practicebox}[Задание 2]
+  Решите уравнение
+  \[
+    \log_3(2x-1)=4.
+  \]
+  \workarea{40mm}
+\end{practicebox}
+
+\begin{practicebox}[Задание 3]
+  Запишите точный корень уравнения
+  \[
+    7^x=20
+  \]
+  и укажите два соседних целых числа, между которыми он расположен.
+  \workarea{38mm}
+\end{practicebox}
+
+\begin{reflectionbox}[Моё определение]
+  Не используя учебник, завершите предложение:
+
+  «Логарифм числа \(b\) по основанию \(a\) --- это
+  \answerblank[98mm]».
+\end{reflectionbox}
+
+\begin{questionsbox}[Перед завершением работы]
+  \begin{enumerate}
+    \item Что нужно проверить, чтобы убедиться в равенстве \(\log_a b=c\)?
+    \item Как из равенства \(a^c=b\) получить логарифмическую запись?
+    \item Почему \(\log_5 1=0\)?
+    \item Как записать точный корень уравнения \(11^x=6\)?
+  \end{enumerate}
+\end{questionsbox}

@@ -1,0 +1,136 @@
+% =================================================
+% TikZ-рисунки для комплекта «Логарифм: в какую степень?»
+% =================================================
+
+\newcommand{\logmotivationfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.35cm,y=0.68cm]
+      \draw[-{Stealth[length=2.5mm]},thick,color=GrayText] (-2.65,0) -- (3.55,0) node[right] {$x$};
+      \draw[-{Stealth[length=2.5mm]},thick,color=GrayText] (0,-0.45) -- (0,8.65) node[above] {$y$};
+
+      \foreach \x in {-2,-1,1,2,3}{
+        \draw[color=GrayLine] (\x,-0.12) -- (\x,0.12);
+        \node[below=2pt,color=GrayText,font=\small] at (\x,0) {$\x$};
+      }
+      \foreach \y in {1,2,4,5,8}{
+        \draw[color=GrayLine] (-0.11,\y) -- (0.11,\y);
+        \node[left=3pt,color=GrayText,font=\small] at (0,\y) {$\y$};
+      }
+
+      \draw[very thick,color=Primary,domain=-2.5:3.05,samples=120,smooth]
+        plot (\x,{pow(2,\x)});
+      \node[anchor=west,color=Primary,font=\bfseries\sffamily] at (2.55,7.1) {$y=2^x$};
+
+      \draw[thick,color=Secondary] (-2.55,5) -- (3.35,5);
+      \node[anchor=west,color=Secondary,font=\bfseries\sffamily] at (2.55,5.25) {$y=5$};
+
+      \def\xzero{2.321928}
+      \fill[color=Accent] (\xzero,5) circle (2.2pt);
+      \draw[dashed,color=Accent,thick] (\xzero,5) -- (\xzero,0);
+      \node[anchor=north,color=Accent,font=\bfseries\small]
+        at (\xzero,-0.34) {$x_0=\log_2 5$};
+    \end{tikzpicture}
+  \end{center}%
+}
+
+\newcommand{\logmotivationworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.35cm,y=0.68cm]
+      \draw[-{Stealth[length=2.5mm]},thick,color=GrayText] (-2.65,0) -- (3.55,0) node[right] {$x$};
+      \draw[-{Stealth[length=2.5mm]},thick,color=GrayText] (0,-0.45) -- (0,8.65) node[above] {$y$};
+      \foreach \x in {-2,-1,1,2,3}{
+        \draw[color=GrayLine] (\x,-0.12) -- (\x,0.12);
+        \node[below=2pt,color=GrayText,font=\small] at (\x,0) {$\x$};
+      }
+      \foreach \y in {1,2,4,5,8}{
+        \draw[color=GrayLine] (-0.11,\y) -- (0.11,\y);
+        \node[left=3pt,color=GrayText,font=\small] at (0,\y) {$\y$};
+      }
+      \draw[very thick,color=Primary,domain=-2.5:3.05,samples=120,smooth]
+        plot (\x,{pow(2,\x)});
+      \node[anchor=west,color=Primary,font=\bfseries\sffamily] at (2.55,7.1) {$y=2^x$};
+      \draw[thick,color=Secondary] (-2.55,5) -- (3.35,5);
+      \node[anchor=west,color=Secondary,font=\bfseries\sffamily] at (2.55,5.25) {$y=5$};
+      \def\xzero{2.321928}
+      \fill[color=Accent] (\xzero,5) circle (2.2pt);
+      \draw[dashed,color=Accent,thick] (\xzero,5) -- (\xzero,0);
+      \node[anchor=north,color=Accent,font=\bfseries\small]
+        at (\xzero,-0.34) {$x_0$};
+    \end{tikzpicture}
+  \end{center}%
+}
+
+\newcommand{\logequivalencefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=12mm]
+      \node[
+        draw=Primary,very thick,rounded corners=2mm,
+        fill=PrimaryLight,minimum width=5.0cm,minimum height=1.55cm,
+        font=\Large\bfseries
+      ] (power) {$a^c=b$};
+      \node[
+        draw=Secondary,very thick,rounded corners=2mm,
+        fill=SecondaryLight,minimum width=5.0cm,minimum height=1.55cm,
+        font=\Large\bfseries,right=22mm of power
+      ] (log) {$\log_a b=c$};
+      \draw[<->,very thick,color=Accent] (power.east) -- (log.west)
+        node[midway,above=3pt,font=\bfseries\sffamily,color=Accent] {один и тот же факт};
+      \node[below=4pt of power,color=GrayText,font=\sffamily] {степенная запись};
+      \node[below=4pt of log,color=GrayText,font=\sffamily] {логарифмическая запись};
+    \end{tikzpicture}
+  \end{center}%
+}
+
+\newcommand{\logequivalenceworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=12mm]
+      \node[
+        draw=Primary,very thick,rounded corners=2mm,
+        fill=PrimaryLight,minimum width=5.0cm,minimum height=1.55cm,
+        font=\Large\bfseries
+      ] (power) {$a^{\answerfraction[13mm]}=b$};
+      \node[
+        draw=Secondary,very thick,rounded corners=2mm,
+        fill=SecondaryLight,minimum width=5.0cm,minimum height=1.55cm,
+        font=\Large\bfseries,right=22mm of power
+      ] (log) {$\log_a b=\answerblank[13mm]$};
+      \draw[<->,very thick,color=Accent] (power.east) -- (log.west);
+      \node[below=4pt of power,color=GrayText,font=\sffamily] {степенная запись};
+      \node[below=4pt of log,color=GrayText,font=\sffamily] {логарифмическая запись};
+    \end{tikzpicture}
+  \end{center}%
+}
+
+\newcommand{\lognotationfigure}{%
+  \begin{center}
+    \begin{tikzpicture}
+      \node[font=\fontsize{30pt}{34pt}\selectfont\bfseries] (formula) at (0,0)
+        {$\log_{\color{Primary}a}{\color{Secondary}b}={\color{Accent}c}$};
+      \draw[->,thick,color=Primary] (-1.52,-0.55) -- (-2.35,-1.45)
+        node[below,align=center,font=\sffamily\small] {основание\\степени};
+      \draw[->,thick,color=Secondary] (0.05,-0.45) -- (0.05,-1.45)
+        node[below,align=center,font=\sffamily\small] {число, которое\\нужно получить};
+      \draw[->,thick,color=Accent] (1.55,-0.42) -- (2.35,-1.45)
+        node[below,align=center,font=\sffamily\small] {искомый\\показатель};
+    \end{tikzpicture}
+  \end{center}%
+}
+
+\newcommand{\logquestionfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=8mm]
+      \node[
+        rounded corners=2mm,draw=Primary,very thick,fill=PrimaryLight,
+        text width=10.5cm,align=center,inner sep=5mm,
+        font=\large\bfseries\sffamily
+      ] (question)
+      {В какую степень нужно возвести число $a$,\\чтобы получить число $b$?};
+      \node[
+        below=8mm of question,rounded corners=2mm,draw=Secondary,very thick,
+        fill=SecondaryLight,inner xsep=8mm,inner ysep=4mm,
+        font=\Large\bfseries
+      ] (answer) {$\log_a b$};
+      \draw[->,very thick,color=Accent] (question) -- (answer);
+    \end{tikzpicture}
+  \end{center}%
+}
