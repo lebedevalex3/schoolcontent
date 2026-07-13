@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EGE/Planimetry/Task1/Без названия.md",
-                "mode": "preview",
+                "file": "EGE/equality/eq1/eq1.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Без названия"
+              "title": "eq1"
             }
           }
         ]
@@ -183,20 +183,23 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "02cdb5f3f99ee84b",
+  "active": "8164f3b507572168",
   "lastOpenFiles": [
-    "EGE/Parametr/Parametr1/~$lesson01.pptx",
-    "EGE/Planimetry/Task1/~$lesson01.pptx",
-    "EGE/Planimetry/Task1/ppt6C0D.tmp",
-    "EGE/Planimetry/Task1/ppt8B21.tmp",
-    "EGE/Planimetry/Task1/lesson01.pptx",
-    "EGE/Planimetry/Task1/Презентация Microsoft PowerPoint.pptx",
-    "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/main-student-color.out",
-    "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/main-student-color.aux",
-    "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/main-student-color.log",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-homework-teacher-bw.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-homework-teacher-color.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-homework-student-bw.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-homework-student-color.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-teacher-bw.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-teacher-color.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/main-student-bw.pdf",
+    "EGE/equality/eq1/log-inequality-sheets-revised/style-color.sty",
+    "EGE/equality/eq1/log-inequality-sheets-revised/style-common.sty",
+    "EGE/equality/eq1/log-inequality-sheets-revised",
+    "EGE/equality/eq1/log-inequality-sheets-revised.zip",
+    "EGE/equality/Без названия.md",
+    "EGE/equality/eq1/eq1.md",
+    "EGE/Planimetry/Task1/Без названия.md",
     "EGE/Parametr/Parametr1/Parametr.md",
-    "EGE/Parametr/Parametr1/ppt61F5.tmp",
-    "EGE/Parametr/Parametr1/ppt841C.tmp",
     "EGE/Parametr/Parametr1/parameter-handout-reworked/README.md",
     "EGE/Planimetry/Task1/Без названия 1.md",
     "00_meta/templates/worksheet.md",
@@ -212,7 +215,6 @@
     "EGE/Parametr/Parametr1/Latex/parameter-three-methods-v3/README.md",
     "EGE/Parametr/Parametr1/Latex/README.md",
     "EGE/Parametr/Parametr1/parameter-homework-v1/README.md",
-    "EGE/Planimetry/Task1/Без названия.md",
     "EGE/Planimetry/Task1/Task 1.md",
     "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/README.md",
     "Geometry/GMT/GMT.md",

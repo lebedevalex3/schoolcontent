@@ -1,0 +1,129 @@
+% =================================================
+% TikZ-рисунки для листов по логарифмическому неравенству
+% =================================================
+
+\newcommand{\logchainstudentfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[
+      node distance=2mm,
+      box/.style={draw=Primary,fill=PrimaryLight,rounded corners=1.7mm,
+        minimum height=11mm,align=center,font=\small\sffamily,inner xsep=3mm},
+      arrow/.style={-{Stealth[length=2.6mm]},draw=Accent,line width=0.9pt}
+    ]
+      \node[box,minimum width=13mm] (x) {$x$};
+      \node[box,right=of x,minimum width=21mm] (q) {$x^2-4$};
+      \node[box,right=of q,minimum width=25mm] (abs) {$|x^2-4|$};
+      \node[box,right=of abs,text width=31mm] (y) {$y=\lg|x^2-4|$};
+      \node[box,right=of y,text width=24mm] (t) {$t=y^2$};
+      \draw[arrow] (x)--(q);
+      \draw[arrow] (q)--(abs);
+      \draw[arrow] (abs)--(y);
+      \draw[arrow] (y)--(t);
+      \node[font=\footnotesize\sffamily,text=GrayText,align=center,below=5mm of abs]
+        {Сначала сворачиваем выражение, затем возвращаемся\\в обратном порядке, не теряя условий.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\notationtrianglefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=7mm and 9mm]
+      \node[draw=Primary,fill=PrimaryLight,rounded corners=2mm,
+        text width=42mm,minimum height=16mm,align=center,font=\small\sffamily] (a)
+        {$\lg^2 A=(\lg A)^2$\\степень значения функции};
+      \node[draw=Secondary,fill=SecondaryLight,rounded corners=2mm,
+        text width=42mm,minimum height=16mm,align=center,font=\small\sffamily,right=of a] (b)
+        {$\lg(A^2)$\\степень внутри аргумента};
+      \node[draw=Accent,fill=AccentLight,rounded corners=2mm,
+        text width=42mm,minimum height=16mm,align=center,font=\small\sffamily,right=of b] (c)
+        {$\log_2 A$\\основание логарифма равно $2$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\argregimesstudentfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[-{Stealth[length=2.5mm]},draw=GrayText] (0,0)--(11.4,0) node[right] {$B=|x^2-4|$};
+      \foreach \x in {0.7,3.6,8.7}{\draw[GrayText] (\x,-0.14)--(\x,0.14);}
+      \node[below=4pt,font=\small] at (0.7,0) {$0$};
+      \node[below=4pt,font=\small] at (3.6,0) {$10^{-2}$};
+      \node[below=4pt,font=\small] at (8.7,0) {$10^2$};
+      \node[above=7pt,font=\small\sffamily,text=GrayText] at (2.1,0)
+        {малые положительные значения};
+      \node[above=7pt,font=\small\sffamily,text=GrayText] at (9.8,0)
+        {большие значения};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\argregimesteacherfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[-{Stealth[length=2.5mm]},draw=GrayText] (0,0)--(11.4,0) node[right] {$B=|x^2-4|$};
+      \draw[Secondary,line width=2.5pt] (0.72,0)--(3.6,0);
+      \draw[Secondary,line width=2.5pt] (8.7,0)--(11.15,0);
+      \node[circle,draw=Accent,fill=white,line width=0.9pt,inner sep=2pt] at (0.7,0) {};
+      \node[circle,draw=Secondary,fill=Secondary,inner sep=2pt] at (3.6,0) {};
+      \node[circle,draw=Secondary,fill=Secondary,inner sep=2pt] at (8.7,0) {};
+      \foreach \x in {0.7,3.6,8.7}{\draw[GrayText] (\x,-0.14)--(\x,0.14);}
+      \node[below=4pt,font=\small] at (0.7,0) {$0$};
+      \node[below=4pt,font=\small] at (3.6,0) {$10^{-2}$};
+      \node[below=4pt,font=\small] at (8.7,0) {$10^2$};
+      \node[above=7pt,font=\small\bfseries\sffamily,text=Secondary] at (2.1,0)
+        {$0<B\le10^{-2}$};
+      \node[above=7pt,font=\small\bfseries\sffamily,text=Secondary] at (9.8,0)
+        {$B\ge10^2$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\finalnumberlinestudentfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.72cm,y=1cm]
+      \draw[-{Stealth[length=2.5mm]},draw=GrayText] (-10.5,0)--(10.5,0) node[right] {$x$};
+      \foreach \x in {-8,-5.7,-3.7,-1.8,1.8,3.7,5.7,8}{\draw[GrayText] (\x,-0.15)--(\x,0.15);}
+      \node[below=5pt,font=\scriptsize] at (-8,0) {$-2\sqrt{26}$};
+      \node[below=16pt,font=\scriptsize] at (-5.7,0) {$-\frac{\sqrt{401}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (-3.7,0) {$-2$};
+      \node[below=16pt,font=\scriptsize] at (-1.8,0) {$-\frac{\sqrt{399}}{10}$};
+      \node[below=16pt,font=\scriptsize] at (1.8,0) {$\frac{\sqrt{399}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (3.7,0) {$2$};
+      \node[below=16pt,font=\scriptsize] at (5.7,0) {$\frac{\sqrt{401}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (8,0) {$2\sqrt{26}$};
+      \node[above=5pt,font=\footnotesize\sffamily,text=GrayText] at (0,0)
+        {Отметьте открытые и закрытые границы, затем выделите решение.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\finalnumberlineteacherfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.72cm,y=1cm]
+      \draw[-{Stealth[length=2.5mm]},draw=GrayText] (-10.5,0)--(10.5,0) node[right] {$x$};
+      \draw[Secondary,line width=2.5pt] (-10.2,0)--(-8,0);
+      \draw[Secondary,line width=2.5pt] (-5.7,0)--(-3.73,0);
+      \draw[Secondary,line width=2.5pt] (-3.67,0)--(-1.8,0);
+      \draw[Secondary,line width=2.5pt] (1.8,0)--(3.67,0);
+      \draw[Secondary,line width=2.5pt] (3.73,0)--(5.7,0);
+      \draw[Secondary,line width=2.5pt] (8,0)--(10.2,0);
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (-8,0) {};
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (-5.7,0) {};
+      \node[circle,draw=Accent,fill=white,line width=0.9pt,inner sep=2.1pt] at (-3.7,0) {};
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (-1.8,0) {};
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (1.8,0) {};
+      \node[circle,draw=Accent,fill=white,line width=0.9pt,inner sep=2.1pt] at (3.7,0) {};
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (5.7,0) {};
+      \node[circle,fill=Secondary,draw=Secondary,inner sep=2.1pt] at (8,0) {};
+      \foreach \x in {-8,-5.7,-3.7,-1.8,1.8,3.7,5.7,8}{\draw[GrayText] (\x,-0.15)--(\x,0.15);}
+      \node[below=5pt,font=\scriptsize] at (-8,0) {$-2\sqrt{26}$};
+      \node[below=16pt,font=\scriptsize] at (-5.7,0) {$-\frac{\sqrt{401}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (-3.7,0) {$-2$};
+      \node[below=16pt,font=\scriptsize] at (-1.8,0) {$-\frac{\sqrt{399}}{10}$};
+      \node[below=16pt,font=\scriptsize] at (1.8,0) {$\frac{\sqrt{399}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (3.7,0) {$2$};
+      \node[below=16pt,font=\scriptsize] at (5.7,0) {$\frac{\sqrt{401}}{10}$};
+      \node[below=5pt,font=\scriptsize] at (8,0) {$2\sqrt{26}$};
+    \end{tikzpicture}
+  \end{center}
+}
