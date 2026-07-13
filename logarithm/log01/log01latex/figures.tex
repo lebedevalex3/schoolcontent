@@ -19,15 +19,15 @@
 
       \draw[very thick,color=Primary,domain=-2.5:3.05,samples=120,smooth]
         plot (\x,{pow(2,\x)});
-      \node[anchor=west,color=Primary,font=\bfseries\sffamily] at (2.55,7.1) {$y=2^x$};
+      \node[log graph label,anchor=west] at (2.55,7.1) {$y=2^x$};
 
       \draw[thick,color=Secondary] (-2.55,5) -- (3.35,5);
-      \node[anchor=west,color=Secondary,font=\bfseries\sffamily] at (2.55,5.25) {$y=5$};
+      \node[log level label,anchor=west] at (2.55,5.25) {$y=5$};
 
       \def\xzero{2.321928}
       \fill[color=Accent] (\xzero,5) circle (2.2pt);
       \draw[dashed,color=Accent,thick] (\xzero,5) -- (\xzero,0);
-      \node[anchor=north,color=Accent,font=\bfseries\small]
+      \node[log intersection label,anchor=north]
         at (\xzero,-0.34) {$x_0=\log_2 5$};
     \end{tikzpicture}
   \end{center}%
@@ -48,13 +48,13 @@
       }
       \draw[very thick,color=Primary,domain=-2.5:3.05,samples=120,smooth]
         plot (\x,{pow(2,\x)});
-      \node[anchor=west,color=Primary,font=\bfseries\sffamily] at (2.55,7.1) {$y=2^x$};
+      \node[log graph label,anchor=west] at (2.55,7.1) {$y=2^x$};
       \draw[thick,color=Secondary] (-2.55,5) -- (3.35,5);
-      \node[anchor=west,color=Secondary,font=\bfseries\sffamily] at (2.55,5.25) {$y=5$};
+      \node[log level label,anchor=west] at (2.55,5.25) {$y=5$};
       \def\xzero{2.321928}
       \fill[color=Accent] (\xzero,5) circle (2.2pt);
       \draw[dashed,color=Accent,thick] (\xzero,5) -- (\xzero,0);
-      \node[anchor=north,color=Accent,font=\bfseries\small]
+      \node[log intersection label,anchor=north]
         at (\xzero,-0.34) {$x_0$};
     \end{tikzpicture}
   \end{center}%

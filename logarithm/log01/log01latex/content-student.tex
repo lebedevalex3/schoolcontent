@@ -8,25 +8,17 @@
 
 \studentnameblock
 
-\begin{checkpointbox}[Входная диагностика: 4 минуты]
+\begin{checkpointbox}[Входная диагностика: 2 минуты]
   Заполните пропуски без калькулятора.
   \begin{enumerate}[label=\textbf{\arabic*.},itemsep=0.48em]
-    \item \(2^{\answerblank[13mm]}=32\).
-    \item \(10^{\answerblank[13mm]}=0{,}01\).
+    \item \(2^{\mathgap[6mm]}=32\).
+    \item \(10^{\mathgap[6mm]}=0{,}01\).
     \item \(3^{-2}=\answerblank[22mm]\).
     \item \(25^{\frac12}=\answerblank[18mm]\).
   \end{enumerate}
 \end{checkpointbox}
 
-\begin{reflectionbox}[Что уже умеем]
-  Во всех четырёх заданиях показатель степени показывает, сколько раз и
-  каким способом используется основание. Отметьте, какие показатели вы
-  узнали уверенно:
-  \choicebox\ натуральный\qquad
-  \choicebox\ нулевой\qquad
-  \choicebox\ отрицательный\qquad
-  \choicebox\ дробный.
-\end{reflectionbox}
+
 
 \section{Показатель можно подобрать не всегда}
 
@@ -39,12 +31,12 @@
 
 \begin{fillbox}[Подберите показатели]
   \[
-    8=2^{\answerblank[12mm]}
+8=2^{\mathgap[6mm]}
     \quad\Longrightarrow\quad
     x=\answerblank[14mm],
   \]
   \[
-    \frac14=2^{\answerblank[12mm]}
+    \frac14=2^{\mathgap[6mm]}
     \quad\Longrightarrow\quad
     x=\answerblank[14mm].
   \]
@@ -58,10 +50,16 @@
 \begin{thinkbox}[Оцените корень до введения нового обозначения]
   Используйте соседние степени двойки:
   \[
-    2^{\answerblank[12mm]}=4<5<8=2^{\answerblank[12mm]}.
+    2^{\mathgap[6mm]}=4<5<8=2^{\mathgap[6mm]}.
   \]
-  Поэтому корень уравнения расположен между числами
-  \(\answerblank[12mm]\) и \(\answerblank[12mm]\).
+  Это значит, что
+  \[
+    2^2<2^x<2^3.
+  \]
+  Функция \(y=2^t\) строго возрастает, поэтому
+  \[
+    \answerblank[14mm]<x<\answerblank[14mm].
+  \]
 \end{thinkbox}
 
 \logmotivationworksheetfigure
@@ -69,14 +67,17 @@
 \begin{checkpointbox}[Что показывает рисунок]
   \begin{enumerate}
     \item Сколько точек пересечения имеют графики? \answerblank[18mm]
-    \item Следовательно, сколько корней имеет уравнение \(2^x=5\)?
-      \answerblank[18mm]
-    \item Можно ли по рисунку записать корень точно знакомым числом?
+    \item Функция \(y=2^x\) строго возрастает. Объясните, почему поэтому
+      уравнение \(2^x=5\) имеет только один корень.
+      \writinglines{1}
+    \item Можно ли по рисунку определить точное значение корня?
       \answerblank[25mm]
   \end{enumerate}
 \end{checkpointbox}
 
-Для точной записи этого корня вводят обозначение
+По графику можно установить существование и примерное положение корня,
+но нельзя определить его точное значение. Для точной записи вводят новое
+обозначение
 \[
   x_0=\log_2 5.
 \]
@@ -124,9 +125,25 @@
   \[
     a>0,\qquad a\ne1,\qquad b>0.
   \]
-  В этом комплекте мы используем только корректные основания и аргументы.
-  Причины ограничений будут изучены отдельно.
+  При вычислении логарифмов далее мы будем использовать только корректные
+  основания и аргументы. В следующем задании специально приведены также
+  недопустимые записи. Причины ограничений будут изучены отдельно.
 \end{notebox}
+
+\begin{checkpointbox}[Допустима ли запись?]
+  Отметьте записи, которые имеют смысл в вещественных числах, и для
+  каждой недопустимой записи укажите нарушенное условие:
+  \[
+    \log_2 8,
+    \qquad
+    \log_{-2}8,
+    \qquad
+    \log_2(-8),
+    \qquad
+    \log_1 5.
+  \]
+  \writinglines{2}
+\end{checkpointbox}
 
 \section{Переводим запись в обе стороны}
 
@@ -144,31 +161,40 @@
       Степенная запись & & Логарифмическая запись \\
       \midrule
       \(2^3=8\) & \(\Longleftrightarrow\) & \(\log_2 8=3\) \\
-      \(5^2=25\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[9mm]}\answerfraction[16mm]=\answerblank[10mm]\) \\
-      \(10^{-3}=0{,}001\) & \(\Longleftrightarrow\) & \(\lg\answerblank[20mm]=\answerblank[12mm]\) \\
-      \(16^{\frac12}=4\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[10mm]}\answerfraction[13mm]=\answerblank[12mm]\) \\
-      \(\left(\frac13\right)^{-2}=9\) & \(\Longleftrightarrow\) & \(\log_{\answerfraction[14mm]}\answerfraction[13mm]=\answerblank[12mm]\) \\
+      \(5^2=25\) & \(\Longleftrightarrow\) & \(\log_{\mathgap[12mm]}\mathgap[12mm]=\mathgap[12mm]\) \\
+      \(10^{-3}=0{,}001\) & \(\Longleftrightarrow\) & \(\log_{\mathgap[12mm]}\mathgap[12mm]=\mathgap[12mm]\) \\
+      \(16^{\frac12}=4\) & \(\Longleftrightarrow\) & \(\log_{\mathgap[12mm]}\mathgap[12mm]=\mathgap[12mm]\) \\
+      \(\left(\frac13\right)^{-2}=9\) & \(\Longleftrightarrow\) & \(\log_{\mathgap[12mm]}\mathgap[12mm]=\mathgap[12mm]\) \\
       \bottomrule
     \end{tabularx}
   \end{center}
 \end{fillbox}
 
 \begin{fillbox}[Из логарифма в степень]
-  \begin{enumerate}
-    \item \(\log_4 64=3\quad\Longleftrightarrow\quad
-      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
-    \item \(\log_7 1=0\quad\Longleftrightarrow\quad
-      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
-    \item \(\log_{25}5=\dfrac12\quad\Longleftrightarrow\quad
-      \answerblank[14mm]^{\answerfraction[11mm]}=\answerblank[18mm].\)
-  \end{enumerate}
+  \begin{center}
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{@{}r@{\hspace{0.55em}}r@{\hspace{0.45em}}c@{\hspace{0.45em}}l@{\hspace{1.35em}}c@{\hspace{1.35em}}c@{\hspace{0.75em}}c@{\hspace{0.75em}}c@{}}
+      \textbf{1.} & \(\log_4 64\) & \(=\) & \(3\) &
+        \(\Longleftrightarrow\) &
+        \(\answerblank[14mm]^{\answerfraction[11mm]}\) & \(=\) &
+        \(\answerblank[18mm].\) \\
+      \textbf{2.} & \(\log_7 1\) & \(=\) & \(0\) &
+        \(\Longleftrightarrow\) &
+        \(\answerblank[14mm]^{\answerfraction[11mm]}\) & \(=\) &
+        \(\answerblank[18mm].\) \\
+      \textbf{3.} & \(\log_{25}5\) & \(=\) & \(\displaystyle\frac12\) &
+        \(\Longleftrightarrow\) &
+        \(\answerblank[14mm]^{\answerfraction[11mm]}\) & \(=\) &
+        \(\answerblank[18mm].\) \\
+    \end{tabular}
+  \end{center}
 \end{fillbox}
 
 \begin{reflectionbox}[Проверка перевода]
-  При переходе к логарифмической записи основание степени
-  \answerblank[25mm] основанием логарифма, показатель степени
-  \answerblank[25mm] значением логарифма, а результат возведения
-  \answerblank[25mm] аргументом логарифма.
+  В равенстве \(a^c=b\) число \(a\) становится
+  \answerblank[28mm] логарифма, число \(c\) —
+  \answerblank[28mm] логарифма, а число \(b\) —
+  \answerblank[28mm] логарифма.
 \end{reflectionbox}
 
 \Needspace{13\baselineskip}
@@ -211,10 +237,20 @@
   \quad\choicebox\ отрицательным;
   \quad\choicebox\ дробным.
 \end{checkpointbox}
+\newpage
+\begin{practicebox}[Самостоятельно: без готовых шагов]
+  Вычислите
+  \[
+    \log_{\frac13}27.
+  \]
+  Запишите вопрос, полное рассуждение и обязательную степенную проверку
+  ответа.
+  \workarea{28mm}
+\end{practicebox}
 
 \section{Решаем простейшие уравнения}
 
-\begin{fillbox}[Уравнение 1: неизвестно число под логарифмом]
+\begin{fillbox}[Уравнение 1: неизвестен аргумент логарифма]
   \[
     \log_2 x=6
     \quad\Longleftrightarrow\quad
@@ -224,7 +260,7 @@
   \]
 \end{fillbox}
 
-\begin{fillbox}[Уравнение 2: под логарифмом выражение]
+\begin{fillbox}[Уравнение 2: неизвестное содержится в аргументе логарифма]
   \[
     \log_5(x+1)=2
     \quad\Longleftrightarrow\quad
@@ -235,20 +271,50 @@
 \end{fillbox}
 
 \begin{fillbox}[Уравнение 3: неизвестен показатель]
-  Уравнение \(3^x=10\) не решается подбором целого показателя. По
-  определению логарифма его точный корень равен
+  Значение показателя в уравнении \(3^x=10\) не удаётся непосредственно
+  подобрать по известным степеням числа 3. По определению логарифма его
+  точный корень равен
   \[
     x=\answerblank[36mm].
   \]
 \end{fillbox}
 
-\begin{reflectionbox}[Точный ответ]
-  Объясните, почему запись \(x=\log_3 10\) является точным ответом, хотя
-  справа нет привычного целого или дробного числа.
-  \writinglines{2}
-\end{reflectionbox}
+\begin{notebox}[Точное и приближённое значение]
+  Запись \(x=\log_3 10\) задаёт точное значение корня. Десятичное
+  приближение можно получить с помощью научного калькулятора или
+  математической программы:
+  \[
+    \log_3 10\approx2{,}096,
+    \qquad
+    \text{до сотых: }\log_3 10\approx2{,}10.
+  \]
+\end{notebox}
 
-\Needspace{12\baselineskip}
+\begin{questionsbox}[Итоговое задание]
+  Выполните самостоятельно, не возвращаясь к образцам.
+  \begin{enumerate}[itemsep=0.45em]
+    \item Объясните словами смысл записи \(\log_2 7\).
+    \item Переведите равенство \(3^{-2}=\dfrac19\) в логарифмическую форму.
+    \item Проверьте равенство \(\log_4 64=3\) степенным равенством.
+  \end{enumerate}
+\end{questionsbox}
+
+\begin{checkpointbox}[Обязательная часть завершена]
+  Вы должны уметь:
+  \begin{itemize}
+    \item объяснить смысл записи \(\log_a b\);
+    \item переводить степенную запись в логарифмическую и обратно;
+    \item вычислять простые логарифмы через представление числа степенью;
+    \item проверять значение логарифма соответствующим степенным
+      равенством \(a^c=b\);
+    \item распознавать допустимые основания и аргументы;
+    \item записывать точный корень уравнения \(a^x=b\).
+  \end{itemize}
+\end{checkpointbox}
+
+\newpage
+\section*{Расширение}
+
 \section{Найдите и исправьте ошибки}
 
 \begin{practicebox}[Ошибка 1]
@@ -271,21 +337,11 @@
   Ученик утверждает: «Логарифм не может быть отрицательным, потому что
   степень --- это количество множителей». Опровергните утверждение одним
   примером.
-  \workarea{28mm}
+  \workarea{24mm}
 \end{practicebox}
 
-\begin{checkpointbox}[Обязательная часть завершена]
-  Вы должны уметь:
-  \begin{itemize}
-    \item объяснить смысл записи \(\log_a b\);
-    \item переводить степенную запись в логарифмическую и обратно;
-    \item вычислять простые логарифмы через представление числа степенью;
-    \item записывать точный корень уравнения \(a^x=b\).
-  \end{itemize}
-\end{checkpointbox}
-
 \newpage
-\section*{Расширение и перенос}
+\section*{Основные тождества}
 
 \section{Получаем первые общие равенства}
 
@@ -306,13 +362,7 @@
   \]
 \end{fillbox}
 
-\begin{fillbox}[Обобщение]
-  \[
-    a^m=a^m
-    \quad\Longrightarrow\quad
-    \boxed{\log_a a^m=\answerblank[14mm]}.
-  \]
-\end{fillbox}
+
 
 \section{Восстановите полное рассуждение}
 

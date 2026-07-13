@@ -229,6 +229,18 @@
   \makebox[#1]{}%
 }
 
+% Компактное пустое поле для показателя степени. Рамка визуально отделяет
+% пропуск от основания и не выглядит продолжением верхней части цифры.
+\newcommand{\mathgap}[1][6mm]{%
+  \mathord{%
+    \begingroup
+      \setlength{\fboxsep}{0.8pt}%
+      \setlength{\fboxrule}{0.35pt}%
+      \fbox{\rule{0pt}{1.15ex}\hspace{#1}}%
+    \endgroup
+  }%
+}
+
 \newcommand{\longanswerline}[1][Ответ]{%
   \par\vspace{0.25em}
   \noindent\textbf{#1:}\ \hrulefill\par
