@@ -1,0 +1,208 @@
+% =================================================
+% Часть 2. Решение логарифмического неравенства
+% =================================================
+\worksheettitle
+  {Часть 2. Решаем логарифмическое неравенство}
+  {От двух замен к точному ответу}
+\studentnameblock
+
+\begin{problembox}
+  Решите неравенство
+  \[
+    \lg^4((x^2-4)^2)-\lg^2((x^2-4)^4)\ge192.
+  \]
+\end{problembox}
+
+\begin{checkpointbox}[Вспомните ключевые переходы]
+  Заполните по памяти. Если один из переходов вызывает затруднение,
+  вернитесь к соответствующему разделу первой части.
+  \[
+    \lg^2 A=\answerblank[34mm],
+    \qquad
+    \lg(z^2)=\answerblank[42mm]\quad(z\ne0),
+  \]
+  \[
+    0<|u|\le a
+    \Longleftrightarrow
+    \answerblank[108mm].
+  \]
+\end{checkpointbox}
+
+\section{ОДЗ и преобразование логарифмов}
+
+Аргументы логарифмов должны быть положительными:
+\[
+  (x^2-4)^2>0
+  \quad\Longleftrightarrow\quad
+  x\ne\answerblank[14mm],\quad x\ne\answerblank[14mm].
+\]
+
+На ОДЗ:
+\[
+  \lg((x^2-4)^2)=2\lg\answerblank[30mm],
+\]
+\[
+  \lg((x^2-4)^4)=4\lg\answerblank[30mm].
+\]
+\newpage
+\begin{reflectionbox}[Контроль равносильности]
+  Почему запись \(4\lg(x^2-4)\) потеряла бы часть допустимых значений?
+  \writinglines{2}
+\end{reflectionbox}
+
+\begin{fillbox}[Переписываем исходное неравенство целиком]
+  Важно сохранить внешние степени: в четвёртую степень возводится значение
+  первого логарифма, а в квадрат --- значение второго.
+  \[
+    \begin{aligned}
+      &\bigl[\lg((x^2-4)^2)\bigr]^4
+      -\bigl[\lg((x^2-4)^4)\bigr]^2\ge192\\
+      &\quad\Longleftrightarrow
+      \bigl[2\lg|x^2-4|\bigr]^4
+      -\bigl[4\lg|x^2-4|\bigr]^2\ge192.
+    \end{aligned}
+  \]
+  Какое выражение повторяется в обеих частях полученного неравенства?
+  \[
+    \answerblank[65mm].
+  \]
+\end{fillbox}
+
+\section{Сводим задачу к квадратному неравенству}
+
+Положим
+\[
+  y=\lg|x^2-4|.
+\]
+Тогда
+\[
+  \begin{aligned}
+    (2y)^4-(4y)^2&\ge192,\\
+    16y^4-16y^2&\ge192,\\
+    y^4-y^2-12&\ge0.
+  \end{aligned}
+\]
+
+Введите замену и ограничение:
+\[
+  t=\answerblank[20mm],
+  \qquad t\answerblank[10mm]0.
+\]
+Решите получившееся квадратное неравенство:
+\[
+  t^2-t-12=(t-\answerblank[12mm])(t+\answerblank[12mm])\ge0,
+\]
+\[
+  t\in\answerblank[75mm].
+\]
+С учётом ограничения на \(t\):
+\[
+  t\ge\answerblank[12mm].
+\]
+
+\begin{checkpointbox}[Не потеряйте отрицательную ветвь]
+  \[
+    \begin{aligned}
+      t\ge4
+      &\Longrightarrow y^2\ge4
+      \Longleftrightarrow |y|\ge\answerblank[10mm],\\
+      &\Longleftrightarrow \answerblank[75mm].
+    \end{aligned}
+  \]
+\end{checkpointbox}
+
+\section{Выполняем обратный переход}
+
+Так как \(y=\lg|x^2-4|\), получаем:
+\[
+  \lg|x^2-4|\le-2
+  \qquad\text{или}\qquad
+  \lg|x^2-4|\ge2.
+\]
+Десятичный логарифм возрастает, поэтому:
+\[
+  0<|x^2-4|\le\answerblank[22mm]
+  \qquad\text{или}\qquad
+  |x^2-4|\ge\answerblank[22mm].
+\]
+
+\argregimesstudentfigure
+
+\newpage
+\section{Разбираем два случая}
+
+\begin{fillbox}[Ветвь малого аргумента]
+  Используйте правило из первой части:
+  \[
+    0<|x^2-4|\le\frac1{100}.
+  \]
+  После раскрытия условия:
+  \[
+    -\frac1{100}\le x^2-4<0
+    \quad\text{или}\quad
+    0<x^2-4\le\frac1{100}.
+  \]
+  После прибавления \(4\):
+  \[
+    \frac{\phantom{000}}{100}\le x^2<4
+    \quad\text{или}\quad
+    4<x^2\le\frac{\phantom{000}}{100}.
+  \]
+  Запишите четыре промежутка для \(x\):
+  \workarea{42mm}
+\end{fillbox}
+
+\begin{fillbox}[Ветвь большого аргумента]
+  \[
+    |x^2-4|\ge100
+    \Longleftrightarrow
+    x^2-4\le\answerblank[18mm]
+    \quad\text{или}\quad
+    x^2-4\ge\answerblank[18mm].
+  \]
+  Какая ветвь невозможна и почему?
+  \writinglines{2}
+  Оставшаяся ветвь даёт:
+  \[
+    x^2\ge\answerblank[16mm]
+    \Longleftrightarrow
+    |x|\ge\answerblank[22mm].
+  \]
+  \[
+    x\in\answerblank[100mm].
+  \]
+\end{fillbox}
+
+\section{Собираем ответ}
+
+\finalnumberlinestudentfigure
+
+\begin{resultbox}[Точный ответ]
+  \writinglines{4}
+\end{resultbox}
+
+\begin{checkpointbox}[Проверка характерных точек]
+  Проверьте подстановкой или по полученным условиям:
+  \[
+    x=0,\qquad x=2,\qquad
+    x=\frac{\sqrt{399}}{10},\qquad x=2\sqrt{26}.
+  \]
+  Какая точка не принадлежит ОДЗ? Какие две являются граничными решениями?
+  \writinglines{2}
+\end{checkpointbox}
+
+\newpage
+\section{Самостоятельно записываем решение}
+
+\begin{practicebox}[Самостоятельная запись]
+  Закройте предыдущие страницы и запишите связное решение. Проверьте полноту
+  только после завершения:
+  \begin{enumerate}
+    \item ОДЗ и формулы с модулем;
+    \item замены \(y=\lg|x^2-4|\) и \(t=y^2\ge0\);
+    \item обе ветви обратного перехода;
+    \item решение двух условий относительно \(x\);
+    \item точный ответ.
+  \end{enumerate}
+  \workarea{150mm}
+\end{practicebox}

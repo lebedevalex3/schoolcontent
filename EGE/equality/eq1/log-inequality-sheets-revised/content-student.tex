@@ -372,6 +372,85 @@
   а во втором — \answerblank[45mm].
 \end{reflectionbox}
 
+\section{Как читать двойное неравенство с модулем}
+
+\begin{methodintro}[Сначала упростим запись]
+  Если под модулем находится сложное выражение, временно обозначьте его
+  одной буквой. Положим
+  \[
+    u=x^2-4.
+  \]
+  Тогда ветвь малого аргумента принимает более простой вид:
+  \[
+    0<|u|\le\frac1{100}.
+  \]
+\end{methodintro}
+
+\Needspace{20\baselineskip}
+\begin{fillbox}[Два условия должны выполняться одновременно]
+  Двойное неравенство
+  \[
+    0<|u|\le a,\qquad a>0,
+  \]
+  означает систему двух условий:
+  \[
+    |u|>0
+    \qquad\text{и}\qquad
+    |u|\le a.
+  \]
+  Первое условие исключает значение
+  \[
+    u=\answerblank[12mm].
+  \]
+  Второе условие равносильно двойному неравенству
+  \[
+    -\answerblank[12mm]\le u\le\answerblank[12mm].
+  \]
+  Поэтому середину промежутка нужно выколоть:
+  \[
+    0<|u|\le a
+    \quad\Longleftrightarrow\quad
+    -a\le u<0
+    \quad\text{или}\quad
+    0<u\le a.
+  \]
+\end{fillbox}
+
+\begin{checkpointbox}[Проверьте понимание на простом примере]
+  Решите неравенство
+  \[
+    0<|u|\le3.
+  \]
+  Заполните промежутки:
+  \[
+    u\in
+    \left[\answerblank[11mm],\answerblank[11mm]\right)
+    \cup
+    \left(\answerblank[11mm],\answerblank[11mm]\right].
+  \]
+  Почему число (0) не входит в ответ, а числа \(-3\) и (3) входят?
+  \writinglines{1}
+\end{checkpointbox}
+
+\begin{notebox}[Два полезных шаблона]
+  При \(a>0\):
+  \[
+    0<|u|\le a
+    \quad\Longleftrightarrow\quad
+    -a\le u<0
+    \quad\text{или}\quad
+    0<u\le a;
+  \]
+  \[
+    |u|\ge a
+    \quad\Longleftrightarrow\quad
+    u\le-a
+    \quad\text{или}\quad
+    u\ge a.
+  \]
+  Первый шаблон понадобится сейчас, второй — в ветви большого аргумента.
+\end{notebox}
+
 \section{Малый положительный аргумент}
 
 Решаем:
@@ -380,6 +459,7 @@
 \]
 
 \begin{fillbox}[Раскрываем модуль]
+  Используем \(u=x^2-4\) и первый шаблон:
   \[
     -\frac1{100}\le x^2-4<0
     \qquad\text{или}\qquad

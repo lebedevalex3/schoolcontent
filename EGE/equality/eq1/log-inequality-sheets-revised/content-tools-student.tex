@@ -1,0 +1,227 @@
+% =================================================
+% Часть 1. Подготовка к решению
+% =================================================
+\worksheettitle
+  {Часть 1. Готовимся к решению}
+  {Четыре ключевых перехода}
+\studentnameblock
+
+
+
+\section{Различаем три похожие записи}
+
+\begin{fillbox}[Что означает число \(2\)?]
+  \begin{center}
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{0.96\textwidth}{@{}
+      >{\centering\arraybackslash}p{0.19\textwidth}
+      >{\raggedright\arraybackslash}p{0.38\textwidth}X@{}}
+      \toprule
+      \rowcolor{TableHeader}
+      Запись & Как прочитать & Роль числа \(2\) \\
+      \midrule
+      \(\lg^2 A\) & \answerblank[48mm] & \answerblank[44mm] \\
+      \addlinespace[0.3em]
+      \(\lg(A^2)\) & \answerblank[48mm] & \answerblank[44mm] \\
+      \addlinespace[0.3em]
+      \(\log_2 A\) & \answerblank[48mm] & \answerblank[44mm] \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{fillbox}
+
+\notationtrianglefigure
+
+\begin{checkpointbox}[Быстрая проверка]
+  Вычислите:
+  \[
+    \lg^2 1000=\answerblank[22mm],
+    \qquad
+    \lg(1000^2)=\answerblank[22mm].
+  \]
+  Объясните словами, почему ответы различаются.
+  \writinglines{2}
+\end{checkpointbox}
+
+\section{Преобразуем логарифм, не теряя ОДЗ}
+
+\begin{fillbox}[Начинаем с области определения]
+  Для выражения \(\lg((x-1)^2)\) аргумент должен быть положительным:
+  \[
+    (x-1)^2>0
+    \quad\Longleftrightarrow\quad
+    x\ne\answerblank[14mm].
+  \]
+  Подставьте \(x=0\). Какое выражение определено?
+  \[
+    \square\;\lg((x-1)^2)
+    \qquad
+    \square\;2\lg(x-1).
+  \]
+\end{fillbox}
+
+\begin{fillbox}[Выводим формулу, не сужая область определения]
+  При \(z\ne0\):
+  \[
+    z^2=|z|^2,
+    \qquad
+    \lg(z^2)=2\lg|z|.
+  \]
+  Поэтому
+  \[
+    \lg((x-1)^2)=2\lg\answerblank[26mm],
+    \qquad x\ne1.
+  \]
+  Аналогично при \(z\ne0\):
+  \[
+    \lg(z^4)=\answerblank[12mm]\lg\answerblank[18mm].
+  \]
+\end{fillbox}
+
+\begin{warningbox}[Что именно делает модуль]
+  Модуль не появляется из-за правила «под квадратом всегда модуль».
+  Он позволяет заменить \(z\) положительным числом \(|z|\), не изменяя
+  чётную степень и не теряя отрицательные значения \(z\).
+\end{warningbox}
+
+\newpage
+\section{Читаем модуль как расстояние}
+
+\begin{methodintro}[Модуль как расстояние]
+  Неравенство
+  \[
+    |u|\le3
+  \]
+  означает: расстояние от числа \(u\) до нуля не больше \(3\).
+  Поэтому
+  \[
+    u\in\left[\answerblank[10mm],\answerblank[10mm]\right].
+  \]
+\end{methodintro}
+
+\begin{center}
+\begin{tikzpicture}[x=1.25cm,y=1cm]
+  \draw[-{Stealth[length=2.2mm]}] (-3.7,0)--(3.9,0);
+  \draw[very thick] (-3,0)--(3,0);
+  \fill (-3,0) circle (2.4pt);
+  \fill (3,0) circle (2.4pt);
+  \foreach \x in {-3,0,3}{\draw (\x,0.10)--(\x,-0.10) node[below=4pt]{\(\x\)};}
+\end{tikzpicture}
+\end{center}
+
+\begin{checkpointbox}[Изменяем только одно условие]
+  Теперь решите
+  \[
+    0<|u|\le3.
+  \]
+  Условие \(|u|\le3\) оставляет отрезок \([-3;3]\), а условие
+  \(|u|>0\) исключает единственное число \(u=\answerblank[12mm]\).
+  Поэтому
+  \[
+    u\in
+    \left[\answerblank[10mm],\answerblank[10mm]\right)
+    \cup
+    \left(\answerblank[10mm],\answerblank[10mm]\right].
+  \]
+\end{checkpointbox}
+
+\begin{center}
+\begin{tikzpicture}[x=1.25cm,y=1cm]
+  \draw[-{Stealth[length=2.2mm]}] (-3.7,0)--(3.9,0);
+  \draw[very thick] (-3,0)--(-0.11,0);
+  \draw[very thick] (0.11,0)--(3,0);
+  \fill (-3,0) circle (2.4pt);
+  \draw[fill=white,very thick] (0,0) circle (2.7pt);
+  \fill (3,0) circle (2.4pt);
+  \foreach \x in {-3,0,3}{\draw (\x,0.10)--(\x,-0.10) node[below=4pt]{\(\x\)};}
+\end{tikzpicture}
+\end{center}
+
+\begin{reflectionbox}[Сравните]
+  Чем отличаются множества решений \(|u|\le3\) и \(0<|u|\le3\)?
+  Сформулируйте ответ одним предложением.
+  \writinglines{2}
+\end{reflectionbox}
+
+\section{Получаем два полезных правила}
+
+\begin{fillbox}[Два условия выполняются одновременно]
+  При \(a>0\):
+  \[
+    0<|u|\le a
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+      |u|>0,\\
+      |u|\le a.
+    \end{cases}
+  \]
+  Поэтому
+  \[
+    0<|u|\le a
+    \quad\Longleftrightarrow\quad
+    -a\le u<0
+    \quad\text{или}\quad
+    0<u\le a.
+  \]
+  Второй полезный шаблон:
+  \[
+    |u|\ge a
+    \quad\Longleftrightarrow\quad
+    u\le-a
+    \quad\text{или}\quad
+    u\ge a.
+  \]
+\end{fillbox}
+
+\begin{checkpointbox}[Применяем правило на простом примере]
+  Решите:
+  \[
+    0<|x-2|\le3.
+  \]
+  Сначала положите \(u=x-2\), найдите промежутки для \(u\), затем вернитесь
+  к \(x\).
+  \workarea{20mm}
+  \longanswerline
+\end{checkpointbox}
+
+\newpage
+\section{Возвращаемся от квадрата к переменной}
+
+\begin{fillbox}[Две симметричные части ответа]
+  Решите неравенство
+  \[
+    1\le x^2<4.
+  \]
+  Сначала перепишите его через \(|x|\):
+  \[
+    \answerblank[12mm]\le|x|<\answerblank[12mm].
+  \]
+  Затем запишите промежутки для \(x\):
+  \[
+    x\in\answerblank[95mm].
+  \]
+\end{fillbox}
+
+\begin{checkpointbox}[Соединяем два перехода]
+  Решите неравенство
+  \[
+    0<|x^2-4|\le1.
+  \]
+  \begin{enumerate}
+    \item Положите \(u=x^2-4\) и раскройте условие для \(u\).
+    \item Получите два условия на \(x^2\).
+    \item Перейдите к промежуткам для \(x\).
+  \end{enumerate}
+  \workarea{20mm}
+  \longanswerline
+\end{checkpointbox}
+
+\begin{questionsbox}[Итоговая проверка перед частью 2]
+  Отметьте только те утверждения, которые можете объяснить словами.
+  \begin{itemize}[label=\choicebox,leftmargin=2.4em]
+    \item Я различаю \(\lg^2 A\), \(\lg(A^2)\) и \(\log_2 A\).
+    \item Я объясняю, почему \(\lg(z^2)=2\lg|z|\) при \(z\ne0\).
+    \item Я вижу на числовой прямой решение \(0<|u|\le a\).
+    \item Я перехожу от условий на \(x^2\) к обеим частям ответа для \(x\).
+  \end{itemize}
+\end{questionsbox}

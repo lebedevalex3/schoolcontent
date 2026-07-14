@@ -8,16 +8,38 @@
 \RequirePackage{polyglossia}
 \setdefaultlanguage{russian}
 
-\setmainfont{Tinos}
-\setsansfont{Arimo}
-\setmonofont{DejaVu Sans Mono}
+% Подключаем установленные файлы явно: XeTeX на macOS не всегда видит
+% пользовательские шрифты по семейному имени через Fontconfig.
+\setmainfont{Tinos-Regular.ttf}[
+  Path=/Users/alex/Library/Fonts/,
+  BoldFont=Tinos-Bold.ttf,
+  ItalicFont=Tinos-Italic.ttf,
+  BoldItalicFont=Tinos-BoldItalic.ttf
+]
+\setsansfont{Arial.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Arial Bold.ttf},
+  ItalicFont={Arial Italic.ttf},
+  BoldItalicFont={Arial Bold Italic.ttf}
+]
+\setmonofont{DejaVuSansMono.ttf}
 
 % Явно сообщаем Polyglossia, какие семейства использовать для русского.
 % В некоторых установках macOS шрифты Tinos/Arimo содержат кириллицу,
 % но их OpenType-метаданные не объявляют скрипт Cyrillic.
-\newfontfamily\cyrillicfont{Tinos}
-\newfontfamily\cyrillicfontsf{Arimo}
-\newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+\newfontfamily\cyrillicfont{Tinos-Regular.ttf}[
+  Path=/Users/alex/Library/Fonts/,
+  BoldFont=Tinos-Bold.ttf,
+  ItalicFont=Tinos-Italic.ttf,
+  BoldItalicFont=Tinos-BoldItalic.ttf
+]
+\newfontfamily\cyrillicfontsf{Arial.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Arial Bold.ttf},
+  ItalicFont={Arial Italic.ttf},
+  BoldItalicFont={Arial Bold Italic.ttf}
+]
+\newfontfamily\cyrillicfonttt{DejaVuSansMono.ttf}
 
 % =================================================
 % Геометрия страницы
