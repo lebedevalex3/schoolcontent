@@ -11,14 +11,12 @@
             "id": "02cdb5f3f99ee84b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "logarithm/log01/Логарифм в какую степень.md",
-                "mode": "source",
-                "source": true
+                "file": "tmp/pdfs/log-review/student-09.png"
               },
-              "icon": "lucide-file",
-              "title": "Логарифм в какую степень"
+              "icon": "lucide-image",
+              "title": "student-09"
             }
           }
         ]
@@ -185,21 +183,37 @@
   },
   "active": "8164f3b507572168",
   "lastOpenFiles": [
-    "logarithm/log01/log01latex/style-common.sty",
-    "logarithm/log01/log01latex/style-color.sty",
-    "logarithm/log01/log01latex/style-bw.sty",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-teacher-color.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-teacher-bw.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-student-color.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-student-bw.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-reference-color.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-reference-bw.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-homework-teacher-color.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-homework-teacher-bw.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-homework-student-color.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/pdf/lesson3-homework-student-bw.pdf",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/style-common.sty",
+    "school/5grade/01_NaturalNumbers/lesson03/Latex/README.md",
+    "school/5grade/01_NaturalNumbers/lesson02/Latex/README.md",
+    "school/5grade/01_NaturalNumbers/lesson02/Latex/lesson2_natural_numbers/README.md",
+    "school/5grade/01_NaturalNumbers/lesson01/Latex/README.md",
+    "tmp/pdfs/log-review/student-05.png",
+    "tmp/pdfs/log-review/student-02.png",
+    "EGE/2022/SimpleStereo/SimpleStereo 2022.md",
+    "tmp/pdfs/log-review/teacher-11.png",
+    "tmp/pdfs/log-review/teacher-10.png",
+    "tmp/pdfs/log-review/teacher-09.png",
+    "tmp/pdfs/log-review/teacher-08.png",
+    "tmp/pdfs/log-review/teacher-07.png",
+    "tmp/pdfs/log-review/teacher-06.png",
+    "tmp/pdfs/log-review/teacher-05.png",
+    "tmp/pdfs/log-review/teacher-04.png",
+    "EGE/equality/eq1/log-inequality-sheets-revised/CONTEXT.md",
+    "logarithm/log01/Логарифм в какую степень.md",
     "logarithm/log01/log01latex/README.md",
-    "logarithm/log01/log01latex/main-teacher-color.tex",
-    "logarithm/log01/log01latex/main-teacher-bw.tex",
-    "logarithm/log01/log01latex/main-student-color.tex",
-    "logarithm/log01/log01latex/main-student-bw.tex",
-    "logarithm/log01/log01latex/main-reference-color.tex",
-    "logarithm/log01/log01latex/main-reference-bw.tex",
-    "logarithm/log01/log01latex/main-homework-teacher-color.tex",
-    "logarithm/log01/log01latex/main-homework-teacher-bw.tex",
     "logarithm/log01/README.md",
     "EGE/equality/eq1/eq1.md",
-    "logarithm/log01/Логарифм в какую степень.md",
     "EGE/equality/Без названия.md",
     "EGE/Planimetry/Task1/Без названия.md",
     "EGE/Parametr/Parametr1/Parametr.md",
@@ -214,12 +228,6 @@
     "00_meta/templates/concept.md",
     "00_meta/tags.md",
     "00_meta/conventions.md",
-    "EGE/Parametr/Parametr.md",
-    "EGE/Parametr/Parametr1/Latex/parameter-three-methods-v3/README.md",
-    "EGE/Parametr/Parametr1/Latex/README.md",
-    "EGE/Parametr/Parametr1/parameter-homework-v1/README.md",
-    "EGE/Planimetry/Task1/Task 1.md",
-    "EGE/Planimetry/Task1/trapezoid_circumcenter_pack/README.md",
-    "Geometry/GMT/GMT.md"
+    "EGE/Parametr/Parametr.md"
   ]
 }

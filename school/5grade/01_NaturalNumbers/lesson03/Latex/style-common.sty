@@ -1,0 +1,276 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style-common}[2026/07/11 Common natural numbers lesson style v2]
+
+% =================================================
+% Язык и шрифты
+% =================================================
+\RequirePackage{fontspec}
+\RequirePackage{polyglossia}
+\setdefaultlanguage{russian}
+
+\setmainfont{Tinos}
+\setsansfont{Arimo}
+\setmonofont{DejaVu Sans Mono}
+
+% Явно сообщаем Polyglossia, какие семейства использовать для русского.
+% В некоторых установках macOS шрифты Tinos/Arimo содержат кириллицу,
+% но их OpenType-метаданные не объявляют скрипт Cyrillic.
+\newfontfamily\cyrillicfont{Tinos}
+\newfontfamily\cyrillicfontsf{Arimo}
+\newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+
+% =================================================
+% Геометрия страницы
+% =================================================
+\RequirePackage[
+  a4paper,
+  left=24mm,
+  right=24mm,
+  top=22mm,
+  bottom=23mm,
+  headheight=26pt,
+  headsep=7mm
+]{geometry}
+
+% =================================================
+% Математика, таблицы, списки
+% =================================================
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{colortbl}
+\RequirePackage{enumitem}
+
+% =================================================
+% Служебные пакеты
+% =================================================
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{fancyhdr}
+\RequirePackage{microtype}
+\RequirePackage{hyperref}
+\RequirePackage{needspace}
+\RequirePackage{titlesec}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{
+  arrows.meta,
+  calc,
+  positioning,
+  patterns.meta,
+  decorations.pathreplacing
+}
+
+% =================================================
+% Общая типографика
+% =================================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\linespread{1.14}
+
+% Единый ритм вокруг выключных формул.
+\setlength{\abovedisplayskip}{0.72em}
+\setlength{\belowdisplayskip}{0.72em}
+\setlength{\abovedisplayshortskip}{0.42em}
+\setlength{\belowdisplayshortskip}{0.52em}
+\allowdisplaybreaks[1]
+
+\setlist[itemize]{
+  leftmargin=1.65em,
+  itemsep=0.32em,
+  topsep=0.4em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\setlist[enumerate]{
+  leftmargin=2em,
+  itemsep=0.42em,
+  topsep=0.45em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\mainfontsize}{%
+  \fontsize{13.5pt}{16.8pt}\selectfont
+}
+
+\newcommand{\methodname}[1]{\textbf{\sffamily #1}}
+\newcommand{\excluded}[1]{\textcolor{Accent}{\boldsymbol{#1}}}
+
+% Небольшой векторный знак для предупреждений.
+\newcommand{\warningicon}{%
+  \tikz[baseline=-0.65ex]{%
+    \node[
+      circle,
+      fill=Accent,
+      draw=Accent,
+      text=white,
+      font=\bfseries\sffamily\footnotesize,
+      inner sep=1.15pt
+    ] {!};%
+  }%
+}
+
+% Выразительный заголовок шага без тяжёлой рамки.
+\newcommand{\stepheading}[2]{%
+  \Needspace{5\baselineskip}%
+  \par\addvspace{1.15em}%
+  \noindent
+  \tikz[baseline=(step.base)]{%
+    \node[
+      fill=Primary,
+      text=white,
+      rounded corners=1mm,
+      inner xsep=5pt,
+      inner ysep=2.6pt,
+      font=\bfseries\sffamily
+    ] (step) {#1};%
+  }%
+  \hspace{0.55em}%
+  {\large\bfseries\sffamily\color{Secondary}#2}%
+  \par\nobreak\vspace{0.38em}%
+}
+
+% =================================================
+% Заголовки
+% =================================================
+\newcommand{\SectionFont}{%
+  \Large\bfseries\sffamily\color{Primary}%
+  \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+}
+
+\newcommand{\SubsectionFont}{%
+  \large\bfseries\sffamily\color{Secondary}%
+  \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+}
+
+\titleformat{\section}
+  {\SectionFont}
+  {\thesection.}
+  {0.65em}
+  {}
+
+\titleformat{\subsection}
+  {\SubsectionFont}
+  {}
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\sffamily\raggedright}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\section}{0pt}{1.9em}{0.75em}
+\titlespacing*{\subsection}{0pt}{1.25em}{0.48em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.35em}
+
+% =================================================
+% Колонтитулы
+% =================================================
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{%
+  \footnotesize\sffamily\color{GrayText} Математика. 5 класс
+}
+
+\fancyhead[R]{%
+  \footnotesize\sffamily\color{GrayText} Натуральные числа. Урок 3
+}
+
+\fancyfoot[C]{\small\color{GrayText}\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{%
+    \color{GrayLine}\leaders\hrule height \headrulewidth\hfill
+  }
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyfoot[C]{\small\color{GrayText}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+
+% =================================================
+% Команды рабочего листа
+% =================================================
+\newcommand{\worksheettitle}[2]{%
+  \begin{center}
+    {\fontsize{24pt}{29pt}\selectfont\bfseries\sffamily\color{Primary}#1\par}
+    \vspace{0.3em}
+    {\large\sffamily\color{Secondary}#2\par}
+  \end{center}
+  \vspace{0.45em}
+}
+
+\newcommand{\studentnameblock}{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X@{\hspace{1.2em}}p{0.27\textwidth}@{}}
+    \textbf{Фамилия, имя:}\ \hrulefill &
+    \textbf{Дата:}\ \hrulefill
+  \end{tabularx}
+  \par\vspace{0.45em}
+}
+
+\newcommand{\answerblank}[1][25mm]{%
+  \makebox[#1]{\hrulefill}%
+}
+
+% Пустой бланк для числителя/знаменателя дроби: резервирует ширину, но НЕ
+% рисует линию (иначе она наложится на фракционную черту). Используйте
+% \answerfraction{...} вместо \answerblank{...} внутри \frac/\dfrac.
+\newcommand{\answerfraction}[1][25mm]{%
+  \makebox[#1]{}%
+}
+
+\newcommand{\longanswerline}[1][Ответ]{%
+  \par\vspace{0.25em}
+  \noindent\textbf{#1:}\ \hrulefill\par
+}
+
+\newcommand{\workarea}[1]{%
+  \par\vspace{0.25em}%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=GrayLine,
+    boxrule=0.45pt,
+    arc=1mm,
+    height=#1,
+    left=3mm,right=3mm,top=2mm,bottom=2mm,
+    borderline west={1.6pt}{0pt}{Primary},
+    before skip=0.4em,after skip=0.45em
+  ]
+  \end{tcolorbox}%
+}
+
+\newcommand{\writinglines}[1]{%
+  \par\vspace{0.2em}%
+  \begingroup
+  \setlength{\parskip}{0pt}%
+  \foreach \n in {1,...,#1}{%
+    \noindent{\color{GrayLine}\rule{\linewidth}{0.45pt}}\par\vspace{4mm}%
+  }%
+  \endgroup
+}
+
+\newcommand{\choicebox}{\(\square\)}
+
+\newcommand{\teacherlabel}{%
+  \tikz[baseline=(n.base)]{%
+    \node[
+      rounded corners=1mm,
+      fill=Accent,
+      text=white,
+      inner xsep=4pt,
+      inner ysep=1.5pt,
+      font=\bfseries\sffamily\footnotesize
+    ] (n) {для учителя};%
+  }%
+}

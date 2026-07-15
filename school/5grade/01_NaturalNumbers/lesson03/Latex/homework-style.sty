@@ -1,0 +1,252 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{homework-style}[2026/07/11 Natural numbers lesson 3 homework additions]
+
+% =================================================
+% Колонтитулы домашней работы
+% =================================================
+\fancyhead[L]{%
+  \footnotesize\sffamily\color{GrayText} Математика. 5 класс. Домашняя работа
+}
+\fancyhead[R]{%
+  \footnotesize\sffamily\color{GrayText} Составление чисел. Задачи на цифры
+}
+
+% =================================================
+% Служебные команды
+% =================================================
+\newcommand{\homeworktitle}[2]{%
+  \begin{center}
+    {\fontsize{24pt}{28pt}\selectfont\bfseries\sffamily\color{Primary} #1\par}
+    \vspace{0.35em}
+    {\large\sffamily\color{Secondary} #2\par}
+  \end{center}
+  \vspace{0.55em}
+}
+
+\newcommand{\studentline}{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X@{\hspace{1.2em}}p{0.28\textwidth}@{}}
+    \textbf{Фамилия, имя:}\ \hrulefill &
+    \textbf{Дата:}\ \hrulefill
+  \end{tabularx}
+}
+
+\newcommand{\answerspace}[1]{%
+  \par\vspace{0.3em}%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=GrayLine,
+    boxrule=0.45pt,
+    arc=1mm,
+    height=#1,
+    left=3mm,right=3mm,top=2mm,bottom=2mm,
+    borderline west={1.6pt}{0pt}{Primary},
+    before skip=0.45em,after skip=0.45em
+  ]
+  \end{tcolorbox}%
+}
+
+\newcommand{\tasklabel}[1]{%
+  \tikz[baseline=(n.base)]{%
+    \node[
+      circle,
+      fill=Primary,
+      text=white,
+      minimum size=7mm,
+      inner sep=0pt,
+      font=\bfseries\sffamily\small
+    ] (n) {#1};%
+  }%
+}
+
+\newcommand{\teacheronlylabel}{%
+  \tikz[baseline=(n.base)]{%
+    \node[
+      rounded corners=1mm,
+      fill=Accent,
+      text=white,
+      inner xsep=4pt,
+      inner ysep=1.5pt,
+      font=\bfseries\sffamily\footnotesize
+    ] (n) {для учителя};%
+  }%
+}
+
+
+\newcommand{\solutionmap}{%
+  \par\vspace{0.35em}
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=GrayLine,
+    boxrule=0.45pt,
+    arc=1mm,
+    left=3.5mm,right=3.5mm,top=2.5mm,bottom=2.5mm,
+    borderline west={1.6pt}{0pt}{Primary},
+    before skip=0.45em,after skip=0.55em
+  ]
+    \renewcommand{\arraystretch}{1.45}
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries\sffamily}p{0.34\linewidth}X@{}}
+      Условие двух нулей: & \hrulefill \\
+      Нули числителя: & \hrulefill \\
+      Проверка знаменателя: & \hrulefill \\
+      Ответ: & \hrulefill
+    \end{tabularx}
+  \end{tcolorbox}%
+}
+
+\newcommand{\shortanswerline}{%
+  \par\vspace{0.35em}
+  \noindent\textbf{Ответ:}\ \hrulefill\par
+}
+
+% =================================================
+% Блоки домашней работы
+% =================================================
+\newtcolorbox{routebox}[1][Маршрут решения]{
+  enhanced,
+  breakable,
+  colback=SecondaryLight,
+  colframe=Secondary,
+  boxrule=0.75pt,
+  arc=2mm,
+  left=4.5mm,right=4.5mm,top=3mm,bottom=3mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=Secondary,
+  attach boxed title to top left={xshift=5mm,yshift=-2.3mm},
+  boxed title style={
+    colback=Secondary,colframe=Secondary,boxrule=0pt,arc=1.3mm,
+    left=3mm,right=3mm,top=1.2mm,bottom=1.2mm
+  },
+  before skip=0.9em,after skip=0.9em
+}
+
+\newtcolorbox{homeworktask}[2][]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=GrayLine,
+  boxrule=0.65pt,
+  borderline west={3pt}{0pt}{Primary},
+  arc=1.3mm,
+  left=4.5mm,right=4.5mm,top=3mm,bottom=3mm,
+  title={\tasklabel{#2}\hspace{0.6em}#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=white,
+  attach title to upper,
+  after title={\par\vspace{0.35em}},
+  before skip=0.75em,after skip=0.75em
+}
+
+\newtcolorbox{hintbox}[1][Подсказка]{
+  enhanced,
+  breakable,
+  colback=AccentLight,
+  colframe=AccentLight,
+  boxrule=0pt,
+  borderline west={2.5pt}{0pt}{Accent},
+  arc=0mm,
+  left=4.5mm,right=4mm,top=2.3mm,bottom=2.3mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Accent,
+  colbacktitle=AccentLight,
+  attach title to upper,
+  after title={\par\vspace{0.25em}},
+  before skip=0.65em,after skip=0.65em
+}
+
+\newtcolorbox{selfcheck}[1][Перед сдачей проверьте]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLine,
+  boxrule=0.65pt,
+  arc=2mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.25em}},
+  before skip=0.85em,after skip=0.85em
+}
+
+\newtcolorbox{teacheranswer}[1][Решение]{
+  enhanced,
+  breakable,
+  colback=SecondaryLight,
+  colframe=Secondary,
+  boxrule=0.75pt,
+  arc=1.8mm,
+  left=4.5mm,right=4.5mm,top=3mm,bottom=3mm,
+  title={\teacheronlylabel\hspace{0.6em}#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,
+  colbacktitle=SecondaryLight,
+  attach title to upper,
+  after title={\par\vspace{0.3em}},
+  before skip=0.85em,after skip=0.85em
+}
+
+\newtcolorbox{criterionbox}[1][Что проверяет задание]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLight,
+  boxrule=0pt,
+  borderline west={2.3pt}{0pt}{Secondary},
+  arc=0mm,
+  left=4.2mm,right=4mm,top=2.1mm,bottom=2.1mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.22em}},
+  before skip=0.55em,after skip=0.55em
+}
+
+
+% =================================================
+% Дополнительные карты решения
+% =================================================
+\newcommand{\structuredsolutionmap}{%
+  \par\vspace{0.35em}
+  \begin{tcolorbox}[
+    enhanced,colback=white,colframe=GrayLine,boxrule=0.45pt,arc=1mm,
+    left=3.5mm,right=3.5mm,top=2.2mm,bottom=2.2mm,
+    borderline west={1.6pt}{0pt}{Primary},
+    before skip=0.4em,after skip=0.45em
+  ]
+    \renewcommand{\arraystretch}{1.38}
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries\sffamily}p{0.34\linewidth}X@{}}
+      Ноль на ветви \(x\ge0\): & \hrulefill \\
+      Ноль на ветви \(x<0\): & \hrulefill \\
+      Условие двух нулей: & \hrulefill \\
+      \(D(x_1)\): & \hrulefill \\
+      \(D(x_2)\): & \hrulefill \\
+      Исключаемые параметры: & \hrulefill \\
+      Ответ: & \hrulefill
+    \end{tabularx}
+  \end{tcolorbox}%
+}
+
+\newcommand{\reducedsolutionmap}{%
+  \par\vspace{0.35em}
+  \begin{tcolorbox}[
+    enhanced,colback=white,colframe=GrayLine,boxrule=0.45pt,arc=1mm,
+    left=3.5mm,right=3.5mm,top=2.8mm,bottom=2.8mm,
+    borderline west={1.6pt}{0pt}{Primary},
+    before skip=0.45em,after skip=0.55em
+  ]
+    \textbf{1. Числитель:}\par\vspace{12mm}
+    \textbf{2. Знаменатель:}\par\vspace{18mm}
+    \textbf{3. Ответ:}\ \hrulefill
+  \end{tcolorbox}%
+}

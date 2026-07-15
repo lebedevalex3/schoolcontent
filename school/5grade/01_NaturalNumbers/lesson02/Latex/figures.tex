@@ -1,0 +1,157 @@
+% =================================================
+% TikZ-рисунки к уроку 2
+% =================================================
+
+% Полная таблица классов: миллиарды, миллионы, тысячи, единицы.
+\newcommand{\classtablefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.91cm,y=0.85cm]
+      % Заголовки классов
+      \foreach \start/\title in {0/{класс миллиардов},3/{класс миллионов},6/{класс тысяч},9/{класс единиц}}{
+        \node[
+          draw=Primary,fill=PrimaryLight,
+          minimum width=2.73cm,minimum height=0.75cm,
+          font=\footnotesize\bfseries\sffamily,text=Primary
+        ] at (\start+1,1.35) {\title};
+      }
+      % Разряды и цифры числа 7 304 052 018
+      \foreach \x/\head/\digit in {
+        0/{сот.}/0,1/{дес.}/0,2/{ед.}/7,
+        3/{сот.}/3,4/{дес.}/0,5/{ед.}/4,
+        6/{сот.}/0,7/{дес.}/5,8/{ед.}/2,
+        9/{сот.}/0,10/{дес.}/1,11/{ед.}/8}{
+        \node[
+          draw=GrayLine,fill=TableHeader,
+          minimum width=0.91cm,minimum height=0.68cm,
+          font=\scriptsize\bfseries\sffamily,text=Primary
+        ] at (\x,0.45) {\head};
+        \node[
+          draw=GrayLine,fill=white,
+          minimum width=0.91cm,minimum height=0.82cm,
+          font=\bfseries\sffamily\large
+        ] at (\x,-0.34) {\digit};
+      }
+      \draw[Primary,line width=0.9pt] (2.5,1.73) -- (2.5,-0.75);
+      \draw[Primary,line width=0.9pt] (5.5,1.73) -- (5.5,-0.75);
+      \draw[Primary,line width=0.9pt] (8.5,1.73) -- (8.5,-0.75);
+      \node[font=\small\sffamily,text=GrayText,anchor=north]
+        at (5.5,-1.0) {Число \(7\,304\,052\,018\): в каждом классе по три разряда.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Схема деления числа на классы справа налево.
+\newcommand{\splitclassesfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=2mm]
+      \node[
+        draw=Primary,fill=PrimaryLight,rounded corners=1.5mm,
+        inner xsep=7mm,inner ysep=3.2mm,
+        font=\bfseries\sffamily\Large,text=Primary
+      ] (raw) {7304052018};
+      \node[
+        below=8mm of raw,
+        draw=Secondary,fill=SecondaryLight,rounded corners=1.5mm,
+        inner xsep=6mm,inner ysep=3.2mm,
+        font=\bfseries\sffamily\Large,text=Secondary
+      ] (split) {7\,|\,304\,|\,052\,|\,018};
+      \draw[-{Stealth[length=3mm]},draw=Accent,line width=1pt]
+        (raw) -- node[right,font=\small\sffamily,text=GrayText]{отделяем справа по три цифры} (split);
+      \node[below=4mm of split,font=\small\sffamily,text=GrayText]
+        {миллиарды \quad миллионы \quad тысячи \quad единицы};
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Маршрут чтения числа по классам.
+\newcommand{\readingroutefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=4mm and 3mm]
+      \node[draw=Primary,fill=PrimaryLight,rounded corners=1.3mm,
+        minimum width=2.0cm,minimum height=1.0cm,
+        align=center,font=\bfseries\sffamily,text=Primary] (a) {7\\миллиардов};
+      \node[right=of a,draw=Primary,fill=PrimaryLight,rounded corners=1.3mm,
+        minimum width=2.4cm,minimum height=1.0cm,
+        align=center,font=\bfseries\sffamily,text=Primary] (b) {304\\миллиона};
+      \node[right=of b,draw=Primary,fill=PrimaryLight,rounded corners=1.3mm,
+        minimum width=2.4cm,minimum height=1.0cm,
+        align=center,font=\bfseries\sffamily,text=Primary] (c) {52\\тысячи};
+      \node[right=of c,draw=Secondary,fill=SecondaryLight,rounded corners=1.3mm,
+        minimum width=2.0cm,minimum height=1.0cm,
+        align=center,font=\bfseries\sffamily,text=Secondary] (d) {18};
+      \draw[-{Stealth[length=2.5mm]},draw=Accent,line width=0.9pt] (a) -- (b);
+      \draw[-{Stealth[length=2.5mm]},draw=Accent,line width=0.9pt] (b) -- (c);
+      \draw[-{Stealth[length=2.5mm]},draw=Accent,line width=0.9pt] (c) -- (d);
+      \node[below=4mm of b.south east,font=\small\sffamily,text=GrayText,align=center]
+        {Читаем слева направо. Название класса единиц не произносим.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Схема записи числа словами через карточки классов.
+\newcommand{\writingclassesfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=5mm]
+      \node[font=\sffamily,align=center,text=GrayText] (words)
+        {восемь миллионов четырнадцать тысяч пять};
+      \node[below=6mm of words,draw=Primary,fill=PrimaryLight,rounded corners=1.3mm,
+        minimum width=1.5cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Primary] (m) {8};
+      \node[right=3mm of m,draw=Primary,fill=PrimaryLight,rounded corners=1.3mm,
+        minimum width=1.8cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Primary] (t) {014};
+      \node[right=3mm of t,draw=Secondary,fill=SecondaryLight,rounded corners=1.3mm,
+        minimum width=1.8cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Secondary] (u) {005};
+      \node[below=1.5mm of m,font=\scriptsize\sffamily,text=GrayText] {миллионы};
+      \node[below=1.5mm of t,font=\scriptsize\sffamily,text=GrayText] {тысячи};
+      \node[below=1.5mm of u,font=\scriptsize\sffamily,text=GrayText] {единицы};
+      \draw[-{Stealth[length=2.7mm]},draw=Accent,line width=0.9pt]
+        (words) -- ($(t.north)+(0,0.5mm)$);
+      \node[below=8mm of t,font=\bfseries\sffamily\Large,text=Primary] {8\,014\,005};
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Нулевой класс: при чтении пропускается, в записи сохраняется.
+\newcommand{\zeroclassfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=3mm]
+      \node[draw=Primary,fill=PrimaryLight,rounded corners=1.4mm,
+        minimum width=1.6cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Primary] (m) {9};
+      \node[right=of m,draw=Accent,fill=AccentLight,rounded corners=1.4mm,
+        minimum width=1.9cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Accent] (t) {000};
+      \node[right=of t,draw=Secondary,fill=SecondaryLight,rounded corners=1.4mm,
+        minimum width=1.9cm,minimum height=1.0cm,font=\bfseries\sffamily\Large,text=Secondary] (u) {406};
+      \node[below=2mm of m,font=\scriptsize\sffamily,text=GrayText] {миллионы};
+      \node[below=2mm of t,font=\scriptsize\sffamily,text=Accent] {тысячи: класс пуст};
+      \node[below=2mm of u,font=\scriptsize\sffamily,text=GrayText] {единицы};
+      \node[below=8mm of t,font=\small\sffamily,text=GrayText,align=center]
+        {Читаем: «девять миллионов четыреста шесть».\\Слово «тысяч» не произносим, но группу \(000\) не удаляем.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+% Пустая рабочая таблица классов для числа 325 041 708.
+\newcommand{\classworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.07cm,y=0.85cm]
+      \foreach \start/\title in {0/{миллионы},3/{тысячи},6/{единицы}}{
+        \node[draw=Primary,fill=PrimaryLight,
+          minimum width=3.21cm,minimum height=0.72cm,
+          font=\footnotesize\bfseries\sffamily,text=Primary]
+          at (\start+1,1.3) {класс \title};
+      }
+      \foreach \x/\head/\digit in {
+        0/{сот.}/3,1/{дес.}/2,2/{ед.}/5,
+        3/{сот.}/0,4/{дес.}/4,5/{ед.}/1,
+        6/{сот.}/7,7/{дес.}/0,8/{ед.}/8}{
+        \node[draw=GrayLine,fill=TableHeader,
+          minimum width=1.07cm,minimum height=0.66cm,
+          font=\scriptsize\bfseries\sffamily,text=Primary] at (\x,0.42) {\head};
+        \node[draw=GrayLine,fill=white,
+          minimum width=1.07cm,minimum height=0.82cm,
+          font=\bfseries\sffamily\large] at (\x,-0.35) {\digit};
+      }
+      \draw[Primary,line width=0.9pt] (2.5,1.65) -- (2.5,-0.75);
+      \draw[Primary,line width=0.9pt] (5.5,1.65) -- (5.5,-0.75);
+    \end{tikzpicture}
+  \end{center}
+}

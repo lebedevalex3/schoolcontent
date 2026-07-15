@@ -1,0 +1,145 @@
+% =================================================
+% TikZ-схемы. Урок 3
+% =================================================
+
+\newcommand{\digitcard}[2][]{%
+  \tikz[baseline=(n.base)]{%
+    \node[
+      draw=Primary,
+      fill=PrimaryLight,
+      rounded corners=1.2mm,
+      minimum width=9mm,
+      minimum height=10mm,
+      inner sep=0pt,
+      font=\bfseries\sffamily\large,
+      #1
+    ] (n) {#2};%
+  }%
+}
+
+\newcommand{\orderchangesfigure}{%
+  \begin{center}
+  \begin{tikzpicture}[>=Stealth,node distance=8mm]
+    \node[font=\small\sffamily,text=GrayText] (digits) {Одни и те же цифры};
+    \node[below=5mm of digits] (cards) {\digitcard{2}\hspace{2mm}\digitcard{7}};
+    \node[draw=Primary,fill=PrimaryLight,rounded corners=2mm,
+      minimum width=25mm,minimum height=13mm,font=\bfseries\sffamily,
+      below left=11mm and 14mm of cards] (a) {$27$};
+    \node[draw=Secondary,fill=SecondaryLight,rounded corners=2mm,
+      minimum width=25mm,minimum height=13mm,font=\bfseries\sffamily,
+      below right=11mm and 14mm of cards] (b) {$72$};
+    \draw[-{Stealth[length=2.8mm]},draw=Primary,line width=.9pt] (cards) -- (a);
+    \draw[-{Stealth[length=2.8mm]},draw=Secondary,line width=.9pt] (cards) -- (b);
+    \node[below=2mm of a,font=\small\sffamily,text=GrayText] {2 десятка и 7 единиц};
+    \node[below=2mm of b,font=\small\sffamily,text=GrayText] {7 десятков и 2 единицы};
+  \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\repeatstreefigure}{%
+  \begin{center}
+  \begin{tikzpicture}[
+    level 1/.style={sibling distance=46mm,level distance=16mm},
+    level 2/.style={sibling distance=21mm,level distance=17mm},
+    every node/.style={font=\sffamily},
+    branch/.style={draw=Primary,fill=PrimaryLight,circle,minimum size=9mm,inner sep=0pt,font=\bfseries\sffamily},
+    leaf/.style={draw=Secondary,fill=SecondaryLight,rounded corners=1.5mm,minimum width=19mm,minimum height=9mm,font=\bfseries\sffamily},
+    edge from parent/.style={draw=GrayText,line width=.7pt}
+  ]
+    \node[draw=GrayLine,fill=GrayLight,rounded corners=2mm,inner xsep=5mm,inner ysep=2mm,font=\small\bfseries\sffamily] {цифра десятков}
+      child {node[branch] {3}
+        child {node[leaf] {33} edge from parent node[left,font=\scriptsize\sffamily] {3}}
+        child {node[leaf] {37} edge from parent node[right,font=\scriptsize\sffamily] {7}}
+      }
+      child {node[branch] {7}
+        child {node[leaf] {73} edge from parent node[left,font=\scriptsize\sffamily] {3}}
+        child {node[leaf] {77} edge from parent node[right,font=\scriptsize\sffamily] {7}}
+      };
+    \node[font=\small\sffamily,text=GrayText] at (0,-40mm) {На каждом шаге используются обе разрешённые цифры.};
+  \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\norepeattreefigure}{%
+  \begin{center}
+  \resizebox{0.94\linewidth}{!}{%
+  \begin{tikzpicture}[
+    node distance=8mm,
+    start/.style={draw=GrayLine,fill=GrayLight,rounded corners=2mm,minimum width=34mm,minimum height=10mm,font=\small\bfseries\sffamily},
+    branch/.style={draw=Primary,fill=PrimaryLight,circle,minimum size=9mm,inner sep=0pt,font=\bfseries\sffamily},
+    leaf/.style={draw=Secondary,fill=SecondaryLight,rounded corners=1.5mm,minimum width=20mm,minimum height=9mm,font=\bfseries\sffamily},
+    bad/.style={draw=Accent,fill=AccentLight,rounded corners=1.5mm,minimum width=29mm,minimum height=9mm,font=\small\bfseries\sffamily,text=Accent},
+    arr/.style={-{Stealth[length=2.4mm]},draw=GrayText,line width=.7pt}
+  ]
+    \node[start] (s) {первая цифра};
+    \node[bad,below left=13mm and 35mm of s] (z) {$0$ нельзя};
+    \node[branch,below=13mm of s] (f) {5};
+    \node[branch,below right=13mm and 35mm of s] (e) {8};
+    \draw[arr] (s)--(z); \draw[arr] (s)--(f); \draw[arr] (s)--(e);
+    \node[leaf,below left=15mm and 9mm of f] (a) {508};
+    \node[leaf,below right=15mm and 9mm of f] (b) {580};
+    \node[leaf,below left=15mm and 9mm of e] (c) {805};
+    \node[leaf,below right=15mm and 9mm of e] (d) {850};
+    \draw[arr] (f)--(a); \draw[arr] (f)--(b); \draw[arr] (e)--(c); \draw[arr] (e)--(d);
+    \node[font=\small\sffamily,text=GrayText,align=center] at (0,-50mm)
+      {После выбора первой цифры остаются две цифры;\\их можно поставить в двух порядках.};
+  \end{tikzpicture}%
+  }
+  \end{center}
+}
+
+\newcommand{\largestsmallestfigure}{%
+  \begin{center}
+  \resizebox{0.95\linewidth}{!}{%
+  \begin{tikzpicture}[node distance=8mm]
+    \node[font=\small\sffamily,text=GrayText] (d) {Даны цифры:};
+    \node[below=3mm of d] (cards) {\digitcard{0}\hspace{1.5mm}\digitcard{2}\hspace{1.5mm}\digitcard{5}\hspace{1.5mm}\digitcard{8}};
+    \node[draw=Secondary,fill=SecondaryLight,rounded corners=2mm,
+      minimum width=51mm,minimum height=13mm,font=\bfseries\sffamily,
+      below left=13mm and 10mm of cards] (max) {наибольшее: $8520$};
+    \node[draw=Primary,fill=PrimaryLight,rounded corners=2mm,
+      minimum width=51mm,minimum height=13mm,font=\bfseries\sffamily,
+      below right=13mm and 10mm of cards] (min) {наименьшее: $2058$};
+    \draw[-{Stealth[length=2.6mm]},draw=Secondary,line width=.9pt] (cards)--(max);
+    \draw[-{Stealth[length=2.6mm]},draw=Primary,line width=.9pt] (cards)--(min);
+    \node[below=2mm of min,font=\scriptsize\sffamily,text=GrayText,align=center]
+      {Сначала наименьшая ненулевая цифра,\\затем ноль и остальные по возрастанию.};
+  \end{tikzpicture}%
+  }
+  \end{center}
+}
+
+\newcommand{\systematicroutefigure}{%
+  \begin{center}
+  \begin{tikzpicture}[
+    node distance=5mm,
+    box/.style={draw=Primary,fill=PrimaryLight,rounded corners=1.5mm,
+      minimum width=31mm,minimum height=12mm,align=center,font=\small\bfseries\sffamily},
+    arr/.style={-{Stealth[length=2.4mm]},draw=Accent,line width=.9pt}
+  ]
+    \node[box] (a) {1. Записать\\условие};
+    \node[box,right=of a] (b) {2. Выбрать\\первую цифру};
+    \node[box,right=of b] (c) {3. Найти\\остальные цифры};
+    \node[box,right=of c] (d) {4. Проверить\\и посчитать};
+    \draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d);
+  \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\placevaluecountfigure}{%
+  \begin{center}
+  \begin{tikzpicture}[node distance=6mm]
+    \node[draw=Primary,fill=PrimaryLight,rounded corners=1.5mm,
+      minimum width=34mm,minimum height=12mm,align=center,font=\small\bfseries\sffamily] (a)
+      {десятки\\$7$ вариантов};
+    \node[font=\Large\bfseries\sffamily,text=Accent,right=of a] (x) {$\times$};
+    \node[draw=Secondary,fill=SecondaryLight,rounded corners=1.5mm,
+      minimum width=34mm,minimum height=12mm,align=center,font=\small\bfseries\sffamily,right=of x] (b)
+      {единицы\\определены};
+    \node[font=\Large\bfseries\sffamily,text=Accent,right=of b] (eq) {$=$};
+    \node[draw=Accent,fill=AccentLight,rounded corners=1.5mm,
+      minimum width=28mm,minimum height=12mm,align=center,font=\small\bfseries\sffamily,right=of eq] (r)
+      {$7$ чисел};
+  \end{tikzpicture}
+  \end{center}
+}

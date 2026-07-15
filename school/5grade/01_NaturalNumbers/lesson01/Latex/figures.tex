@@ -1,0 +1,127 @@
+% =================================================
+% TikZ-рисунки к уроку 1
+% =================================================
+
+\newcommand{\digitcardsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \foreach \d [count=\i from 0] in {0,1,2,3,4,5,6,7,8,9}{
+        \node[
+          draw=Primary,
+          fill=PrimaryLight,
+          rounded corners=1.4mm,
+          minimum width=9mm,
+          minimum height=10mm,
+          font=\bfseries\sffamily\large,
+          text=Primary
+        ] at (\i*1.05,0) {\d};
+      }
+      \node[font=\small\sffamily,text=GrayText,anchor=north west]
+        at (0,-0.7) {Из десяти цифр можно составить бесконечно много записей чисел.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\placevaluefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.55cm,y=1cm]
+      \foreach \x/\head/\digit in {
+        0/{десятки\\тысяч}/5,
+        1/{единицы\\тысяч}/8,
+        2/{сотни}/3,
+        3/{десятки}/4,
+        4/{единицы}/2}{
+        \node[
+          draw=GrayLine,
+          fill=TableHeader,
+          minimum width=1.47cm,
+          minimum height=1.35cm,
+          align=center,
+          font=\footnotesize\bfseries\sffamily,
+          text=Primary
+        ] at (\x,0.65) {\head};
+        \node[
+          draw=GrayLine,
+          fill=white,
+          minimum width=1.47cm,
+          minimum height=1.15cm,
+          font=\bfseries\sffamily\Large
+        ] at (\x,-0.6) {\digit};
+      }
+      \node[font=\small\sffamily,text=GrayText,anchor=north]
+        at (2,-1.35) {Число \(58\,342\): каждая цифра занимает свой разряд.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\placevalueworksheetfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1.55cm,y=1cm]
+      \foreach \x/\head/\digit in {
+        0/{десятки\\тысяч}/7,
+        1/{единицы\\тысяч}/2,
+        2/{сотни}/6,
+        3/{десятки}/4,
+        4/{единицы}/9}{
+        \node[
+          draw=GrayLine,
+          fill=TableHeader,
+          minimum width=1.47cm,
+          minimum height=1.35cm,
+          align=center,
+          font=\footnotesize\bfseries\sffamily,
+          text=Primary
+        ] at (\x,0.65) {\head};
+        \node[
+          draw=GrayLine,
+          fill=white,
+          minimum width=1.47cm,
+          minimum height=1.15cm,
+          font=\bfseries\sffamily\Large
+        ] at (\x,-0.6) {\digit};
+      }
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\zeroplacefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=8mm]
+      \node[
+        draw=Primary,fill=PrimaryLight,rounded corners=1.5mm,
+        minimum width=4.6cm,minimum height=13mm,
+        font=\bfseries\sffamily\Large,text=Primary
+      ] (n) {40\,508};
+      \node[
+        below=5mm of n,
+        font=\small\sffamily,
+        text=GrayText,
+        align=center
+      ] {0 тысяч и 0 десятков: нули сохраняют места разрядов};
+      \draw[-{Stealth[length=2.5mm]},draw=Accent,line width=0.8pt]
+        ($(n.center)+(-0.48,0.05)$) -- ++(0,-0.62);
+      \draw[-{Stealth[length=2.5mm]},draw=Accent,line width=0.8pt]
+        ($(n.center)+(0.48,0.05)$) -- ++(0,-0.62);
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\expandedformfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[node distance=7mm]
+      \node[
+        draw=Primary,fill=PrimaryLight,rounded corners=1.5mm,
+        inner xsep=7mm,inner ysep=3.5mm,
+        font=\bfseries\sffamily\Large,text=Primary
+      ] (number) {47\,305};
+      \node[
+        below=8mm of number,
+        draw=Secondary,fill=SecondaryLight,rounded corners=1.5mm,
+        inner xsep=5mm,inner ysep=3.5mm,
+        font=\sffamily
+      ] (sum) {\(40\,000+7\,000+300+5\)};
+      \draw[-{Stealth[length=3mm]},draw=Accent,line width=1pt]
+        (number) -- node[right,font=\small\sffamily,text=GrayText]{разложили по разрядам} (sum);
+    \end{tikzpicture}
+  \end{center}
+}
