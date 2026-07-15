@@ -1,0 +1,20 @@
+\input{../../common/Latex/module-style-common.sty}
+\input{../../common/Latex/module-style-color.sty}
+
+\fancyhead[L]{\footnotesize\sffamily\color{GrayText} Математика. 5 класс}
+\fancyhead[R]{\footnotesize\sffamily\color{GrayText} Натуральные числа. M01}
+
+\newcommand{\modulemark}[1]{%
+  \tikz[baseline=-0.5ex]{\node[
+    fill=Primary,
+    text=white,
+    rounded corners=1mm,
+    inner xsep=4pt,
+    inner ysep=2pt,
+    font=\bfseries\sffamily\small
+  ]{#1};}%
+}
+
+\newcommand{\levelbase}{\textbf{\color{Primary}\(\bullet\) База}}
+\newcommand{\levelpractice}{\textbf{\color{Secondary}\(\circ\) Закрепление}}
+\newcommand{\levelextension}{\textbf{\color{Accent}\(\star\) Усложнение}}

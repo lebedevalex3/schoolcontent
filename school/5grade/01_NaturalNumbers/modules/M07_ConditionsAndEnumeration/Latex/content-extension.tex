@@ -1,0 +1,49 @@
+\worksheettitle{M07\(\star\). Считаем без списка}{\modulemark{M07\(\star\)} Усложнение}
+\studentnameblock
+
+\begin{notebox}[От строк таблицы к количеству]
+  Для условия $b=a+k$ цифра десятков $a$ начинается с 1. Чтобы $b$ не
+  превысила 9, должно выполняться $a+k\leq9$, то есть $a\leq9-k$.
+\end{notebox}
+
+\begin{practicebox}[Разберите закономерность]
+  \begin{center}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{c|c|c}
+    \toprule
+    условие & допустимые $a$ & число вариантов \\
+    \midrule
+    $b=a+1$ & от 1 до 8 & 8 \\
+    $b=a+2$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
+    $b=a+4$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
+    $b=a+7$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Сформулируйте правило количества вариантов через $k$:
+  \answerblank[90mm].
+\end{practicebox}
+
+\begin{practicebox}[Сумма цифр]
+  Для $a+b=S$ и $S\leq9$ цифра $a$ может принимать значения от 1 до
+  $S$, а $b=S-a$ остаётся цифрой.
+
+  Не выписывая числа, найдите количество вариантов:
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item сумма 4: \answerblank[15mm];
+    \item сумма 7: \answerblank[15mm];
+    \item сумма 9: \answerblank[15mm].
+  \end{enumerate}
+  Почему количество совпадает с суммой $S$? \answerblank[60mm].
+\end{practicebox}
+
+\begin{warningbox}[Граница правила]
+  Проверьте сумму 10. Можно ли просто сказать, что вариантов 10? Учтите, что
+  $b$ не может быть 10, а $a$ не может быть 0. Сделайте вывод:
+  \answerblank[70mm].
+\end{warningbox}
+
+\begin{checkpointbox}[Связь с перебором]
+  Объясните, почему подсчёт допустимых значений $a$ доказывает полноту так же,
+  как заполненная таблица: \answerblank[65mm].
+\end{checkpointbox}

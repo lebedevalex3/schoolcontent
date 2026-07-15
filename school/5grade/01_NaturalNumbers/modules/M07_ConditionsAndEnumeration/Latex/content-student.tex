@@ -1,0 +1,201 @@
+\worksheettitle{Условия между цифрами}{\modulemark{M07} Учебный модуль \textbullet\ упорядоченный перебор}
+\studentnameblock
+
+\begin{checkpointbox}[Вход после M05]
+  Из цифр 1, 3, 5 составьте все двузначные числа без повторений:
+  \answerblank[85mm]. Как вы убедились, что список полный?
+  \answerblank[80mm].
+\end{checkpointbox}
+
+\section{Переводим условие на язык цифр}
+Пусть (a) — цифра десятков, (b) — цифра единиц. Тогда двузначное число
+имеет вид (10a+b), причём (a) принимает значения от 1 до 9, а (b) — от
+0 до 9.
+
+\begin{fillbox}[Единицы на 2 больше десятков]
+  Фраза означает: к цифре десятков прибавили 2 и получили цифру единиц.
+  Короткая запись:
+  [
+    b=a+2.
+  ]
+  Если $a=1$, то $b=$\answerblank[12mm], число \answerblank[20mm].
+  Если $a=2$, то $b=$\answerblank[12mm], число \answerblank[20mm].
+\end{fillbox}
+
+\begin{warningbox}[Не обращайте зависимость]
+  «Единицы на 2 больше десятков» — это (b=a+2), а не (a=b+2).
+  Сначала назовите, какая цифра больше, и только затем записывайте равенство.
+\end{warningbox}
+
+\section{Строим полный список}
+Заполняйте таблицу, увеличивая (a) на 1.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabular}{c|ccccccccc}
+  \toprule
+  (a) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+  \midrule
+  (b=a+2) & 3 & 4 & \answerblank[8mm] & \answerblank[8mm] &
+  \answerblank[8mm] & \answerblank[8mm] & \answerblank[8mm] & 10 & 11 \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{reflectionbox}[Граница перебора]
+  Значения 10 и 11 не являются цифрами. Поэтому последняя допустимая пара —
+  $a=$\answerblank[12mm], $b=$\answerblank[12mm], а полный список чисел:
+  \answerblank[105mm].
+\end{reflectionbox}
+
+\newpage
+\section{Другие виды условий}
+
+\begin{fillbox}[Единицы в 2 раза больше десятков]
+  Условие: (b=2a). Заполните допустимые пары.
+  \begin{center}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{c|ccccc}
+    \toprule
+    (a) & 1 & 2 & 3 & 4 & 5 \\
+    \midrule
+    (b=2a) & 2 & \answerblank[10mm] & \answerblank[10mm] &
+      \answerblank[10mm] & 10 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Подходящие числа: \answerblank[80mm]. Почему перебор заканчивается?
+  \answerblank[75mm].
+\end{fillbox}
+
+\begin{fillbox}[Сумма цифр равна 7]
+  Условие: (a+b=7), значит (b=7-a).
+  \begin{center}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{c|ccccccc}
+    \toprule
+    (a) & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+    \midrule
+    (b) & 6 & \answerblank[8mm] & \answerblank[8mm] & \answerblank[8mm] &
+    \answerblank[8mm] & \answerblank[8mm] & 0 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Полный список: \answerblank[100mm].
+\end{fillbox}
+
+\begin{practicebox}[\levelbase. Сначала запишите равенство]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Единицы на 4 больше десятков: \answerblank[35mm].
+    \item Десятки на 3 больше единиц: \answerblank[35mm].
+    \item Единицы в 3 раза больше десятков: \answerblank[35mm].
+    \item Сумма цифр равна 9: \answerblank[35mm].
+  \end{enumerate}
+\end{practicebox}
+
+\newpage
+\section{Практика: выбирает учитель}
+
+Для каждого задания запишите зависимость, постройте таблицу или группы и
+объясните границу перебора.
+
+\begin{practicebox}[\levelpractice. Найдите все двузначные числа]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Цифра единиц на 1 больше цифры десятков.
+    \item Цифра единиц на 3 меньше цифры десятков.
+    \item Цифра единиц в 3 раза больше цифры десятков.
+    \item Цифра десятков в 2 раза больше цифры единиц.
+    \item Сумма цифр равна 5.
+    \item Сумма цифр равна 10.
+  \end{enumerate}
+  \vspace{42mm}
+\end{practicebox}
+
+\begin{practicebox}[Проверьте количество]
+  Для каждого предыдущего списка укажите число вариантов:
+  \begin{center}
+    1) \answerblank[12mm]\quad
+    2) \answerblank[12mm]\quad
+    3) \answerblank[12mm]\quad
+    4) \answerblank[12mm]\quad
+    5) \answerblank[12mm]\quad
+    6) \answerblank[12mm].
+  \end{center}
+\end{practicebox}
+
+\newpage
+\section{Разбираемся в ошибках}
+
+\begin{warningbox}[Исправьте решения]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item «Единицы на 2 меньше десятков» записали (b=a+2).
+    \item При условии (b=a+4) включили число 6,10.
+    \item Для суммы цифр 6 записали (15,24,33,42,51), но забыли 60.
+    \item Для условия (a=2b) записали (12,24,36,48).
+  \end{enumerate}
+  Для каждого пункта назовите причину ошибки и дайте правильный ответ.
+  \vspace{38mm}
+\end{warningbox}
+
+\begin{fillbox}[Почему нельзя остановиться раньше]
+  Ученик нашёл числа (14,25,36) для условия (b=a+3) и решил, что этого
+  достаточно. Какие варианты он потерял? \answerblank[70mm].
+  Какая таблица или закономерность доказывает полноту?
+  \answerblank[100mm].
+\end{fillbox}
+
+\newpage
+\section{Смешанные условия}
+
+\begin{practicebox}[Сначала отберите, затем проверьте]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Найдите двузначные числа, у которых сумма цифр 8, а цифра десятков
+      больше цифры единиц.
+    \item Найдите двузначные числа, у которых единицы на 2 больше десятков и
+      число больше 40.
+    \item Найдите двузначные числа, у которых десятки в 2 раза больше единиц,
+      а число меньше 80.
+  \end{enumerate}
+  \vspace{30mm}
+\end{practicebox}
+
+\begin{fillbox}[Составьте собственное условие]
+  Придумайте условие между цифрами, которому удовлетворяют хотя бы три, но не
+  более шести двузначных чисел.
+
+  Условие словами: \answerblank[115mm].
+
+  Равенство: \answerblank[35mm]. Список: \answerblank[55mm].
+
+  Почему список полный: \answerblank[80mm].
+\end{fillbox}
+
+\newpage
+\section{Контрольная точка}
+\begin{checkpointbox}[Выполните без подсказки]
+  Найдите все двузначные числа, в которых цифра единиц на 3 больше цифры
+  десятков.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Запишите условие равенством: \answerblank[45mm].
+    \item Полный список: \answerblank[70mm].
+    \item Почему перебор заканчивается именно здесь?
+      \answerblank[75mm].
+  \end{enumerate}
+\end{checkpointbox}
+
+\begin{reflectionbox}[Моя готовность]
+  \choicebox\ Не обращаю зависимость между цифрами.
+
+  \choicebox\ Помню, что цифра принимает значения только от 0 до 9.
+
+  \choicebox\ Изменяю одну цифру по порядку и вычисляю вторую.
+
+  \choicebox\ Объясняю, почему список полный.
+
+  \choicebox\ Мне нужна таблица M07-R.
+\end{reflectionbox}
+
+\begin{notebox}[Если закончили раньше]
+  Выполните M07\(\star\): подсчитайте число вариантов без записи полного
+  списка и свяжите формулу с допустимыми строками таблицы.
+\end{notebox}

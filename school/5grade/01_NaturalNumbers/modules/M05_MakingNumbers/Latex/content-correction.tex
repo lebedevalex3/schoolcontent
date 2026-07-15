@@ -1,0 +1,47 @@
+\worksheettitle
+  {M05-R. Дерево выбора}
+  {\modulemark{M05-R} Коррекционная карточка}
+
+\studentnameblock
+
+\begin{notebox}[Задача]
+  Из цифр 0, 3, 6 составьте все двузначные числа без повторений.
+\end{notebox}
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=20mm,
+  level 1/.style={sibling distance=48mm},
+  level 2/.style={sibling distance=22mm},
+  every node/.style={draw=Primary,rounded corners,inner sep=4pt,font=\sffamily},
+  edge from parent/.style={draw=Secondary,-{Stealth}}
+]
+\node {первая цифра}
+  child {node[draw=Accent,text=Accent] {0: нельзя}}
+  child {node {3}
+    child {node {0}}
+    child {node {6}}}
+  child {node {6}
+    child {node {0}}
+    child {node {3}}};
+\end{tikzpicture}
+\end{center}
+
+\begin{practicebox}[Пройдите по ветвям]
+  Начинаются с 3: \answerblank[18mm], \answerblank[18mm].
+
+  Начинаются с 6: \answerblank[18mm], \answerblank[18mm].
+
+  Полный список: \answerblank[90mm].
+\end{practicebox}
+
+\begin{reflectionbox}[Почему список полный]
+  Ноль исключён только из \answerblank[25mm] позиции. Проверены обе допустимые
+  первые цифры: \answerblank[15mm] и \answerblank[15mm]. Для каждой проверены
+  все оставшиеся вторые цифры.
+\end{reflectionbox}
+
+\begin{checkpointbox}[Повторная проверка]
+  Из цифр 0, 4, 8 составьте все двузначные числа без повторений:
+  \answerblank[100mm].
+\end{checkpointbox}
