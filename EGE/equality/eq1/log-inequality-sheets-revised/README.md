@@ -35,9 +35,9 @@ t=y^2=\lg^2|x^2-4|.
 
 - `content-tools-student.tex` — часть 1 с четырьмя ключевыми переходами и проверкой готовности;
 - `content-solution-student.tex` — часть 2 с решением задачи и восстановлением полного решения;
-- `content-student.tex` — сохранённая архивная версия до разделения;
 - `content-teacher.tex` — сценарий занятия, полное и альтернативное решения, типичные ошибки, дифференциация и критерии;
 - `homework-content.tex` — домашняя работа с постепенным снятием опор;
+- `homework-short-answers.tex` — краткие ответы для самостоятельной проверки ученика;
 - `homework-solutions.tex` — решения и диагностические комментарии;
 - `figures.tex` — TikZ-схемы нотации, цепочки замен и числовые прямые;
 - `style-common.sty`, `style-color.sty`, `style-bw.sty`, `homework-style.sty` — стили.
@@ -46,7 +46,6 @@ t=y^2=\lg^2|x^2-4|.
 
 - `main-tools-student-color.tex`, `main-tools-student-bw.tex` — часть 1;
 - `main-solution-student-color.tex`, `main-solution-student-bw.tex` — часть 2;
-- `main-student-color.tex`, `main-student-bw.tex` — совместимые имена для части 2;
 - `main-teacher-color.tex`, `main-teacher-bw.tex`;
 - `main-homework-student-color.tex`, `main-homework-student-bw.tex`;
 - `main-homework-teacher-color.tex`, `main-homework-teacher-bw.tex`.
@@ -56,5 +55,10 @@ t=y^2=\lg^2|x^2-4|.
 Используется XeLaTeX:
 
 ```bash
-xelatex -interaction=nonstopmode -halt-on-error main-student-color.tex
+xelatex -interaction=nonstopmode -halt-on-error main-tools-student-color.tex
+xelatex -interaction=nonstopmode -halt-on-error main-solution-student-color.tex
 ```
+
+Для чёрно-белой печати замените суффикс `color` на `bw`. Методическая версия
+и практикум собираются через соответствующие файлы `main-teacher-*` и
+`main-homework-*`.

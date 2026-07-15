@@ -211,6 +211,24 @@
   before skip=0.55em,after skip=0.55em
 }
 
+\newtcolorbox{answerkeybox}[1][Краткие ответы]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLine,
+  boxrule=0.65pt,
+  borderline west={2.5pt}{0pt}{Secondary},
+  arc=1.5mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.3em}},
+  before skip=0.75em,after skip=0.75em
+}
+
 
 
 % =================================================
@@ -224,15 +242,14 @@
     borderline west={1.6pt}{0pt}{Primary},
     before skip=0.4em,after skip=0.45em
   ]
-    \renewcommand{\arraystretch}{1.38}
-    \begin{tabularx}{\linewidth}{@{}>{\bfseries\sffamily}p{0.35\linewidth}X@{}}
+    \renewcommand{\arraystretch}{1.48}
+    \begin{tabularx}{\linewidth}{@{}>{\bfseries\sffamily}p{0.42\linewidth}X@{}}
       ОДЗ: & \hrulefill \\
-      Формулы с модулем: & \hrulefill \\
-      Замена \(y\): & \hrulefill \\
-      Замена \(t=y^2\): & \hrulefill \\
-      Условия на логарифм: & \hrulefill \\
-      Условия на аргумент: & \hrulefill \\
-      Условия на \(x\): & \hrulefill \\
+      Преобразование логарифмов: & \hrulefill \\
+      Первая замена \(y\): & \hrulefill \\
+      Неравенство относительно \(y\): & \hrulefill \\
+      Вторая замена и ограничение: & \hrulefill \\
+      Обратный переход: & \hrulefill \\
       Ответ: & \hrulefill
     \end{tabularx}
   \end{tcolorbox}%
