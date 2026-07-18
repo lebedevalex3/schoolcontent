@@ -1,0 +1,236 @@
+% =================================================
+% TikZ-рисунки к листу «Точки на отрезке»
+% =================================================
+
+\tikzset{
+  geom segment/.style={draw=Secondary,line width=1.45pt,line cap=round},
+  geom auxiliary/.style={draw=GrayLine,line width=0.75pt},
+  geom dashed/.style={draw=GrayText,line width=0.75pt,densely dashed},
+  geom point/.style={circle,fill=Accent,draw=white,line width=0.35pt,inner sep=2.15pt},
+  geom ghost point/.style={circle,fill=white,draw=GrayText,line width=0.8pt,inner sep=2.0pt},
+  geom label/.style={font=\small\bfseries,text=GrayText},
+  geom caption/.style={font=\small\sffamily,text=GrayText,align=center},
+  geom note/.style={font=\small\bfseries\sffamily,text=Secondary,align=center},
+  geom card/.style={draw=GrayLine,fill=white,rounded corners=1.5mm,line width=0.65pt},
+  geom arrow/.style={-{Stealth[length=2.6mm]},draw=Accent,line width=0.9pt}
+}
+
+\newcommand{\pointonsegment}[3]{%
+  \node[geom point] at (#1,#2) {};
+  \node[geom label,above=3pt] at (#1,#2) {$#3$};%
+}
+
+\newcommand{\betweenfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-5,0);
+      \coordinate (C) at (-0.7,0);
+      \coordinate (B) at (4.7,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,C,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \node[geom note,below=10pt] at (C) {точка $C$ лежит между $A$ и $B$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\wholepartsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-5,0);
+      \coordinate (C) at (-1.1,0);
+      \coordinate (B) at (4.7,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,C,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(A)+(0,-0.45)$)--($(C)+(0,-0.45)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$AC$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Secondary]
+        ($(C)+(0,-0.45)$)--($(B)+(0,-0.45)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Secondary] {$CB$};
+      \draw[decorate,decoration={brace,amplitude=4pt},draw=Primary]
+        ($(A)+(0,0.48)$)--($(B)+(0,0.48)$)
+        node[midway,above=5pt,font=\small\bfseries\sffamily,text=Primary] {$AB=AC+CB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\fourpointsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-5.3,0);
+      \coordinate (C) at (-2.1,0);
+      \coordinate (D) at (1.8,0);
+      \coordinate (B) at (5.0,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,C,D,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(A)+(0,-0.45)$)--($(C)+(0,-0.45)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$AC$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Secondary]
+        ($(C)+(0,-0.45)$)--($(D)+(0,-0.45)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Secondary] {$CD$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(D)+(0,-0.45)$)--($(B)+(0,-0.45)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$DB$};
+      \node[geom note,above=13pt] at (0,0) {$A-C-D-B$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\sameendpointfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom card,minimum width=15.4cm,minimum height=3.4cm] at (0,0.25) {};
+      \coordinate (A) at (-5.3,0);
+      \coordinate (C) at (-1.7,0);
+      \coordinate (D) at (2.7,0);
+      \coordinate (B) at (5.1,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,C,D,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(A)+(0,-0.5)$)--($(C)+(0,-0.5)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$AC=4\text{ см}$};
+      \draw[decorate,decoration={brace,amplitude=4pt},draw=Primary]
+        ($(A)+(0,0.5)$)--($(D)+(0,0.5)$)
+        node[midway,above=5pt,font=\small\sffamily,text=Primary] {$AD=9\text{ см}$};
+      \node[geom note,below=15pt] at (0.5,0) {$CD=AD-AC=5\text{ см}$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\oppositeendsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom card,minimum width=15.5cm,minimum height=3.8cm] at (0,0.15) {};
+      \coordinate (A) at (-5.4,0);
+      \coordinate (C) at (-2.0,0);
+      \coordinate (D) at (2.2,0);
+      \coordinate (B) at (5.2,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,C,D,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(A)+(0,-0.5)$)--($(C)+(0,-0.5)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$AC$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Secondary]
+        ($(D)+(0,-0.5)$)--($(B)+(0,-0.5)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Secondary] {$DB$};
+      \draw[decorate,decoration={brace,amplitude=4pt},draw=Primary]
+        ($(A)+(0,0.5)$)--($(B)+(0,0.5)$)
+        node[midway,above=5pt,font=\small\sffamily,text=Primary] {$AB$};
+      \node[geom note,below=16pt] at (0.1,0) {$CD=AB-AC-DB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\threeoppositecasesfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.82cm,y=1cm]
+      \foreach \y/\lab in {2.0/{1. Между точками есть промежуток},0/{2. Точки совпали},-2.0/{3. Порядок точек изменился}}{
+        \node[font=\small\bfseries\sffamily,text=Primary,anchor=east] at (-4.8,\y) {\lab};
+        \draw[geom segment] (-4.2,\y)--(5.1,\y);
+        \node[geom point] at (-4.2,\y) {}; \node[geom label,above=3pt] at (-4.2,\y) {$A$};
+        \node[geom point] at (5.1,\y) {};  \node[geom label,above=3pt] at (5.1,\y) {$B$};
+      }
+      % gap
+      \node[geom point] at (-1.8,2.0) {}; \node[geom label,above=3pt] at (-1.8,2.0) {$C$};
+      \node[geom point] at (2.2,2.0) {};  \node[geom label,above=3pt] at (2.2,2.0) {$D$};
+      % coincide
+      \node[geom point] at (0.3,0) {}; \node[geom label,above=3pt] at (0.3,0) {$C=D$};
+      % reversed
+      \node[geom point] at (1.7,-2.0) {};  \node[geom label,above=3pt] at (1.7,-2.0) {$C$};
+      \node[geom point] at (-1.2,-2.0) {}; \node[geom label,above=3pt] at (-1.2,-2.0) {$D$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\twopositionsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-5,0);
+      \coordinate (B) at (5,0);
+      \coordinate (C) at (0,0);
+      \coordinate (Done) at (-2.6,0);
+      \coordinate (Dtwo) at (2.6,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,B,C}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \node[geom ghost point] at (Done) {}; \node[geom label,below=4pt] at (Done) {$D_1$};
+      \node[geom ghost point] at (Dtwo) {}; \node[geom label,below=4pt] at (Dtwo) {$D_2$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(Done)+(0,-0.55)$)--($(C)+(0,-0.55)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$CD$};
+      \draw[decorate,decoration={brace,mirror,amplitude=4pt},draw=Accent]
+        ($(C)+(0,-0.55)$)--($(Dtwo)+(0,-0.55)$)
+        node[midway,below=5pt,font=\small\sffamily,text=Accent] {$CD$};
+      \node[geom note,above=14pt] at (0,0) {От точки $C$ расстояние можно отложить в обе стороны};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\candidatefilterfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom card,minimum width=15.5cm,minimum height=4.2cm] at (0,0.2) {};
+      \coordinate (A) at (-4.6,0);
+      \coordinate (B) at (4.6,0);
+      \coordinate (C) at (-3.2,0);
+      \coordinate (Din) at (0.0,0);
+      \coordinate (Dout) at (-6.4,0);
+      \draw[geom segment] (A)--(B);
+      \draw[geom dashed] (-6.6,0)--(A);
+      \foreach \P in {A,B,C}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \node[geom ghost point] at (Din) {}; \node[geom label,below=4pt] at (Din) {$D_1$};
+      \node[geom ghost point] at (Dout) {}; \node[geom label,below=4pt] at (Dout) {$D_2$};
+      \node[font=\Large\bfseries\sffamily,text=Secondary] at (0.0,0.75) {$\checkmark$};
+      \node[font=\Large\bfseries\sffamily,text=Accent] at (-6.4,0.75) {$\times$};
+      \node[geom caption,text width=13.5cm] at (0,-1.25)
+        {Если точка $D$ должна лежать на отрезке $AB$, положение вне отрезка отбрасывают.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\studentcaseonefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[draw=GrayLine,line width=0.6pt,minimum width=14.7cm,minimum height=3.5cm] at (0,0) {};
+      \coordinate (A) at (-5.6,0);
+      \coordinate (B) at (5.6,0);
+      \draw[geom segment] (A)--(B);
+      \foreach \P in {A,B}{\node[geom point] at (\P) {};\node[geom label,above=3pt] at (\P) {$\P$};}
+      \node[geom caption,above=14pt] at (0,0) {$AB=12\text{ см},\quad AC=4\text{ см},\quad DB=3\text{ см}$};
+      \node[geom caption,below=10pt] at (0,0) {Отметьте точки $C$ и $D$, затем найдите $CD$.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\studenttwocasesfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.82cm,y=1cm]
+      \foreach \y/\lab in {1.25/{Случай 1},-1.25/{Случай 2}}{
+        \draw[geom segment] (-5.4,\y)--(5.4,\y);
+        \node[geom point] at (-5.4,\y) {}; \node[geom label,above=3pt] at (-5.4,\y) {$A$};
+        \node[geom point] at (5.4,\y) {};  \node[geom label,above=3pt] at (5.4,\y) {$B$};
+        \node[font=\small\bfseries\sffamily,text=Primary,anchor=east] at (-5.8,\y) {\lab};
+      }
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\studenttwocasesanswersfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=0.72cm,y=1cm]
+      \foreach \y/\lab in {1.25/{Случай 1},-1.25/{Случай 2}}{
+        \draw[geom segment] (-5.4,\y)--(5.4,\y);
+        \node[geom point] at (-5.4,\y) {}; \node[geom label,above=3pt] at (-5.4,\y) {$A$};
+        \node[geom point] at (5.4,\y) {};  \node[geom label,above=3pt] at (5.4,\y) {$B$};
+        \node[font=\small\bfseries\sffamily,text=Primary,anchor=east] at (-5.8,\y) {\lab};
+      }
+      % scale: AB=10, 1 cm task = 1.08 TikZ cm
+      \node[geom point] at (1.08,1.25) {}; \node[geom label,above=3pt] at (1.08,1.25) {$C$};
+      \node[geom ghost point] at (-1.08,1.25) {}; \node[geom label,below=4pt] at (-1.08,1.25) {$D$};
+      \node[geom point] at (1.08,-1.25) {}; \node[geom label,above=3pt] at (1.08,-1.25) {$C$};
+      \node[geom ghost point] at (3.24,-1.25) {}; \node[geom label,below=4pt] at (3.24,-1.25) {$D$};
+      \node[geom caption,anchor=west] at (5.65,1.25) {$BD=6\text{ см}$};
+      \node[geom caption,anchor=west] at (5.65,-1.25) {$BD=2\text{ см}$};
+    \end{tikzpicture}
+  \end{center}
+}

@@ -1,0 +1,265 @@
+% =================================================
+% TikZ-рисунки к листу «Точка, прямая, отрезок и луч»
+% Школьная конвенция: у прямой нет стрелок;
+% луч обозначается двумя буквами без знака вектора.
+% =================================================
+
+\tikzset{
+  geom line/.style={draw=Primary,line width=1.05pt,line cap=round},
+  geom object/.style={draw=Secondary,line width=1.35pt,line cap=round},
+  geom auxiliary/.style={draw=GrayLine,line width=0.7pt},
+  geom point/.style={circle,fill=Accent,draw=white,line width=0.35pt,inner sep=2.15pt},
+  geom point bw/.style={circle,fill=Primary,draw=Primary,inner sep=1.8pt},
+  geom label/.style={font=\small\bfseries,text=GrayText},
+  geom object label/.style={font=\small\bfseries\sffamily,text=Secondary},
+  geom caption/.style={font=\small\sffamily,text=GrayText,align=center},
+  geom card/.style={draw=GrayLine,fill=white,rounded corners=1.5mm,line width=0.65pt},
+  geom blank/.style={draw=GrayLine,line width=0.6pt}
+}
+
+\newcommand{\pointsexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-3.0,0.25);
+      \coordinate (B) at (0,-0.35);
+      \coordinate (C) at (3.0,0.45);
+      \foreach \P/\pos in {A/above left,B/below,C/above right}{
+        \node[geom point] at (\P) {};
+        \node[geom label,\pos=3pt] at (\P) {$\P$};
+      }
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\lineexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[geom line] (-4.5,0) -- (4.5,0);
+      \coordinate (A) at (-1.8,0);
+      \coordinate (B) at (1.7,0);
+      \node[geom point] at (A) {};
+      \node[geom point] at (B) {};
+      \node[geom label,above=3pt] at (A) {$A$};
+      \node[geom label,above=3pt] at (B) {$B$};
+      \node[geom object label,below=8pt] at (3.8,0) {прямая $a$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\incidenceexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[geom line] (-4.5,0) -- (4.5,0);
+      \coordinate (A) at (-2.1,0);
+      \coordinate (B) at (1.0,0);
+      \coordinate (C) at (2.4,1.05);
+      \node[geom point] at (A) {};
+      \node[geom point] at (B) {};
+      \node[geom point] at (C) {};
+      \node[geom label,above=3pt] at (A) {$A$};
+      \node[geom label,above=3pt] at (B) {$B$};
+      \node[geom label,above=3pt] at (C) {$C$};
+      \node[geom object label,below=7pt] at (3.8,0) {$a$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\segmentexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-3.1,0);
+      \coordinate (B) at (3.1,0);
+      \draw[geom object] (A) -- (B);
+      \node[geom point] at (A) {};
+      \node[geom point] at (B) {};
+      \node[geom label,above=3pt] at (A) {$A$};
+      \node[geom label,above=3pt] at (B) {$B$};
+      \node[geom object label,below=8pt] at (0,0) {отрезок $AB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\rayexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \coordinate (A) at (-3.4,0);
+      \coordinate (B) at (-0.3,0);
+      % Без стрелки: справа изображена только часть продолжающегося луча.
+      \draw[geom object] (A) -- (4.3,0);
+      \node[geom point] at (A) {};
+      \node[geom point] at (B) {};
+      \node[geom label,above=3pt] at (A) {$A$};
+      \node[geom label,above=3pt] at (B) {$B$};
+      \node[geom object label,below=8pt] at (0.6,0) {луч $AB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\oppositeraysfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[geom line] (-4.5,0) -- (4.5,0);
+      \coordinate (B) at (-2.1,0);
+      \coordinate (A) at (0,0);
+      \coordinate (C) at (2.3,0);
+      \foreach \P/\pos in {B/above,A/above,C/above}{
+        \node[geom point] at (\P) {};
+        \node[geom label,\pos=3pt] at (\P) {$\P$};
+      }
+      \draw[geom object,line width=1.8pt] (A) -- (4.15,0);
+      \draw[geom object,line width=1.8pt,dash pattern=on 5pt off 2.4pt] (A) -- (-4.15,0);
+      \node[geom caption,below=8pt] at (2.45,0) {луч $AC$};
+      \node[geom caption,below=8pt] at (-2.45,0) {луч $AB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\objectscomparisonfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom card,minimum width=3.65cm,minimum height=2.15cm] at (-5.8,0) {};
+      \node[geom card,minimum width=3.65cm,minimum height=2.15cm] at (-1.95,0) {};
+      \node[geom card,minimum width=3.65cm,minimum height=2.15cm] at (1.95,0) {};
+      \node[geom card,minimum width=3.65cm,minimum height=2.15cm] at (5.8,0) {};
+
+      \node[geom point] at (-5.8,0.2) {};
+      \node[geom label,above=3pt] at (-5.8,0.2) {$A$};
+      \node[geom caption] at (-5.8,-0.62) {точка $A$};
+
+      \draw[geom line] (-3.35,0.2) -- (-0.55,0.2);
+      \node[geom caption] at (-1.95,-0.62) {прямая $a$};
+
+      \draw[geom object] (0.65,0.2) -- (3.25,0.2);
+      \node[geom point] at (0.65,0.2) {};
+      \node[geom point] at (3.25,0.2) {};
+      \node[geom label,above=3pt] at (0.65,0.2) {$A$};
+      \node[geom label,above=3pt] at (3.25,0.2) {$B$};
+      \node[geom caption] at (1.95,-0.62) {отрезок $AB$};
+
+      \draw[geom object] (4.55,0.2) -- (7.15,0.2);
+      \node[geom point] at (4.55,0.2) {};
+      \node[geom point] at (5.75,0.2) {};
+      \node[geom label,above=3pt] at (4.55,0.2) {$A$};
+      \node[geom label,above=3pt] at (5.75,0.2) {$B$};
+      \node[geom caption] at (5.8,-0.62) {луч $AB$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\identifyobjectsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      % 1
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (-3.9,1.25) {};
+      \node[geom point] at (-3.9,1.48) {};
+      \node[geom label,above=3pt] at (-3.9,1.48) {$M$};
+      \node[geom caption] at (-3.9,0.72) {1. \rule{34mm}{0.45pt}};
+      % 2
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (3.9,1.25) {};
+      \draw[geom line] (1.2,1.48) -- (6.6,1.48);
+      \node[geom object label,above=4pt] at (5.95,1.48) {$b$};
+      \node[geom caption] at (3.9,0.72) {2. \rule{34mm}{0.45pt}};
+      % 3
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (-3.9,-1.25) {};
+      \draw[geom object] (-6.3,-1.02) -- (-1.5,-1.02);
+      \node[geom point] at (-6.3,-1.02) {};
+      \node[geom point] at (-1.5,-1.02) {};
+      \node[geom label,above=3pt] at (-6.3,-1.02) {$C$};
+      \node[geom label,above=3pt] at (-1.5,-1.02) {$D$};
+      \node[geom caption] at (-3.9,-1.78) {3. \rule{34mm}{0.45pt}};
+      % 4
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (3.9,-1.25) {};
+      \draw[geom object] (1.5,-1.02) -- (6.6,-1.02);
+      \node[geom point] at (1.5,-1.02) {};
+      \node[geom point] at (3.25,-1.02) {};
+      \node[geom label,above=3pt] at (1.5,-1.02) {$K$};
+      \node[geom label,above=3pt] at (3.25,-1.02) {$P$};
+      \node[geom caption] at (3.9,-1.78) {4. \rule{34mm}{0.45pt}};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\identifyobjectsanswersfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (-3.9,1.25) {};
+      \node[geom point] at (-3.9,1.48) {};
+      \node[geom label,above=3pt] at (-3.9,1.48) {$M$};
+      \node[geom caption] at (-3.9,0.72) {1. точка $M$};
+
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (3.9,1.25) {};
+      \draw[geom line] (1.2,1.48) -- (6.6,1.48);
+      \node[geom object label,above=4pt] at (5.95,1.48) {$b$};
+      \node[geom caption] at (3.9,0.72) {2. прямая $b$};
+
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (-3.9,-1.25) {};
+      \draw[geom object] (-6.3,-1.02) -- (-1.5,-1.02);
+      \node[geom point] at (-6.3,-1.02) {};
+      \node[geom point] at (-1.5,-1.02) {};
+      \node[geom label,above=3pt] at (-6.3,-1.02) {$C$};
+      \node[geom label,above=3pt] at (-1.5,-1.02) {$D$};
+      \node[geom caption] at (-3.9,-1.78) {3. отрезок $CD$};
+
+      \node[geom card,minimum width=7.2cm,minimum height=2.05cm] at (3.9,-1.25) {};
+      \draw[geom object] (1.5,-1.02) -- (6.6,-1.02);
+      \node[geom point] at (1.5,-1.02) {};
+      \node[geom point] at (3.25,-1.02) {};
+      \node[geom label,above=3pt] at (1.5,-1.02) {$K$};
+      \node[geom label,above=3pt] at (3.25,-1.02) {$P$};
+      \node[geom caption] at (3.9,-1.78) {4. луч $KP$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\constructionpointsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom blank,minimum width=15.7cm,minimum height=4.0cm] at (0,0) {};
+      \coordinate (A) at (-4.8,1.55);
+      \coordinate (B) at (1.8,1.1);
+      \coordinate (C) at (-1.25,-1.65);
+      \coordinate (D) at (4.65,-1.15);
+      \foreach \P/\pos in {A/above left,B/above right,C/below left,D/below right}{
+        \node[geom point] at (\P) {};
+        \node[geom label,\pos=3pt] at (\P) {$\P$};
+      }
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\constructionanswersfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[geom blank,minimum width=15.7cm,minimum height=6.1cm] at (0,0) {};
+      \coordinate (A) at (-4.8,1.55);
+      \coordinate (B) at (1.8,1.1);
+      \coordinate (C) at (-1.25,-1.65);
+      \coordinate (D) at (4.65,-1.15);
+      \draw[geom line] ($(A)!-0.55!(B)$) -- ($(A)!1.55!(B)$);
+      \draw[geom object] (C) -- (D);
+      \draw[geom object] (D) -- ($(D)!1.55!(A)$);
+      \foreach \P/\pos in {A/above left,B/above right,C/below left,D/below right}{
+        \node[geom point] at (\P) {};
+        \node[geom label,\pos=3pt] at (\P) {$\P$};
+      }
+      \node[geom caption,fill=white,inner sep=1.2pt] at (-1.4,2.0) {прямая $AB$};
+      \node[geom caption,fill=white,inner sep=1.2pt] at (1.6,-1.75) {отрезок $CD$};
+      \node[geom caption,fill=white,inner sep=1.2pt] at (3.75,0.05) {луч $DA$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\threelinepointsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[geom line] (-4.8,0) -- (4.8,0);
+      \coordinate (A) at (-2.75,0);
+      \coordinate (B) at (0,0);
+      \coordinate (C) at (2.65,0);
+      \foreach \P/\pos in {A/above,B/above,C/above}{
+        \node[geom point] at (\P) {};
+        \node[geom label,\pos=3pt] at (\P) {$\P$};
+      }
+    \end{tikzpicture}
+  \end{center}
+}

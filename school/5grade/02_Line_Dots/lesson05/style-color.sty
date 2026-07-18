@@ -1,0 +1,336 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style-color}[2026/07/11 Color geometry handout style v1]
+
+% =================================================
+% Палитра
+% =================================================
+\definecolor{Primary}{HTML}{2F5D8A}
+\definecolor{PrimaryLight}{HTML}{EEF4FA}
+\definecolor{Secondary}{HTML}{3E7C72}
+\definecolor{SecondaryLight}{HTML}{EEF7F5}
+\definecolor{Accent}{HTML}{A35F20}
+\definecolor{AccentLight}{HTML}{FFF5E9}
+\definecolor{GrayText}{HTML}{666666}
+\definecolor{GrayLine}{HTML}{D9DEE4}
+\definecolor{GrayLight}{HTML}{F6F7F9}
+\colorlet{TableHeader}{PrimaryLight}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=Primary,
+  urlcolor=Primary
+}
+
+% =================================================
+% TikZ: логика задачи
+% =================================================
+\tikzset{
+  par logic condition/.style={
+    draw=Primary,
+    fill=PrimaryLight,
+    rounded corners=2mm,
+    line width=0.8pt,
+    minimum height=15mm,
+    text width=5.6cm,
+    align=center,
+    font=\small\sffamily
+  },
+  par logic result/.style={
+    draw=Secondary,
+    fill=SecondaryLight,
+    rounded corners=2mm,
+    line width=0.9pt,
+    minimum height=15mm,
+    text width=6.2cm,
+    align=center,
+    font=\small\bfseries\sffamily
+  },
+  par logic arrow/.style={
+    -{Stealth[length=3mm]},
+    line width=1pt,
+    draw=Accent
+  },
+  par logic plus/.style={font=\Large\bfseries\sffamily,text=Accent}
+}
+
+% =================================================
+% TikZ: графический метод
+% =================================================
+\tikzset{
+  par axis/.style={-{Stealth[length=2.6mm]},draw=GrayText,line width=0.55pt},
+  par graph/.style={draw=Primary,line width=1.45pt},
+  par level negative/.style={draw=GrayText,line width=0.95pt,dashed},
+  par level zero/.style={draw=Accent,line width=1.2pt},
+  par level positive/.style={draw=Secondary,line width=1.2pt,dash pattern=on 6pt off 2.5pt},
+  par guide/.style={draw=GrayLine,line width=0.65pt,densely dotted},
+  par intersection/.style={circle,fill=Secondary,draw=white,line width=0.4pt,inner sep=2.2pt},
+  par origin intersection/.style={circle,fill=Accent,draw=white,line width=0.4pt,inner sep=2.2pt},
+  par graph heading/.style={font=\bfseries\sffamily,text=Primary},
+  par graph caption/.style={font=\small\sffamily,text=GrayText,align=center},
+  par graph label/.style={font=\small,text=GrayText},
+  par level label/.style={font=\small\bfseries\sffamily},
+  par branch label/.style={font=\small\sffamily,text=Primary,fill=white,inner sep=1.5pt}
+}
+
+% =================================================
+% TikZ: числовая прямая ответа
+% =================================================
+\tikzset{
+  par number base/.style={-{Stealth[length=2.5mm]},draw=GrayText,thin},
+  par number accepted/.style={draw=Secondary,very thick},
+  par number excluded/.style={circle,draw=Accent,fill=white,line width=0.95pt,inner sep=2.15pt},
+  par number tick/.style={draw=GrayText,thin},
+  par number label/.style={font=\small,text=GrayText},
+  par number note/.style={font=\footnotesize\sffamily,text=Accent,align=center}
+}
+
+% =================================================
+% Учебные блоки
+% =================================================
+\newtcolorbox{problembox}[1][Задача]{
+  enhanced,
+  breakable,
+  colback=PrimaryLight,
+  colframe=Primary,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=5mm,right=5mm,top=4mm,bottom=3.5mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=Primary,
+  attach boxed title to top left={xshift=5mm,yshift=-2.5mm},
+  boxed title style={
+    colback=Primary,colframe=Primary,boxrule=0pt,arc=1.5mm,
+    left=3mm,right=3mm,top=1.5mm,bottom=1.5mm
+  },
+  before skip=1.05em,after skip=1.05em
+}
+
+\newtcolorbox{propertybox}[1][Ключевой факт]{
+  enhanced,
+  breakable,
+  colback=SecondaryLight,
+  colframe=Secondary,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=4.5mm,right=4.5mm,top=4mm,bottom=3mm,
+  title={#1},
+  fonttitle=\fontsize{13.5pt}{16pt}\selectfont\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=Secondary,
+  attach boxed title to top left={xshift=5mm,yshift=-2.5mm},
+  boxed title style={
+    colback=Secondary,colframe=Secondary,boxrule=0pt,arc=1.5mm,
+    left=3mm,right=3mm,top=1.5mm,bottom=1.5mm
+  },
+  before skip=0.95em,after skip=0.95em
+}
+
+\newtcolorbox{trainingtask}[1][Подготовительное задание]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=GrayLine,
+  boxrule=0.65pt,
+  borderline west={3pt}{0pt}{Primary},
+  arc=1mm,
+  left=4.5mm,right=4.5mm,top=2.7mm,bottom=2.7mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=white,
+  attach title to upper,
+  after title={\par\vspace{0.28em}},
+  before skip=0.75em,after skip=0.75em
+}
+
+\newtcolorbox{methodintro}[1][Идея метода]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLight,
+  boxrule=0pt,
+  borderline west={3pt}{0pt}{Secondary},
+  arc=0mm,
+  left=5mm,right=4.5mm,top=2.7mm,bottom=2.7mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.3em}},
+  before skip=0.85em,after skip=0.85em
+}
+
+\newtcolorbox{notebox}[1][Обратите внимание]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLight,
+  boxrule=0pt,
+  borderline west={2.5pt}{0pt}{Primary},
+  arc=0mm,
+  left=4.5mm,right=4.5mm,top=2.6mm,bottom=2.6mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.28em}},
+  before skip=0.8em,after skip=0.8em
+}
+
+\newtcolorbox{warningbox}[1][Типичная ошибка]{
+  enhanced,
+  breakable,
+  colback=AccentLight,
+  colframe=Accent,
+  boxrule=0.75pt,
+  borderline west={3.2pt}{0pt}{Accent},
+  arc=1.5mm,
+  left=4.8mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={\warningicon\hspace{0.45em}#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Accent,
+  colbacktitle=AccentLight,
+  attach title to upper,
+  after title={\par\vspace{0.3em}},
+  before skip=0.9em,after skip=0.9em
+}
+
+\newtcolorbox{conclusionbox}[1][Промежуточный вывод]{
+  enhanced,
+  breakable,
+  colback=SecondaryLight,
+  colframe=SecondaryLight,
+  boxrule=0pt,
+  borderline west={3pt}{0pt}{Secondary},
+  arc=0mm,
+  left=5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,
+  colbacktitle=SecondaryLight,
+  attach title to upper,
+  after title={\par\vspace{0.2em}},
+  before skip=0.8em,after skip=0.8em
+}
+
+\newtcolorbox{casebox}[1]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=GrayLine,
+  boxrule=0.65pt,
+  arc=1.5mm,
+  left=3.5mm,right=3.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=PrimaryLight,
+  boxed title style={boxrule=0pt},
+  before skip=0.6em,after skip=0.6em
+}
+
+\newtcolorbox{resultbox}[1][Ответ]{
+  enhanced,
+  breakable,
+  colback=SecondaryLight,
+  colframe=Secondary,
+  boxrule=0.95pt,
+  arc=2mm,
+  left=5mm,right=5mm,top=3.3mm,bottom=3.3mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=Secondary,
+  before skip=0.95em,after skip=0.95em
+}
+
+\newtcolorbox{practicebox}[1][Самостоятельная работа]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=Primary,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=4.5mm,right=4.5mm,top=2.7mm,bottom=2.7mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=Primary,
+  before skip=0.75em,after skip=0.75em
+}
+
+\newtcolorbox{questionsbox}[1][Вопросы для самопроверки]{
+  enhanced,
+  breakable,
+  colback=GrayLight,
+  colframe=GrayLine,
+  boxrule=0.7pt,
+  arc=2mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},
+  fonttitle=\bfseries\sffamily,
+  coltitle=Primary,
+  colbacktitle=GrayLight,
+  attach title to upper,
+  after title={\par\vspace{0.3em}},
+  before skip=0.9em,after skip=0.9em
+}
+
+
+% =================================================
+% Блоки рабочего листа
+% =================================================
+\newtcolorbox{thinkbox}[1][Сначала подумайте]{
+  enhanced,breakable,
+  colback=AccentLight,colframe=AccentLight,boxrule=0pt,
+  borderline west={3pt}{0pt}{Accent},arc=0mm,
+  left=4.8mm,right=4.5mm,top=2.7mm,bottom=2.7mm,
+  title={#1},fonttitle=\bfseries\sffamily,
+  coltitle=Accent,colbacktitle=AccentLight,
+  attach title to upper,after title={\par\vspace{0.28em}},
+  before skip=0.8em,after skip=0.8em
+}
+
+\newtcolorbox{fillbox}[1][Заполните]{
+  enhanced,breakable,
+  colback=white,colframe=GrayLine,boxrule=0.65pt,arc=1.5mm,
+  borderline west={3pt}{0pt}{Primary},
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},fonttitle=\bfseries\sffamily,
+  coltitle=Primary,colbacktitle=white,
+  attach title to upper,after title={\par\vspace{0.28em}},
+  before skip=0.75em,after skip=0.75em
+}
+
+\newtcolorbox{checkpointbox}[1][Контрольная точка]{
+  enhanced,breakable,
+  colback=SecondaryLight,colframe=Secondary,boxrule=0.75pt,arc=1.8mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},fonttitle=\bfseries\sffamily,
+  coltitle=white,colbacktitle=Secondary,
+  before skip=0.85em,after skip=0.85em
+}
+
+\newtcolorbox{reflectionbox}[1][Объясните словами]{
+  enhanced,breakable,
+  colback=GrayLight,colframe=GrayLine,boxrule=0.65pt,arc=1.5mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={#1},fonttitle=\bfseries\sffamily,
+  coltitle=Secondary,colbacktitle=GrayLight,
+  attach title to upper,after title={\par\vspace{0.25em}},
+  before skip=0.8em,after skip=0.8em
+}
+
+\newtcolorbox{teacherbox}[1][Методический комментарий]{
+  enhanced,breakable,
+  colback=AccentLight,colframe=Accent,boxrule=0.7pt,arc=1.5mm,
+  left=4.5mm,right=4.5mm,top=2.8mm,bottom=2.8mm,
+  title={\teacherlabel\hspace{0.55em}#1},fonttitle=\bfseries\sffamily,
+  coltitle=Accent,colbacktitle=AccentLight,
+  attach title to upper,after title={\par\vspace{0.25em}},
+  before skip=0.8em,after skip=0.8em
+}

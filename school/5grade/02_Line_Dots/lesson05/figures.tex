@@ -1,0 +1,197 @@
+% =================================================
+% TikZ-рисунки к листу «Точки через равные промежутки»
+% =================================================
+
+\tikzset{
+  eq line/.style={draw=Secondary,line width=1.35pt,line cap=round},
+  eq interval/.style={draw=Primary,line width=3.2pt,line cap=round},
+  eq interval alt/.style={draw=Accent,line width=3.2pt,line cap=round},
+  eq guide/.style={draw=GrayLine,line width=0.7pt,densely dashed},
+  eq point/.style={circle,fill=Accent,draw=white,line width=0.35pt,inner sep=2.25pt},
+  eq point primary/.style={circle,fill=Primary,draw=white,line width=0.35pt,inner sep=2.25pt},
+  eq label/.style={font=\small\bfseries,text=GrayText},
+  eq caption/.style={font=\small\sffamily,text=GrayText,align=center},
+  eq note/.style={font=\small\bfseries\sffamily,text=Secondary,align=center},
+  eq card/.style={draw=GrayLine,fill=white,rounded corners=1.5mm,line width=0.65pt}
+}
+
+\newcommand{\equalpointsbasic}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[eq line] (-6.2,0)--(6.2,0);
+      \foreach \x/\n in {-5/1,-3/2,-1/3,1/4,3/5,5/6}{
+        \node[eq point] at (\x,0) {};
+        \node[eq label,above=4pt] at (\x,0) {\n};
+      }
+      \foreach \x in {-5,-3,-1,1,3}{
+        \draw[eq interval] (\x,0)--++(2,0);
+      }
+      \draw[decorate,decoration={brace,amplitude=6pt,mirror},draw=Accent,line width=0.8pt]
+        (-5,-0.45)--(5,-0.45)
+        node[midway,below=7pt,eq note] {6 точек, но 5 промежутков};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\pointsvsintervalsfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[eq card,minimum width=14.8cm,minimum height=4.1cm] at (0,0) {};
+      \draw[eq line] (-5.7,0.35)--(5.7,0.35);
+      \foreach \x/\n in {-4.8/1,-2.4/2,0/3,2.4/4,4.8/5}{
+        \node[eq point primary] at (\x,0.35) {};
+        \node[eq label,above=4pt] at (\x,0.35) {\n-я точка};
+      }
+      \foreach \x in {-4.8,-2.4,0,2.4}{
+        \draw[eq interval alt] (\x,0.35)--++(2.4,0);
+      }
+      \foreach \x/\n in {-3.6/1,-1.2/2,1.2/3,3.6/4}{
+        \node[font=\footnotesize\bfseries\sffamily,text=Accent,below=5pt] at (\x,0.35) {\n-й промежуток};
+      }
+      \node[eq caption,text width=13cm] at (0,-1.25)
+        {От первой до пятой точки нужно сделать четыре перехода. Поэтому промежутков на один меньше, чем точек.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\numberdifferencefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[eq line] (-6.2,0)--(6.2,0);
+      \foreach \x/\n in {-5.4/8,-3.6/9,-1.8/10,0/11,1.8/12}{
+        \node[eq point] at (\x,0) {};
+        \node[eq label,above=4pt] at (\x,0) {\n};
+      }
+      \node[font=\Large\bfseries,text=GrayText] at (3.2,0.05) {$\cdots$};
+      \node[eq point primary] at (5.4,0) {};
+      \node[eq label,above=4pt] at (5.4,0) {27};
+      \draw[decorate,decoration={brace,amplitude=6pt,mirror},draw=Accent,line width=0.8pt]
+        (-5.4,-0.5)--(5.4,-0.5)
+        node[midway,below=7pt,eq note] {$27-8=19$ промежутков};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\distanceexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[eq card,minimum width=14.8cm,minimum height=4.8cm] at (0,0) {};
+      \draw[eq line] (-5.5,0.45)--(5.5,0.45);
+      \node[eq point] at (-5,0.45) {};
+      \node[eq label,above=4pt] at (-5,0.45) {8-я};
+      \node[font=\Large\bfseries,text=GrayText] at (0,0.5) {$\cdots$};
+      \node[eq point] at (5,0.45) {};
+      \node[eq label,above=4pt] at (5,0.45) {27-я};
+      \draw[decorate,decoration={brace,amplitude=6pt},draw=Secondary,line width=0.8pt]
+        (-5,1.05)--(5,1.05)
+        node[midway,above=7pt,eq note] {19 одинаковых промежутков};
+      \node[font=\large\bfseries\sffamily,text=Primary] at (0,-0.65)
+        {$19\cdot 7\text{ мм}=133\text{ мм}$};
+      \node[eq caption] at (0,-1.35) {Сначала считаем промежутки, затем умножаем на длину одного промежутка.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\reverseexamplefigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[eq card,minimum width=14.8cm,minimum height=4.5cm] at (0,0) {};
+      \draw[eq line] (-5.3,0.4)--(5.3,0.4);
+      \foreach \x/\n in {-5/3,-2.5/4,0/5,2.5/6,5/7}{
+        \node[eq point primary] at (\x,0.4) {};
+        \node[eq label,above=4pt] at (\x,0.4) {\n};
+      }
+      \draw[decorate,decoration={brace,amplitude=6pt,mirror},draw=Accent,line width=0.8pt]
+        (-5,-0.15)--(5,-0.15)
+        node[midway,below=7pt,eq note] {4 промежутка, вместе 24 см};
+      \node[font=\large\bfseries\sffamily,text=Primary] at (0,-1.45)
+        {$24:4=6\text{ см}$};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\studentcountstrip}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[eq line] (-6,0)--(6,0);
+      \foreach \x/\n in {-5/2,-3/3,-1/4,1/5,3/6,5/7}{
+        \node[eq point] at (\x,0) {};
+        \node[eq label,above=4pt] at (\x,0) {\n};
+      }
+      \node[eq caption] at (0,-0.75) {Точки стоят через одинаковые промежутки.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\unknownpointfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[eq line] (-6,0)--(6,0);
+      \foreach \x/\n in {-5/12,-3/13,-1/14,1/15,3/16,5/?}{
+        \node[eq point] at (\x,0) {};
+        \node[eq label,above=4pt] at (\x,0) {\n};
+      }
+      \foreach \x in {-5,-3,-1,1,3}{
+        \node[font=\footnotesize\sffamily,text=GrayText,below=5pt] at (\x+1,0) {4 см};
+      }
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\postrowfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[draw=GrayLine,line width=1pt] (-6,-0.65)--(6,-0.65);
+      \foreach \x/\n in {-5.4/1,-3.6/2,-1.8/3,0/4,1.8/5,3.6/6,5.4/7}{
+        \draw[draw=Secondary,line width=2.2pt,line cap=round] (\x,-0.65)--(\x,0.8);
+        \fill[Primary] (\x,0.8) circle (2.5pt);
+        \node[eq label,above=3pt] at (\x,0.8) {\n};
+      }
+      \foreach \x in {-5.4,-3.6,-1.8,0,1.8,3.6}{
+        \draw[decorate,decoration={brace,amplitude=3.5pt,mirror},draw=Accent,line width=0.65pt]
+          (\x,-0.9)--++(1.8,0);
+      }
+      \node[eq caption] at (0,-1.45) {7 столбов образуют 6 промежутков.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\pinetree}[2]{%
+  \draw[draw=Secondary,line width=1.25pt] (#1,#2-0.25)--(#1,#2+0.12);
+  \fill[SecondaryLight,draw=Secondary,line width=0.7pt]
+    (#1,#2+0.05)--(#1-0.28,#2+0.42)--(#1-0.12,#2+0.42)--(#1-0.35,#2+0.72)--(#1,#2+1.08)--(#1+0.35,#2+0.72)--(#1+0.12,#2+0.42)--(#1+0.28,#2+0.42)--cycle;
+}
+
+\newcommand{\birchtree}[2]{%
+  \draw[draw=GrayText,line width=2.0pt,line cap=round] (#1,#2-0.25)--(#1,#2+0.55);
+  \fill[PrimaryLight,draw=Primary,line width=0.7pt] (#1,#2+0.85) circle (0.42);
+  \draw[draw=GrayText,line width=0.7pt] (#1-0.06,#2+0.05)--(#1+0.06,#2+0.1);
+  \draw[draw=GrayText,line width=0.7pt] (#1-0.06,#2+0.3)--(#1+0.06,#2+0.35);
+}
+
+\newcommand{\alternatingtreesfigure}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \draw[draw=GrayLine,line width=1pt] (-6,-0.55)--(6,-0.55);
+      \foreach \x/\n in {-5.2/1,-3.9/2,-2.6/3,-1.3/4,0/5,1.3/6,2.6/7,3.9/8,5.2/9}{
+        \ifodd\n
+          \pinetree{\x}{-0.25}
+        \else
+          \birchtree{\x}{-0.25}
+        \fi
+        \node[font=\footnotesize\bfseries\sffamily,text=GrayText] at (\x,-0.95) {\n};
+      }
+      \node[eq caption] at (0,-1.45) {Сосны стоят на нечётных местах, берёзы --- на чётных.};
+    \end{tikzpicture}
+  \end{center}
+}
+
+\newcommand{\studentworkline}{%
+  \begin{center}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+      \node[draw=GrayLine,line width=0.6pt,minimum width=14.8cm,minimum height=4.4cm] at (0,0) {};
+      \draw[eq line] (-6,-0.45)--(6,-0.45);
+      \node[eq caption] at (0,1.35) {Место для схемы};
+    \end{tikzpicture}
+  \end{center}
+}
