@@ -1,192 +1,223 @@
 \worksheettitle
   {Чтение и запись многозначных чисел}
-  {\modulemark{M04} Учебный модуль \textbullet\ базовый маршрут и запас практики}
+  {\modulemark{M04} Учебный модуль \textbullet\ полный маршрут}
 
 \studentnameblock
 
+\begin{notebox}[Чему вы научитесь]
+  Читать многозначные числа по классам и записывать их цифрами, сохраняя
+  нулевые классы и по три позиции в каждой группе справа от крайней левой.
+\end{notebox}
+
 \begin{checkpointbox}[Вход: готовность после M03]
-  Разделите число на классы и подпишите их:
+  Разделите число на классы:
   \[
-    50804007=\answerblank[55mm].
+    50804007=\answerblank[52mm].
   \]
-  Группа класса тысяч: \answerblank[18mm]. Число единиц этого класса:
+  Группа класса тысяч: \answerblank[18mm]. Количество единиц этого класса:
   \answerblank[18mm].
+
+  Если деление начато слева или потеряны нули, сначала выполните M03-R.
 \end{checkpointbox}
 
 \section{Как читать число по классам}
 
-Рассмотрите запись:
-\[
-  \underbrace{214}_{\text{миллионы}}\;|
-  \underbrace{036}_{\text{тысячи}}\;|
-  \underbrace{508}_{\text{единицы}}.
-\]
-
-Двигайтесь слева направо: назовите число каждого ненулевого класса, затем
-название класса. У класса единиц название не произносят.
-
-\begin{fillbox}[Читаем по шагам]
+\begin{problembox}[Разобранный пример: читаем число]
+  \[
+    \underbrace{214}_{\text{миллионы}}\;|\;
+    \underbrace{036}_{\text{тысячи}}\;|\;
+    \underbrace{508}_{\text{единицы}}.
+  \]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item (214) миллионов --- «двести четырнадцать миллионов».
-    \item (036) тысяч содержит число \answerblank[15mm] ---
-      «\answerblank[50mm]».
-    \item (508) единиц --- «\answerblank[55mm]».
+    \item \(214\): двести четырнадцать миллионов.
+    \item \(036\): тридцать шесть тысяч.
+    \item \(508\): пятьсот восемь. Название класса единиц не произносим.
   \end{enumerate}
-  Всё число: \answerblank[125mm].
-\end{fillbox}
+  Всё число: \textbf{двести четырнадцать миллионов тридцать шесть тысяч
+  пятьсот восемь}.
+\end{problembox}
 
-\begin{notebox}[Нулевой класс]
-  В числе (73\,000\,406) класс тысяч записан группой (000). При чтении
-  его не называют: «семьдесят три миллиона четыреста шесть».
+\begin{reflectionbox}[Алгоритм чтения]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Разделите запись на классы.
+    \item Начните с крайнего левого ненулевого класса.
+    \item Прочитайте количество единиц класса и добавьте название класса.
+    \item Нулевой класс пропустите; у класса единиц название не произносите.
+  \end{enumerate}
+\end{reflectionbox}
+
+\newpage
+\section{Названия классов в правильной форме}
+
+\begin{problembox}[Миллионы и тысячи]
+  \begin{center}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{c|c|c}
+    \toprule
+    количество & класс миллионов & класс тысяч \\
+    \midrule
+    1 & один миллион & одна тысяча \\
+    2 & два миллиона & две тысячи \\
+    25 & двадцать пять миллионов & двадцать пять тысяч \\
+    11 & одиннадцать миллионов & одиннадцать тысяч \\
+    21 & двадцать один миллион & двадцать одна тысяча \\
+    22 & двадцать два миллиона & двадцать две тысячи \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{problembox}
+
+\begin{notebox}[Запомните]
+  В классе тысяч слова «один» и «два» меняются: \textbf{одна тысяча},
+  \textbf{две тысячи}. Числа от 11 до 14 всегда требуют формы
+  \textbf{тысяч}: одиннадцать тысяч, двенадцать тысяч.
 \end{notebox}
 
-\section{Тысяча, тысячи или тысяч?}
+\begin{practicebox}[1. Дополните чтение]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(31\,000\): тридцать \answerblank[16mm] тысяча.
+    \item \(42\,000\): сорок \answerblank[16mm] тысячи.
+    \item \(104\,000\): сто четыре \answerblank[20mm].
+    \item \(112\,000\): сто двенадцать \answerblank[20mm].
+    \item \(23\,000\,000\): двадцать три \answerblank[22mm].
+  \end{enumerate}
+\end{practicebox}
 
-Соедините число с подходящим словом:
-\[
-  21\;\answerblank[22mm]\qquad
-  32\;\answerblank[22mm]\qquad
-  15\;\answerblank[22mm]\qquad
-  104\;\answerblank[22mm].
-\]
-
-Слова для выбора: \emph{тысяча, тысячи, тысяч}.
-
-\begin{practicebox}[\levelbase. Прочитайте числа]
+\begin{practicebox}[2. Прочитайте числа]
   Запишите каждое число словами.
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item $6\,018$ --- \answerblank[105mm].
-    \item $42\,305$ --- \answerblank[100mm].
-    \item $700\,040$ --- \answerblank[95mm].
-    \item $9\,006\,012$ --- \answerblank[85mm].
-    \item $305\,000\,080$ --- \answerblank[75mm].
+    \item \(6\,018\): \answerblank[100mm].
+    \item \(42\,305\): \answerblank[95mm].
+    \item \(700\,040\): \answerblank[90mm].
+    \item \(9\,006\,012\): \answerblank[82mm].
+    \item \(21\,002\,004\): \answerblank[75mm].
+    \item \(305\,000\,080\): \answerblank[70mm].
   \end{enumerate}
 \end{practicebox}
 
 \newpage
 \section{Как записывать число цифрами}
 
-Запишем: \emph{сорок два миллиона семь тысяч девять}.
-
-\begin{center}
-\renewcommand{\arraystretch}{1.55}
-\begin{tabular}{c|c|c}
-  \toprule
-  миллионы & тысячи & единицы \\
-  \midrule
-  $42$ & $007$ & $009$ \\
-  \bottomrule
-\end{tabular}
-\end{center}
-
-Получаем $42\,007\,009$. В непервом классе всегда три позиции, поэтому
-$7$ записали как $007$, а $9$ --- как $009$.
+\begin{problembox}[Разобранный пример: записываем число]
+  Запишем: \emph{сорок два миллиона семь тысяч девять}.
+  \begin{center}
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabular}{c|c|c}
+    \toprule
+    миллионы & тысячи & единицы \\
+    \midrule
+    \(42\) & \(007\) & \(009\) \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Получаем \(42\,007\,009\). Группы справа от крайней левой дополняем нулями
+  до трёх цифр.
+\end{problembox}
 
 \begin{reflectionbox}[Алгоритм записи]
   \begin{enumerate}[label=\textbf{\arabic*.}]
     \item Выделите названные классы.
-    \item Запишите число каждого класса отдельной группой.
-    \item В каждом непервом классе дополните группу \answerblank[20mm]
-      нулями до \answerblank[12mm] цифр.
-    \item Неназванный промежуточный класс запишите как \answerblank[18mm].
-    \item Соедините группы и прочитайте результат обратно.
+    \item Запишите количество единиц каждого класса отдельной группой.
+    \item Все группы, кроме крайней левой, дополните слева нулями до трёх цифр.
+    \item Неназванный промежуточный класс запишите группой \(000\).
+    \item Соедините группы и прочитайте число обратно.
   \end{enumerate}
 \end{reflectionbox}
 
-\begin{practicebox}[\levelbase. Запишите цифрами]
-  Сначала при необходимости подпишите группы классов.
+\begin{practicebox}[1. Запишите цифрами]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item двадцать восемь тысяч пять: \answerblank[55mm];
-    \item шестьсот три тысячи сорок два: \answerblank[55mm];
-    \item семь миллионов девятьсот тысяч восемь: \answerblank[55mm];
-    \item пятьдесят миллионов двадцать четыре: \answerblank[55mm];
-    \item двести один миллион три тысячи семьдесят: \answerblank[55mm].
+    \item двадцать восемь тысяч пять: \answerblank[48mm].
+    \item шестьсот три тысячи сорок два: \answerblank[48mm].
+    \item семь миллионов девятьсот тысяч восемь: \answerblank[48mm].
+    \item пятьдесят миллионов двадцать четыре: \answerblank[48mm].
+    \item двести один миллион три тысячи семьдесят: \answerblank[48mm].
   \end{enumerate}
 \end{practicebox}
 
-\begin{warningbox}[Исправьте запись]
-  Число \emph{восемь миллионов пять тысяч сорок два} записали так:
-  $8\,5\,42$.
+\begin{warningbox}[2. Исправьте запись]
+  Число \emph{восемь миллионов пять тысяч сорок два} записали как
+  \(8\,5\,42\).
 
-  Правильные группы: \answerblank[20mm]\(\;|\;\)\answerblank[20mm]
-  \(\;|\;\)\answerblank[20mm].
-  Число: \answerblank[42mm].
+  Правильные группы:
+  \(\answerblank[17mm]\;|\;\answerblank[17mm]\;|\;\answerblank[17mm]\).
+  Число: \answerblank[38mm].
 
-  Объяснение ошибки: \answerblank[90mm].
-\end{warningbox}
-
-\section{Закрепление: выбирает учитель}
-
-Эта часть не обязательна для перехода. Выполните столько заданий, сколько
-нужно для уверенности.
-
-\begin{practicebox}[\levelpractice. Чтение]
-  Запишите словами.
-  \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item $18\,004$; \item $90\,090$; \item $407\,001$;
-    \item $12\,030\,004$; \item $80\,005\,600$;
-    \item $906\,000\,015$.
-  \end{enumerate}
-  \vspace{18mm}
-\end{practicebox}
-
-\begin{practicebox}[\levelpractice. Запись]
-  Запишите цифрами и проверьте обратным чтением.
-  \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item сто пять тысяч четырнадцать;
-    \item девятьсот тысяч девять;
-    \item два миллиона сорок тысяч сто;
-    \item семьдесят миллионов шесть тысяч два;
-    \item четыреста миллионов четыре;
-    \item триста два миллиона пятьсот тысяч пятьдесят.
-  \end{enumerate}
-  \vspace{10mm}
-\end{practicebox}
-
-\begin{fillbox}[Пары: взаимная проверка]
-  Один ученик записывает число словами, второй --- цифрами. Затем поменяйтесь
-  ролями и проверьте друг друга обратным действием.
-  \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item $61\,008\,030$;
-    \item сто семь миллионов двадцать тысяч шесть.
-  \end{enumerate}
-\end{fillbox}
-
-\section{Разбираемся в ошибках}
-
-\begin{warningbox}[Найдите и объясните ошибки]
-  Для каждого пункта запишите правильный ответ и причину ошибки.
-  \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item «Пять миллионов двенадцать» записали $5\,012$.
-    \item $34\,000\,080$ прочитали: «тридцать четыре миллиона восемьдесят
-      тысяч».
-    \item «Двести тысяч семь» записали $200\,7$.
-    \item $7\,014\,005$ прочитали: «семь миллионов четырнадцать тысяч
-      пятьсот».
-  \end{enumerate}
-  \vspace{30mm}
+  Причина ошибки: \answerblank[82mm].
 \end{warningbox}
 
 \newpage
-\begin{checkpointbox}[Контрольная точка]
-  Выполните без подсказки.
+\section{Самостоятельная практика: чтение и запись}
+
+\begin{practicebox}[1. Прочитайте и запишите словами]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item Прочитайте $63\,000\,407$:
-      \answerblank[75mm].
+    \item \(18\,004\): \answerblank[96mm].
+    \item \(90\,090\): \answerblank[96mm].
+    \item \(12\,030\,004\): \answerblank[82mm].
+    \item \(80\,005\,600\): \answerblank[78mm].
+    \item \(906\,000\,015\): \answerblank[70mm].
+  \end{enumerate}
+\end{practicebox}
+
+\begin{practicebox}[2. Запишите цифрами и проверьте чтением]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item сто пять тысяч четырнадцать: \answerblank[45mm].
+    \item девятьсот тысяч девять: \answerblank[45mm].
+    \item два миллиона сорок тысяч сто: \answerblank[45mm].
+    \item семьдесят миллионов шесть тысяч два: \answerblank[45mm].
+    \item четыреста миллионов четыре: \answerblank[45mm].
+  \end{enumerate}
+\end{practicebox}
+
+\section{Разбираемся в ошибках}
+
+\begin{warningbox}[3. Найдите и объясните ошибки]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item «Пять миллионов двенадцать» записали \(5\,012\).
+    \item \(34\,000\,080\) прочитали: «тридцать четыре миллиона восемьдесят
+      тысяч».
+    \item «Двести тысяч семь» записали \(200\,7\).
+    \item \(7\,014\,005\) прочитали: «семь миллионов четырнадцать тысяч
+      пятьсот».
+  \end{enumerate}
+  Запишите исправления и причины.
+  \writinglines{4}
+\end{warningbox}
+
+\newpage
+\section{Контрольная точка}
+
+\begin{checkpointbox}[Выполните без подсказки]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Прочитайте \(63\,000\,407\):
+      \writinglines{1}
+    \item Прочитайте \(21\,002\,004\):
+      \writinglines{1}
     \item Запишите цифрами: \emph{девяносто миллионов восемь тысяч
-      пятнадцать}: \answerblank[28mm].
-    \item Почему во втором числе нужны группы $008$ и $015$?
-      \answerblank[102mm].
+      пятнадцать}: \answerblank[40mm].
+    \item Запишите цифрами: \emph{пятьдесят два миллиона сорок семь}:
+      \answerblank[40mm].
+    \item Почему в четвёртом числе нужны группы \(000\) и \(047\)?
+      \writinglines{2}
+    \item Исправьте запись \(7\,14\,5\), если требовалось записать
+      \emph{семь миллионов четырнадцать тысяч пять}. Объясните ошибку.
+      \writinglines{2}
   \end{enumerate}
 \end{checkpointbox}
 
-\begin{reflectionbox}[Моя готовность]
-  \choicebox\ Читаю число по классам и пропускаю только нулевой класс.
+\begin{reflectionbox}[Проверяю себя]
+  \choicebox\ Пропускаю нулевой класс при чтении.
+  \quad
+  \choicebox\ Говорю «одна тысяча» и «две тысячи».
 
-  \choicebox\ При записи сохраняю все классы и три позиции внутри группы.
-
-  \choicebox\ Мне нужна таблица классов M04-R.
+  \choicebox\ Сохраняю нулевой класс при записи.
+  \quad
+  \choicebox\ Дополняю группы до трёх цифр.
 \end{reflectionbox}
 
-\textbf{Закончили раньше?} Выполните M04\(\star\): найдите две разные ошибки
-и составьте собственную ловушку.
+\begin{notebox}[Дальнейший маршрут]
+  Если потерян нулевой класс, группа записана не тремя цифрами или неверно
+  прочитаны формы «одна тысяча» и «две тысячи», выполните M04-R. Если оба
+  действия понятны, но нужна тренировка, выполните дополнительную практику
+  или M04-H. Если оба действия выполнены устойчиво, переходите к M05;
+  M04\(\star\) можно выполнить дополнительно.
+\end{notebox}

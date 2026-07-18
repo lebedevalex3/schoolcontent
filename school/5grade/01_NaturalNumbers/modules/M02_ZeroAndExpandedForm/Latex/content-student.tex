@@ -1,81 +1,205 @@
 \worksheettitle
   {Ноль и разрядный состав}
-  {\modulemark{M02} Учебный модуль \textbullet\ ориентир 15--20 минут}
+  {\modulemark{M02} Учебный модуль \textbullet\ полный маршрут}
 
 \studentnameblock
 
+\begin{notebox}[Чему вы научитесь]
+  Объяснять роль нуля в записи числа, раскладывать число на разрядные
+  слагаемые и собирать число по такой сумме.
+\end{notebox}
+
 \begin{checkpointbox}[Вход: связь с M01]
-  В числе \(81\,804\) две цифры \(8\). Назовите их значения:
-  \answerblank[25mm] и \answerblank[25mm].
+  В числе \(81\,804\) две цифры \(8\).
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Назовите их значения: \answerblank[24mm] и \answerblank[24mm].
+    \item В каких разрядах стоят нули? \answerblank[65mm].
+  \end{enumerate}
 \end{checkpointbox}
 
 \section{Зачем внутри числа нужен ноль}
 
-Сравните записи:
-\[
-  40\,508 \qquad\text{и}\qquad 458.
-\]
+Сравните записи \(40\,508\) и \(458\).
 
-\begin{fillbox}[Заполните разряды числа \(40\,508\)]
+\begin{fillbox}[Пример с опорой: заполните разряды]
 \begin{center}
 \renewcommand{\arraystretch}{1.45}
 \begin{tabular}{c|ccccc}
   \toprule
   разряд & дес. тысяч & ед. тысяч & сотни & десятки & единицы \\
   \midrule
-  цифра & 4 & \answerblank[10mm] & 5 & \answerblank[10mm] & 8 \\
-  значение & 40 000 & \answerblank[15mm] & 500 & \answerblank[15mm] & 8 \\
+  цифра в \(40\,508\) & 4 & \answerblank[9mm] & 5 & \answerblank[9mm] & 8 \\
+  значение & 40 000 & \answerblank[13mm] & 500 & \answerblank[13mm] & 8 \\
   \bottomrule
 \end{tabular}
 \end{center}
 \end{fillbox}
 
-\begin{reflectionbox}[Главный вывод]
-  Ноль показывает, что единиц соответствующего \answerblank[28mm] нет, и
-  сохраняет \answerblank[32mm] остальных цифр.
-\end{reflectionbox}
-
-\section{Разложение и сборка числа}
-
-\levelbase
-
-Каждое число можно представить как сумму значений его ненулевых цифр:
-\[
-  47\,305=40\,000+7\,000+300+5.
-\]
-
-\begin{practicebox}[Практика с опорой]
+\newpage
+\begin{practicebox}[Сравните значения цифр]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item \(63\,204=\answerblank[92mm].\)
-    \item \(8\,090=\answerblank[92mm].\)
-    \item \(70\,000+800+6=\answerblank[28mm].\)
-    \item \(5\,000+40+3=\answerblank[28mm].\)
+    \item Значение цифры \(4\) в числе \(40\,508\): \answerblank[22mm],
+      а в числе \(458\): \answerblank[22mm].
+    \item Значение цифры \(5\) в числе \(40\,508\): \answerblank[22mm],
+      а в числе \(458\): \answerblank[22mm].
+    \item Почему числа \(40\,508\) и \(458\) различны?
+      \writinglines{1}
   \end{enumerate}
 \end{practicebox}
 
-\begin{warningbox}[Найдите ошибку]
-  Ученик написал:
-  \[
-    50\,204=50\,000+2\,000+4.
-  \]
-  Цифра \(2\) стоит в разряде \answerblank[28mm], поэтому её значение
-  равно \answerblank[20mm].
+\begin{notebox}[Правило]
+  Ноль показывает, что единиц данного разряда нет. Благодаря нулю можно
+  однозначно определить разряды и значения остальных цифр.
+\end{notebox}
 
-  Верная запись: \(50\,204=\answerblank[75mm].\)
+\begin{practicebox}[Что произойдёт, если удалить ноль]
+  Из числа \(60\,205\):
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item удалили ноль в разряде единиц тысяч. Получилось \answerblank[26mm];
+    \item удалили ноль в разряде десятков. Получилось \answerblank[26mm].
+  \end{enumerate}
+  Сравните значения цифр до и после удаления нуля.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item В обоих случаях значение цифры \(6\) изменилось с
+      \answerblank[19mm] до \answerblank[19mm], то есть уменьшилось на
+      \answerblank[22mm].
+    \item Во втором случае значение цифры \(2\) изменилось с
+      \answerblank[16mm] до \answerblank[16mm], то есть уменьшилось на
+      \answerblank[18mm].
+    \item Какое из вычисленных изменений больше? \answerblank[42mm].
+  \end{enumerate}
+\end{practicebox}
+
+\section{Разложение на разрядные слагаемые}
+
+\begin{notebox}[Разобранный пример и правило]
+  Число можно представить в виде суммы разрядных слагаемых. Слагаемые,
+  соответствующие нулевым цифрам, обычно не записывают:
+  \[
+    47\,305=40\,000+7\,000+300+5.
+  \]
+\end{notebox}
+
+\begin{fillbox}[Заполните пропуски]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(53\,204=50\,000+\answerblank[18mm]+200+\answerblank[16mm].\)
+    \item \(80\,507=80\,000+\answerblank[18mm]+7.\)
+    \item \(405\,060=400\,000+\answerblank[18mm]+60.\)
+  \end{enumerate}
+\end{fillbox}
+
+\begin{practicebox}[Разложите самостоятельно]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(63\,204=\answerblank[90mm].\)
+    \item \(8\,090=\answerblank[90mm].\)
+    \item \(50\,006=\answerblank[90mm].\)
+    \item \(304\,080=\answerblank[90mm].\)
+    \item \(600\,007=\answerblank[90mm].\)
+    \item \(701\,040=\answerblank[90mm].\)
+  \end{enumerate}
+\end{practicebox}
+
+\begin{reflectionbox}[Объясните]
+  Почему в разложении числа \(304\,080\) нет слагаемых, соответствующих
+  разрядам десятков тысяч, сотен и единиц?
+  \writinglines{2}
+\end{reflectionbox}
+
+\begin{practicebox}[Разложите и соберите обратно]
+  Разложите число \(70\,305\) на разрядные слагаемые. Затем сложите полученные
+  слагаемые и убедитесь, что получилось исходное число.
+  \writinglines{2}
+\end{practicebox}
+
+\section{Сборка числа по разрядным слагаемым}
+
+\begin{fillbox}[Пример с опорой: заполните все разряды]
+  Соберите число \(80\,000+700+5\).
+  \begin{center}
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabular}{c|ccccc}
+    \toprule
+    разряд & дес. тысяч & ед. тысяч & сотни & десятки & единицы \\
+    \midrule
+    значение & 80 000 & \answerblank[11mm] & 700 & \answerblank[11mm] & 5 \\
+    цифра & 8 & \answerblank[9mm] & 7 & \answerblank[9mm] & 5 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Получилось число \answerblank[32mm].
+\end{fillbox}
+
+\begin{practicebox}[Запишите числа]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(50\,000+3\,000+200+4=\answerblank[30mm].\)
+    \item \(80\,000+700+5=\answerblank[30mm].\)
+    \item \(300\,000+40\,000+8=\answerblank[30mm].\)
+    \item \(600\,000+20+1=\answerblank[30mm].\)
+    \item \(900\,000+4\,000+60=\answerblank[30mm].\)
+    \item \(700\,000+5=\answerblank[30mm].\)
+  \end{enumerate}
+\end{practicebox}
+
+\section{Разбираемся в ошибках}
+
+\begin{warningbox}[Исправьте записи]
+  Для каждой записи объясните ошибку и запишите верный результат.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(80\,000+700+5=875.\)
+    \item \(8\,090=8\,000+900.\)
+    \item \(50\,204=50\,000+2\,000+200+4.\)
+    \item \(300\,000+4\,000+8=34\,008.\)
+  \end{enumerate}
+  \writinglines{4}
 \end{warningbox}
 
-\begin{checkpointbox}[Контрольная точка]
+\section{Применяем способ}
+
+\begin{practicebox}[Составьте числа по условиям]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item \(90\,307=\answerblank[84mm].\)
-    \item \(30\,000+400+8=\answerblank[28mm].\)
-    \item Почему в первом разложении нет слагаемых для тысяч и десятков?
+    \item Запишите пятизначное число, в котором нет единиц тысяч и десятков.
+      Число: \answerblank[35mm].
+    \item Запишите шестизначное число, разложение которого содержит ровно три
+      ненулевых разрядных слагаемых. Число: \answerblank[35mm].
+    \item Разложите оба составленных числа и проверьте выполнение условий.
+      \writinglines{2}
+  \end{enumerate}
+\end{practicebox}
+
+\begin{practicebox}[Вставьте нули]
+  Вставьте в запись \(428\) один или два нуля так, чтобы получить:
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item четырёхзначное число: \answerblank[30mm];
+    \item пятизначное число: \answerblank[30mm].
+  \end{enumerate}
+  Назовите значения цифр \(4\), \(2\) и \(8\) в каждом полученном числе.
+  \writinglines{1}
+\end{practicebox}
+
+\begin{checkpointbox}[Контрольная точка]
+  Выполните без подсказки.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(90\,307=\answerblank[86mm].\)
+    \item \(500\,040=\answerblank[86mm].\)
+    \item \(30\,000+400+8=\answerblank[30mm].\)
+    \item \(600\,000+2\,000+70=\answerblank[30mm].\)
+    \item Почему в первом разложении нет слагаемых, соответствующих разрядам
+      единиц тысяч и десятков?
       \writinglines{1}
   \end{enumerate}
 \end{checkpointbox}
 
-\begin{reflectionbox}[Моя готовность]
-  \choicebox\ Я сохраняю нулевые разряды при сборке числа.
+\begin{reflectionbox}[Проверяю себя]
+  \choicebox\ Я объясняю, какие разряды обозначены нулями.
 
-  \choicebox\ Я пока теряю место, если в разряде стоит ноль.
+  \choicebox\ Я раскладываю число, не записывая нулевые слагаемые.
+
+  \choicebox\ Я сохраняю все разряды при сборке числа по сумме.
 \end{reflectionbox}
 
+\begin{notebox}[Дальнейший маршрут]
+  Если при сборке потерян разряд, цифре приписано неверное значение или роль
+  нуля не объяснена, выполните M02-R. Если способ понятен, но нужна тренировка,
+  выполните дополнительную практику или M02-H. Если контроль выполнен
+  устойчиво, переходите к M03; M02\(\star\) можно выполнить дополнительно.
+\end{notebox}

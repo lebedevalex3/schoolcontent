@@ -1,5 +1,9 @@
 \input{../../common/Latex/module-style-common.sty}
-\input{../../common/Latex/module-style-color.sty}
+\ifdefined\modulebw
+  \input{../../common/Latex/module-style-bw.sty}
+\else
+  \input{../../common/Latex/module-style-color.sty}
+\fi
 
 \fancyhead[L]{\footnotesize\sffamily\color{GrayText} Математика. 5 класс}
 \fancyhead[R]{\footnotesize\sffamily\color{GrayText} Натуральные числа. M02}

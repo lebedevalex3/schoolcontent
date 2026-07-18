@@ -1,49 +1,91 @@
-\worksheettitle{M07\(\star\). Считаем без списка}{\modulemark{M07\(\star\)} Усложнение}
+\worksheettitle
+  {M07\(\star\). Считаем без списка}
+  {\modulemark{M07\(\star\)} Усложнение}
+
 \studentnameblock
 
-\begin{notebox}[От строк таблицы к количеству]
-  Для условия $b=a+k$ цифра десятков $a$ начинается с 1. Чтобы $b$ не
-  превысила 9, должно выполняться $a+k\leq9$, то есть $a\leq9-k$.
+\begin{notebox}[Главный вопрос]
+  Можно ли узнать количество подходящих чисел, не выписывая сами числа?
+  Да: нужно определить, сколько допустимых значений может принять удобно
+  выбранная цифра. Сначала исследуем конкретные условия, а закономерность
+  сформулируем словами.
 \end{notebox}
 
-\begin{practicebox}[Разберите закономерность]
+\begin{practicebox}[1. Цифра единиц больше цифры десятков]
+  Заполните таблицу, не составляя сами двузначные числа.
   \begin{center}
   \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{c|c|c}
     \toprule
-    условие & допустимые $a$ & число вариантов \\
+    условие & допустимые значения \(a\) & количество чисел \\
     \midrule
-    $b=a+1$ & от 1 до 8 & 8 \\
-    $b=a+2$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
-    $b=a+4$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
-    $b=a+7$ & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
+    \(b=a+1\) & от 1 до 8 & 8 \\
+    \(b=a+2\) & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
+    \(b=a+4\) & от 1 до \answerblank[10mm] & \answerblank[12mm] \\
     \bottomrule
   \end{tabular}
   \end{center}
-  Сформулируйте правило количества вариантов через $k$:
-  \answerblank[90mm].
+  Что происходит с количеством чисел, когда разность между цифрами
+  увеличивается? \writinglines{2}
 \end{practicebox}
 
-\begin{practicebox}[Сумма цифр]
-  Для $a+b=S$ и $S\leq9$ цифра $a$ может принимать значения от 1 до
-  $S$, а $b=S-a$ остаётся цифрой.
+\begin{practicebox}[2. Цифра единиц меньше цифры десятков]
+  Определите допустимые значения \(a\) и количество чисел.
+  \begin{center}
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabular}{c|c|c}
+    \toprule
+    условие & допустимые значения \(a\) & количество чисел \\
+    \midrule
+    \(b=a-1\) & от \answerblank[8mm] до 9 & \answerblank[12mm] \\
+    \(b=a-3\) & от \answerblank[8mm] до 9 & \answerblank[12mm] \\
+    \(b=a-6\) & от \answerblank[8mm] до 9 & \answerblank[12mm] \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Почему при условии \(b=a-1\) получается девять чисел, хотя цифра десятков
+  не может быть нулём? \writinglines{1}
+\end{practicebox}
+
+\newpage
+\begin{practicebox}[3. Сумма цифр не больше 9]
+  Рассмотрите сумму цифр, равную \(4\). Можно по порядку выбирать
+  \(a=1,2,3,4\); тогда цифра \(b\) определяется однозначно.
 
   Не выписывая числа, найдите количество вариантов:
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item сумма 4: \answerblank[15mm];
-    \item сумма 7: \answerblank[15mm];
-    \item сумма 9: \answerblank[15mm].
+    \item сумма цифр равна \(4\): \answerblank[15mm];
+    \item сумма цифр равна \(7\): \answerblank[15mm];
+    \item сумма цифр равна \(9\): \answerblank[15mm].
   \end{enumerate}
-  Почему количество совпадает с суммой $S$? \answerblank[60mm].
+  Объясните найденную закономерность словами. \writinglines{2}
 \end{practicebox}
 
-\begin{warningbox}[Граница правила]
-  Проверьте сумму 10. Можно ли просто сказать, что вариантов 10? Учтите, что
-  $b$ не может быть 10, а $a$ не может быть 0. Сделайте вывод:
-  \answerblank[70mm].
+\begin{warningbox}[4. Что меняется после суммы 9]
+  При сумме цифр \(10\) можно выбирать \(a\) от \(1\) до \(9\). При сумме
+  \(11\) значение \(a=1\) уже не подходит: тогда получилось бы \(b=10\),
+  а \(10\) не является цифрой.
+
+  Найдите количество вариантов при суммах цифр:
+  \[
+    10:\ \answerblank[12mm];\qquad
+    11:\ \answerblank[12mm];\qquad
+    12:\ \answerblank[12mm];\qquad
+    15:\ \answerblank[12mm];\qquad
+    18:\ \answerblank[12mm].
+  \]
+  Как меняется количество вариантов при увеличении суммы после \(9\)?
+  \writinglines{1}
 \end{warningbox}
 
-\begin{checkpointbox}[Связь с перебором]
-  Объясните, почему подсчёт допустимых значений $a$ доказывает полноту так же,
-  как заполненная таблица: \answerblank[65mm].
+\begin{checkpointbox}[5. Контроль без полного списка]
+  Для каждого условия укажите только допустимые значения перебираемой цифры
+  и количество подходящих двузначных чисел.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(b=a+3\): \writinglines{1}
+    \item \(b=a-4\): \writinglines{1}
+    \item сумма цифр равна \(13\): \writinglines{1}
+  \end{enumerate}
+  Выберите один пункт и объясните, почему подсчёт допустимых значений доказывает
+  полноту. \writinglines{2}
 \end{checkpointbox}

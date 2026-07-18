@@ -1,16 +1,17 @@
 \worksheettitle
-  {M05-R. Дерево выбора}
+  {Дерево выбора}
   {\modulemark{M05-R} Коррекционная карточка}
 
 \studentnameblock
 
 \begin{notebox}[Задача]
-  Из цифр 0, 3, 6 составьте все двузначные числа без повторений.
+  Из цифр \(0,\ 3,\ 6\) составьте все двузначные числа без повторений.
+  Запись двузначного числа не может начинаться с нуля.
 \end{notebox}
 
 \begin{center}
 \begin{tikzpicture}[
-  level distance=20mm,
+  level distance=19mm,
   level 1/.style={sibling distance=48mm},
   level 2/.style={sibling distance=22mm},
   every node/.style={draw=Primary,rounded corners,inner sep=4pt,font=\sffamily},
@@ -32,16 +33,43 @@
 
   Начинаются с 6: \answerblank[18mm], \answerblank[18mm].
 
-  Полный список: \answerblank[90mm].
+  Полный список: \answerblank[78mm]. Всего чисел: \answerblank[13mm].
 \end{practicebox}
 
 \begin{reflectionbox}[Почему список полный]
-  Ноль исключён только из \answerblank[25mm] позиции. Проверены обе допустимые
-  первые цифры: \answerblank[15mm] и \answerblank[15mm]. Для каждой проверены
-  все оставшиеся вторые цифры.
+  Ноль исключён только из \answerblank[24mm] позиции. Проверены все допустимые
+  первые цифры. Для каждой проверены все разрешённые вторые цифры.
 \end{reflectionbox}
 
+\newpage
+\section{Различаем условия}
+
+\begin{practicebox}[1. Цифры 3 и 7]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Двузначные числа; повторения разрешены; использовать обе цифры
+      необязательно:
+      \answerblank[68mm].
+    \item Двузначные числа без повторений: \answerblank[48mm].
+    \item Трёхзначные числа; повторения разрешены; обе цифры обязательны:
+      \answerblank[84mm].
+  \end{enumerate}
+\end{practicebox}
+
+\begin{warningbox}[2. Найдите повтор и пропуск]
+  Для цифр \(1,\ 3,\ 6\) без повторений записали:
+  \(13,\ 16,\ 31,\ 36,\ 61,\ 61\).
+
+  Повтор: \answerblank[15mm]. Пропущено: \answerblank[15mm].
+  Как вы проверили список?
+  \writinglines{2}
+\end{warningbox}
+
 \begin{checkpointbox}[Повторная проверка]
-  Из цифр 0, 4, 8 составьте все двузначные числа без повторений:
-  \answerblank[100mm].
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Из цифр \(0,\ 4,\ 8\) составьте все двузначные числа без повторений:
+      \answerblank[70mm].
+    \item Из цифр \(2,\ 5\) составьте все трёхзначные числа с повторениями,
+      если обе цифры обязательны:
+      \answerblank[88mm].
+  \end{enumerate}
 \end{checkpointbox}

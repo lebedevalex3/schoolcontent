@@ -1,33 +1,58 @@
 \worksheettitle
   {Классы многозначных чисел}
-  {\modulemark{M03} Учебный модуль \textbullet\ ориентир 20 минут}
+  {\modulemark{M03} Учебный модуль \textbullet\ полный маршрут}
 
 \studentnameblock
 
+\begin{notebox}[Чему вы научитесь]
+  Делить запись числа на классы, называть группы классов и количество их
+  единиц, а также собирать число по заданным классам.
+\end{notebox}
+
 \begin{checkpointbox}[Вход: связь с M02]
-  Соберите число:
+  Соберите число и сохраните все разряды:
   \[
     60\,000+3\,000+40+2=\answerblank[30mm].
   \]
+  Если получилось не \(63\,042\), сначала выполните коррекционную карточку
+  M02-R.
 \end{checkpointbox}
 
-\section{Делим запись на классы}
+\section{Зачем нужны классы}
 
-Поставьте пробелы, отделяя справа группы по три цифры:
-\[
-  5308\longrightarrow\answerblank[35mm],
-  \qquad
-  7204061\longrightarrow\answerblank[42mm].
-\]
+Длинную запись числа легче читать, если разделить её на группы по три цифры.
+Такие группы называют \textbf{классами}.
+
+\begin{problembox}[Разобранный пример]
+  Начинаем с правого края числа \(7204061\).
+  \begin{enumerate}[label=\textbf{Шаг \arabic*.}]
+    \item Последние три цифры образуют класс единиц: \(061\).
+    \item Следующие три цифры образуют класс тысяч: \(204\).
+    \item Слева остаётся класс миллионов: \(7\).
+  \end{enumerate}
+  \[
+    7204061=7\,|\,204\,|\,061=7\,204\,061.
+  \]
+\end{problembox}
 
 \begin{reflectionbox}[Правило]
-  Число делят на классы, начиная с \answerblank[28mm] края, по
-  \answerblank[14mm] цифры. Самая левая группа может содержать меньше цифр.
+  Запись числа делят на классы \textbf{справа налево}, по три цифры.
+  Только крайняя левая группа может содержать одну или две цифры.
 \end{reflectionbox}
+
+\newpage
+\begin{practicebox}[Пробуем с опорой]
+  Отделяйте по три цифры, начиная справа.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(5308=5\,|\,308=\answerblank[32mm].\)
+    \item \(604015=\answerblank[40mm].\)
+    \item \(80304072=\answerblank[46mm].\)
+  \end{enumerate}
+\end{practicebox}
 
 \section{Названия классов}
 
-Классы считают справа налево:
+Классы нумеруют справа налево.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.45}
@@ -35,65 +60,172 @@
   \toprule
   номер класса & III & II & I \\
   \midrule
-  название & \answerblank[25mm] & \answerblank[25mm] & единицы \\
+  название & миллионы & тысячи & единицы \\
   \bottomrule
 \end{tabular}
 \end{center}
 
-Разберите число:
-\[
-  325\,|\,041\,|\,708.
-\]
+\begin{problembox}[Группа класса и количество его единиц]
+  Рассмотрим число \(325\,|\,041\,|\,708\).
+  \begin{itemize}
+    \item Группа класса миллионов: \(325\). Она обозначает \(325\) единиц
+      класса миллионов.
+    \item Группа класса тысяч: \(041\). Она обозначает \(41\) единицу класса
+      тысяч.
+    \item Группа класса единиц: \(708\). Она обозначает \(708\) единиц класса
+      единиц.
+  \end{itemize}
+\end{problembox}
 
-\begin{fillbox}[Группа и число внутри класса]
-  \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item Класс миллионов содержит число \answerblank[18mm].
-    \item Класс тысяч записан группой \answerblank[18mm], но содержит число
-      \answerblank[18mm].
-    \item Класс единиц записан группой \answerblank[18mm] и содержит число
-      \answerblank[18mm].
-  \end{enumerate}
-\end{fillbox}
-
-\begin{notebox}[Почему пишут \(041\)]
-  Каждый класс справа от первого занимает три позиции. Начальный ноль внутри
-  группы сохраняет разряд сотен тысяч.
+\begin{notebox}[Не путайте два разных вопроса]
+  В числе \(325\,041\,708\) группа класса тысяч равна \(041\), поэтому в ней
+  записана \(41\) единица класса тысяч. Но во всём числе содержится
+  \(325\,041\) полная тысяча. В этом модуле мы работаем именно с
+  \textbf{группой класса} и \textbf{количеством единиц этого класса}.
 \end{notebox}
 
-\section{Практика}
+\begin{notebox}[Почему пишут \(041\), а не \(41\)]
+  Каждый класс, кроме крайнего левого, записывают тремя цифрами. Начальные
+  нули сохраняют позиции отсутствующих разрядов внутри класса. В группе
+  \(041\) ноль показывает отсутствие сотен тысяч.
+\end{notebox}
 
-\begin{practicebox}[Выполните самостоятельно]
+\newpage
+\begin{practicebox}[Заполните таблицу]
+  Разберите число \(52\,006\,090\).
+  \begin{center}
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabular}{c|ccc}
+    \toprule
+    класс & миллионы & тысячи & единицы \\
+    \midrule
+    группа & \answerblank[15mm] & \answerblank[15mm] & \answerblank[15mm] \\
+    количество единиц класса & \answerblank[15mm] & \answerblank[15mm] &
+      \answerblank[15mm] \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{practicebox}
+
+\begin{practicebox}[Объясните нули]
+  Почему в числе \(52\,006\,090\) нельзя заменить группу \(006\) на \(6\),
+  а группу \(090\) на \(90\)?
+  \writinglines{2}
+\end{practicebox}
+
+\section{Самостоятельная практика: классы числа}
+
+\begin{practicebox}[1. Разделите числа на классы]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item \(805070204\longrightarrow\answerblank[50mm].\)
-    \item В числе \(71\,006\,540\) класс тысяч записан группой
-      \answerblank[18mm] и содержит число \answerblank[18mm].
-    \item В числе \(8\,014\,005\) класс единиц записан группой
-      \answerblank[18mm], а класс тысяч --- группой \answerblank[18mm].
+    \item \(4072=\answerblank[45mm].\)
+    \item \(53008=\answerblank[45mm].\)
+    \item \(604015=\answerblank[45mm].\)
+    \item \(7030406=\answerblank[52mm].\)
+    \item \(80005009=\answerblank[52mm].\)
+    \item \(302000070=\answerblank[55mm].\)
   \end{enumerate}
 \end{practicebox}
 
-\begin{warningbox}[Найдите ошибку]
-  Число \(7204061\) разделили слева: \(720\,|\,406\,|\,1\).
+\begin{practicebox}[2. Назовите классы]
+  Для числа \(418\,027\,305\) заполните пропуски.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item III класс называется классом \answerblank[25mm]; его группа
+      \answerblank[18mm].
+    \item II класс называется классом \answerblank[25mm]; его группа
+      \answerblank[18mm], она обозначает \answerblank[18mm] единиц класса.
+    \item I класс называется классом \answerblank[25mm]; его группа
+      \answerblank[18mm].
+  \end{enumerate}
+\end{practicebox}
 
-  Правильно: \answerblank[43mm], потому что классы отделяют
-  \answerblank[28mm].
+\begin{practicebox}[3. Найдите нулевой класс]
+  В каждом числе подчеркните группу \(000\) и назовите её класс.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(52\,000\,308\): класс \answerblank[25mm].
+    \item \(407\,006\,000\): класс \answerblank[25mm].
+    \item \(9\,000\,040\): класс \answerblank[25mm].
+  \end{enumerate}
+\end{practicebox}
+
+\section{Собираем число по классам}
+
+\begin{problembox}[Разобранный пример: собираем число]
+  В числе \(23\) миллиона, \(7\) тысяч и \(5\) единиц.
+  \[
+    23\;|\;007\;|\;005=23\,007\,005.
+  \]
+  Группы справа от крайней левой дополняем нулями до трёх цифр.
+\end{problembox}
+
+\begin{practicebox}[1. Восстановите числа]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(36\) миллионов, \(5\) тысяч, \(8\) единиц:
+      \(36\;|\;\answerblank[15mm]\;|\;\answerblank[15mm]
+      =\answerblank[35mm].\)
+    \item \(4\) миллиона, \(0\) тысяч, \(72\) единицы:
+      \answerblank[58mm].
+    \item \(205\) миллионов, \(9\) тысяч, \(40\) единиц:
+      \answerblank[58mm].
+  \end{enumerate}
+\end{practicebox}
+
+\section{Разбираемся в ошибках}
+
+\begin{warningbox}[2. Исправьте ошибки]
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \(7204061=720\,|\,406\,|\,1\).
+    \item \(53008=53\,|\,08\).
+    \item \(42\) миллиона, \(7\) тысяч, \(90\) единиц записали как
+      \(42\,7\,90\).
+  \end{enumerate}
+  Запишите верные варианты и объясните каждую ошибку.
+  \writinglines{4}
 \end{warningbox}
 
-\begin{checkpointbox}[Контрольная точка]
-  Рассмотрите число \(42\,007\,090\).
+\begin{practicebox}[3. Сравните]
+  Поставьте знак \(>\), \(<\) или \(=\). Подчеркните первый слева класс, в
+  котором группы различаются.
+  \[
+    8\,041\,005\ \answerblank[8mm]\ 8\,401\,005,
+    \qquad
+    27\,006\,050\ \answerblank[8mm]\ 27\,060\,005.
+  \]
+\end{practicebox}
+
+\newpage
+\section{Контрольная точка}
+
+\begin{checkpointbox}[Выполните без подсказки]
   \begin{enumerate}[label=\textbf{\arabic*.}]
-    \item Класс тысяч записан группой \answerblank[18mm] и содержит число
-      \answerblank[18mm].
-    \item Класс единиц записан группой \answerblank[18mm] и содержит число
-      \answerblank[18mm].
-    \item Почему группу класса единиц нельзя записать внутри этого числа как
-      \(90\)?
-      Ответ: \answerblank[78mm].
+    \item Разделите на классы: \(90305008=\answerblank[55mm].\)
+    \item В полученном числе назовите группы классов миллионов, тысяч и
+      единиц.
+      \writinglines{1}
+    \item Какое количество единиц записано в группе класса тысяч и в группе
+      класса единиц?
+      \writinglines{1}
+    \item Запишите число, в котором \(17\) миллионов, \(4\) тысячи и \(6\)
+      единиц: \answerblank[48mm].
+    \item Почему в записи этого числа нужны группы \(004\) и \(006\)?
+      \writinglines{2}
+    \item Исправьте запись \(6150302=615\,|\,030\,|\,2\) и объясните ошибку.
+      \writinglines{2}
   \end{enumerate}
 \end{checkpointbox}
 
-\begin{reflectionbox}[Моя готовность]
-  \choicebox\ Отделяю справа и сохраняю три позиции.
+\begin{reflectionbox}[Проверяю себя]
+  \choicebox\ Начинаю деление справа.
   \quad
-  \choicebox\ Пока начинаю не с того края или теряю ноль.
+  \choicebox\ Сохраняю по три цифры во всех группах, кроме крайней левой.
+
+  \choicebox\ Различаю группу класса и количество его единиц.
+  \quad
+  \choicebox\ Умею собрать число по классам.
 \end{reflectionbox}
+
+\begin{notebox}[Дальнейший маршрут]
+  Если деление начиналось слева, в группе потеряны нули или перепутаны группа
+  класса и количество его единиц, выполните M03-R. Если способ понятен, но
+  нужна тренировка, выполните M03-H. Если контроль выполнен без подсказки и
+  ошибки объяснены, переходите к M04; M03\(\star\) можно выполнить дополнительно.
+\end{notebox}

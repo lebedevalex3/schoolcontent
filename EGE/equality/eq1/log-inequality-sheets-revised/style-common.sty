@@ -8,13 +8,13 @@
 \RequirePackage{polyglossia}
 \setdefaultlanguage{russian}
 
-% Подключаем установленные файлы явно: XeTeX на macOS не всегда видит
-% пользовательские шрифты по семейному имени через Fontconfig.
-\setmainfont{Tinos-Regular.ttf}[
-  Path=/Users/alex/Library/Fonts/,
-  BoldFont=Tinos-Bold.ttf,
-  ItalicFont=Tinos-Italic.ttf,
-  BoldItalicFont=Tinos-BoldItalic.ttf
+% Используем стандартные системные шрифты macOS и подключаем файлы явно,
+% чтобы сборка XeLaTeX не зависела от пользовательской папки Fonts.
+\setmainfont{Times New Roman.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Times New Roman Bold.ttf},
+  ItalicFont={Times New Roman Italic.ttf},
+  BoldItalicFont={Times New Roman Bold Italic.ttf}
 ]
 \setsansfont{Arial.ttf}[
   Path=/System/Library/Fonts/Supplemental/,
@@ -22,16 +22,19 @@
   ItalicFont={Arial Italic.ttf},
   BoldItalicFont={Arial Bold Italic.ttf}
 ]
-\setmonofont{DejaVuSansMono.ttf}
+\setmonofont{Courier New.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Courier New Bold.ttf},
+  ItalicFont={Courier New Italic.ttf},
+  BoldItalicFont={Courier New Bold Italic.ttf}
+]
 
 % Явно сообщаем Polyglossia, какие семейства использовать для русского.
-% В некоторых установках macOS шрифты Tinos/Arimo содержат кириллицу,
-% но их OpenType-метаданные не объявляют скрипт Cyrillic.
-\newfontfamily\cyrillicfont{Tinos-Regular.ttf}[
-  Path=/Users/alex/Library/Fonts/,
-  BoldFont=Tinos-Bold.ttf,
-  ItalicFont=Tinos-Italic.ttf,
-  BoldItalicFont=Tinos-BoldItalic.ttf
+\newfontfamily\cyrillicfont{Times New Roman.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Times New Roman Bold.ttf},
+  ItalicFont={Times New Roman Italic.ttf},
+  BoldItalicFont={Times New Roman Bold Italic.ttf}
 ]
 \newfontfamily\cyrillicfontsf{Arial.ttf}[
   Path=/System/Library/Fonts/Supplemental/,
@@ -39,7 +42,12 @@
   ItalicFont={Arial Italic.ttf},
   BoldItalicFont={Arial Bold Italic.ttf}
 ]
-\newfontfamily\cyrillicfonttt{DejaVuSansMono.ttf}
+\newfontfamily\cyrillicfonttt{Courier New.ttf}[
+  Path=/System/Library/Fonts/Supplemental/,
+  BoldFont={Courier New Bold.ttf},
+  ItalicFont={Courier New Italic.ttf},
+  BoldItalicFont={Courier New Bold Italic.ttf}
+]
 
 % =================================================
 % Геометрия страницы

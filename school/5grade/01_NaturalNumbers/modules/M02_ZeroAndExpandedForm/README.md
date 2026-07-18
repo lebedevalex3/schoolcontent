@@ -11,17 +11,25 @@
 
 Пройдена контрольная точка M01: ученик определяет разряд и значение цифры.
 
-## Ориентировочное время
-
-15–20 минут. Переход определяется контрольной точкой.
+Модуль не ограничен временем. Переход определяется достижением результата в
+контрольной точке, а объём практики выбирается по устойчивости способа.
 
 ## Комплект
 
-- `content-student.tex` — базовый лист ученика;
+- `content-student.tex` — полный учебный маршрут ученика;
 - `content-teacher.tex` — ответы и решения по маршруту;
 - `content-correction.tex` — коррекционная карточка M02-R;
 - `content-extension.tex` — усложнение M02★;
+- `content-homework-student.tex` — домашняя работа M02-H;
+- `content-homework-teacher.tex` — ответы и критерии проверки M02-H;
 - `main-*.tex` — сборочные файлы.
+
+## Маршрут
+
+При потере разряда, неверном значении цифры или необъяснённой роли нуля
+назначается M02-R. Если способ понятен, но требует тренировки, используются
+дополнительная практика или M02-H. После устойчивого контроля ученик
+переходит к M03; M02★ выполняется дополнительно.
 
 ## Сборка
 
@@ -32,11 +40,15 @@ xelatex -interaction=nonstopmode -halt-on-error main-student-color.tex
 xelatex -interaction=nonstopmode -halt-on-error main-teacher-color.tex
 xelatex -interaction=nonstopmode -halt-on-error main-correction-color.tex
 xelatex -interaction=nonstopmode -halt-on-error main-extension-color.tex
+xelatex -interaction=nonstopmode -halt-on-error main-homework-student-color.tex
+xelatex -interaction=nonstopmode -halt-on-error main-homework-teacher-color.tex
 ```
 
-Итоговые PDF сохраняются в общей папке `output/pdf/`:
+Итоговые PDF сохраняются в папке `outputs/` модуля:
 
-- `M02-student-color.pdf` — 2 страницы;
-- `M02-teacher-color.pdf` — 2 страницы;
-- `M02-correction-color.pdf` — 1 страница;
-- `M02-extension-color.pdf` — 1 страница.
+- `M02-student-color.pdf` — основной лист ученика, 6 страниц;
+- `M02-teacher-color.pdf` — версия учителя, 6 страниц;
+- `M02-correction-color.pdf` — коррекционная карточка, 2 страницы;
+- `M02-extension-color.pdf` — усложнение, 2 страницы;
+- `M02-homework-student-color.pdf` — домашняя работа, 2 страницы;
+- `M02-homework-teacher-color.pdf` — ответы к домашней работе, 2 страницы.

@@ -17,30 +17,18 @@ modules=(
   "M07_ConditionsAndEnumeration"
 )
 
-variants=(
-  "student"
-  "teacher"
-  "correction"
-  "extension"
-)
-
 for module in "${modules[@]}"; do
-  latex_dir="$SCRIPT_DIR/$module/Latex"
+  module_dir="$SCRIPT_DIR/$module"
   module_code="${module%%_*}"
 
-  for variant in "${variants[@]}"; do
-    main_file="main-$variant-color.tex"
-    pdf_file="main-$variant-color.pdf"
-    output_file="$OUTPUT_DIR/$module_code-$variant-color.pdf"
+  "$module_dir/build-pdfs.sh"
 
-    (
-      cd "$latex_dir"
-      xelatex -interaction=nonstopmode -halt-on-error "$main_file" >/dev/null
-    )
-
-    cp "$latex_dir/$pdf_file" "$output_file"
-    printf 'Built %s\n' "$output_file"
+  module_pdfs=("$module_dir/outputs/$module_code"-*.pdf)
+  for pdf_path in "${module_pdfs[@]}"; do
+    output_file="$OUTPUT_DIR/${pdf_path##*/}"
+    cp "$pdf_path" "$output_file"
+    printf 'Collected %s\n' "$output_file"
   done
 done
 
-printf 'All module PDFs built successfully.\n'
+printf 'All color and black-and-white module PDFs built successfully.\n'

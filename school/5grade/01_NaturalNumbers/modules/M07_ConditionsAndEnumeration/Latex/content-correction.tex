@@ -1,40 +1,92 @@
-\worksheettitle{M07-R. Таблица зависимости}{\modulemark{M07-R} Коррекционная карточка}
+\worksheettitle
+  {M07-R. От условия к полному списку}
+  {\modulemark{M07-R} Коррекционная карточка}
+
 \studentnameblock
 
-\begin{notebox}[Условие]
-  Цифра единиц на 4 больше цифры десятков. Значит, (b=a+4).
+\begin{notebox}[Что нужно получить]
+  Нужно не просто найти несколько чисел, а получить \textbf{все} подходящие
+  числа. Для этого выберите одну цифру, проверьте по порядку все её возможные
+  значения и каждый раз вычисляйте вторую цифру.
 \end{notebox}
 
-\begin{practicebox}[Изменяем (a), вычисляем (b)]
+\begin{practicebox}[Шаг 1. Запишите условие]
+  Цифра единиц на \(4\) больше цифры десятков.
+
+  Цифра десятков --- \(a\), цифра единиц --- \(b\).
+
+  Больше цифра \answerblank[22mm]. Поэтому равенство:
+  \answerblank[35mm].
+\end{practicebox}
+
+\begin{practicebox}[Шаг 2. Выберите цифру для перебора]
+  Из равенства \(b=a+4\) удобно сначала выбирать \(a\), а затем вычислять
+  кандидат \(a+4\) на значение \(b\).
+
   \begin{center}
-  \renewcommand{\arraystretch}{1.55}
+  \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{c|ccccccccc}
     \toprule
-    (a) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+    перебираем \(a\) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
     \midrule
-    (b=a+4) & 5 & \answerblank[7mm] & \answerblank[7mm] &
+    кандидат \(a+4\) & 5 & \answerblank[7mm] & \answerblank[7mm] &
       \answerblank[7mm] & \answerblank[7mm] & 10 & 11 & 12 & 13 \\
     \bottomrule
   \end{tabular}
   \end{center}
-  Обведите допустимые пары. Значения 10 и больше зачеркните: это не цифры.
+
+  Обведите кандидаты от \(0\) до \(9\). Остальные значения зачеркните: они не
+  могут стать цифрой \(b\).
 \end{practicebox}
 
-\begin{practicebox}[Собираем числа]
-  Пара (a=1,b=5) даёт число 15.
+\begin{practicebox}[Шаг 3. Составьте числа]
+  Пара \((a,b)=(1,5)\) даёт число \(15\).
 
-  Остальные числа: \answerblank[90mm].
+  Полный список: \answerblank[95mm].
 
-  Последняя допустимая пара: \answerblank[45mm].
-  Первая недопустимая пара: \answerblank[45mm].
+  Какие значения \(a\) вы проверили? \answerblank[65mm].
+
+  Почему список полный? \writinglines{1}
 \end{practicebox}
 
-\begin{reflectionbox}[Проверка направления]
-  Больше цифра \answerblank[25mm]. Поэтому к цифре \answerblank[25mm]
-  прибавляем 4 и получаем цифру \answerblank[25mm].
-\end{reflectionbox}
+\newpage
+\begin{notebox}[Иногда удобнее перебирать \(b\)]
+  Если условие записано как \(a=2b\), по выбранному \(b\) сразу вычисляется
+  цифра \(a\). Поэтому здесь удобнее перебирать \(b\), а не \(a\).
+\end{notebox}
+
+\begin{practicebox}[Шаг 4. Цифра десятков равна удвоенной цифре единиц]
+  Равенство: \(a=2b\).
+
+  \begin{center}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{c|cccccc}
+    \toprule
+    перебираем \(b\) & 0 & 1 & 2 & 3 & 4 & 5 \\
+    \midrule
+    кандидат \(2b\) & 0 & \answerblank[9mm] & \answerblank[9mm] &
+      \answerblank[9mm] & \answerblank[9mm] & 10 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  При \(b=0\) получается \(a=0\), но цифра десятков двузначного числа не может
+  быть нулём. При \(b=5\) получается \(a=10\), а \(10\) не цифра. При
+  \(b>5\) значение \(2b\) ещё больше, поэтому допустимой цифры \(a\) также
+  не получится.
+
+  Полный список: \answerblank[85mm].
+
+  Почему других чисел нет? \writinglines{1}
+\end{practicebox}
 
 \begin{checkpointbox}[Повторная проверка]
-  Единицы на 2 меньше десятков. Равенство: \answerblank[35mm].
-  Полный список: \answerblank[95mm].
+  Цифра единиц на \(2\) меньше цифры десятков.
+  \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Математическая запись: \answerblank[38mm].
+    \item Перебираю цифру: \answerblank[18mm].
+    \item Полный список: \answerblank[90mm].
+    \item Какие значения проверены и почему список полный?
+      \writinglines{2}
+  \end{enumerate}
 \end{checkpointbox}
