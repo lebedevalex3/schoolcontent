@@ -1,0 +1,123 @@
+\newcommand{\SchoolWorksheetSubject}{Математика}
+\newcommand{\SchoolWorksheetGrade}{5 класс}
+\newcommand{\SchoolWorksheetSection}{Натуральные числа}
+
+\input{../../../../common/Latex/school-worksheet-common.sty}
+\ifdefined\workbookbw
+  \input{../../../../common/Latex/school-worksheet-bw.sty}
+\else
+  \input{../../../../common/Latex/school-worksheet-color.sty}
+\fi
+
+\usepackage{pdfpages}
+
+\hypersetup{
+  pdftitle={Натуральные числа. Рабочая тетрадь ученика. 5 класс},
+  pdfsubject={Основной маршрут M01--M07},
+  pdfauthor={Школьные учебные материалы}
+}
+
+\renewcommand{\contentsname}{Содержание}
+\setcounter{tocdepth}{1}
+
+\newcommand{\technicalblankpage}{%
+  \clearpage
+  \thispagestyle{empty}%
+  \null
+  \clearpage
+}
+
+\newcommand{\includemodule}[3]{%
+  \includepdf[
+    pages=-,
+    fitpaper=true,
+    pagecommand={},
+    addtotoc={1,section,1,{#2},#1}
+  ]{../../output/pdf/#3-student-\workbookmode.pdf}%
+}
+
+\begin{document}
+\mainfontsize
+
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{24mm}
+
+  {\sffamily\bfseries\fontsize{31pt}{37pt}\selectfont
+   \color{Primary}Натуральные числа\par}
+
+  \vspace{5mm}
+
+  {\sffamily\fontsize{19pt}{24pt}\selectfont
+   \color{Secondary}Рабочая тетрадь ученика\par}
+
+  \vspace{3mm}
+
+  {\sffamily\Large 5 класс\par}
+
+  \vspace{22mm}
+
+  \begin{tcolorbox}[
+    width=0.78\textwidth,
+    colback=PrimaryLight,
+    colframe=Primary,
+    boxrule=0.9pt,
+    arc=2mm,
+    left=7mm,right=7mm,top=6mm,bottom=6mm
+  ]
+    \centering\sffamily
+    Семь учебных модулей: от цифр и разрядов\\
+    до полного упорядоченного перебора
+  \end{tcolorbox}
+
+  \vfill
+
+  \begin{tabularx}{0.86\textwidth}{@{}X@{}}
+    \textbf{Фамилия, имя:}\ \hrulefill\\[9mm]
+    \textbf{Класс:}\ \answerblank[42mm]
+    \hfill
+    \textbf{Учебный год:}\ \answerblank[45mm]
+  \end{tabularx}
+
+  \vspace{15mm}
+\end{center}
+
+\clearpage
+\thispagestyle{firstpage}
+\tableofcontents
+
+\vspace{1.2em}
+
+\begin{notebox}[Как работать со сборником]
+  \begin{enumerate}
+    \item Выполняйте модули по порядку и записывайте решения прямо в листах.
+    \item В конце каждого модуля пройдите контрольную точку и проверьте себя.
+    \item Дальнейший маршрут определите вместе с учителем: следующий модуль,
+      дополнительная практика, коррекция или усложнение.
+  \end{enumerate}
+\end{notebox}
+
+\begin{reflectionbox}[Условные обозначения]
+  \textbf{M01--M07}~--- основные учебные модули.
+  Дополнительные карточки учитель выдаёт отдельно по результатам контрольной
+  точки.
+\end{reflectionbox}
+
+\includemodule{module-m01}{M01. Цифры, числа и разряды}{M01}
+\includemodule{module-m02}{M02. Ноль и разрядный состав}{M02}
+\includemodule{module-m03}{M03. Классы многозначных чисел}{M03}
+\includemodule{module-m04}{M04. Чтение и запись многозначных чисел}{M04}
+
+\technicalblankpage
+
+\includemodule{module-m05}{M05. Составление чисел из цифр}{M05}
+\includemodule{module-m06}{M06. Наибольшее и наименьшее число}{M06}
+
+\technicalblankpage
+
+\includemodule{module-m07}{M07. Упорядоченный перебор и условия между цифрами}{M07}
+
+\technicalblankpage
+
+\end{document}
+
