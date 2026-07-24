@@ -42,3 +42,7 @@ done
 for variant in 9 10 11 12; do
   build_fragment "$variant" "$source_dir/variants-09-12.tex"
 done
+
+for variant in 13 14 15 16 17 18; do
+  build_fragment "$variant" "$source_dir/variants-13-18.tex"
+done

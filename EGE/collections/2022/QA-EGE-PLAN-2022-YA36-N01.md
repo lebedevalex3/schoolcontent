@@ -12,7 +12,7 @@ compiler: pdflatex
 
 ## Компиляция
 
-Варианты 1--4 собраны из независимых `latex/main.tex`; варианты 5--12 — из
+Варианты 1--4 собраны из независимых `latex/main.tex`; варианты 5--18 — из
 неизменяемых исходных фрагментов через общий сборщик. Во всех случаях использован
 `pdflatex` с параметрами `-interaction=nonstopmode -halt-on-error`. Каждый PDF
 содержит одну страницу.
@@ -31,6 +31,12 @@ compiler: pdflatex
 | 10 | `TASK-EGE-PLAN-2022-YA36-V10-N01/outputs/main.pdf` | пройдено |
 | 11 | `TASK-EGE-PLAN-2022-YA36-V11-N01/outputs/main.pdf` | пройдено |
 | 12 | `TASK-EGE-PLAN-2022-YA36-V12-N01/outputs/main.pdf` | пройдено |
+| 13 | `TASK-EGE-PLAN-2022-YA36-V13-N01/outputs/main.pdf` | пройдено |
+| 14 | `TASK-EGE-PLAN-2022-YA36-V14-N01/outputs/main.pdf` | пройдено |
+| 15 | `TASK-EGE-PLAN-2022-YA36-V15-N01/outputs/main.pdf` | пройдено |
+| 16 | `TASK-EGE-PLAN-2022-YA36-V16-N01/outputs/main.pdf` | пройдено |
+| 17 | `TASK-EGE-PLAN-2022-YA36-V17-N01/outputs/main.pdf` | пройдено |
+| 18 | `TASK-EGE-PLAN-2022-YA36-V18-N01/outputs/main.pdf` | пройдено |
 
 ## Визуальная проверка
 
@@ -55,3 +61,9 @@ compiler: pdflatex
 | 10 | \(r=a\sin30^\circ/2\) | \(6\) |
 | 11 | Для инцентра \(\angle AOB=90^\circ+\angle C/2\) | \(113^\circ\) |
 | 12 | Из площади \(\sin\angle ACB=6/8\) | \(0{,}75\) |
+| 13 | Для касательного четырёхугольника \(AB+CD=BC+AD\) | \(62\) |
+| 14 | Угол между касательной и хордой равен половине центрального | \(78^\circ\) |
+| 15 | Дуга \(AD=2\cdot106^\circ-2\cdot69^\circ=74^\circ\) | \(37^\circ\) |
+| 16 | Противоположные углы вписанного четырёхугольника в сумме дают \(180^\circ\) | \(53^\circ\) |
+| 17 | Внешний угол между секущими: \((106^\circ-48^\circ)/2\) | \(29^\circ\) |
+| 18 | \(AB=2R\sin120^\circ\) | \(6\) |
