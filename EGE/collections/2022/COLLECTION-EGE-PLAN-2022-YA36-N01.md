@@ -29,6 +29,12 @@ tasks:
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V16-N01/TASK-EGE-PLAN-2022-YA36-V16-N01]]"
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V17-N01/TASK-EGE-PLAN-2022-YA36-V17-N01]]"
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V18-N01/TASK-EGE-PLAN-2022-YA36-V18-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V19-N01/TASK-EGE-PLAN-2022-YA36-V19-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V20-N01/TASK-EGE-PLAN-2022-YA36-V20-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V21-N01/TASK-EGE-PLAN-2022-YA36-V21-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V22-N01/TASK-EGE-PLAN-2022-YA36-V22-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V23-N01/TASK-EGE-PLAN-2022-YA36-V23-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V24-N01/TASK-EGE-PLAN-2022-YA36-V24-N01]]"
 tags: [ege, planimetry, yashchenko-2022, collection]
 ---
 
@@ -56,6 +62,12 @@ tags: [ege, planimetry, yashchenko-2022, collection]
 | 16 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V16-N01/TASK-EGE-PLAN-2022-YA36-V16-N01|вписанный четырёхугольник — угол]] | \(53^\circ\) | `outputs/main.pdf` |
 | 17 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V17-N01/TASK-EGE-PLAN-2022-YA36-V17-N01|секущие — внешний угол]] | \(29^\circ\) | `outputs/main.pdf` |
 | 18 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V18-N01/TASK-EGE-PLAN-2022-YA36-V18-N01|описанная окружность — сторона]] | \(6\) | `outputs/main.pdf` |
+| 19 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V19-N01/TASK-EGE-PLAN-2022-YA36-V19-N01|прямоугольный треугольник — площадь]] | \(60\) | `outputs/main.pdf` |
+| 20 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V20-N01/TASK-EGE-PLAN-2022-YA36-V20-N01|средняя линия — площадь]] | \(64\) | `outputs/main.pdf` |
+| 21 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V21-N01/TASK-EGE-PLAN-2022-YA36-V21-N01|прямоугольная трапеция — радиус]] | \(6{,}5\) | `outputs/main.pdf` |
+| 22 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V22-N01/TASK-EGE-PLAN-2022-YA36-V22-N01|касат. четырёхугольник — сторона]] | \(30\) | `outputs/main.pdf` |
+| 23 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V23-N01/TASK-EGE-PLAN-2022-YA36-V23-N01|параллелограмм середин — площадь]] | \(72{,}5\) | `outputs/main.pdf` |
+| 24 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V24-N01/TASK-EGE-PLAN-2022-YA36-V24-N01|вписанный четырёхугольник — углы]] | \(68^\circ\) | `outputs/main.pdf` |
 
 Остальные варианты добавляются в эту подборку тем же способом.
 
