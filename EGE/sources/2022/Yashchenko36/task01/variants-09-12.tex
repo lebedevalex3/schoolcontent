@@ -1,0 +1,277 @@
+\newpage
+
+% =========================================================
+% ВАРИАНТ 9
+% =========================================================
+
+\section*{Вариант 9}
+
+Сторона ромба равна \(10\), острый угол равен \(30^\circ\).
+Найдите радиус окружности, вписанной в ромб.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.62,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  % Ромб со стороной 6 и углом 30 градусов.
+  % Масштаб рисунка не связан с числовыми данными задачи.
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (D) at (5.196,3);
+  \coordinate (C) at (11.196,3);
+
+  % Центр вписанной окружности
+  \coordinate (O) at (5.598,1.5);
+
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--(D)--cycle;
+
+  \draw[line width=0.9pt]
+    (O) circle (1.5);
+
+  % Острый угол ромба
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=B--A--D};
+
+  \node at (1.35,0.38) {$30^\circ$};
+
+  % Длина стороны
+  \path (A)--(B)
+    node[midway,below=3mm] {$10$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left]  at (D) {$D$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }2{,}5}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 10
+% =========================================================
+
+\section*{Вариант 10}
+
+Радиус окружности, вписанной в ромб, равен \(1{,}5\).
+Найдите сторону ромба, если один из его углов равен \(30^\circ\).
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.62,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (D) at (5.196,3);
+  \coordinate (C) at (11.196,3);
+
+  \coordinate (O) at (5.598,1.5);
+  \coordinate (T) at (5.598,0);
+
+  % Ромб и вписанная окружность
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--(D)--cycle;
+
+  \draw[line width=0.9pt]
+    (O) circle (1.5);
+
+  % Радиус к точке касания
+  \draw[line width=0.75pt] (O)--(T);
+
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=3mm
+  ] {right angle=O--T--B};
+
+  \node[right] at ($(O)!0.5!(T)$) {$1{,}5$};
+
+  % Угол 30 градусов
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=B--A--D};
+
+  \node at (1.35,0.38) {$30^\circ$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left]  at (D) {$D$};
+  \node[above left]  at (O) {$O$};
+  \node[below]       at (T) {$T$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }6}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 11
+% =========================================================
+
+\newpage
+
+\section*{Вариант 11}
+
+В треугольнике \(ABC\) угол \(C\) равен \(46^\circ\),
+\(AD\) и \(BE\) --- биссектрисы, пересекающиеся в точке \(O\).
+Найдите угол \(AOB\). Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.68,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  % Треугольник с углом C, равным приблизительно 46 градусам
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (C) at (2.5,7.037);
+
+  % Точки пересечения биссектрис со сторонами
+  \coordinate (D) at (4.441,3.135);
+  \coordinate (E) at (1.082,3.047);
+
+  % Точка пересечения биссектрис — центр вписанной окружности
+  \coordinate (O) at (2.804,1.980);
+
+  % Стороны треугольника
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--cycle;
+
+  % Биссектрисы
+  \draw[line width=0.85pt] (A)--(D);
+  \draw[line width=0.85pt] (B)--(E);
+
+  \fill (O) circle (1.4pt);
+
+  % Две равные части угла A
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=5mm
+  ] {angle=B--A--D};
+
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=5mm
+  ] {angle=D--A--C};
+
+  % Две равные части угла B
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=5mm
+  ] {angle=C--B--E};
+
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=5mm
+  ] {angle=E--B--A};
+
+  % Угол C
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=6mm
+  ] {angle=A--C--B};
+
+  \node at (2.5,6.05) {$46^\circ$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above]       at (C) {$C$};
+  \node[right]       at (D) {$D$};
+  \node[left]        at (E) {$E$};
+  \node[below]       at (O) {$O$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }113}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 12
+% =========================================================
+
+\section*{Вариант 12}
+
+В треугольнике \(ABC\) высота \(CH\) равна \(6\),
+\(AB=BC\), \(AC=8\). Найдите синус угла \(ACB\).
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.72,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  % Координаты выбраны в соответствии с условием:
+  % AC = 8, CH = 6, AB = BC.
+  \coordinate (A) at (0,0);
+  \coordinate (H) at (5.292,0);
+  \coordinate (B) at (6.047,0);
+  \coordinate (C) at (5.292,6);
+
+  % Равные стороны AB и BC
+  \draw[line width=0.9pt,equal segment] (A)--(B);
+  \draw[line width=0.9pt,equal segment] (B)--(C);
+
+  % Сторона AC
+  \draw[line width=0.9pt] (C)--(A);
+
+  % Высота CH
+  \draw[line width=0.85pt] (C)--(H);
+
+  % Прямой угол
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.2mm
+  ] {right angle=C--H--B};
+
+  % Числовые данные
+  \path (C)--(H)
+    node[midway,right=2mm] {$6$};
+
+  \path (A)--(C)
+    node[midway,above left] {$8$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above]       at (C) {$C$};
+  \node[below]       at (H) {$H$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }0{,}75}
+\]
+
+\end{document}

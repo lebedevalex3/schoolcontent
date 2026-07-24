@@ -1,0 +1,301 @@
+\newpage
+
+% =========================================================
+% ВАРИАНТ 5
+% =========================================================
+
+\section*{Вариант 5}
+
+Биссектриса тупого угла параллелограмма делит противоположную сторону
+в отношении \(3:4\), считая от вершины острого угла.
+Найдите большую сторону параллелограмма, если его периметр равен \(33\).
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.72,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (7,0);
+  \coordinate (E) at (3,0);
+  \coordinate (D) at (0.8,2.891);
+  \coordinate (C) at (7.8,2.891);
+
+  % Параллелограмм
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--(D)--cycle;
+
+  % Биссектриса тупого угла D
+  \draw[line width=0.9pt] (D)--(E);
+
+  % Обозначение равных углов
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=5mm
+  ] {angle=A--D--E};
+
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=5mm
+  ] {angle=E--D--C};
+
+  % Подписи точек
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left]  at (D) {$D$};
+  \node[below]       at (E) {$E$};
+
+  % Отношение частей стороны
+  \node[below=4mm] at ($(A)!0.5!(E)$) {$3$};
+  \node[below=4mm] at ($(E)!0.5!(B)$) {$4$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }11{,}55}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 6
+% =========================================================
+
+\section*{Вариант 6}
+
+Точка пересечения биссектрис двух углов параллелограмма,
+прилежащих к одной стороне, принадлежит противоположной стороне.
+Меньшая сторона параллелограмма равна \(6\).
+Найдите его большую сторону.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.78,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (D) at (1,2.828);
+  \coordinate (C) at (7,2.828);
+
+  % Точка пересечения биссектрис
+  \coordinate (E) at (3,0);
+
+  % Параллелограмм
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--(D)--cycle;
+
+  % Биссектрисы углов D и C
+  \draw[line width=0.9pt] (D)--(E)--(C);
+
+  % Биссектриса угла D
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=4.8mm
+  ] {angle=A--D--E};
+
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=4.8mm
+  ] {angle=E--D--C};
+
+  % Биссектриса угла C
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=4.8mm
+  ] {angle=D--C--E};
+
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=4.8mm
+  ] {angle=E--C--B};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left]  at (D) {$D$};
+  \node[below]       at (E) {$E$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }12}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 7
+% =========================================================
+
+\newpage
+
+\section*{Вариант 7}
+
+Острый угол прямоугольного треугольника равен \(50^\circ\).
+Найдите угол между высотой \(CH\) и медианой \(CM\),
+проведёнными из вершины прямого угла.
+Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.9,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+
+  % M — середина гипотенузы AB
+  \coordinate (M) at (3,0);
+
+  % H — основание высоты CH
+  \coordinate (H) at (3.521,0);
+
+  % Вершина прямого угла
+  \coordinate (C) at (3.521,2.954);
+
+  % Гипотенуза с отметками равных частей
+  \draw[line width=0.9pt,equal segment] (A)--(M);
+  \draw[line width=0.9pt,equal segment] (M)--(B);
+
+  % Катеты
+  \draw[line width=0.9pt] (A)--(C)--(B);
+
+  % Медиана и высота
+  \draw[line width=0.85pt] (C)--(M);
+  \draw[line width=0.85pt] (C)--(H);
+
+  % Прямой угол при C
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.5mm
+  ] {right angle=A--C--B};
+
+  % CH перпендикулярна AB
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.2mm
+  ] {right angle=C--H--B};
+
+  % Угол B = 50 градусов
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=C--B--A};
+
+  \node at (5.15,0.48) {$50^\circ$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above]       at (C) {$C$};
+  \node[below]       at (M) {$M$};
+  \node[below]       at (H) {$H$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }10}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 8
+% =========================================================
+
+\section*{Вариант 8}
+
+Угол между биссектрисой \(CD\) и медианой \(CM\),
+проведёнными из вершины прямого угла \(C\) треугольника \(ABC\),
+равен \(10^\circ\).
+Найдите меньший угол этого треугольника.
+Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.9,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+
+  % M — середина гипотенузы
+  \coordinate (M) at (3,0);
+
+  % D — точка пересечения биссектрисы с гипотенузой
+  \coordinate (D) at (3.528,0);
+
+  % Вершина прямого угла
+  \coordinate (C) at (4.026,2.819);
+
+  % Гипотенуза с отметками равных частей
+  \draw[line width=0.9pt,equal segment] (A)--(M);
+  \draw[line width=0.9pt,equal segment] (M)--(B);
+
+  % Катеты
+  \draw[line width=0.9pt] (A)--(C)--(B);
+
+  % Медиана и биссектриса
+  \draw[line width=0.85pt] (C)--(M);
+  \draw[line width=0.85pt] (C)--(D);
+
+  % Прямой угол
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.5mm
+  ] {right angle=A--C--B};
+
+  % Обозначения равных частей угла C
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=A--C--D};
+
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=D--C--B};
+
+  % Угол между медианой и биссектрисой
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=4.5mm
+  ] {angle=M--C--D};
+
+  \node at (3.68,2.10) {$10^\circ$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above]       at (C) {$C$};
+  \node[below]       at (M) {$M$};
+  \node[below]       at (D) {$D$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }35}
+\]
+
+\end{document}

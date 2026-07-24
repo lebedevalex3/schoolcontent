@@ -17,3 +17,5 @@ for task_id in "${task_ids[@]}"; do
     pdflatex -interaction=nonstopmode -halt-on-error -output-directory=outputs latex/main.tex
   )
 done
+
+bash "$(dirname "$0")/build-yashchenko-2022-fragments.sh"
