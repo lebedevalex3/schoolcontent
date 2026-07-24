@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+
+\usetikzlibrary{calc,angles,quotes,decorations.markings}
+
+\pagestyle{empty}
+
+\tikzset{
+  equal segment/.style={
+    postaction={decorate},
+    decoration={
+      markings,
+      mark=at position 0.55 with {
+        \draw[line width=0.7pt] (0,-2.5pt)--(0,2.5pt);
+      }
+    }
+  }
+}
+
+\begin{document}
+
+\section*{Вариант 2}
+
+В тупоугольном треугольнике \(ABC\) известно, что
+\(AC=BC\), высота \(AH\) равна \(3\), \(CH=\sqrt7\).
+Найдите синус угла \(ACB\).
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=1.15,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.2,0);
+  \coordinate (C) at (2.9,1.25);
+
+  \coordinate (H) at ($(B)!(A)!(C)$);
+
+  \draw[line width=0.9pt] (A)--(B);
+  \draw[line width=0.9pt,equal segment] (A)--(C);
+  \draw[line width=0.9pt,equal segment] (C)--(B);
+
+  \draw[dashed,line width=0.8pt] (A)--(H);
+  \draw[dashed,line width=0.8pt] (H)--(C);
+
+  \pic[
+    draw,
+    line width=0.7pt,
+    angle radius=3.5mm
+  ] {right angle=A--H--C};
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left] at (H) {$H$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }0{,}75}
+\]
+
+\end{document}
