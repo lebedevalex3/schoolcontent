@@ -14,7 +14,7 @@
 \newcommand{\rulecard}[2]{\noindent\fbox{\begin{minipage}{.94\linewidth}\textbf{#1} \quad #2\end{minipage}}\par\smallskip}
 \newcommand{\picturedtask}[3]{%
 \item \begin{minipage}[t]{.65\linewidth}#1\teacheranswer{#3}\end{minipage}\hfill
-\begin{minipage}[t]{.3\linewidth}\centering #2\end{minipage}\par\medskip}
+\begin{minipage}[t]{.3\linewidth}\centering\resizebox{\linewidth}{!}{#2}\end{minipage}\par\medskip}
 
 \begin{document}
 \begin{center}
@@ -33,13 +33,8 @@
 \ex В четырёхугольник \(ABCD\) вписана окружность. \(AB=9\), \(BC=7\),
 \(CD=18\). Найдите \(AD\).
 \teacheranswer{\(AB+CD=BC+AD\), поэтому \(AD=9+18-7=20\).}
-
-\ex В четырёхугольник вписана окружность. Длины трёх его сторон равны \(11\),
-\(16\) и \(24\). Найдите четвёртую сторону, если первые и третья стороны
-противоположны.
-\teacheranswer{\(11+24=16+x\), значит \(x=19\).}
 \end{minipage}\hfill
-\begin{minipage}[t]{.35\linewidth}\centering\figTangentialQuad\end{minipage}
+\begin{minipage}[t]{.35\linewidth}\centering\figTangentialQuad{9}{7}{18}\end{minipage}
 
 \rulecard{Опора A}{Если в четырёхугольник вписана окружность, то суммы
 противоположных сторон равны: \(AB+CD=BC+AD\).}
@@ -47,15 +42,16 @@
 \section*{2. Биссектриса в параллелограмме}
 \begin{minipage}[t]{.55\linewidth}
 \ex Биссектриса тупого угла параллелограмма пересекает противоположную сторону
-в точке \(E\). \(AE:EB=2:3\), периметр равен \(42\). Найдите большую сторону.
-\teacheranswer{Из параллельности \(AE=AD\). Пусть \(AE=2x\), \(EB=3x\):
-\(P=2(5x+2x)=14x=42\), большая сторона \(AB=5x=15\).}
+в точке \(E\). \(AE:EB=3:4\), периметр равен \(40\). Найдите большую сторону.
+\teacheranswer{Из параллельности \(AE=AD\). Пусть \(AE=3x\), \(EB=4x\):
+\(P=2(7x+3x)=20x=40\), большая сторона \(AB=7x=14\).}
 \end{minipage}\hfill
 \begin{minipage}[t]{.4\linewidth}\centering\figParallelogramBisector\end{minipage}
 
 \rulecard{Опора B}{Биссектриса угла \(D\) создаёт равнобедренный треугольник
 \(ADE\): \(AD=AE\). Причина: \(AB\parallel CD\), поэтому равны нужные углы.}
 
+\newpage
 \section*{3. Две биссектрисы и ромб}
 \begin{minipage}[t]{.48\linewidth}
 \centering\figParallelogramTwoBisectors
@@ -67,7 +63,7 @@
 большая сторона равна \(16\).}
 \end{minipage}\hfill
 \begin{minipage}[t]{.48\linewidth}
-\centering\figRhombusCircle
+\centering\figRhombusCircle{14}
 \raggedright
 \ex Сторона ромба равна \(14\), острый угол равен \(30^\circ\). Найдите
 радиус вписанной окружности.
@@ -77,10 +73,9 @@
 \rulecard{Опора C}{Для ромба \(S=a^2\sin\alpha\), а также \(S=pr=2ar\).
 Следовательно, \(r=\dfrac{a\sin\alpha}{2}\). При угле \(30^\circ\): \(r=a/4\).}
 
-\newpage
 \section*{4. Две короткие связи в трапеции}
 \begin{minipage}[t]{.48\linewidth}
-\centering\figRightTangentialTrapezoid
+\centering\figRightTangentialTrapezoid{31}
 \raggedright
 \ex Периметр прямоугольной трапеции, описанной около окружности, равен \(84\).
 Её большая боковая сторона равна \(31\). Найдите радиус окружности.
@@ -88,7 +83,7 @@
 \(11\). Это высота, значит \(r=11/2=5{,}5\).}
 \end{minipage}\hfill
 \begin{minipage}[t]{.48\linewidth}
-\centering\figTrapezoidParallel
+\centering\figTrapezoidParallel{24}{51}
 \raggedright
 \ex Через конец меньшего основания трапеции проведена прямая, параллельная
 боковой стороне; она отсекает треугольник. Меньшее основание равно \(24\),
@@ -104,47 +99,47 @@
 Все рисунки --- схемы; измерять на них ничего не нужно.
 \begin{enumerate}
 \picturedtask{В четырёхугольник вписана окружность. \(AB=12\), \(BC=9\),
-\(CD=22\). Найдите \(AD\).}{\figTangentialQuad}{\(AD=12+22-9=25\).}
+\(CD=22\). Найдите \(AD\).}{\figTangentialQuad{12}{9}{22}}{\(AD=12+22-9=25\).}
 \picturedtask{Биссектриса тупого угла параллелограмма делит противоположную
-сторону на отрезки \(3x\) и \(5x\). Периметр равен \(66\). Найдите большую
-сторону.}{\figParallelogramBisector}{\(P=2(8x+3x)=22x=66\), поэтому
-\(AB=8x=24\).}
+сторону на отрезки \(3x\) и \(4x\). Периметр равен \(60\). Найдите большую
+сторону.}{\figParallelogramBisector}{\(P=2(7x+3x)=20x=60\), поэтому
+\(AB=7x=21\).}
 \picturedtask{Биссектрисы двух прилежащих углов параллелограмма пересекаются
 на противоположной стороне. Меньшая сторона равна \(7\). Найдите большую
 сторону.}{\figParallelogramTwoBisectors}{\(2\cdot7=14\).}
-\picturedtask{Радиус окружности, вписанной в ромб, равен \(2\). Один из углов
-ромба равен \(30^\circ\). Найдите сторону ромба.}{\figRhombusCircle}{При
-\(30^\circ\): \(r=a/4\), поэтому \(a=8\).}
+\picturedtask{Сторона ромба равна \(8\). Один из углов ромба равен \(30^\circ\).
+Найдите радиус вписанной окружности.}
+{\figRhombusCircle{8}}{При \(30^\circ\): \(r=a/4=2\).}
 \picturedtask{Периметр прямоугольной трапеции, описанной около окружности,
 равен \(72\). Большая боковая сторона равна \(27\). Найдите радиус окружности.}
-{\figRightTangentialTrapezoid}{Сумма боковых сторон \(36\), высота \(9\),
+{\figRightTangentialTrapezoid{27}}{Сумма боковых сторон \(36\), высота \(9\),
 радиус \(4{,}5\).}
 \picturedtask{Меньшее основание трапеции равно \(18\). Параллельная боковой
 стороне прямая отсекает треугольник периметра \(47\). Найдите периметр трапеции.}
-{\figTrapezoidParallel}{\(47+2\cdot18=83\).}
+{\figTrapezoidParallel{18}{47}}{\(47+2\cdot18=83\).}
 \end{enumerate}
 
 \section*{6. Домашняя работа}
 Реши без конспекта. После каждого номера запиши одно использованное свойство.
 \begin{enumerate}
 \picturedtask{В четырёхугольник вписана окружность. \(AB=15\), \(BC=11\),
-\(CD=19\). Найдите \(AD\).}{\figTangentialQuad}{\(15+19-11=23\).}
+\(CD=19\). Найдите \(AD\).}{\figTangentialQuad{15}{11}{19}}{\(15+19-11=23\).}
 \picturedtask{Биссектриса тупого угла параллелограмма делит противоположную
-сторону в отношении \(1:2\), считая от вершины острого угла. Периметр равен
-\(24\). Найдите большую сторону.}{\figParallelogramBisector}{Пусть части
-\(x\) и \(2x\): \(P=2(3x+x)=8x=24\), большая сторона \(9\).}
+сторону в отношении \(3:4\), считая от вершины острого угла. Периметр равен
+\(80\). Найдите большую сторону.}{\figParallelogramBisector}{Пусть части
+\(3x\) и \(4x\): \(P=2(7x+3x)=20x=80\), большая сторона \(28\).}
 \picturedtask{Биссектрисы двух прилежащих углов параллелограмма пересекаются
 на противоположной стороне. Меньшая сторона равна \(9\). Найдите большую
 сторону.}{\figParallelogramTwoBisectors}{\(18\).}
 \picturedtask{Сторона ромба равна \(20\), острый угол равен \(30^\circ\).
-Найдите радиус вписанной окружности.}{\figRhombusCircle}{\(r=a/4=5\).}
+Найдите радиус вписанной окружности.}{\figRhombusCircle{20}}{\(r=a/4=5\).}
 \picturedtask{Периметр прямоугольной трапеции, описанной около окружности,
 равен \(96\). Большая боковая сторона равна \(35\). Найдите радиус окружности.}
-{\figRightTangentialTrapezoid}{Другая боковая сторона \(48-35=13\), радиус
+{\figRightTangentialTrapezoid{35}}{Другая боковая сторона \(48-35=13\), радиус
 \(6{,}5\).}
 \picturedtask{Меньшее основание трапеции равно \(29\). Параллельная боковой
 стороне прямая отсекает треугольник периметра \(64\). Найдите периметр трапеции.}
-{\figTrapezoidParallel}{\(64+2\cdot29=122\).}
+{\figTrapezoidParallel{29}{64}}{\(64+2\cdot29=122\).}
 \end{enumerate}
 
 \ifteacher
