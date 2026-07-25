@@ -21,6 +21,7 @@ tags: [ege, index]
 - [[EGE/05_VARIANTS|Варианты и источники]]
 - [[EGE/06_INBOX|Добавить новый материал]]
 - [[EGE/methodology/MAP-EGE-PLAN-TASK01-YA36-2022|Методическая карта: планиметрия, задание №1]]
+- [[EGE/courses/planimetry-task1/COURSE-EGE-PLAN-TASK01|Курс: планиметрия, задание №1]]
 
 ## Всё готовое к использованию
 

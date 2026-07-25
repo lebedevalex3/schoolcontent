@@ -1,0 +1,69 @@
+% Шаблонные схемы урока 1.
+% Допустима только синхронизация числовой подписи, если она добавлена в условие.
+% Конфигурацию, вершины, линии, дуги и оформление не изменять без явного поручения.
+
+\newcommand{\figRightTriangle}{%
+\begin{tikzpicture}[scale=.56,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.8,0);
+  \coordinate (C) at (0,3.1);
+  \draw[line width=.8pt] (A)--(B)--(C)--cycle;
+  \pic[draw,line width=.55pt,angle radius=3mm] {right angle=B--A--C};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above left] at (C) {$C$};
+\end{tikzpicture}}
+
+\newcommand{\figMidlineTriangle}{%
+\begin{tikzpicture}[scale=.54,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.5,0);
+  \coordinate (C) at (3.5,3.5);
+  \coordinate (D) at ($(A)!0.5!(C)$);
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--cycle;
+  \draw[line width=.8pt] (D)--(E);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[left] at (D) {$D$}; \node[right] at (E) {$E$};
+\end{tikzpicture}}
+
+\newcommand{\figParallelogramMidpoints}{%
+\begin{tikzpicture}[scale=.5,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0);
+  \coordinate (D) at (1.4,3.1); \coordinate (C) at (7.4,3.1);
+  \coordinate (Ap) at ($(A)!0.5!(B)$); \coordinate (Bp) at ($(B)!0.5!(C)$);
+  \coordinate (Cp) at ($(C)!0.5!(D)$); \coordinate (Dp) at ($(D)!0.5!(A)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=.8pt] (Ap)--(Bp)--(Cp)--(Dp)--cycle;
+  \foreach \p in {Ap,Bp,Cp,Dp} \fill (\p) circle (1.1pt);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+  \node[below] at (Ap) {$A'$}; \node[right] at (Bp) {$B'$};
+  \node[above] at (Cp) {$C'$}; \node[left] at (Dp) {$D'$};
+\end{tikzpicture}}
+
+\newcommand{\figTrapezoidDiagonal}{%
+\begin{tikzpicture}[scale=.53,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0);
+  \coordinate (D) at (1.3,3); \coordinate (C) at (5.6,3);
+  \coordinate (E) at ($(A)!0.5!(D)$); \coordinate (F) at ($(B)!0.5!(C)$);
+  \coordinate (P) at ($(D)!0.5!(B)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=.8pt] (E)--(F); \draw[line width=.8pt] (D)--(B);
+  \fill (P) circle (1.1pt);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+  \node[left] at (E) {$E$}; \node[right] at (F) {$F$}; \node[above] at (P) {$P$};
+\end{tikzpicture}}
+
+\newcommand{\figIsoscelesTrapezoid}{%
+\begin{tikzpicture}[scale=.53,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0);
+  \coordinate (D) at (1.7,3); \coordinate (C) at (5.3,3);
+  \coordinate (H) at ($(A)!(C)!(B)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=.8pt] (C)--(H);
+  \pic[draw,line width=.55pt,angle radius=2.7mm] {right angle=C--H--B};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}
