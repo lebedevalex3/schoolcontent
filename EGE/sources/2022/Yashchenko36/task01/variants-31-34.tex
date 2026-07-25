@@ -1,0 +1,315 @@
+\newpage
+
+% =========================================================
+% ВАРИАНТ 31
+% =========================================================
+
+\section*{Вариант 31}
+
+Четырёхугольник \(ABCD\) вписан в окружность.
+Угол \(ABC\) равен \(122^\circ\), угол \(ABD\) равен \(36^\circ\).
+Найдите угол \(CAD\). Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=1.08,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \def\R{2.45}
+
+  \coordinate (O) at (0,0);
+
+  % Положение точек обеспечивает:
+  % угол ABC = 122 градусов;
+  % угол ABD = 36 градусов;
+  % угол CAD = 86 градусов.
+  \coordinate (A) at (200:\R);
+  \coordinate (B) at (250:\R);
+  \coordinate (C) at (316:\R);
+  \coordinate (D) at (128:\R);
+
+  % Окружность
+  \draw[line width=0.9pt] (O) circle (\R);
+
+  % Вписанный четырёхугольник
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--(D)--cycle;
+
+  % Диагонали, необходимые для указанных углов
+  \draw[line width=0.8pt] (A)--(C);
+  \draw[line width=0.8pt] (B)--(D);
+
+  % Угол ABD = 36 градусов
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=5mm
+  ] {angle=A--B--D};
+
+  % Угол ABC = 122 градуса
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=9mm
+  ] {angle=A--B--C};
+
+  \node at (-0.62,-1.63) {$36^\circ$};
+  \node at (0.00,-1.98) {$122^\circ$};
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below]       at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above left]  at (D) {$D$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }86}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 32
+% =========================================================
+
+\section*{Вариант 32}
+
+Два угла треугольника равны \(68^\circ\) и \(35^\circ\).
+Найдите тупой угол, который образуют высоты треугольника,
+выходящие из вершин этих углов.
+Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=1.02,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  % Неравнобедренный остроугольный треугольник:
+  % угол A = 68 градусов, угол B = 35 градусов.
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (7,0);
+  \coordinate (C) at (1.544,3.821);
+
+  % Основания высот
+  \coordinate (D) at (2.303,3.289);
+  \coordinate (E) at (0.982,2.431);
+
+  % Ортоцентр
+  \coordinate (H) at (1.544,2.205);
+
+  % Треугольник
+  \draw[line width=0.9pt]
+    (A)--(B)--(C)--cycle;
+
+  % Высоты AD и BE
+  \draw[line width=0.85pt] (A)--(D);
+  \draw[line width=0.85pt] (B)--(E);
+
+  % Прямые углы у оснований высот
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=3mm
+  ] {right angle=A--D--C};
+
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=3mm
+  ] {right angle=B--E--C};
+
+  % Данные углы треугольника
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=B--A--C};
+
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=7mm
+  ] {angle=C--B--A};
+
+  \node at (0.78,0.42) {$68^\circ$};
+  \node at (5.98,0.34) {$35^\circ$};
+
+  % Искомый тупой угол между высотами
+  \pic[
+    draw,
+    line width=0.7pt,
+    angle radius=5.5mm
+  ] {angle=A--H--B};
+
+  \node at (1.65,1.50) {$?$};
+
+  \fill (H) circle (1.3pt);
+
+  % Подписи
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above]       at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[left]        at (E) {$E$};
+  \node[below]       at (H) {$H$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }103}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 33
+% =========================================================
+
+\newpage
+
+\section*{Вариант 33}
+
+Найдите угол \(ACO\), если его сторона \(CA\) касается окружности
+с центром \(O\), отрезок \(CO\) пересекает окружность в точке \(B\),
+а дуга \(AB\) окружности, заключённая внутри этого угла,
+равна \(17^\circ\).
+Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=1.02,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \def\R{3.2}
+  \pgfmathsetmacro{\Cx}{\R/cos(17)}
+
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0:\R);
+  \coordinate (A) at (17:\R);
+  \coordinate (C) at (\Cx,0);
+
+  % Окружность
+  \draw[line width=0.9pt] (O) circle (\R);
+
+  % Радиус, секущая и касательная
+  \draw[line width=0.8pt] (O)--(A);
+  \draw[line width=0.9pt] (O)--(C);
+  \draw[line width=0.9pt] (A)--(C);
+
+  % Выделяем дугу AB
+  \draw[line width=1.4pt]
+    (0:\R) arc[start angle=0,end angle=17,radius=\R];
+
+  % Радиус перпендикулярен касательной
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.2mm
+  ] {right angle=O--A--C};
+
+  % Искомый угол ACO
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=5mm
+  ] {angle=A--C--O};
+
+  % Градусная мера дуги
+  \node at (8.5:3.72) {$17^\circ$};
+
+  \fill (O) circle (1.2pt);
+  \fill (A) circle (1.1pt);
+  \fill (B) circle (1.1pt);
+
+  % Подписи
+  \node[below left]  at (O) {$O$};
+  \node[below]       at (B) {$B$};
+  \node[above]       at (A) {$A$};
+  \node[right]       at (C) {$C$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }73}
+\]
+
+
+% =========================================================
+% ВАРИАНТ 34
+% =========================================================
+
+\section*{Вариант 34}
+
+Угол \(ACO\) равен \(62^\circ\).
+Его сторона \(CA\) касается окружности с центром в точке \(O\).
+Отрезок \(CO\) пересекает окружность в точке \(B\).
+Найдите градусную меру дуги \(AB\) окружности,
+заключённой внутри этого угла.
+Ответ дайте в градусах.
+
+\begin{center}
+\begin{tikzpicture}[
+  scale=1.04,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small}
+]
+  \def\R{2.9}
+  \pgfmathsetmacro{\Cx}{\R/cos(28)}
+
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0:\R);
+  \coordinate (A) at (28:\R);
+  \coordinate (C) at (\Cx,0);
+
+  % Окружность
+  \draw[line width=0.9pt] (O) circle (\R);
+
+  % Радиус, секущая и касательная
+  \draw[line width=0.8pt] (O)--(A);
+  \draw[line width=0.9pt] (O)--(C);
+  \draw[line width=0.9pt] (A)--(C);
+
+  % Искомая дуга AB
+  \draw[line width=1.4pt]
+    (0:\R) arc[start angle=0,end angle=28,radius=\R];
+
+  % Прямой угол между радиусом и касательной
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=3.2mm
+  ] {right angle=O--A--C};
+
+  % Угол ACO = 62 градуса
+  \pic[
+    draw,
+    line width=0.65pt,
+    angle radius=6mm
+  ] {angle=A--C--O};
+
+  \node at (2.69,0.49) {$62^\circ$};
+
+  \fill (O) circle (1.2pt);
+  \fill (A) circle (1.1pt);
+  \fill (B) circle (1.1pt);
+
+  % Подписи
+  \node[below left] at (O) {$O$};
+  \node[below]      at (B) {$B$};
+  \node[above]      at (A) {$A$};
+  \node[right]      at (C) {$C$};
+\end{tikzpicture}
+\end{center}
+
+\[
+\boxed{\text{Ответ: }28}
+\]
+
+\end{document}
