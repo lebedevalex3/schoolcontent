@@ -9,6 +9,7 @@ latex_locked: true
 figure_template_locked: true
 figure_role: schematic_template
 allowed_content_edits: [condition_text, numerical_data, question, answer]
+permitted_figure_edits: [synchronize_explicit_numerical_labels]
 source:
   publisher: "Ященко"
   year: 2022
@@ -56,7 +57,9 @@ tags: [ege, planimetry, yashchenko-2022, collection]
 
 > [[00_meta/FIGURE_TEMPLATE_POLICY|Рисунки этой подборки — неизменяемые шаблоны]].
 > При создании похожих задач допускается менять только текстовое содержание;
-> TikZ-конфигурация, подписи, числовые метки и дуги не редактируются.
+> TikZ-конфигурация, подписи и дуги не редактируются. Числовая метка меняется
+> только при синхронизации с изменённым числом из условия и без смены её позиции
+> или оформления.
 
 ## Внесённые варианты
 

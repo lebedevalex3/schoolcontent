@@ -13,6 +13,7 @@ latex_locked: true
 figure_template_locked: true
 figure_role: schematic_template
 allowed_content_edits: [condition_text, numerical_data, question, answer]
+permitted_figure_edits: [synchronize_explicit_numerical_labels]
 tags: [ege]
 ---
 
