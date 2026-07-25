@@ -35,6 +35,12 @@ tasks:
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V22-N01/TASK-EGE-PLAN-2022-YA36-V22-N01]]"
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V23-N01/TASK-EGE-PLAN-2022-YA36-V23-N01]]"
   - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V24-N01/TASK-EGE-PLAN-2022-YA36-V24-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V25-N01/TASK-EGE-PLAN-2022-YA36-V25-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V26-N01/TASK-EGE-PLAN-2022-YA36-V26-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V27-N01/TASK-EGE-PLAN-2022-YA36-V27-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V28-N01/TASK-EGE-PLAN-2022-YA36-V28-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V29-N01/TASK-EGE-PLAN-2022-YA36-V29-N01]]"
+  - "[[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V30-N01/TASK-EGE-PLAN-2022-YA36-V30-N01]]"
 tags: [ege, planimetry, yashchenko-2022, collection]
 ---
 
@@ -68,6 +74,12 @@ tags: [ege, planimetry, yashchenko-2022, collection]
 | 22 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V22-N01/TASK-EGE-PLAN-2022-YA36-V22-N01|касат. четырёхугольник — сторона]] | \(30\) | `outputs/main.pdf` |
 | 23 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V23-N01/TASK-EGE-PLAN-2022-YA36-V23-N01|параллелограмм середин — площадь]] | \(72{,}5\) | `outputs/main.pdf` |
 | 24 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V24-N01/TASK-EGE-PLAN-2022-YA36-V24-N01|вписанный четырёхугольник — углы]] | \(68^\circ\) | `outputs/main.pdf` |
+| 25 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V25-N01/TASK-EGE-PLAN-2022-YA36-V25-N01|прямоугольный треугольник — высота и биссектриса]] | \(21^\circ\) | `outputs/main.pdf` |
+| 26 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V26-N01/TASK-EGE-PLAN-2022-YA36-V26-N01|прямоугольный треугольник — биссектриса и медиана]] | \(35^\circ\) | `outputs/main.pdf` |
+| 27 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V27-N01/TASK-EGE-PLAN-2022-YA36-V27-N01|трапеция — диагональ и средняя линия]] | \(13\) | `outputs/main.pdf` |
+| 28 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V28-N01/TASK-EGE-PLAN-2022-YA36-V28-N01|трапеция — периметр]] | \(165\) | `outputs/main.pdf` |
+| 29 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V29-N01/TASK-EGE-PLAN-2022-YA36-V29-N01|треугольник — высоты]] | \(2\) | `outputs/main.pdf` |
+| 30 | [[EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V30-N01/TASK-EGE-PLAN-2022-YA36-V30-N01|равнобедренная трапеция — средняя линия]] | \(10\) | `outputs/main.pdf` |
 
 Остальные варианты добавляются в эту подборку тем же способом.
 
