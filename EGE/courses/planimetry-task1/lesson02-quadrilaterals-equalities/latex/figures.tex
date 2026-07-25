@@ -1,0 +1,63 @@
+% Шаблонные схемы урока 2. Не использовать их как чертежи в масштабе.
+
+\newcommand{\figTangentialQuad}{%
+\begin{tikzpicture}[scale=.46,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (O) at (0,0); \coordinate (A) at (-2.3,-.8);
+  \coordinate (B) at (.9,-1.5); \coordinate (C) at (2.1,.7); \coordinate (D) at (-.7,2);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (O) circle (1);
+  \node[left] at (A) {$A$}; \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$}; \node[above] at (D) {$D$};
+\end{tikzpicture}}
+
+\newcommand{\figParallelogramBisector}{%
+\begin{tikzpicture}[scale=.48,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0); \coordinate (D) at (1,2.7); \coordinate (C) at (7,2.7);
+  \coordinate (E) at (2.8,0);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (D)--(E);
+  \pic[draw,line width=.5pt,angle radius=3mm] {angle=A--D--E};
+  \pic[draw,line width=.5pt,angle radius=3mm] {angle=E--D--C};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (E) {$E$};
+\end{tikzpicture}}
+
+\newcommand{\figParallelogramTwoBisectors}{%
+\begin{tikzpicture}[scale=.48,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0); \coordinate (D) at (1,2.7); \coordinate (C) at (7,2.7);
+  \coordinate (E) at (3.5,0);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (D)--(E)--(C);
+  \pic[draw,line width=.5pt,angle radius=2.8mm] {angle=A--D--E};
+  \pic[draw,line width=.5pt,angle radius=2.8mm] {angle=E--D--C};
+  \pic[draw,line width=.5pt,angle radius=2.8mm] {angle=D--C--E};
+  \pic[draw,line width=.5pt,angle radius=2.8mm] {angle=E--C--B};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (E) {$E$};
+\end{tikzpicture}}
+
+\newcommand{\figRhombusCircle}{%
+\begin{tikzpicture}[scale=.43,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (5,0); \coordinate (D) at (4.33,2.5); \coordinate (C) at (9.33,2.5);
+  \coordinate (O) at (4.665,1.25); \coordinate (T) at (4.665,0);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (O) circle (1.25);
+  \draw[line width=.7pt] (O)--(T); \pic[draw,line width=.5pt,angle radius=2.5mm] {right angle=O--T--B};
+  \pic[draw,line width=.5pt,angle radius=4mm] {angle=B--A--D};
+  \node[below left] at (A) {$A$}; \node[below] at (B) {$B$}; \node[above right] at (C) {$C$};
+  \node[above left] at (D) {$D$}; \node[left] at (O) {$O$};
+\end{tikzpicture}}
+
+\newcommand{\figRightTangentialTrapezoid}{%
+\begin{tikzpicture}[scale=.43,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0); \coordinate (C) at (4.9,3); \coordinate (D) at (0,3); \coordinate (O) at (1.5,1.5);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (O) circle (1.5);
+  \pic[draw,line width=.5pt,angle radius=2.5mm] {right angle=D--A--B};
+  \pic[draw,line width=.5pt,angle radius=2.5mm] {right angle=A--D--C};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+\end{tikzpicture}}
+
+\newcommand{\figTrapezoidParallel}{%
+\begin{tikzpicture}[scale=.48,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0); \coordinate (D) at (1.4,2.8); \coordinate (C) at (5.2,2.8); \coordinate (E) at (3.8,0);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle; \draw[line width=.8pt] (D)--(E);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$}; \node[above right] at (C) {$C$};
+  \node[above left] at (D) {$D$}; \node[below] at (E) {$E$};
+\end{tikzpicture}}
