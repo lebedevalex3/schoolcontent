@@ -45,7 +45,7 @@ bash EGE/build-planimetry-lessons.sh
 выполнить и там:
 
 ```bat
-bash EGE\build-planimetry-lessons.sh
+bash EGE/build-planimetry-lessons.sh
 ```
 
 Альтернативный вариант — установить WSL, открыть Ubuntu и запускать скрипт из
