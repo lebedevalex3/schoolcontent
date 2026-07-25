@@ -6,7 +6,16 @@
 # Основной результат компиляции
 *.pdf
 *.pptx
-/tmpß
+
+# Каталоги сборки в любой части репозитория
+tmp/
+**/tmp/
+temp/
+**/temp/
+outputs/
+**/outputs/
+build/
+**/build/
 # Вспомогательные файлы LaTeX
 *.aux
 *.log
@@ -64,7 +73,6 @@
 *.tar
 *.tar.gz
 *.7z
-/tmp
 
 # macOS
 .DS_Store
