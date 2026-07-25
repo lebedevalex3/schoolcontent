@@ -5,6 +5,10 @@ type: collection
 status: developing
 course: ege
 topic: planimetry
+latex_locked: true
+figure_template_locked: true
+figure_role: schematic_template
+allowed_content_edits: [condition_text, numerical_data, question, answer]
 source:
   publisher: "Ященко"
   year: 2022
@@ -49,6 +53,10 @@ tags: [ege, planimetry, yashchenko-2022, collection]
 ---
 
 # Ященко-2022: задание №1 по планиметрии
+
+> [[00_meta/FIGURE_TEMPLATE_POLICY|Рисунки этой подборки — неизменяемые шаблоны]].
+> При создании похожих задач допускается менять только текстовое содержание;
+> TikZ-конфигурация, подписи, числовые метки и дуги не редактируются.
 
 ## Внесённые варианты
 
