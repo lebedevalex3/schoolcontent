@@ -1,0 +1,136 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{Arial.ttf}[Path=/System/Library/Fonts/Supplemental/]
+\setsansfont{Arial.ttf}[Path=/System/Library/Fonts/Supplemental/]
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{calc,angles,quotes}
+\usefonttheme{serif}
+\renewcommand{\familydefault}{\rmdefault}
+
+% Рисунки — единые шаблоны из рабочего листа урока 1.
+% Конфигурацию, вершины, линии, дуги и оформление не изменять.
+\input{../../../../courses/planimetry-task1/lesson01-areas-midlines-projections/latex/figures.tex}
+
+\definecolor{lessonblue}{RGB}{20,56,96}
+\definecolor{lessonpaper}{RGB}{248,249,251}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black,bg=lessonpaper}
+\setbeamercolor{frametitle}{fg=lessonblue}
+\setbeamerfont{normal text}{family=\rmfamily}
+\setbeamerfont{structure}{family=\rmfamily}
+\setbeamerfont{frametitle}{family=\rmfamily,size=\Large,series=\bfseries}
+\setbeamercolor{title}{fg=lessonblue}
+\setbeamerfont{title}{family=\rmfamily,size=\LARGE,series=\bfseries}
+\setbeamercolor{footline}{fg=lessonblue}
+\setbeamerfont{footline}{family=\rmfamily}
+\setbeamertemplate{footline}{%
+  \hfill\scriptsize ЕГЭ. Планиметрия. Задание №1\quad Урок 1\quad\insertframenumber/\inserttotalframenumber\hspace*{4mm}\strut\par\vspace{4mm}}
+
+\newcommand{\support}[2]{%
+\vfill
+\begin{beamercolorbox}[wd=\linewidth,sep=1.1ex,rounded=true,shadow=false]{block body}
+\textbf{#1}\quad #2
+\end{beamercolorbox}}
+\setbeamercolor{block body}{fg=black,bg=blue!8}
+\newcommand{\taskframe}[4]{%
+\begin{frame}{#1}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.59\textwidth}
+\vspace{3mm}\Large #2
+\end{column}
+\begin{column}{.37\textwidth}
+\centering\resizebox{\linewidth}{!}{#3}
+\end{column}
+\end{columns}
+\support{#4}{}
+\end{frame}}
+\newcommand{\trainerframe}[3]{%
+\begin{frame}{Тренажёр: назови правило}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.59\textwidth}
+\vspace{3mm}\Large #1
+\end{column}
+\begin{column}{.37\textwidth}
+\centering\resizebox{\linewidth}{!}{#2}
+\end{column}
+\end{columns}
+\support{Задание}{Сначала назови фигуру и одно свойство, затем вычисляй.}
+\end{frame}}
+
+\begin{document}
+
+\begin{frame}
+\vfill
+\begin{center}
+{\usebeamerfont{title}\color{lessonblue} Площади, средние линии и проекции}\\[8mm]
+{\Large ЕГЭ. Планиметрия. Задание №1}\\[15mm]
+{\large Работаем на рисунке: правило \(\rightarrow\) одна связь \(\rightarrow\) ответ}
+\end{center}
+\vfill
+\end{frame}
+
+\taskframe{Площадь через катеты}{
+В прямоугольном треугольнике один катет равен \(20\), гипотенуза равна \(29\).
+Найдите площадь треугольника.
+}{\figRightTriangle}{Опора A. В прямоугольном треугольнике \(S=\dfrac{ab}{2}\), где \(a\) и \(b\) --- катеты.}
+
+\taskframe{Одна площадь --- две записи}{
+В треугольнике \(AB=12\), высота к стороне \(AB\) равна \(3\), \(AC=6\).
+Найдите высоту к стороне \(AC\).
+}{\figTriangleAltitudes}{Опора A. Для одной площади: \(a h_a=b h_b\).}
+
+\taskframe{Средняя линия треугольника}{
+Точки \(D\) и \(E\) --- середины сторон \(AC\) и \(BC\). Площадь трапеции \(ABED\)
+равна \(45\). Найдите площадь \(ABC\).
+}{\figMidlineTriangle}{Опора B. Малый подобный треугольник имеет коэффициент \(1/2\), значит его площадь равна \(1/4\) площади большого.}
+
+\taskframe{Четырёхугольник середин}{
+Площадь параллелограмма \(ABCD\) равна \(186\). \(A'B'C'D'\) соединяет середины его сторон.
+Найдите площадь \(A'B'C'D'\).
+}{\figParallelogramMidpoints}{Опора C. Четырёхугольник середин имеет половину площади исходного четырёхугольника.}
+
+\taskframe{Диагональ и средняя линия трапеции}{
+Основания трапеции равны \(18\) и \(28\). Диагональ пересекает среднюю линию в точке \(P\).
+Найдите больший из отрезков средней линии.
+}{\figTrapezoidDiagonal}{Опора C. Диагональ делит среднюю линию на отрезки, равные половинам оснований.}
+
+\taskframe{Проекция в равнобедренной трапеции}{
+Высота из вершины тупого угла равнобедренной трапеции делит большее основание
+на отрезки \(13\) и \(11\). Найдите среднюю линию.
+}{\figIsoscelesTrapezoid}{Опора. В равнобедренной трапеции проекции боковых сторон на большее основание равны.}
+
+\begin{frame}{Тренажёр}
+\begin{center}
+\Large На каждом слайде: назови правило, запиши одну связь, получи ответ.\\[8mm]
+\large Не измеряем рисунок и не строим его заново.
+\end{center}
+\end{frame}
+
+\trainerframe{В прямоугольном треугольнике катет равен \(9\), гипотенуза равна \(15\).
+Найдите площадь треугольника.}{\figRightTriangle}
+
+\trainerframe{В треугольнике средняя линия параллельна основанию. Площадь трапеции,
+отсечённой этой средней линией, равна \(72\). Найдите площадь всего треугольника.}{\figMidlineTriangle}
+
+\trainerframe{Площадь параллелограмма равна \(254\). Найдите площадь четырёхугольника,
+вершины которого --- середины сторон параллелограмма.}{\figParallelogramMidpoints}
+
+\trainerframe{Основания трапеции равны \(16\) и \(34\). Найдите больший отрезок средней
+линии, на которые её делит диагональ.}{\figTrapezoidDiagonal}
+
+\trainerframe{В треугольнике сторона \(a=14\), высота к ней \(5\). Другая сторона равна \(10\).
+Найдите высоту к этой стороне.}{\figTriangleAltitudes}
+
+\trainerframe{Высота из вершины тупого угла равнобедренной трапеции делит большее основание
+на части \(16\) и \(12\). Найдите среднюю линию.}{\figIsoscelesTrapezoid}
+
+\begin{frame}{Финал урока}
+\begin{center}
+\Large Перед ответом скажи вслух:\\[5mm]
+\textcolor{lessonblue}{\textbf{«Какая фигура? Какое свойство? Какая одна связь?»}}
+\end{center}
+\end{frame}
+
+\end{document}

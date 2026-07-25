@@ -21,6 +21,7 @@ figure_template_locked: true
 permitted_figure_edits: [synchronize_explicit_numerical_labels]
 student_source: "latex/main-student.tex"
 teacher_source: "latex/main-teacher.tex"
+presentation: "[[EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/README]]"
 tags: [ege, planimetry, lesson, areas, midline]
 ---
 
@@ -28,6 +29,8 @@ tags: [ege, planimetry, lesson, areas, midline]
 
 Ученический лист: `latex/main-student.tex`; учительская версия с ответами и
 краткими опорами: `latex/main-teacher.tex`.
+
+Презентация для занятия: [[EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/README|Beamer-презентация]].
 
 ## Маршрут урока
 
