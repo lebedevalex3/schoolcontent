@@ -11,10 +11,14 @@
             "id": "02cdb5f3f99ee84b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "EGE/methodology/MAP-EGE-PLAN-TASK01-YA36-2022.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "MAP-EGE-PLAN-TASK01-YA36-2022"
             }
           }
         ]
@@ -40,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Файловый менеджер"
+              "title": "Files"
             }
           },
           {
@@ -170,34 +174,53 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Меню быстрого перехода": false,
-      "graph:Граф": false,
-      "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
-      "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false,
-      "bases:Создать новую базу": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "8164f3b507572168",
+  "active": "02cdb5f3f99ee84b",
   "lastOpenFiles": [
-    "school/5grade/02_Line_Dots/lesson05/style-common.sty",
-    "school/5grade/02_Line_Dots/lesson05/style-color.sty",
-    "school/5grade/02_Line_Dots/lesson05/style-bw.sty",
-    "school/5grade/02_Line_Dots/lesson05/main-teacher-color.tex",
-    "school/5grade/02_Line_Dots/lesson05/main-teacher-bw.tex",
-    "school/5grade/02_Line_Dots/lesson05/main-student-color.tex",
-    "school/5grade/02_Line_Dots/lesson05/main-student-bw.tex",
-    "school/5grade/02_Line_Dots/lesson05/main-reference-color.tex",
-    "school/5grade/02_Line_Dots/lesson05/main-reference-bw.tex",
-    "school/5grade/02_Line_Dots/lesson05/figures.tex",
-    "school/5grade/02_Line_Dots/lesson05/content-teacher.tex",
-    "school/5grade/02_Line_Dots/lesson05/README.md",
-    "school/5grade/02_Line_Dots/lesson04/README.md",
-    "school/5grade/02_Line_Dots/lesson03/README.md",
-    "school/5grade/02_Line_Dots/lesson01/README.md",
-    "school/5grade/02_Line_Dots/lesson02/README.md",
-    "school/5grade/02_Line_Dots/lesson01/geometry-sheet-01/README.md",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.toc",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.nav",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.snm",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.pdf",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.out",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.aux",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/missfont.log",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs/main.log",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/outputs",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/latex/main.tex",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/latex",
+    "EGE/presentations/planimetry-task1/lesson01-areas-midlines-projections/README.md",
+    "EGE/courses/planimetry-task1/lesson02-quadrilaterals-equalities/latex/README.md",
+    "EGE/courses/planimetry-task1/lesson02-quadrilaterals-equalities/LESSON-EGE-PLAN-TASK01-02.md",
+    "EGE/_catalog/records/LESSON-EGE-PLAN-TASK01-02.md",
+    "EGE/courses/planimetry-task1/lesson01-areas-midlines-projections/latex/README.md",
+    "EGE/_catalog/records/LESSON-EGE-PLAN-TASK01-01.md",
+    "EGE/_catalog/records/COURSE-EGE-PLAN-TASK01.md",
+    "EGE/courses/planimetry-task1/lesson01-areas-midlines-projections/LESSON-EGE-PLAN-TASK01-01.md",
+    "EGE/courses/planimetry-task1/COURSE-EGE-PLAN-TASK01.md",
+    "EGE/00_INDEX.md",
+    "EGE/06_INBOX.md",
+    "EGE/_catalog/records/MAP-EGE-PLAN-TASK01-YA36-2022.md",
+    "EGE/methodology/MAP-EGE-PLAN-TASK01-YA36-2022.md",
+    "00_meta/FIGURE_TEMPLATE_POLICY.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V34-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V33-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V32-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V31-N01.md",
+    "EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V34-N01/TASK-EGE-PLAN-2022-YA36-V34-N01.md",
+    "EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V33-N01/TASK-EGE-PLAN-2022-YA36-V33-N01.md",
+    "EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V32-N01/TASK-EGE-PLAN-2022-YA36-V32-N01.md",
+    "EGE/tasks/planimetry/TASK-EGE-PLAN-2022-YA36-V31-N01/TASK-EGE-PLAN-2022-YA36-V31-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V30-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V29-N01.md",
+    "EGE/_catalog/records/TASK-EGE-PLAN-2022-YA36-V28-N01.md",
     "tmp/pdfs/stage47/m06/recheck/page-2.png",
     "tmp/pdfs/stage47/m06/recheck/page-1.png",
     "tmp/pdfs/stage47/m05/parity/bw-final-1.png",
@@ -207,25 +230,6 @@
     "tmp/pdfs/stage8/m07/teacher-final-color-7.png",
     "tmp/pdfs/stage8/m07/teacher-final-bw-7.png",
     "tmp/pdfs/stage8/m07/teacher-color-7.png",
-    "tmp/pdfs/stage8/m07/teacher-final-color-6.png",
-    "school/5grade/01_NaturalNumbers/lesson03/Latex/README.md",
-    "school/5grade/01_NaturalNumbers/lesson02/Latex/README.md",
-    "school/5grade/01_NaturalNumbers/lesson02/Latex/lesson2_natural_numbers/README.md",
-    "school/5grade/01_NaturalNumbers/lesson01/Latex/README.md",
-    "EGE/2022/SimpleStereo/SimpleStereo 2022.md",
-    "EGE/equality/eq1/log-inequality-sheets-revised/CONTEXT.md",
-    "logarithm/log01/Логарифм в какую степень.md",
-    "logarithm/log01/log01latex/README.md",
-    "logarithm/log01/README.md",
-    "EGE/equality/eq1/eq1.md",
-    "EGE/equality/Без названия.md",
-    "EGE/Planimetry/Task1/Без названия.md",
-    "EGE/Parametr/Parametr1/Parametr.md",
-    "EGE/Parametr/Parametr1/parameter-handout-reworked/README.md",
-    "EGE/Planimetry/Task1/Без названия 1.md",
-    "00_meta/templates/worksheet.md",
-    "00_meta/templates/pack.md",
-    "00_meta/templates/task.md",
-    "00_meta/templates/lesson.md"
+    "tmp/pdfs/stage8/m07/teacher-final-color-6.png"
   ]
 }

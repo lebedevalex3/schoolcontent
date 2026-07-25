@@ -47,27 +47,13 @@
     angle radius=3mm
   ] {right angle=C--H--B};
 
-  % Биссектриса угла C
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=6mm
-  ] {angle=A--C--D};
 
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=6mm
-  ] {angle=D--C--B};
 
-  % Данный угол
-  \pic[
-    draw,
-    line width=0.65pt,
-    angle radius=7mm
-  ] {angle=C--B--A};
 
-  \node at (5.18,0.47) {$66^\circ$};
+
+
+
+
 
   % Подписи
   \node[below left]  at (A) {$A$};
@@ -126,18 +112,8 @@
     angle radius=3.2mm
   ] {right angle=A--C--B};
 
-  % Биссектриса угла C
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=5.8mm
-  ] {angle=A--C--D};
+ 
 
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=5.8mm
-  ] {angle=D--C--B};
 
   % Отметки равных частей гипотенузы
   \draw[line width=0.7pt]
@@ -148,23 +124,13 @@
     ($(M)!0.5!(B)+(0,0.09)$)--
     ($(M)!0.5!(B)+(0,-0.09)$);
 
-  % Угол A = 10 градусов
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=7mm
-  ] {angle=B--A--C};
 
-  \node at (1.05,0.23) {$10^\circ$};
 
-  % Угол B = 80 градусов
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=7mm
-  ] {angle=C--B--A};
+ 
 
-  \node at (6.64,0.42) {$80^\circ$};
+
+
+
 
   % Подписи
   \node[below left]  at (A) {$A$};
@@ -340,9 +306,7 @@
   % Высота к стороне AB
   \draw[line width=0.8pt] (C)--(H);
 
-  % Продолжение AC и высота из B
-  \draw[dashed,line width=0.75pt] (C)--(D);
-  \draw[line width=0.8pt] (B)--(D);
+ 
 
   % Прямые углы
   \pic[
@@ -351,28 +315,22 @@
     angle radius=3mm
   ] {right angle=C--H--B};
 
-  \pic[
-    draw,
-    line width=0.6pt,
-    angle radius=3mm
-  ] {right angle=B--D--C};
+
 
   % Длины
-  \path (A)--(B)
-    node[midway,below=3mm] {$8$};
+
 
   \path (A)--(C)
     node[midway,above left] {$4$};
 
-  \path (C)--(H)
-    node[midway,right=2mm] {$1$};
+
 
   % Подписи
   \node[below left]  at (A) {$A$};
   \node[below right] at (B) {$B$};
   \node[above]       at (C) {$C$};
   \node[below]       at (H) {$H$};
-  \node[above right] at (D) {$D$};
+
 \end{tikzpicture}
 \end{center}
 

@@ -39,11 +39,11 @@
     angle radius=7mm
   ] {angle=B--A--D};
 
-  \node at (1.35,0.38) {$30^\circ$};
+  \node at (1.65,0.38) {$30^\circ$};
 
   % Длина стороны
   \path (A)--(B)
-    node[midway,below=3mm] {$10$};
+    node[midway,below=0mm] {$10$};
 
   % Подписи
   \node[below left]  at (A) {$A$};
@@ -128,8 +128,6 @@
 % ВАРИАНТ 11
 % =========================================================
 
-\newpage
-
 \section*{Вариант 11}
 
 В треугольнике \(ABC\) угол \(C\) равен \(46^\circ\),
@@ -138,26 +136,25 @@
 
 \begin{center}
 \begin{tikzpicture}[
-  scale=0.68,
+  scale=0.75,
   line cap=round,
   line join=round,
   every node/.style={font=\small}
 ]
-  % Треугольник с углом C, равным приблизительно 46 градусам
+  % Неравнобедренный треугольник
   \coordinate (A) at (0,0);
-  \coordinate (B) at (6,0);
-  \coordinate (C) at (2.5,7.037);
+  \coordinate (B) at (8,0);
+  \coordinate (C) at (3.5,9);
 
-  % Точки пересечения биссектрис со сторонами
-  \coordinate (D) at (4.441,3.135);
-  \coordinate (E) at (1.082,3.047);
+  % Точки на сторонах (для биссектрис)
+  \coordinate (D) at (5.96,4.08);   % на BC
+  \coordinate (E) at (1.55,3.99);   % на AC
 
-  % Точка пересечения биссектрис — центр вписанной окружности
-  \coordinate (O) at (2.804,1.980);
+  % Точка пересечения биссектрис
+  \coordinate (O) at (3.80,2.60);
 
   % Стороны треугольника
-  \draw[line width=0.9pt]
-    (A)--(B)--(C)--cycle;
+  \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
 
   % Биссектрисы
   \draw[line width=0.85pt] (A)--(D);
@@ -165,20 +162,25 @@
 
   \fill (O) circle (1.4pt);
 
-  % Две равные части угла A
+  %------------------------------------------------
+  % Угол A: одна дужка на каждой половине
+  %------------------------------------------------
   \pic[
     draw,
     line width=0.6pt,
-    angle radius=5mm
+    angle radius=6mm
   ] {angle=B--A--D};
 
   \pic[
     draw,
     line width=0.6pt,
-    angle radius=5mm
+    angle radius=6mm
   ] {angle=D--A--C};
 
-  % Две равные части угла B
+  %------------------------------------------------
+  % Угол B: две дужки на каждой половине
+  %------------------------------------------------
+  % Первая половина угла B
   \pic[
     draw,
     line width=0.6pt,
@@ -188,17 +190,30 @@
   \pic[
     draw,
     line width=0.6pt,
+    angle radius=6.4mm
+  ] {angle=C--B--E};
+
+  % Вторая половина угла B
+  \pic[
+    draw,
+    line width=0.6pt,
     angle radius=5mm
+  ] {angle=E--B--A};
+
+  \pic[
+    draw,
+    line width=0.6pt,
+    angle radius=6.4mm
   ] {angle=E--B--A};
 
   % Угол C
   \pic[
     draw,
     line width=0.65pt,
-    angle radius=6mm
+    angle radius=7mm
   ] {angle=A--C--B};
 
-  \node at (2.5,6.05) {$46^\circ$};
+  \node at (3.55,7.15) {$46^\circ$};
 
   % Подписи
   \node[below left]  at (A) {$A$};
@@ -257,7 +272,7 @@
 
   % Числовые данные
   \path (C)--(H)
-    node[midway,right=2mm] {$6$};
+    node[midway,right=-5mm] {$6$};
 
   \path (A)--(C)
     node[midway,above left] {$8$};
@@ -273,5 +288,6 @@
 \[
 \boxed{\text{Ответ: }0{,}75}
 \]
+
 
 \end{document}
