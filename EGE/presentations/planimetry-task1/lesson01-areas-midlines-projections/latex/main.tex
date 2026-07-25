@@ -1,8 +1,13 @@
 \documentclass[aspectratio=169,12pt]{beamer}
 
 \usepackage{fontspec}
-\setmainfont{Arial.ttf}[Path=/System/Library/Fonts/Supplemental/]
-\setsansfont{Arial.ttf}[Path=/System/Library/Fonts/Supplemental/]
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}%
+  \setsansfont{Arial}%
+}{%
+  \setmainfont{TeX Gyre Termes}%
+  \setsansfont{TeX Gyre Heros}%
+}
 \usepackage[russian]{babel}
 \usepackage{amsmath,amssymb,tikz}
 \usetikzlibrary{calc,angles,quotes}
