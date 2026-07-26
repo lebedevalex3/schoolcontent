@@ -1,0 +1,154 @@
+% =============================================================================
+% УРОК 4. НАВИГАЦИЯ ПО РИСУНКАМ
+% =============================================================================
+% Это рабочие копии TikZ-схем урока 4. Именно этот файл подключается из
+% lesson-content.tex и определяет рисунки в PDF листа.
+%
+% Для правки в Overleaf: возьмите целиком блок \newcommand{...} нужной задачи,
+% включая \begin{tikzpicture} и \end{tikzpicture}. Не меняйте имя команды:
+% lesson-content.tex вызывает её по этому имени.
+%
+% Карта источников (Ященко-2022, задание №1):
+%   Задача урока 1  — вариант 16 — \figCyclicOpposite
+%   Задача урока 2  — вариант 15 — \figCyclicChord
+%   Задача урока 3  — вариант 14 — \figTangentPair
+%   Задача урока 4  — вариант 33 — \figTangentSecant
+%   Задача урока 5  — вариант 17 — \figExternalSecants
+%   Тренажёр/домашняя работа также используют варианты 16, 15, 14, 33, 17.
+%   Задачи о двух углах четырёхугольника — вариант 24 — \figCyclicTwoAngles.
+%   Обратная задача «угол -> дуга» — вариант 34 — \figTangentSecantReverse.
+%
+% Актуальные исходники, в которых хранятся эталонные схемы:
+%   EGE/sources/2022/Yashchenko36/task01/variants-13-18.tex  (14--17)
+%   EGE/sources/2022/Yashchenko36/task01/variants-19-24.tex  (24)
+%   EGE/sources/2022/Yashchenko36/task01/variants-31-34.tex  (33--34)
+%
+% Политика рисунков: не менять конфигурацию, точки, линии, дуги и отметки.
+% В аналогах меняются только числа, уже напечатанные на соответствующей схеме.
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% ЗАДАЧА УРОКА 1 | ИСТОЧНИК: вариант 16
+% Вписанный четырёхугольник: противоположные углы.
+% -----------------------------------------------------------------------------
+\newcommand{\figCyclicOpposite}[1]{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (A) at (190:\R); \coordinate (B) at (130:\R);
+  \coordinate (C) at (0:\R); \coordinate (D) at (236:\R);
+  \draw[line width=0.9pt] (0,0) circle (\R);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--A--B};
+  \node at (-1.37,-.10) {\(#1^\circ\)};
+  \node[left] at (A) {\(A\)}; \node[above left] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)}; \node[below left] at (D) {\(D\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ЗАДАЧА УРОКА 2 | ИСТОЧНИК: вариант 15
+% Вписанные углы, опирающиеся на одну хорду.
+% -----------------------------------------------------------------------------
+\newcommand{\figCyclicChord}[2]{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (A) at (200:\R); \coordinate (B) at (140:\R);
+  \coordinate (C) at (52:\R); \coordinate (D) at (274:\R);
+  \draw[line width=0.9pt] (0,0) circle (\R);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (A)--(C); \draw[line width=0.9pt] (B)--(D);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--B--C};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--A--C};
+  \node at (-1.05,1.15) {\(#1^\circ\)}; \node at (-1.38,-.62) {\(#2^\circ\)};
+  \node[above left] at (A) {\(A\)}; \node[above right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)}; \node[below] at (D) {\(D\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ТРЕНАЖЁР И ДОМАШНЯЯ РАБОТА | ИСТОЧНИК: вариант 24
+% Два угла вписанного четырёхугольника; чисел на схеме нет.
+% -----------------------------------------------------------------------------
+\newcommand{\figCyclicTwoAngles}{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (A) at (150:\R); \coordinate (B) at (186:\R);
+  \coordinate (C) at (260:\R); \coordinate (D) at (50:\R);
+  \draw[line width=0.9pt] (0,0) circle (\R);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \node[above left] at (A) {\(A\)}; \node[left] at (B) {\(B\)};
+  \node[below] at (C) {\(C\)}; \node[above right] at (D) {\(D\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ЗАДАЧА УРОКА 3 | ИСТОЧНИК: вариант 14
+% Две касательные через концы дуги.
+% -----------------------------------------------------------------------------
+\newcommand{\figTangentPair}[1]{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{1.8}\pgfmathsetmacro{\cx}{\R/cos(39)}
+  \coordinate (O) at (0,0); \coordinate (A) at (39:\R);
+  \coordinate (B) at (-39:\R); \coordinate (C) at (\cx,0);
+  \draw[line width=0.9pt] (O) circle (\R);
+  \draw[line width=0.9pt] (C)--(A) (C)--(B) (A)--(B);
+  \draw[line width=0.75pt] (O)--(A) (O)--(B);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=O--A--C};
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=C--B--O};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=B--A--C};
+  \node at (1.63,0.52) {\(#1^\circ\)};
+  \fill (O) circle (1.2pt); \node[left] at (O) {\(O\)};
+  \node[above right] at (A) {\(A\)}; \node[below right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ЗАДАЧА УРОКА 4 | ИСТОЧНИК: вариант 33
+% Касательная, центр и дуга AB.
+% -----------------------------------------------------------------------------
+\newcommand{\figTangentSecant}{%
+\begin{tikzpicture}[scale=0.58,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{3.2}\pgfmathsetmacro{\cx}{\R/cos(17)}
+  \coordinate (O) at (0,0); \coordinate (B) at (0:\R);
+  \coordinate (A) at (17:\R); \coordinate (C) at (\cx,0);
+  \draw[line width=0.9pt] (O) circle (\R); \draw[line width=0.9pt] (A)--(C);
+  \draw[line width=0.75pt] (O)--(A) (O)--(C);
+  \draw[line width=1.2pt] (B) arc (0:17:\R);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=O--A--C};
+  \fill (O) circle (1.2pt); \node[left] at (O) {\(O\)};
+  \node[above] at (A) {\(A\)}; \node[below right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ДОМАШНЯЯ РАБОТА | ИСТОЧНИК: вариант 34
+% Та же конфигурация: по углу ACO находится дуга AB.
+% -----------------------------------------------------------------------------
+\newcommand{\figTangentSecantReverse}{%
+\begin{tikzpicture}[scale=0.58,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.9}\pgfmathsetmacro{\cx}{\R/cos(28)}
+  \coordinate (O) at (0,0); \coordinate (B) at (0:\R);
+  \coordinate (A) at (28:\R); \coordinate (C) at (\cx,0);
+  \draw[line width=0.9pt] (O) circle (\R); \draw[line width=0.9pt] (A)--(C);
+  \draw[line width=0.75pt] (O)--(A) (O)--(C);
+  \draw[line width=1.2pt] (B) arc (0:28:\R);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=O--A--C};
+  \fill (O) circle (1.2pt); \node[left] at (O) {\(O\)};
+  \node[above] at (A) {\(A\)}; \node[below right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}
+
+% -----------------------------------------------------------------------------
+% ЗАДАЧА УРОКА 5 | ИСТОЧНИК: вариант 17
+% Угол между двумя внешними секущими.
+% -----------------------------------------------------------------------------
+\newcommand{\figExternalSecants}[2]{%
+\begin{tikzpicture}[scale=0.62,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2}\coordinate (O) at (0,0); \coordinate (A) at (0,-2);
+  \coordinate (B) at (-1.923,0.551); \coordinate (D) at (1,1.732);
+  \coordinate (E) at (1.956,0.416); \coordinate (C) at (4.005,2.946);
+  \draw[line width=0.9pt] (O) circle (\R);
+  \draw[line width=0.9pt] (C)--(B) (C)--(A);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=B--C--A};
+  \node at (218:2.42) {\(#1^\circ\)}; \node at (36:2.42) {\(#2^\circ\)};
+  \node[below] at (A) {\(A\)}; \node[left] at (B) {\(B\)};
+  \node[above] at (D) {\(D\)}; \node[right] at (E) {\(E\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}
