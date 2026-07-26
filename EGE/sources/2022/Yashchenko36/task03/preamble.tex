@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{calc,angles,quotes,decorations.markings}
+
+% В исходном тексте часть формул записана без математического режима.
+% Обёртка делает такую запись компилируемой, не изменяя исходный файл.
+\let\sourceoriginalsqrt\sqrt
+\renewcommand{\sqrt}[1]{\ensuremath{\sourceoriginalsqrt{#1}}}
+
+\pagestyle{empty}
