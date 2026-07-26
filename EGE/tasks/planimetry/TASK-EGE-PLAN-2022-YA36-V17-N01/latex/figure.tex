@@ -1,0 +1,14 @@
+% Канонический TikZ-рисунок варианта 17. Править только здесь.
+\newcommand{\figExternalSecants}[2]{%
+\begin{tikzpicture}[scale=0.62,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2}\coordinate (O) at (0,0); \coordinate (A) at (0,-2);
+  \coordinate (B) at (-1.923,0.551); \coordinate (D) at (1,1.732);
+  \coordinate (E) at (1.956,0.416); \coordinate (C) at (4.005,2.946);
+  \draw[line width=0.9pt] (O) circle (\R);
+  \draw[line width=0.9pt] (C)--(B) (C)--(A);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=B--C--A};
+  \node at (218:2.42) {\(#1^\circ\)}; \node at (36:2.42) {\(#2^\circ\)};
+  \node[below] at (A) {\(A\)}; \node[left] at (B) {\(B\)};
+  \node[above] at (D) {\(D\)}; \node[right] at (E) {\(E\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}

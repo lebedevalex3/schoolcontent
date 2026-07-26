@@ -1,0 +1,11 @@
+% Канонический TikZ-рисунок варианта 18. Править только здесь.
+\newcommand{\figCircumcircleSide}[2]{%
+\begin{tikzpicture}[scale=1.15,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (O) at (0,0); \coordinate (A) at (150:\R); \coordinate (B) at (30:\R); \coordinate (C) at (90:\R);
+  \draw[line width=0.9pt] (O) circle (\R); \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--C--B};
+  \node at (0,1.40) {$#2^\circ$};
+  \node[left] at (A) {$A$}; \node[right] at (B) {$B$}; \node[above] at (C) {$C$};
+  \node[below] at (0,-2.45) {$R=#1$};
+\end{tikzpicture}}

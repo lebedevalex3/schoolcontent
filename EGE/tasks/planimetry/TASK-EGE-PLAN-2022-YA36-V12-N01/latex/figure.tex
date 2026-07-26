@@ -1,0 +1,14 @@
+% Канонический TikZ-рисунок варианта 12. Править только здесь.
+\newcommand{\figIsoscelesSine}[2]{%
+\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (H) at (5.292,0); \coordinate (B) at (6.047,0); \coordinate (C) at (5.292,6);
+  \draw[line width=0.9pt,equal segment] (A)--(B);
+  \draw[line width=0.9pt,equal segment] (B)--(C);
+  \draw[line width=0.9pt] (C)--(A);
+  \draw[line width=0.85pt] (C)--(H);
+  \pic[draw,line width=0.65pt,angle radius=3.2mm] {right angle=C--H--B};
+  \path (C)--(H) node[midway,right=-5mm] {$#1$};
+  \path (A)--(C) node[midway,above left] {$#2$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}

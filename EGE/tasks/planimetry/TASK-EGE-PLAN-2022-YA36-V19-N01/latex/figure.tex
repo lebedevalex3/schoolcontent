@@ -1,0 +1,12 @@
+% Канонический TikZ-рисунок варианта 19. Править только здесь.
+\newcommand{\figRightTriangle}{%
+\begin{tikzpicture}[scale=.56,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.8,0);
+  \coordinate (C) at (0,3.1);
+  \draw[line width=.8pt] (A)--(B)--(C)--cycle;
+  \pic[draw,line width=.55pt,angle radius=3mm] {right angle=B--A--C};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above left] at (C) {$C$};
+\end{tikzpicture}}

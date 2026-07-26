@@ -1,0 +1,17 @@
+% Канонический TikZ-рисунок варианта 08. Править только здесь.
+\newcommand{\figRightBisectorMedian}[1]{%
+\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0); \coordinate (M) at (3,0);
+  \coordinate (D) at (3.528,0); \coordinate (C) at (4.026,2.819);
+  \draw[line width=0.9pt,equal segment] (A)--(M);
+  \draw[line width=0.9pt,equal segment] (M)--(B);
+  \draw[line width=0.9pt] (A)--(C)--(B);
+  \draw[line width=0.85pt] (C)--(M); \draw[line width=0.85pt] (C)--(D);
+  \pic[draw,line width=0.65pt,angle radius=3.5mm] {right angle=A--C--B};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=A--C--D};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=D--C--B};
+  \pic[draw,line width=0.65pt,angle radius=4.5mm] {angle=M--C--D};
+  \node at (3.68,2.10) {$#1^\circ$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[below] at (M) {$M$}; \node[below] at (D) {$D$};
+\end{tikzpicture}}

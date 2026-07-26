@@ -1,0 +1,12 @@
+% Канонический TikZ-рисунок варианта 30. Править только здесь.
+\newcommand{\figIsoscelesTrapezoid}{%
+\begin{tikzpicture}[scale=.53,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0);
+  \coordinate (D) at (1.7,3); \coordinate (C) at (5.3,3);
+  \coordinate (H) at ($(A)!(C)!(B)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=.8pt] (C)--(H);
+  \pic[draw,line width=.55pt,angle radius=2.7mm] {right angle=C--H--B};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}

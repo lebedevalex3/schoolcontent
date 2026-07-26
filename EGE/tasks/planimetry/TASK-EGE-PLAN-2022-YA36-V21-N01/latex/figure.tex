@@ -1,0 +1,15 @@
+% Канонический TikZ-рисунок варианта 21. Править только здесь.
+\newcommand{\figRightTangentialTrapezoid}[1]{%
+\begin{tikzpicture}[line cap=round,line join=round,every node/.style={font=\small}]
+  \pgfmathsetmacro{\s}{0.13} \pgfmathsetmacro{\h}{13*\s} \pgfmathsetmacro{\r}{6.5*\s}
+  \pgfmathsetmacro{\a}{(25+10*sqrt(3))*\s} \pgfmathsetmacro{\b}{(25-10*sqrt(3))*\s}
+  \coordinate (A) at (0,0); \coordinate (B) at (\a,0); \coordinate (C) at (\b,\h);
+  \coordinate (D) at (0,\h); \coordinate (O) at (\r,\r);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (O) circle (\r);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=D--A--B};
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=A--D--C};
+  \path (B)--(C) node[midway,above right] {$#1$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+\end{tikzpicture}}

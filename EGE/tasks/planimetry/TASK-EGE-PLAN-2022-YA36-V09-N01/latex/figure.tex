@@ -1,0 +1,13 @@
+% Канонический TikZ-рисунок варианта 09. Править только здесь.
+\newcommand{\figRhombusCircle}[1]{%
+\begin{tikzpicture}[scale=0.62,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0);
+  \coordinate (D) at (5.196,3); \coordinate (C) at (11.196,3); \coordinate (O) at (5.598,1.5);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (O) circle (1.5);
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=B--A--D};
+  \node at (1.65,0.38) {$30^\circ$};
+  \path (A)--(B) node[midway,below=0mm] {$#1$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+\end{tikzpicture}}

@@ -1,0 +1,16 @@
+% Канонический TikZ-рисунок варианта 07. Править только здесь.
+\newcommand{\figRightAltitudeMedian}[1]{%
+\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0); \coordinate (M) at (3,0);
+  \coordinate (H) at (3.521,0); \coordinate (C) at (3.521,2.954);
+  \draw[line width=0.9pt,equal segment] (A)--(M);
+  \draw[line width=0.9pt,equal segment] (M)--(B);
+  \draw[line width=0.9pt] (A)--(C)--(B);
+  \draw[line width=0.85pt] (C)--(M); \draw[line width=0.85pt] (C)--(H);
+  \pic[draw,line width=0.65pt,angle radius=3.5mm] {right angle=A--C--B};
+  \pic[draw,line width=0.65pt,angle radius=3.2mm] {right angle=C--H--B};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=C--B--A};
+  \node at (5.15,0.48) {$#1^\circ$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[below] at (M) {$M$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}

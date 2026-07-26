@@ -1,0 +1,12 @@
+% Канонический TikZ-рисунок варианта 28. Править только здесь.
+\newcommand{\figTrapezoidParallel}[2]{%
+\begin{tikzpicture}[scale=0.86,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (8,0);
+  \coordinate (D) at (1.5,3); \coordinate (C) at (5.5,3); \coordinate (E) at (4,0);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.85pt] (D)--(E);
+  \path (D)--(C) node[midway,above=3mm] {$#1$};
+  \node at (1.85,1.05) {$P_{\triangle ADE}=#2$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (E) {$E$};
+\end{tikzpicture}}

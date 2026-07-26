@@ -1,0 +1,19 @@
+% Канонический TikZ-рисунок варианта 11. Править только здесь.
+\newcommand{\figIncenterBisectors}[1]{%
+\begin{tikzpicture}[scale=0.75,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (8,0); \coordinate (C) at (3.5,9);
+  \coordinate (D) at (5.96,4.08); \coordinate (E) at (1.55,3.99); \coordinate (O) at (3.80,2.60);
+  \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
+  \draw[line width=0.85pt] (A)--(D); \draw[line width=0.85pt] (B)--(E);
+  \fill (O) circle (1.4pt);
+  \pic[draw,line width=0.6pt,angle radius=6mm] {angle=B--A--D};
+  \pic[draw,line width=0.6pt,angle radius=6mm] {angle=D--A--C};
+  \pic[draw,line width=0.6pt,angle radius=5mm] {angle=C--B--E};
+  \pic[draw,line width=0.6pt,angle radius=6.4mm] {angle=C--B--E};
+  \pic[draw,line width=0.6pt,angle radius=5mm] {angle=E--B--A};
+  \pic[draw,line width=0.6pt,angle radius=6.4mm] {angle=E--B--A};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=A--C--B};
+  \node at (3.55,7.15) {$#1^\circ$};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$}; \node[above] at (C) {$C$};
+  \node[right] at (D) {$D$}; \node[left] at (E) {$E$}; \node[below] at (O) {$O$};
+\end{tikzpicture}}

@@ -1,0 +1,17 @@
+% Канонический TikZ-рисунок варианта 14. Править только здесь.
+\newcommand{\figTangentPair}[1]{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{1.8}\pgfmathsetmacro{\cx}{\R/cos(39)}
+  \coordinate (O) at (0,0); \coordinate (A) at (39:\R);
+  \coordinate (B) at (-39:\R); \coordinate (C) at (\cx,0);
+  \draw[line width=0.9pt] (O) circle (\R);
+  \draw[line width=0.9pt] (C)--(A) (C)--(B) (A)--(B);
+  \draw[line width=0.75pt] (O)--(A) (O)--(B);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=O--A--C};
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=C--B--O};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=B--A--C};
+  \node at (1.63,0.52) {\(#1^\circ\)};
+  \fill (O) circle (1.2pt); \node[left] at (O) {\(O\)};
+  \node[above right] at (A) {\(A\)}; \node[below right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)};
+\end{tikzpicture}}

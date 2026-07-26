@@ -1,0 +1,14 @@
+% Канонический TikZ-рисунок варианта 05. Править только здесь.
+\newcommand{\figParallelogramBisector}{%
+\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0); \coordinate (E) at (3,0);
+  \coordinate (D) at (0.8,2.891); \coordinate (C) at (7.8,2.891);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (D)--(E);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--D--E};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=E--D--C};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$}; \node[below] at (E) {$E$};
+  \node[below=4mm] at ($(A)!0.5!(E)$) {$3$};
+  \node[below=4mm] at ($(E)!0.5!(B)$) {$4$};
+\end{tikzpicture}}

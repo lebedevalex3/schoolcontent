@@ -1,0 +1,12 @@
+% Канонический TikZ-рисунок варианта 25. Править только здесь.
+\newcommand{\figRightAltitudeBisector}{%
+\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (6,0); \coordinate (C) at (5.007,2.229);
+  \coordinate (H) at (5.007,0); \coordinate (D) at (4.152,0);
+  \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
+  \draw[line width=0.85pt] (C)--(H); \draw[line width=0.85pt] (C)--(D);
+  \pic[draw,line width=0.65pt,angle radius=3.3mm] {right angle=A--C--B};
+  \pic[draw,line width=0.65pt,angle radius=3mm] {right angle=C--H--B};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[below] at (D) {$D$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}

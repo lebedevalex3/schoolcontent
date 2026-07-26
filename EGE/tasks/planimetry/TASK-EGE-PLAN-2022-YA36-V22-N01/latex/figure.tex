@@ -1,0 +1,14 @@
+% Канонический TikZ-рисунок варианта 22. Править только здесь.
+\newcommand{\figTangentialQuad}[3]{%
+\begin{tikzpicture}[scale=1.25,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-1.462,-0.532); \coordinate (B) at ( 0.598,-1.282);
+  \coordinate (C) at ( 1.179, 0.316); \coordinate (D) at (-0.270, 1.532);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (O) circle (1);
+  \path (A)--(B) node[midway,below left] {$#1$};
+  \path (B)--(C) node[midway,right=2mm] {$#2$};
+  \path (C)--(D) node[midway,above right] {$#3$};
+  \node[left] at (A) {$A$}; \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$}; \node[above] at (D) {$D$};
+\end{tikzpicture}}

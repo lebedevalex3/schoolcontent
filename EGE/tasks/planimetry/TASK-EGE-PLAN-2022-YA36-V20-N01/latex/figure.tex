@@ -1,0 +1,13 @@
+% Канонический TikZ-рисунок варианта 20. Править только здесь.
+\newcommand{\figMidlineTriangle}{%
+\begin{tikzpicture}[scale=.54,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.5,0);
+  \coordinate (C) at (3.5,3.5);
+  \coordinate (D) at ($(A)!0.5!(C)$);
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \draw[line width=.8pt] (A)--(B)--(C)--cycle;
+  \draw[line width=.8pt] (D)--(E);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[left] at (D) {$D$}; \node[right] at (E) {$E$};
+\end{tikzpicture}}

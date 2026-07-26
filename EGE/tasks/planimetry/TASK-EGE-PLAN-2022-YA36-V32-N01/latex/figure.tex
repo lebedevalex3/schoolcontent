@@ -1,0 +1,16 @@
+% Канонический TikZ-рисунок варианта 32. Править только здесь.
+\newcommand{\figTriangleAltitudes}{%
+\begin{tikzpicture}[scale=1.02,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0); \coordinate (C) at (1.544,3.821);
+  \coordinate (D) at (2.303,3.289); \coordinate (E) at (0.982,2.431); \coordinate (H) at (1.544,2.205);
+  \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
+  \draw[line width=0.85pt] (A)--(D); \draw[line width=0.85pt] (B)--(E);
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=A--D--C};
+  \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=B--E--C};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=B--A--C};
+  \pic[draw,line width=0.65pt,angle radius=7mm] {angle=C--B--A};
+  \pic[draw,line width=0.7pt,angle radius=5.5mm] {angle=A--H--B};
+  \fill (H) circle (1.3pt);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$}; \node[above] at (C) {$C$};
+  \node[above right] at (D) {$D$}; \node[left] at (E) {$E$}; \node[below] at (H) {$H$};
+\end{tikzpicture}}

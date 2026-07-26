@@ -1,0 +1,15 @@
+% Канонический TikZ-рисунок варианта 15. Править только здесь.
+\newcommand{\figCyclicChord}[2]{%
+\begin{tikzpicture}[scale=0.78,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (A) at (200:\R); \coordinate (B) at (140:\R);
+  \coordinate (C) at (52:\R); \coordinate (D) at (274:\R);
+  \draw[line width=0.9pt] (0,0) circle (\R);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.9pt] (A)--(C); \draw[line width=0.9pt] (B)--(D);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--B--C};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--A--C};
+  \node at (-1.05,1.15) {\(#1^\circ\)}; \node at (-1.38,-.62) {\(#2^\circ\)};
+  \node[above left] at (A) {\(A\)}; \node[above right] at (B) {\(B\)};
+  \node[right] at (C) {\(C\)}; \node[below] at (D) {\(D\)};
+\end{tikzpicture}}
