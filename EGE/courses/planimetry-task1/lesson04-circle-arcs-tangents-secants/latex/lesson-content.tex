@@ -1,0 +1,137 @@
+\input{figures.tex}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ЕГЭ. Планиметрия. Задание №1}
+\rhead{Урок 4}
+\cfoot{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlist[enumerate]{itemsep=7pt,topsep=4pt,leftmargin=6mm}
+\newcounter{exercise}
+\newcommand{\ex}{\stepcounter{exercise}\textbf{\theexercise.} }
+\newcommand{\answerline}[1]{\rule{#1}{0.4pt}}
+\newcommand{\teacheranswer}[1]{\ifteacher\par\smallskip\textit{Ответ/ход: #1}\par\fi}
+\newcommand{\rulecard}[2]{\noindent\fbox{\begin{minipage}{.94\linewidth}\textbf{#1} \quad #2\end{minipage}}\par\smallskip}
+\newcommand{\picturedtask}[3]{%
+\item \begin{minipage}[t]{.64\linewidth}#1\teacheranswer{#3}\end{minipage}\hfill
+\begin{minipage}[t]{.31\linewidth}\centering\resizebox{\linewidth}{!}{#2}\end{minipage}\par\medskip}
+\newcommand{\taskfigure}[3]{%
+\begin{minipage}[t]{.64\linewidth}#1\teacheranswer{#3}\end{minipage}\hfill
+\begin{minipage}[t]{.31\linewidth}\centering\resizebox{\linewidth}{!}{#2}\end{minipage}\par\medskip}
+
+\begin{document}
+\begin{center}
+{\Large\textbf{Окружность: дуги, касательные и секущие}}\\[2mm]
+{\small ЕГЭ, планиметрия, задание №1 \quad | \quad Фамилия\ \answerline{6cm}}
+\end{center}
+\ifteacher
+\begin{center}\fbox{\textbf{Учительская версия:} ответы и краткие опоры выделены курсивом.}\end{center}
+\fi
+
+\textbf{Цель.} Сначала назвать объект: вписанный угол, касательная или две
+секущие. Затем выбрать одно свойство окружности. Рисунок не измеряем: он
+показывает только неизменную конфигурацию.
+
+\section*{1. Вписанный четырёхугольник: противоположные углы}
+\taskfigure{В четырёхугольник \(ABCD\) вписана окружность. Угол
+\(\angle BAD=127^\circ\). Найдите угол \(\angle BCD\).}
+{\figCyclicOpposite{127}}{Противоположные углы вписанного четырёхугольника
+в сумме дают \(180^\circ\): \(\angle BCD=180^\circ-127^\circ=53^\circ\).}
+
+\rulecard{Опора A}{У вписанного четырёхугольника сумма противоположных
+углов равна \(180^\circ\): \(\angle A+\angle C=180^\circ\). Вначале
+проверь, что все четыре вершины лежат на одной окружности.}
+
+\section*{2. Одна хорда --- равные вписанные углы}
+\taskfigure{В четырёхугольник \(ABCD\) вписана окружность.
+\(\angle ABC=106^\circ\), \(\angle CAD=69^\circ\). Найдите
+\(\angle ABD\).}{\figCyclicChord{106}{69}}
+{\(\angle ADC=74^\circ\). Тогда \(\angle ACD=180^\circ-74^\circ-69^\circ=37^\circ\).
+Углы \(ACD\) и \(ABD\) опираются на хорду \(AD\), поэтому ответ \(37^\circ\).}
+
+\rulecard{Опора B}{Вписанные углы, опирающиеся на одну хорду (или одну дугу),
+равны. Здесь сначала найди угол, противоположный \(\angle ABC\), затем третий
+угол треугольника \(ACD\), и только после этого переходи к хорде \(AD\).}
+
+\section*{3. Касательная и центральный угол}
+\taskfigure{Через концы дуги \(AB\) окружности с центром \(O\) проведены
+касательные \(CA\) и \(CB\). Угол \(CAB=39^\circ\). Найдите угол \(\angle AOB\).}
+{\figTangentPair{39}}{Радиусы \(OA\) и \(OB\) перпендикулярны касательным,
+поэтому \(\angle AOB=2\angle CAB=78^\circ\).}
+
+\rulecard{Опора C}{Радиус, проведённый в точку касания, перпендикулярен
+касательной. В этой конфигурации центральный угол вдвое больше угла между
+касательной и хордой: \(\angle AOB=2\angle CAB\).}
+
+\taskfigure{Прямая \(CO\) проходит через точку \(B\). Луч \(CA\) касается
+окружности в точке \(A\). Градусная мера дуги \(AB\) равна \(17^\circ\).
+Найдите угол \(\angle ACO\).}{\figTangentSecant}
+{Центральный угол \(\angle AOB=17^\circ\). В прямоугольном \(\triangle AOC\)
+угол при \(C\) равен \(90^\circ-17^\circ=73^\circ\).}
+
+\rulecard{Опора D}{Градусная мера дуги равна соответствующему центральному
+углу. В треугольнике \(AOC\) угол при \(A\) прямой, поэтому два остальных
+угла в сумме дают \(90^\circ\).}
+
+\section*{4. Две внешние секущие}
+\taskfigure{Из точки \(C\) проведены две секущие окружности. Градусные меры
+дуг \(AB\) и \(DE\) равны соответственно \(106^\circ\) и \(48^\circ\).
+Найдите угол \(\angle ACB\).}{\figExternalSecants{106}{48}}
+{\(\angle ACB=\dfrac{106^\circ-48^\circ}{2}=29^\circ\).}
+
+\rulecard{Опора E}{Угол между двумя секущими, проведёнными из внешней точки,
+равен полуразности большей и меньшей дуг:
+\(\dfrac{\text{большая дуга}-\text{меньшая дуга}}{2}\).
+Сначала найди большую дугу, затем вычти меньшую.}
+
+\section*{5. Тренажёр ЕГЭ: назови свойство до вычисления}
+\begin{enumerate}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность.
+\(\angle BAD=118^\circ\). Найдите угол \(\angle BCD\).}{\figCyclicOpposite{118}}
+{\(180^\circ-118^\circ=62^\circ\).}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность.
+\(\angle ABC=104^\circ\), \(\angle CAD=61^\circ\). Найдите
+\(\angle ABD\).}{\figCyclicChord{104}{61}}
+{\(\angle ADC=76^\circ\), \(\angle ACD=43^\circ\), значит \(\angle ABD=43^\circ\).}
+\picturedtask{Через концы дуги \(AB\) проведены касательные \(CA\) и \(CB\).
+Угол \(CAB=31^\circ\). Найдите угол \(\angle AOB\).}{\figTangentPair{31}}{\(62^\circ\).}
+\picturedtask{Луч \(CA\) касается окружности, прямая \(CO\) проходит через
+точку \(B\). Дуга \(AB\) равна \(24^\circ\). Найдите угол \(\angle ACO\).}
+{\figTangentSecant}{\(90^\circ-24^\circ=66^\circ\).}
+\picturedtask{Из внешней точки проведены две секущие. Большая дуга равна
+\(124^\circ\), меньшая --- \(52^\circ\). Найдите угол между секущими.}
+{\figExternalSecants{124}{52}}{\((124^\circ-52^\circ)/2=36^\circ\).}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность. Два его угла
+равны \(108^\circ\) и \(124^\circ\). Найдите больший из двух оставшихся углов.}
+{\figCyclicTwoAngles}{\(180^\circ-108^\circ=72^\circ\), \(180^\circ-124^\circ=56^\circ\); ответ \(72^\circ\).}
+\end{enumerate}
+
+\section*{6. Домашняя работа}
+Реши без конспекта. Перед каждым номером напиши одно слово: «противоположные»,
+«одна хорда», «касательная» или «секущие» --- это твой первый шаг.
+\begin{enumerate}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность.
+\(\angle BAD=143^\circ\). Найдите угол \(\angle BCD\).}{\figCyclicOpposite{143}}{\(37^\circ\).}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность.
+\(\angle ABC=118^\circ\), \(\angle CAD=55^\circ\). Найдите
+\(\angle ABD\).}{\figCyclicChord{118}{55}}
+{\(\angle ADC=62^\circ\), \(\angle ACD=63^\circ\), значит \(\angle ABD=63^\circ\).}
+\picturedtask{Через концы дуги \(AB\) проведены касательные \(CA\) и \(CB\).
+Угол \(CAB=27^\circ\). Найдите угол \(\angle AOB\).}{\figTangentPair{27}}{\(54^\circ\).}
+\picturedtask{Луч \(CA\) касается окружности, прямая \(CO\) проходит через
+точку \(B\). Угол \(\angle ACO=58^\circ\). Найдите градусную меру дуги \(AB\).}
+{\figTangentSecantReverse}{В \(\triangle AOC\): \(\angle AOC=90^\circ-58^\circ=32^\circ\), значит дуга \(AB\) равна \(32^\circ\).}
+\picturedtask{Из внешней точки проведены две секущие. Большая дуга равна
+\(138^\circ\), меньшая --- \(66^\circ\). Найдите угол между секущими.}
+{\figExternalSecants{138}{66}}{\((138^\circ-66^\circ)/2=36^\circ\).}
+\picturedtask{В четырёхугольник \(ABCD\) вписана окружность. Два его угла
+равны \(116^\circ\) и \(129^\circ\). Найдите больший из двух оставшихся углов.}
+{\figCyclicTwoAngles}{\(64^\circ\) и \(51^\circ\); ответ \(64^\circ\).}
+\end{enumerate}
+
+\ifteacher
+\section*{Короткая проверка урока}
+Ученик готов к смешанным вариантам, если перед вычислением называет вид угла
+и использует одно свойство окружности, не достраивая на рисунке новые линии.
+\fi
+\end{document}

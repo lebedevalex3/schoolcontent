@@ -44,6 +44,7 @@ SHEET_LESSONS=(
   "lesson01-areas-midlines-projections"
   "lesson02-quadrilaterals-equalities"
   "lesson03-triangles-additional-lines"
+  "lesson04-circle-arcs-tangents-secants"
 )
 
 PRESENTATION_LESSONS=(
