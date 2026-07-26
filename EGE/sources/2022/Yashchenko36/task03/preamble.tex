@@ -8,9 +8,4 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,angles,quotes,decorations.markings}
 
-% В исходном тексте часть формул записана без математического режима.
-% Обёртка делает такую запись компилируемой, не изменяя исходный файл.
-\let\sourceoriginalsqrt\sqrt
-\renewcommand{\sqrt}[1]{\ensuremath{\sourceoriginalsqrt{#1}}}
-
 \pagestyle{empty}
