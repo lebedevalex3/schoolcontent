@@ -40,15 +40,23 @@ build_presentation() {
   )
 }
 
-LESSONS=(
+SHEET_LESSONS=(
+  "lesson01-areas-midlines-projections"
+  "lesson02-quadrilaterals-equalities"
+  "lesson03-triangles-additional-lines"
+)
+
+PRESENTATION_LESSONS=(
   "lesson01-areas-midlines-projections"
   "lesson02-quadrilaterals-equalities"
 )
 
-for lesson in "${LESSONS[@]}"; do
+for lesson in "${SHEET_LESSONS[@]}"; do
   echo "Собираю рабочие листы: $lesson"
   build_sheet "$lesson"
+done
 
+for lesson in "${PRESENTATION_LESSONS[@]}"; do
   echo "Собираю презентацию: $lesson"
   build_presentation "$lesson"
 done

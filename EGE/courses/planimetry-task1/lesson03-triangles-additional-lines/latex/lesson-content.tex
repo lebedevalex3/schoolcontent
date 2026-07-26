@@ -1,0 +1,163 @@
+\input{figures.tex}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ЕГЭ. Планиметрия. Задание №1}
+\rhead{Урок 3}
+\cfoot{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlist[enumerate]{itemsep=7pt,topsep=4pt,leftmargin=6mm}
+\newcounter{exercise}
+\newcommand{\ex}{\stepcounter{exercise}\textbf{\theexercise.} }
+\newcommand{\answerline}[1]{\rule{#1}{0.4pt}}
+\newcommand{\teacheranswer}[1]{\ifteacher\par\smallskip\textit{Ответ/ход: #1}\par\fi}
+\newcommand{\rulecard}[2]{\noindent\fbox{\begin{minipage}{.94\linewidth}\textbf{#1} \quad #2\end{minipage}}\par\smallskip}
+\newcommand{\picturedtask}[3]{%
+\item \begin{minipage}[t]{.64\linewidth}#1\teacheranswer{#3}\end{minipage}\hfill
+\begin{minipage}[t]{.31\linewidth}\centering\resizebox{\linewidth}{!}{#2}\end{minipage}\par\medskip}
+
+\begin{document}
+\begin{center}
+{\Large\textbf{Треугольник и дополнительная линия}}\\[2mm]
+{\small ЕГЭ, планиметрия, задание №1 \quad | \quad Фамилия\ \answerline{6cm}}
+\end{center}
+\ifteacher
+\begin{center}\fbox{\textbf{Учительская версия:} ответы и краткие опоры выделены курсивом.}\end{center}
+\fi
+
+\textbf{Цель.} Перед вычислением назвать дополнительную линию: высоту, медиану
+или биссектрису. Затем сказать, какие два угла или каких два треугольника она
+создаёт. Рисунок не измеряем: он показывает только конфигурацию.
+
+\section*{1. Равнобедренный треугольник: высота создаёт прямой угол}
+\begin{minipage}[t]{.56\linewidth}
+В треугольнике \(ABC\) \(AB=BC\), проведена высота \(CH\).
+
+\ex \(CH=6\), \(AC=8\). Найдите \(\sin\angle ACB\).
+\teacheranswer{В этой конфигурации \(\sin\angle ACB=CH/AC=6/8=0{,}75\).}
+
+\ex \(CH=3\), \(AC=5\). Найдите \(\sin\angle ACB\).
+\teacheranswer{\(\sin\angle ACB=3/5=0{,}6\).}
+\end{minipage}\hfill
+\begin{minipage}[t]{.38\linewidth}\centering
+\figIsoscelesSine{6}{8}
+\end{minipage}
+
+\rulecard{Опора A}{В этой схеме высота \(CH\) образует прямоугольный
+треугольник \(ACH\). При \(AB=BC\) для поиска синуса угла \(ACB\)
+достаточно отношения \(CH/AC\). Сначала отметь высоту и гипотенузу.}
+
+\ifteacher\newpage\fi
+\section*{2. Из вершины прямого угла: три линии, три роли}
+\begin{minipage}[t]{.48\linewidth}
+\centering\figRightAltitudeMedian{50}
+\raggedright
+\ex Острый угол при \(B\) равен \(50^\circ\). Найдите угол между высотой
+\(CH\) и медианой \(CM\).
+\teacheranswer{В \(\triangle BCH\): \(\angle BCH=40^\circ\). Так как
+\(CM=BM\), в \(\triangle CBM\) \(\angle BCM=50^\circ\). Искомый угол
+\(50^\circ-40^\circ=10^\circ\).}
+\end{minipage}\hfill
+\begin{minipage}[t]{.48\linewidth}
+\centering\figRightAltitudeBisector
+\raggedright
+\ex Один из острых углов прямоугольного треугольника равен \(66^\circ\).
+Найдите угол между высотой и биссектрисой из вершины прямого угла.
+\teacheranswer{Высота образует с катетом \(24^\circ\), биссектриса ---
+\(45^\circ\). Ответ: \(21^\circ\).}
+\end{minipage}
+
+\rulecard{Опора B}{Медиана к гипотенузе создаёт равнобедренный треугольник:
+\(CM=AM=BM\). Биссектриса прямого угла делит его на \(45^\circ\) и
+\(45^\circ\). Высота создаёт второй прямой угол на гипотенузе. Не путай
+названия линий: у них разные первые свойства.}
+
+\newpage
+\section*{3. Две биссектрисы и две высоты: работаем только с углами}
+\begin{minipage}[t]{.48\linewidth}
+\centering\figIncenterBisectors{46}
+\raggedright
+\ex В треугольнике \(\angle C=46^\circ\). Биссектрисы \(AD\) и \(BE\)
+пересекаются в точке \(O\). Найдите \(\angle AOB\).
+\teacheranswer{\(\angle AOB=90^\circ+\angle C/2=90^\circ+23^\circ=113^\circ\).}
+\end{minipage}\hfill
+\begin{minipage}[t]{.48\linewidth}
+\centering\figTriangleAltitudes
+\raggedright
+\ex Два угла треугольника равны \(68^\circ\) и \(35^\circ\). Найдите тупой
+угол между высотами, проведёнными из этих вершин.
+\teacheranswer{Тупой угол между высотами равен сумме данных углов:
+\(68^\circ+35^\circ=103^\circ\).}
+\end{minipage}
+
+\rulecard{Опора C}{Если биссектрисы при \(A\) и \(B\) пересекаются в
+инцентре \(O\), то \(\angle AOB=90^\circ+\dfrac{\angle C}{2}\). Тупой
+угол между высотами из вершин \(A\) и \(B\) равен \(A+B=180^\circ-C\).}
+
+\section*{4. Описанная окружность: сторона через синус}
+\begin{minipage}[t]{.56\linewidth}
+\ex Радиус описанной окружности равен \(2\sqrt3\), а \(\angle ACB=120^\circ\).
+Найдите \(AB\).
+\teacheranswer{\(AB=2R\sin\angle ACB=2\cdot2\sqrt3\cdot\sin120^\circ=6\).}
+
+\ex Радиус описанной окружности равен \(4\), а \(\angle ACB=90^\circ\).
+Найдите \(AB\).
+\teacheranswer{\(AB=2R\sin90^\circ=8\).}
+\end{minipage}\hfill
+\begin{minipage}[t]{.38\linewidth}\centering
+\figCircumcircleSide{2\sqrt3}{120}
+\end{minipage}
+
+\rulecard{Опора D}{Сторона, лежащая напротив угла \(\alpha\), равна
+\(a=2R\sin\alpha\), где \(R\) --- радиус описанной окружности. Сначала
+назови сторону, которая лежит напротив данного угла.}
+
+\section*{5. Тренажёр ЕГЭ: назови линию до вычисления}
+\begin{enumerate}
+\picturedtask{В треугольнике \(ABC\) \(AB=BC\), высота \(CH=4\),
+\(AC=5\). Найдите \(\sin\angle ACB\).}{\figIsoscelesSine{4}{5}}{\(4/5=0{,}8\).}
+\picturedtask{Острый угол при \(B\) прямоугольного треугольника равен
+\(55^\circ\). Найдите угол между высотой и медианой из вершины прямого угла.}
+{\figRightAltitudeMedian{55}}{Высота даёт \(35^\circ\), медиана --- \(55^\circ\); ответ \(20^\circ\).}
+\picturedtask{Один из острых углов прямоугольного треугольника равен
+\(70^\circ\). Найдите угол между высотой и биссектрисой из вершины прямого угла.}
+{\figRightAltitudeBisector}{\(45^\circ-(90^\circ-70^\circ)=25^\circ\).}
+\picturedtask{Угол между биссектрисой и медианой из вершины прямого угла равен
+\(12^\circ\). Найдите меньший угол треугольника.}{\figRightBisectorMedian{12}}
+{\(45^\circ-12^\circ=33^\circ\).}
+\picturedtask{В треугольнике \(\angle C=58^\circ\), биссектрисы при \(A\)
+и \(B\) пересекаются в \(O\). Найдите \(\angle AOB\).}{\figIncenterBisectors{58}}
+{\(90^\circ+29^\circ=119^\circ\).}
+\picturedtask{Радиус описанной окружности равен \(3\), \(\angle ACB=90^\circ\).
+Найдите \(AB\).}{\figCircumcircleSide{3}{90}}{\(2\cdot3\cdot1=6\).}
+\end{enumerate}
+
+\section*{6. Домашняя работа}
+Реши без конспекта. После каждого номера подпиши: «высота», «медиана»,
+«биссектриса» или «описанная окружность» --- это твой первый шаг.
+\begin{enumerate}
+\picturedtask{В треугольнике \(ABC\) \(AB=BC\), \(CH=5\), \(AC=13\).
+Найдите \(\sin\angle ACB\).}{\figIsoscelesSine{5}{13}}{\(5/13\).}
+\picturedtask{Острый угол при \(B\) прямоугольного треугольника равен
+\(60^\circ\). Найдите угол между высотой и медианой из вершины прямого угла.}
+{\figRightAltitudeMedian{60}}{\(60^\circ-30^\circ=30^\circ\).}
+\picturedtask{Угол между биссектрисой и медианой из вершины прямого угла равен
+\(17^\circ\). Найдите меньший угол треугольника.}{\figRightBisectorMedian{17}}
+{\(45^\circ-17^\circ=28^\circ\).}
+\picturedtask{В треугольнике \(\angle C=72^\circ\), биссектрисы при \(A\)
+и \(B\) пересекаются в \(O\). Найдите \(\angle AOB\).}{\figIncenterBisectors{72}}
+{\(90^\circ+36^\circ=126^\circ\).}
+\picturedtask{Два угла треугольника равны \(74^\circ\) и \(29^\circ\).
+Найдите тупой угол между высотами из этих вершин.}{\figTriangleAltitudes}
+{\(74^\circ+29^\circ=103^\circ\).}
+\picturedtask{Радиус описанной окружности равен \(5\), \(\angle ACB=30^\circ\).
+Найдите \(AB\).}{\figCircumcircleSide{5}{30}}{\(2\cdot5\cdot\frac12=5\).}
+\end{enumerate}
+
+\ifteacher
+\section*{Короткая проверка урока}
+Ученик готов к блоку окружностей, если перед решением способен назвать
+дополнительную линию и её единственное нужное свойство; при этом не вычисляет
+длины там, где ответ получается только из углов.
+\fi
+\end{document}

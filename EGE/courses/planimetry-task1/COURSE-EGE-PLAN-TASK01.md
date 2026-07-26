@@ -24,7 +24,7 @@ tags: [ege, planimetry, course]
 | --- | --- | --- |
 | [[EGE/courses/planimetry-task1/lesson01-areas-midlines-projections/LESSON-EGE-PLAN-TASK01-01|01]] | Площади, средние линии и проекции | готов к просмотру |
 | [[EGE/courses/planimetry-task1/lesson02-quadrilaterals-equalities/LESSON-EGE-PLAN-TASK01-02|02]] | Четырёхугольники как система равенств | готов к просмотру |
-| 03 | Треугольники и дополнительные линии | планируется |
+| [[EGE/courses/planimetry-task1/lesson03-triangles-additional-lines/LESSON-EGE-PLAN-TASK01-03|03]] | Треугольник и дополнительная линия | готов к просмотру |
 | 04 | Окружность: дуги, касательные, секущие | планируется |
 
 Методическая основа: [[EGE/methodology/MAP-EGE-PLAN-TASK01-YA36-2022|карта задания №1]].
