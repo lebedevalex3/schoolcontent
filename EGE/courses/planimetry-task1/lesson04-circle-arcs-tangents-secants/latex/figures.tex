@@ -23,7 +23,7 @@
   \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
   \draw[line width=0.9pt] (A)--(C); \draw[line width=0.9pt] (B)--(D);
   \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--B--C};
-  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=C--A--D};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--A--C};
   \node at (-1.05,1.15) {\(#1^\circ\)}; \node at (-1.38,-.62) {\(#2^\circ\)};
   \node[above left] at (A) {\(A\)}; \node[above right] at (B) {\(B\)};
   \node[right] at (C) {\(C\)}; \node[below] at (D) {\(D\)};
@@ -50,7 +50,7 @@
   \draw[line width=0.75pt] (O)--(A) (O)--(B);
   \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=O--A--C};
   \pic[draw,line width=0.6pt,angle radius=3mm] {right angle=C--B--O};
-  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=C--A--B};
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=B--A--C};
   \node at (1.63,0.52) {\(#1^\circ\)};
   \fill (O) circle (1.2pt); \node[left] at (O) {\(O\)};
   \node[above right] at (A) {\(A\)}; \node[below right] at (B) {\(B\)};
