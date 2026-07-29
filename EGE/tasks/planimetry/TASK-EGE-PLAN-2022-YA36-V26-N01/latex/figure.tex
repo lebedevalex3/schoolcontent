@@ -1,0 +1,13 @@
+% Канонический TikZ-рисунок варианта 26. Править только здесь.
+\newcommand{\figRightBisectorMedian}{%
+\begin{tikzpicture}[scale=0.92,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (7,0); \coordinate (C) at (6.789,1.197);
+  \coordinate (M) at (3.5,0); \coordinate (D) at (5.951,0);
+  \draw[line width=0.9pt] (A)--(B)--(C)--cycle;
+  \draw[line width=0.85pt] (C)--(M); \draw[line width=0.85pt] (C)--(D);
+  \pic[draw,line width=0.65pt,angle radius=3.2mm] {right angle=A--C--B};
+  \draw[line width=0.7pt] ($(A)!0.5!(M)+(0,0.09)$)--($(A)!0.5!(M)+(0,-0.09)$);
+  \draw[line width=0.7pt] ($(M)!0.5!(B)+(0,0.09)$)--($(M)!0.5!(B)+(0,-0.09)$);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above] at (C) {$C$}; \node[below] at (M) {$M$}; \node[below] at (D) {$D$};
+\end{tikzpicture}}

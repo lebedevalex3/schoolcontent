@@ -1,0 +1,14 @@
+% Канонический TikZ-рисунок варианта 31. Править только здесь.
+\newcommand{\figCyclicChord}{%
+\begin{tikzpicture}[scale=1.08,line cap=round,line join=round,every node/.style={font=\small}]
+  \def\R{2.45}
+  \coordinate (O) at (0,0); \coordinate (A) at (200:\R); \coordinate (B) at (250:\R);
+  \coordinate (C) at (316:\R); \coordinate (D) at (128:\R);
+  \draw[line width=0.9pt] (O) circle (\R);
+  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
+  \draw[line width=0.8pt] (A)--(C); \draw[line width=0.8pt] (B)--(D);
+  \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--B--A};
+  \pic[draw,line width=0.65pt,angle radius=9mm] {angle=C--B--A};
+  \node[below left] at (A) {$A$}; \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$}; \node[above left] at (D) {$D$};
+\end{tikzpicture}}
