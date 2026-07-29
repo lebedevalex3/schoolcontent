@@ -23,9 +23,12 @@
   {\setsansfont{Arimo}%
    \newfontfamily\cyrillicfontsf{Arimo}}
 
-\IfFontExistsTF{Consolas}
-  {\setmonofont{Consolas}}
-  {\setmonofont{DejaVu Sans Mono}}
+% Установленный в macOS шрифт Consolas может ошибочно определяться fontspec
+% как доступный, хотя файл шрифта отсутствует. Подключаем системную замену
+% явно, чтобы сборка не зависела от кэша шрифтов XeTeX.
+\setmonofont{Courier New.ttf}[
+  Path=/System/Library/Fonts/Supplemental/
+]
 
 % =================================================
 % Страница

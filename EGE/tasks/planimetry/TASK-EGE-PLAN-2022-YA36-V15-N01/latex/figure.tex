@@ -8,8 +8,10 @@
   \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
   \draw[line width=0.9pt] (A)--(C); \draw[line width=0.9pt] (B)--(D);
   \pic[draw,line width=0.65pt,angle radius=5mm] {angle=A--B--C};
+  \pic[draw,line width=0.65pt,angle radius=3mm] {angle=A--B--C};
   \pic[draw,line width=0.65pt,angle radius=5mm] {angle=D--A--C};
-  \node at (-1.05,1.15) {\(#1^\circ\)}; \node at (-1.38,-.62) {\(#2^\circ\)};
+
+  \node at (-0.9,1) {\(#1^\circ\)}; \node at (-1.2,-.62) {\(#2^\circ\)};
   \node[above left] at (A) {\(A\)}; \node[above right] at (B) {\(B\)};
   \node[right] at (C) {\(C\)}; \node[below] at (D) {\(D\)};
 \end{tikzpicture}}
