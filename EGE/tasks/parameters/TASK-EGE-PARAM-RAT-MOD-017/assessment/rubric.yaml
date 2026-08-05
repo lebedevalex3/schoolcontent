@@ -1,0 +1,61 @@
+schema_version: 1
+rubric_version_id: param-rat-mod-017-v1
+task_id: TASK-EGE-PARAM-RAT-MOD-017
+criteria:
+  - id: parameter.module-branches
+    title: Корректно раскрыт модуль и найдены кандидаты на корни
+    max_points: 1
+    evidence: [Получены обе ветви для x>=0 и x<0., Найдены x_1=a+2 и x_2=-(a+2)/5.]
+    review_triggers: [missing-evidence, ambiguous-handwriting]
+  - id: parameter.two-roots-condition
+    title: Верно получено условие двух различных нулей
+    max_points: 1
+    evidence: [Учтены условия ветвей., Получено строгое условие a>-2.]
+    review_triggers: [boundary-uncertain, answer-reasoning-conflict]
+  - id: parameter.first-substitution
+    title: Верно проверен первый кандидат в знаменателе
+    max_points: 1
+    evidence: [Вычислено D(a+2)=a(a+1)., Объяснено исключение нуля знаменателя.]
+    review_triggers: [missing-evidence, arithmetic-uncertain]
+  - id: parameter.first-exclusions
+    title: Верно исключены значения a=-1 и a=0
+    max_points: 1
+    evidence: [Из D(x_1)=0 получены оба значения -1 и 0.]
+    review_triggers: [boundary-uncertain]
+  - id: parameter.second-substitution
+    title: Верно проверен второй кандидат в знаменателе
+    max_points: 1
+    evidence: [Получено D(x_2)=(a-3)(a-8)/25 или эквивалентное выражение.]
+    review_triggers: [arithmetic-uncertain, missing-evidence]
+  - id: parameter.second-exclusions
+    title: Верно исключены значения a=3 и a=8
+    max_points: 1
+    evidence: [Из D(x_2)=0 получены оба значения 3 и 8.]
+    review_triggers: [boundary-uncertain]
+  - id: parameter.final-intersection
+    title: Корректно собраны условие и все исключения
+    max_points: 1
+    evidence: [Сохранено условие a>-2., Исключены -1, 0, 3 и 8.]
+    review_triggers: [answer-reasoning-conflict, final-answer-uncertain]
+  - id: parameter.final-notation
+    title: Точно записано множество значений параметра
+    max_points: 1
+    evidence: [Ответ записан как множество или эквивалентное объединение промежутков.]
+    review_triggers: [final-answer-uncertain]
+profiles:
+  - id: param-numerator-roots-v1
+    assessment_item_id: numerator-roots
+    max_points: 2
+    criteria: [{criterion_id: parameter.module-branches, max_points: 1}, {criterion_id: parameter.two-roots-condition, max_points: 1}]
+  - id: param-first-denominator-v1
+    assessment_item_id: first-denominator-check
+    max_points: 2
+    criteria: [{criterion_id: parameter.first-substitution, max_points: 1}, {criterion_id: parameter.first-exclusions, max_points: 1}]
+  - id: param-second-denominator-v1
+    assessment_item_id: second-denominator-check
+    max_points: 2
+    criteria: [{criterion_id: parameter.second-substitution, max_points: 1}, {criterion_id: parameter.second-exclusions, max_points: 1}]
+  - id: param-final-set-v1
+    assessment_item_id: final-parameter-set
+    max_points: 2
+    criteria: [{criterion_id: parameter.final-intersection, max_points: 1}, {criterion_id: parameter.final-notation, max_points: 1}]

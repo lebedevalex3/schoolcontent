@@ -1,0 +1,20 @@
+# Педагогически утверждённый рецепт выдачи. Условия и рубрики остаются в
+# task.yaml и rubric.yaml; здесь нет их дублирования.
+schema_version: 1
+task_id: TASK-EGE-LOG-001
+issuance_status: ready
+work_packages:
+  - id: EGE-LOG-001-FULL-REVIEW-V1
+    title: "Логарифмические неравенства: развёрнутая проверочная работа"
+    status: ready
+    layout_id: full-page-solution-v1
+    processing: photo-upload-v1
+    item_sequence:
+      - assessment_item_id: homework-3
+        answer_space: full_page
+      - assessment_item_id: homework-4
+        answer_space: full_page
+      - assessment_item_id: homework-5
+        answer_space: full_page
+      - assessment_item_id: homework-8
+        answer_space: full_page

@@ -1,0 +1,68 @@
+schema_version: 1
+task_id: TASK-EGE-PARAM-RAT-MOD-017
+rubric_version_id: param-rat-mod-017-v1
+cases:
+  - id: numerator-correct
+    assessment_item_id: numerator-roots
+    category: correct
+    expected:
+      final_score: 2
+      review_status: ready_for_batch_approval
+      criterion_results: [{criterion_id: parameter.module-branches, suggested_points: 1, status: met}, {criterion_id: parameter.two-roots-condition, suggested_points: 1, status: met}]
+      review_flags: []
+  - id: numerator-includes-boundary
+    assessment_item_id: numerator-roots
+    category: incorrect_reasoning
+    expected:
+      final_score: 1
+      review_status: needs_review
+      criterion_results: [{criterion_id: parameter.module-branches, suggested_points: 1, status: met}, {criterion_id: parameter.two-roots-condition, suggested_points: 0, status: not_met}]
+      review_flags: [boundary-uncertain]
+  - id: first-check-correct
+    assessment_item_id: first-denominator-check
+    category: correct
+    expected:
+      final_score: 2
+      review_status: ready_for_batch_approval
+      criterion_results: [{criterion_id: parameter.first-substitution, suggested_points: 1, status: met}, {criterion_id: parameter.first-exclusions, suggested_points: 1, status: met}]
+      review_flags: []
+  - id: first-check-misses-zero
+    assessment_item_id: first-denominator-check
+    category: incorrect_answer
+    expected:
+      final_score: 1
+      review_status: needs_review
+      criterion_results: [{criterion_id: parameter.first-substitution, suggested_points: 1, status: met}, {criterion_id: parameter.first-exclusions, suggested_points: 0, status: not_met}]
+      review_flags: [boundary-uncertain]
+  - id: second-check-correct
+    assessment_item_id: second-denominator-check
+    category: correct
+    expected:
+      final_score: 2
+      review_status: ready_for_batch_approval
+      criterion_results: [{criterion_id: parameter.second-substitution, suggested_points: 1, status: met}, {criterion_id: parameter.second-exclusions, suggested_points: 1, status: met}]
+      review_flags: []
+  - id: second-check-arithmetic-error
+    assessment_item_id: second-denominator-check
+    category: incorrect_reasoning
+    expected:
+      final_score: 0
+      review_status: needs_review
+      criterion_results: [{criterion_id: parameter.second-substitution, suggested_points: 0, status: not_met}, {criterion_id: parameter.second-exclusions, suggested_points: 0, status: not_met}]
+      review_flags: [arithmetic-uncertain]
+  - id: final-answer-correct
+    assessment_item_id: final-parameter-set
+    category: correct
+    expected:
+      final_score: 2
+      review_status: ready_for_batch_approval
+      criterion_results: [{criterion_id: parameter.final-intersection, suggested_points: 1, status: met}, {criterion_id: parameter.final-notation, suggested_points: 1, status: met}]
+      review_flags: []
+  - id: final-answer-keeps-forbidden-value
+    assessment_item_id: final-parameter-set
+    category: incorrect_answer
+    expected:
+      final_score: 1
+      review_status: needs_review
+      criterion_results: [{criterion_id: parameter.final-intersection, suggested_points: 0, status: not_met}, {criterion_id: parameter.final-notation, suggested_points: 1, status: met}]
+      review_flags: [final-answer-uncertain]
