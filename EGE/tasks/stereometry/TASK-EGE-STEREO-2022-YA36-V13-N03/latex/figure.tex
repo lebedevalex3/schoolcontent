@@ -1,0 +1,87 @@
+% Канонический TikZ-рисунок варианта 13. Править только здесь.
+\long\def\figStereoV13{%
+\begin{tikzpicture}[
+    scale=0.9,
+    line cap=round,
+    line join=round,
+    sphere/.style={line width=0.9pt},
+    hidden/.style={
+        line width=0.65pt,
+        dashed,
+        dash pattern=on 3pt off 2pt
+    },
+    label/.style={font=\small}
+]
+
+% =================================================
+% Первый шар
+% =================================================
+
+\coordinate (O1) at (0,0);
+\def\rone{1.15}
+
+% Контур шара
+\draw[sphere] (O1) circle[radius=\rone];
+
+% Экватор
+\draw[hidden]
+    ($(O1)+(-\rone,0)$)
+    arc[
+        start angle=180,
+        end angle=0,
+        x radius=\rone,
+        y radius=0.28
+    ];
+
+\draw[sphere]
+    ($(O1)+(\rone,0)$)
+    arc[
+        start angle=0,
+        end angle=-180,
+        x radius=\rone,
+        y radius=0.28
+    ];
+
+% Радиус
+\draw[sphere] (O1)--++(35:\rone);
+
+\fill (O1) circle (1.1pt);
+
+
+% =================================================
+% Второй шар
+% =================================================
+
+\coordinate (O2) at (3.8,0);
+\def\rtwo{1.75}
+
+% Контур шара
+\draw[sphere] (O2) circle[radius=\rtwo];
+
+% Экватор
+\draw[hidden]
+    ($(O2)+(-\rtwo,0)$)
+    arc[
+        start angle=180,
+        end angle=0,
+        x radius=\rtwo,
+        y radius=0.42
+    ];
+
+\draw[sphere]
+    ($(O2)+(\rtwo,0)$)
+    arc[
+        start angle=0,
+        end angle=-180,
+        x radius=\rtwo,
+        y radius=0.42
+    ];
+
+% Радиус
+\draw[sphere] (O2)--++(35:\rtwo);
+
+\fill (O2) circle (1.1pt);
+
+
+\end{tikzpicture}
+}

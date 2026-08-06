@@ -1,0 +1,65 @@
+% Канонический TikZ-рисунок варианта 21. Править только здесь.
+\long\def\figStereoV21{%
+\begin{tikzpicture}[
+  scale=0.95,
+  line cap=round,
+  line join=round
+]
+  \def\radius{1.55}
+  \def\height{2.7}
+  \def\ellipseheight{0.32}
+
+  \coordinate (S) at (0,\height);
+  \coordinate (L) at (-\radius,0);
+  \coordinate (R) at (\radius,0);
+  \coordinate (O) at (0,0);
+
+  % Верхнее основание цилиндра
+  \draw[thick]
+    (0,\height)
+    ellipse[
+      x radius=\radius,
+      y radius=\ellipseheight
+    ];
+
+  % Боковые рёбра цилиндра
+  \draw[thick]
+    (-\radius,0) -- (-\radius,\height);
+
+  \draw[thick]
+    (\radius,0) -- (\radius,\height);
+
+  % Нижнее основание цилиндра
+  \draw[thick]
+    (L)
+    arc[
+      start angle=180,
+      end angle=360,
+      x radius=\radius,
+      y radius=\ellipseheight
+    ];
+
+  \draw[thick,dashed]
+    (R)
+    arc[
+      start angle=0,
+      end angle=180,
+      x radius=\radius,
+      y radius=\ellipseheight
+    ];
+
+  % Конус
+  \draw[thick]
+    (S) -- (L);
+
+  \draw[thick]
+    (S) -- (R);
+
+  % Высота конуса
+  \draw[dashed]
+    (S) -- (O);
+
+  \fill (S) circle (1.2pt);
+  \fill (O) circle (1.2pt);
+\end{tikzpicture}
+}

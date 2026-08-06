@@ -11,6 +11,7 @@ difficulty: basic
 source: {publisher: "Ященко", year: 2022, collection: "36 вариантов", variant: 27, number: 3}
 answer: "10{,}5"
 has_tikz: true
+figure_source: "latex/figure.tex"
 latex_locked: true
 source_fragment: "EGE/sources/2022/Yashchenko36/task03/raw-submission.tex"
 tags: [ege, stereometry, yashchenko-2022]
