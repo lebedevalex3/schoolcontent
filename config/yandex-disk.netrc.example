@@ -1,0 +1,8 @@
+# Скопируйте этот файл в .secrets/yandex-disk.netrc и заполните данными.
+# Не коммитьте созданный файл: папка .secrets/ уже исключена из Git.
+#
+# Пароль — не пароль от Яндекс ID, а отдельный пароль приложения
+# типа «Файлы WebDAV».
+machine webdav.yandex.ru
+login your-yandex-login
+password paste-app-password-here

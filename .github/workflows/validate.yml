@@ -1,0 +1,18 @@
+name: Validate educational content
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-pictures texlive-xetex
+      - name: Validate source and builds
+        run: bash scripts/validate.sh --build
