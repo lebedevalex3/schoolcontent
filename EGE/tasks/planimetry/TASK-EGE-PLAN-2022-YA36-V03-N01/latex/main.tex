@@ -11,6 +11,8 @@
 
 \pagestyle{empty}
 
+\input{latex/figure.tex}
+
 \begin{document}
 
 \section*{Вариант 3}
@@ -18,31 +20,7 @@
 Около трапеции описана окружность. Периметр трапеции равен \(38\),
 средняя линия равна \(11\). Найдите боковую сторону трапеции.
 
-\begin{center}
-\begin{tikzpicture}[
-  scale=1.15,
-  line cap=round,
-  line join=round
-]
-  \def\R{2.5}
-
-  \coordinate (A) at (205:\R);
-  \coordinate (B) at (335:\R);
-  \coordinate (C) at (50:\R);
-  \coordinate (D) at (130:\R);
-
-  \coordinate (M) at ($(A)!0.5!(D)$);
-  \coordinate (N) at ($(B)!0.5!(C)$);
-
-  \draw[line width=0.9pt] (0,0) circle (\R);
-  \draw[line width=0.9pt] (A)--(B)--(C)--(D)--cycle;
-
-  \node[below left] at (A) {$A$};
-  \node[below right] at (B) {$B$};
-  \node[above right] at (C) {$C$};
-  \node[above left] at (D) {$D$};
-\end{tikzpicture}
-\end{center}
+\begin{center}\figCyclicTrapezoid\end{center}
 
 \[
 \boxed{\text{Ответ: }8}

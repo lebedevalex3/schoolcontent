@@ -1,0 +1,13 @@
+% Канонический TikZ-рисунок варианта 01 и его аналогов.
+\newcommand{\figIsoscelesObtuse}{%
+\begin{tikzpicture}[scale=1.15,line cap=round,line join=round,every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (5.2,0); \coordinate (C) at (2.9,1.25);
+  \coordinate (H) at ($(B)!(A)!(C)$);
+  \draw[line width=0.9pt] (A)--(B);
+  \draw[line width=0.9pt,equal segment] (A)--(C);
+  \draw[line width=0.9pt,equal segment] (C)--(B);
+  \draw[dashed,line width=0.8pt] (A)--(H); \draw[dashed,line width=0.8pt] (H)--(C);
+  \pic[draw,line width=0.7pt,angle radius=3.5mm] {right angle=A--H--C};
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (H) {$H$};
+\end{tikzpicture}}
