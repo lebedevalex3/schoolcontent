@@ -1,0 +1,107 @@
+schema_version: 1
+rubric_version_id: logineq-homework-v1
+task_id: TASK-EGE-LOG-001
+criteria:
+  - id: algebra.substitution-domain
+    title: Корректная замена и ограничение на новую переменную
+    max_points: 1
+    evidence:
+      - Записана замена t=y^2 или эквивалентная ей.
+      - Учтено t>=0.
+    review_triggers:
+      - missing-evidence
+      - ambiguous-handwriting
+
+  - id: algebra.solution-set
+    title: Корректно решено алгебраическое неравенство
+    max_points: 1
+    evidence:
+      - Получено t>=4 с учётом ограничения t>=0.
+      - Восстановлены обе ветви y<=-2 и y>=2.
+    review_triggers:
+      - answer-reasoning-conflict
+      - unknown-method
+
+  - id: modulus.interval-transfer
+    title: Корректный переход от условия на модуль к множеству x
+    max_points: 2
+    evidence:
+      - Сохранено строгое исключение нуля в условии 0<|u|.
+      - Верно обработаны открытые и закрытые границы.
+    review_triggers:
+      - interval-parse-failed
+      - boundary-uncertain
+
+  - id: log.domain-and-transform
+    title: Учтены ОДЗ и преобразования логарифмов
+    max_points: 1
+    evidence:
+      - Записано исключение нулей аргумента логарифма.
+      - Использован модуль в формуле логарифма чётной степени.
+    review_triggers:
+      - missing-evidence
+      - answer-reasoning-conflict
+
+  - id: log.two-substitutions
+    title: Корректно сведено исходное неравенство к алгебраическому ядру
+    max_points: 1
+    evidence:
+      - Введено y=log_b|f(x)| или эквивалентная замена.
+      - Получено y^4-y^2-12>=0 или эквивалентное неравенство.
+    review_triggers:
+      - unknown-method
+      - missing-evidence
+
+  - id: final.answer-set
+    title: Точный конечный ответ как множество решений
+    max_points: 1
+    evidence:
+      - Все интервалы и границы совпадают с эталоном как множество.
+    review_triggers:
+      - interval-parse-failed
+      - final-answer-uncertain
+
+profiles:
+  - id: logineq-homework-3-v1
+    assessment_item_id: homework-3
+    max_points: 2
+    criteria:
+      - criterion_id: algebra.substitution-domain
+        max_points: 1
+      - criterion_id: algebra.solution-set
+        max_points: 1
+
+  - id: logineq-homework-4-v1
+    assessment_item_id: homework-4
+    max_points: 3
+    criteria:
+      - criterion_id: modulus.interval-transfer
+        max_points: 2
+      - criterion_id: final.answer-set
+        max_points: 1
+
+  - id: logineq-homework-5-v1
+    assessment_item_id: homework-5
+    max_points: 4
+    criteria:
+      - criterion_id: log.domain-and-transform
+        max_points: 1
+      - criterion_id: log.two-substitutions
+        max_points: 1
+      - criterion_id: modulus.interval-transfer
+        max_points: 1
+      - criterion_id: final.answer-set
+        max_points: 1
+
+  - id: logineq-homework-8-v1
+    assessment_item_id: homework-8
+    max_points: 4
+    criteria:
+      - criterion_id: log.domain-and-transform
+        max_points: 1
+      - criterion_id: log.two-substitutions
+        max_points: 1
+      - criterion_id: modulus.interval-transfer
+        max_points: 1
+      - criterion_id: final.answer-set
+        max_points: 1

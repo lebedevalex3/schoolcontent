@@ -1,0 +1,155 @@
+# Machine-readable sidecar for Assessment Core. Existing LaTeX remains unchanged.
+schema_version: 1
+task_id: TASK-EGE-LOG-001
+version: 1
+topic_id: logarithmic_inequalities
+source:
+  task_record: EGE/tasks/logarithmic-inequalities/TASK-EGE-LOG-001/TASK-EGE-LOG-001.md
+  latex_package_dir: EGE/tasks/logarithmic-inequalities/TASK-EGE-LOG-001/latex-learning-pack
+assessment_items:
+  - id: homework-3
+    title: Решаем алгебраическое ядро
+    source_ref: homework-content.tex#homeworktask-3
+    statement_latex: |
+      Решите неравенство
+      \[
+        y^4-y^2-12\ge0.
+      \]
+      Введите \(t=y^2\). Укажите ограничение на \(t\), которое следует из замены,
+      и запишите множество решений относительно \(y\).
+    rubric_profile: logineq-homework-3-v1
+    expected_answers:
+      - id: final-answer
+        type: interval_set
+        variable: y
+        latex: '(-\infty;-2]\cup[2;+\infty)'
+        intervals:
+          - left: '-infinity'
+            left_closed: false
+            right: '-2'
+            right_closed: true
+          - left: '2'
+            left_closed: true
+            right: infinity
+            right_closed: false
+
+  - id: homework-4
+    title: Решаем два неравенства с модулем
+    source_ref: homework-content.tex#homeworktask-4
+    statement_latex: |
+      Решите два неравенства и для каждого запишите множество решений:
+      \[
+        \text{а) }0<|x-2|\le3,
+        \qquad
+        \text{б) }0<|x^2-4|\le1.
+      \]
+    rubric_profile: logineq-homework-4-v1
+    expected_answers:
+      - id: part-a
+        type: interval_set
+        variable: x
+        latex: '[-1;2)\cup(2;5]'
+        intervals:
+          - left: '-1'
+            left_closed: true
+            right: '2'
+            right_closed: false
+          - left: '2'
+            left_closed: false
+            right: '5'
+            right_closed: true
+      - id: part-b
+        type: interval_set
+        variable: x
+        latex: '[-\sqrt{5};-2)\cup(-2;-\sqrt{3}]\cup[\sqrt{3};2)\cup(2;\sqrt{5}]'
+        intervals:
+          - left: '-sqrt(5)'
+            left_closed: true
+            right: '-2'
+            right_closed: false
+          - left: '-2'
+            left_closed: false
+            right: '-sqrt(3)'
+            right_closed: true
+          - left: 'sqrt(3)'
+            left_closed: true
+            right: '2'
+            right_closed: false
+          - left: '2'
+            left_closed: false
+            right: 'sqrt(5)'
+            right_closed: true
+
+  - id: homework-5
+    title: Собираем решение с опорой
+    source_ref: homework-content.tex#homeworktask-5
+    statement_latex: |
+      Решите неравенство:
+      \[
+        \log_2^4((x-1)^2)-\log_2^2((x-1)^4)\ge192.
+      \]
+      Запишите ОДЗ, ход решения и точный ответ.
+    rubric_profile: logineq-homework-5-v1
+    expected_answers:
+      - id: final-answer
+        type: interval_set
+        variable: x
+        latex: '(-\infty;-3]\cup[\frac{3}{4};1)\cup(1;\frac{5}{4}]\cup[5;+\infty)'
+        intervals:
+          - left: '-infinity'
+            left_closed: false
+            right: '-3'
+            right_closed: true
+          - left: '3/4'
+            left_closed: true
+            right: '1'
+            right_closed: false
+          - left: '1'
+            left_closed: false
+            right: '5/4'
+            right_closed: true
+          - left: '5'
+            left_closed: true
+            right: infinity
+            right_closed: false
+
+  - id: homework-8
+    title: Решаем самостоятельно
+    source_ref: homework-content.tex#homeworktask-8
+    statement_latex: |
+      Решите неравенство:
+      \[
+        \log_2^4((x^2-1)^2)-\log_2^2((x^2-1)^4)\ge192.
+      \]
+      Запишите полное решение с ОДЗ и точным ответом.
+    rubric_profile: logineq-homework-8-v1
+    expected_answers:
+      - id: final-answer
+        type: interval_set
+        variable: x
+        latex: '(-\infty;-\sqrt{5}]\cup[-\frac{\sqrt{5}}{2};-1)\cup(-1;-\frac{\sqrt{3}}{2}]\cup[\frac{\sqrt{3}}{2};1)\cup(1;\frac{\sqrt{5}}{2}]\cup[\sqrt{5};+\infty)'
+        intervals:
+          - left: '-infinity'
+            left_closed: false
+            right: '-sqrt(5)'
+            right_closed: true
+          - left: '-sqrt(5)/2'
+            left_closed: true
+            right: '-1'
+            right_closed: false
+          - left: '-1'
+            left_closed: false
+            right: '-sqrt(3)/2'
+            right_closed: true
+          - left: 'sqrt(3)/2'
+            left_closed: true
+            right: '1'
+            right_closed: false
+          - left: '1'
+            left_closed: false
+            right: 'sqrt(5)/2'
+            right_closed: true
+          - left: 'sqrt(5)'
+            left_closed: true
+            right: infinity
+            right_closed: false

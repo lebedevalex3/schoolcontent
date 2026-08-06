@@ -1,0 +1,147 @@
+schema_version: 1
+task_id: TASK-EGE-LOG-001
+rubric_version_id: logineq-homework-v1
+cases:
+  - id: homework-3-correct
+    assessment_item_id: homework-3
+    category: correct
+    expected:
+      final_score: 2
+      review_status: ready_for_batch_approval
+      criterion_results:
+        - criterion_id: algebra.substitution-domain
+          suggested_points: 1
+          status: met
+        - criterion_id: algebra.solution-set
+          suggested_points: 1
+          status: met
+      review_flags: []
+
+  - id: homework-3-drops-t-nonnegative
+    assessment_item_id: homework-3
+    category: incorrect_reasoning
+    expected:
+      final_score: 1
+      review_status: needs_review
+      criterion_results:
+        - criterion_id: algebra.substitution-domain
+          suggested_points: 0
+          status: not_met
+        - criterion_id: algebra.solution-set
+          suggested_points: 1
+          status: met
+      review_flags: [missing-evidence]
+
+  - id: homework-4-correct
+    assessment_item_id: homework-4
+    category: correct
+    expected:
+      final_score: 3
+      review_status: ready_for_batch_approval
+      criterion_results:
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 2
+          status: met
+        - criterion_id: final.answer-set
+          suggested_points: 1
+          status: met
+      review_flags: []
+
+  - id: homework-4-includes-excluded-roots
+    assessment_item_id: homework-4
+    category: incorrect_answer
+    expected:
+      final_score: 1
+      review_status: needs_review
+      criterion_results:
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 1
+          status: not_met
+        - criterion_id: final.answer-set
+          suggested_points: 0
+          status: not_met
+      review_flags: [boundary-uncertain]
+
+  - id: homework-5-correct
+    assessment_item_id: homework-5
+    category: correct
+    expected:
+      final_score: 4
+      review_status: ready_for_batch_approval
+      criterion_results:
+        - criterion_id: log.domain-and-transform
+          suggested_points: 1
+          status: met
+        - criterion_id: log.two-substitutions
+          suggested_points: 1
+          status: met
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 1
+          status: met
+        - criterion_id: final.answer-set
+          suggested_points: 1
+          status: met
+      review_flags: []
+
+  - id: homework-5-omits-modulus
+    assessment_item_id: homework-5
+    category: incorrect_reasoning
+    expected:
+      final_score: 2
+      review_status: needs_review
+      criterion_results:
+        - criterion_id: log.domain-and-transform
+          suggested_points: 0
+          status: not_met
+        - criterion_id: log.two-substitutions
+          suggested_points: 1
+          status: met
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 0
+          status: not_met
+        - criterion_id: final.answer-set
+          suggested_points: 1
+          status: met
+      review_flags: [answer-reasoning-conflict]
+
+  - id: homework-8-correct
+    assessment_item_id: homework-8
+    category: correct
+    expected:
+      final_score: 4
+      review_status: ready_for_batch_approval
+      criterion_results:
+        - criterion_id: log.domain-and-transform
+          suggested_points: 1
+          status: met
+        - criterion_id: log.two-substitutions
+          suggested_points: 1
+          status: met
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 1
+          status: met
+        - criterion_id: final.answer-set
+          suggested_points: 1
+          status: met
+      review_flags: []
+
+  - id: homework-8-illegible-final-answer
+    assessment_item_id: homework-8
+    category: uncertain
+    expected:
+      final_score: 0
+      review_status: needs_review
+      criterion_results:
+        - criterion_id: log.domain-and-transform
+          suggested_points: 0
+          status: uncertain
+        - criterion_id: log.two-substitutions
+          suggested_points: 0
+          status: uncertain
+        - criterion_id: modulus.interval-transfer
+          suggested_points: 0
+          status: uncertain
+        - criterion_id: final.answer-set
+          suggested_points: 0
+          status: uncertain
+      review_flags: [ambiguous-handwriting, final-answer-uncertain]

@@ -1,0 +1,65 @@
+# Machine-readable assessment sidecar. The existing learning pack remains unchanged.
+schema_version: 1
+task_id: TASK-EGE-PARAM-RAT-MOD-017
+version: 1
+topic_id: parameters_rational_equations
+source:
+  task_record: EGE/tasks/parameters/TASK-EGE-PARAM-RAT-MOD-017/TASK-EGE-PARAM-RAT-MOD-017.md
+  latex_package_dir: EGE/tasks/parameters/TASK-EGE-PARAM-RAT-MOD-017/latex-worksheet-pack
+assessment_items:
+  - id: numerator-roots
+    title: Шаг 1. Нули числителя
+    source_ref: content-student.tex#issledovanie-nuley-chislitelya
+    statement_latex: |
+      Для уравнения
+      \[
+        \frac{|3x|-2x-2-a}{x^2-2x-a}=0
+      \]
+      исследуйте нули числителя. Раскройте модуль по случаям \(x\ge0\)
+      и \(x<0\), найдите оба кандидата на корни и условие на \(a\),
+      при котором они дают два различных нуля.
+    rubric_profile: param-numerator-roots-v1
+    expected_answers:
+      - id: roots-and-condition
+        type: latex_expression
+        latex: 'x_1=a+2,\quad x_2=-\frac{a+2}{5},\quad a>-2'
+
+  - id: first-denominator-check
+    title: Шаг 2. Проверка первого кандидата
+    source_ref: content-student.tex#proveryaem-naydennye-znacheniya-v-znamenatele
+    statement_latex: |
+      Пусть \(x_1=a+2\). Подставьте \(x_1\) в знаменатель
+      \(D(x)=x^2-2x-a\). Упростите выражение, найдите значения \(a\),
+      при которых \(D(x_1)=0\), и объясните, почему их нужно исключить.
+    rubric_profile: param-first-denominator-v1
+    expected_answers:
+      - id: denominator-and-exclusions
+        type: latex_expression
+        latex: 'D(x_1)=a(a+1),\quad a\ne-1,0'
+
+  - id: second-denominator-check
+    title: Шаг 3. Проверка второго кандидата
+    source_ref: content-student.tex#proveryaem-naydennye-znacheniya-v-znamenatele
+    statement_latex: |
+      Пусть \(x_2=-\dfrac{a+2}{5}\). Подставьте \(x_2\) в знаменатель
+      \(D(x)=x^2-2x-a\). Доведите выражение до разложения на множители,
+      найдите исключаемые значения \(a\) и поясните их смысл для исходного
+      рационального уравнения.
+    rubric_profile: param-second-denominator-v1
+    expected_answers:
+      - id: denominator-and-exclusions
+        type: latex_expression
+        latex: 'D(x_2)=\frac{(a-3)(a-8)}{25},\quad a\ne3,8'
+
+  - id: final-parameter-set
+    title: Шаг 4. Окончательный ответ
+    source_ref: content-student.tex#sobiraem-okonchatelnyy-otvet
+    statement_latex: |
+      Соберите окончательный ответ: объедините условие существования двух
+      различных нулей числителя с ограничениями, полученными при проверке
+      знаменателя. Запишите точное множество значений параметра \(a\).
+    rubric_profile: param-final-set-v1
+    expected_answers:
+      - id: final-answer
+        type: latex_expression
+        latex: 'a\in(-2;+\infty)\setminus\{-1,0,3,8\}'

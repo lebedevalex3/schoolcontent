@@ -1,0 +1,14 @@
+schema_version: 1
+task_id: TASK-EGE-PARAM-RAT-MOD-017
+issuance_status: ready
+work_packages:
+  - id: EGE-PARAM-RAT-MOD-017-INDEPENDENT-V1
+    title: "Самостоятельная работа: рациональное уравнение с модулем и параметром"
+    status: ready
+    layout_id: full-page-solution-v1
+    processing: photo-upload-v1
+    item_sequence:
+      - {assessment_item_id: numerator-roots, answer_space: full_page}
+      - {assessment_item_id: first-denominator-check, answer_space: full_page}
+      - {assessment_item_id: second-denominator-check, answer_space: full_page}
+      - {assessment_item_id: final-parameter-set, answer_space: full_page}

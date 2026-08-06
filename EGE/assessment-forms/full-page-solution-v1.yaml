@@ -1,0 +1,17 @@
+schema_version: 1
+id: full-page-solution-v1
+title: Одно развёрнутое задание на странице
+status: ready
+page:
+  format: A4
+  orientation: portrait
+student_header:
+  fields: [student_name, class_group, date]
+answer_space:
+  profile: full_page
+  purpose: handwritten_solution
+  min_height_mm: 175
+  ruled_lines: false
+technical_overlay:
+  owner: assessment_core
+  elements: [page_qr, page_number, corner_markers, solution_zone]
