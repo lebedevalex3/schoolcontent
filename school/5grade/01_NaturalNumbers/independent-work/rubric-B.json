@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "work_id": "G5-NAT-SR-B",
+  "approved_at": "2026-08-07",
+  "scoring_policy": {
+    "main_max_score": 10,
+    "bonus_max_score": 2,
+    "no_negative_points": true,
+    "no_unrequested_grade_conversion": true,
+    "bonus_is_scored_separately": true,
+    "partial_credit_is_awarded_only_by_listed_criteria": true
+  },
+  "normalization": {
+    "numbers": "Пробелы, неразрывные пробелы и LaTeX-разделители тысяч не учитываются; математическое значение должно совпадать.",
+    "number_sets": "Порядок элементов не учитывается. Повторы удаляются для сравнения множества, но отмечаются кодом duplicate_number.",
+    "words": "Не учитываются регистр, конечная пунктуация, повторные пробелы и различие е/ё. Математическое название числа должно сохраняться.",
+    "explanations": "Допускается эквивалентная формулировка, если в ней явно присутствуют смысловые элементы критерия."
+  },
+  "variants": [
+    {
+      "id": "I",
+      "instance_id": "01"
+    },
+    {
+      "id": "II",
+      "instance_id": "02"
+    },
+    {
+      "id": "III",
+      "instance_id": "03"
+    },
+    {
+      "id": "IV",
+      "instance_id": "04"
+    },
+    {
+      "id": "V",
+      "instance_id": "05"
+    },
+    {
+      "id": "VI",
+      "instance_id": "06"
+    }
+  ],
+  "tasks": [
+    {
+      "bank_item_id": "B-01",
+      "number": 1,
+      "max_score": 2,
+      "criteria": [
+        {
+          "id": "part_a_correct",
+          "points": 1,
+          "rule": "Первое число записано с верным значением и всеми нулевыми разрядами."
+        },
+        {
+          "id": "part_b_correct",
+          "points": 1,
+          "rule": "Второе число записано с верным значением и всеми нулевыми разрядами."
+        }
+      ],
+      "diagnostic_codes": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "numbers": [
+              "5000050",
+              "421000003000"
+            ]
+          },
+          "answer_latex": "\\(5\\,000\\,050\\); \\(421\\,000\\,003\\,000\\)"
+        },
+        "02": {
+          "expected": {
+            "numbers": [
+              "80000200",
+              "23000000072"
+            ]
+          },
+          "answer_latex": "\\(80\\,000\\,200\\); \\(23\\,000\\,000\\,072\\)"
+        },
+        "03": {
+          "expected": {
+            "numbers": [
+              "6000070",
+              "305000008000"
+            ]
+          },
+          "answer_latex": "\\(6\\,000\\,070\\); \\(305\\,000\\,008\\,000\\)"
+        },
+        "04": {
+          "expected": {
+            "numbers": [
+              "40000900",
+              "17000000045"
+            ]
+          },
+          "answer_latex": "\\(40\\,000\\,900\\); \\(17\\,000\\,000\\,045\\)"
+        },
+        "05": {
+          "expected": {
+            "numbers": [
+              "9000600",
+              "72000004000"
+            ]
+          },
+          "answer_latex": "\\(9\\,000\\,600\\); \\(72\\,000\\,004\\,000\\)"
+        },
+        "06": {
+          "expected": {
+            "numbers": [
+              "200000030",
+              "408000006000"
+            ]
+          },
+          "answer_latex": "\\(200\\,000\\,030\\); \\(408\\,000\\,006\\,000\\)"
+        }
+      }
+    },
+    {
+      "bank_item_id": "B-03",
+      "number": 2,
+      "max_score": 2,
+      "criteria": [
+        {
+          "id": "all_valid_numbers_present",
+          "points": 1,
+          "rule": "Приведены все допустимые числа; порядок перечисления не важен."
+        },
+        {
+          "id": "no_invalid_or_duplicate_numbers",
+          "points": 1,
+          "rule": "Нет лишних и повторно записанных чисел; ограничения задачи соблюдены."
+        }
+      ],
+      "diagnostic_codes": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "digit_repeated"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "number_set": [
+              "609",
+              "690",
+              "906",
+              "960"
+            ]
+          },
+          "answer_latex": "\\(609,\\;690,\\;906,\\;960\\)"
+        },
+        "02": {
+          "expected": {
+            "number_set": [
+              "508",
+              "580",
+              "805",
+              "850"
+            ]
+          },
+          "answer_latex": "\\(508,\\;580,\\;805,\\;850\\)"
+        },
+        "03": {
+          "expected": {
+            "number_set": [
+              "207",
+              "270",
+              "702",
+              "720"
+            ]
+          },
+          "answer_latex": "\\(207,\\;270,\\;702,\\;720\\)"
+        },
+        "04": {
+          "expected": {
+            "number_set": [
+              "309",
+              "390",
+              "903",
+              "930"
+            ]
+          },
+          "answer_latex": "\\(309,\\;390,\\;903,\\;930\\)"
+        },
+        "05": {
+          "expected": {
+            "number_set": [
+              "108",
+              "180",
+              "801",
+              "810"
+            ]
+          },
+          "answer_latex": "\\(108,\\;180,\\;801,\\;810\\)"
+        },
+        "06": {
+          "expected": {
+            "number_set": [
+              "409",
+              "490",
+              "904",
+              "940"
+            ]
+          },
+          "answer_latex": "\\(409,\\;490,\\;904,\\;940\\)"
+        }
+      }
+    },
+    {
+      "bank_item_id": "B-04",
+      "number": 3,
+      "max_score": 1,
+      "criteria": [
+        {
+          "id": "exact_number",
+          "points": 1,
+          "rule": "Получено точное числовое значение."
+        }
+      ],
+      "diagnostic_codes": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "number": "1170000"
+          },
+          "answer_latex": "\\(1\\,170\\,000\\)"
+        },
+        "02": {
+          "expected": {
+            "number": "728000"
+          },
+          "answer_latex": "\\(728\\,000\\)"
+        },
+        "03": {
+          "expected": {
+            "number": "740000"
+          },
+          "answer_latex": "\\(740\\,000\\)"
+        },
+        "04": {
+          "expected": {
+            "number": "526000"
+          },
+          "answer_latex": "\\(526\\,000\\)"
+        },
+        "05": {
+          "expected": {
+            "number": "825000"
+          },
+          "answer_latex": "\\(825\\,000\\)"
+        },
+        "06": {
+          "expected": {
+            "number": "374000"
+          },
+          "answer_latex": "\\(374\\,000\\)"
+        }
+      }
+    },
+    {
+      "bank_item_id": "B-05",
+      "number": 4,
+      "max_score": 3,
+      "criteria": [
+        {
+          "id": "all_valid_numbers_present",
+          "points": 1,
+          "rule": "Приведены все допустимые трёхзначные числа."
+        },
+        {
+          "id": "no_invalid_or_duplicate_numbers",
+          "points": 1,
+          "rule": "Нет лишних или повторных чисел; каждое число удовлетворяет обоим условиям."
+        },
+        {
+          "id": "completeness_explained",
+          "points": 1,
+          "rule": "Объяснение показывает полный перебор допустимых значений одной цифры и то, что две остальные цифры однозначно задаются условиями; недопустимые значения исключены границами 0–9 и требованием трёхзначности."
+        }
+      ],
+      "diagnostic_codes": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "condition_reversed",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "number_set": [
+              "650",
+              "761",
+              "872",
+              "983"
+            ]
+          },
+          "answer_latex": "\\(650,\\;761,\\;872,\\;983\\)"
+        },
+        "02": {
+          "expected": {
+            "number_set": [
+              "127",
+              "238",
+              "349"
+            ]
+          },
+          "answer_latex": "\\(127,\\;238,\\;349\\)"
+        },
+        "03": {
+          "expected": {
+            "number_set": [
+              "540",
+              "651",
+              "762",
+              "873",
+              "984"
+            ]
+          },
+          "answer_latex": "\\(540,\\;651,\\;762,\\;873,\\;984\\)"
+        },
+        "04": {
+          "expected": {
+            "number_set": [
+              "122",
+              "233",
+              "344",
+              "455"
+            ]
+          },
+          "answer_latex": "\\(122,\\;233,\\;344,\\;455\\)"
+        },
+        "05": {
+          "expected": {
+            "number_set": [
+              "430",
+              "541",
+              "652",
+              "763",
+              "874",
+              "985"
+            ]
+          },
+          "answer_latex": "\\(430,\\;541,\\;652,\\;763,\\;874,\\;985\\)"
+        },
+        "06": {
+          "expected": {
+            "number_set": [
+              "125",
+              "236",
+              "347",
+              "458",
+              "569"
+            ]
+          },
+          "answer_latex": "\\(125,\\;236,\\;347,\\;458,\\;569\\)"
+        }
+      }
+    },
+    {
+      "bank_item_id": "V-02",
+      "number": 5,
+      "max_score": 2,
+      "criteria": [
+        {
+          "id": "numeric_record",
+          "points": 1,
+          "rule": "Цифровой блок повторён нужное число раз и полученная запись верна."
+        },
+        {
+          "id": "word_record",
+          "points": 1,
+          "rule": "То же число верно записано словами; регистр, пунктуация и е/ё не влияют на балл."
+        }
+      ],
+      "diagnostic_codes": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted",
+        "incorrect_number_name",
+        "class_name_error",
+        "grammatical_number_name_error"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "number": "110011001100",
+            "words": "сто десять миллиардов одиннадцать миллионов одна тысяча сто"
+          },
+          "answer_latex": "\\(110\\,011\\,001\\,100\\); сто десять миллиардов одиннадцать миллионов одна тысяча сто"
+        },
+        "02": {
+          "expected": {
+            "number": "202020202020",
+            "words": "двести два миллиарда двадцать миллионов двести две тысячи двадцать"
+          },
+          "answer_latex": "\\(202\\,020\\,202\\,020\\); двести два миллиарда двадцать миллионов двести две тысячи двадцать"
+        },
+        "03": {
+          "expected": {
+            "number": "101010101010",
+            "words": "сто один миллиард десять миллионов сто одна тысяча десять"
+          },
+          "answer_latex": "\\(101\\,010\\,101\\,010\\); сто один миллиард десять миллионов сто одна тысяча десять"
+        },
+        "04": {
+          "expected": {
+            "number": "303030303030",
+            "words": "триста три миллиарда тридцать миллионов триста три тысячи тридцать"
+          },
+          "answer_latex": "\\(303\\,030\\,303\\,030\\); триста три миллиарда тридцать миллионов триста три тысячи тридцать"
+        },
+        "05": {
+          "expected": {
+            "number": "120012001200",
+            "words": "сто двадцать миллиардов двенадцать миллионов одна тысяча двести"
+          },
+          "answer_latex": "\\(120\\,012\\,001\\,200\\); сто двадцать миллиардов двенадцать миллионов одна тысяча двести"
+        },
+        "06": {
+          "expected": {
+            "number": "200220022002",
+            "words": "двести миллиардов двести двадцать миллионов двадцать две тысячи два"
+          },
+          "answer_latex": "\\(200\\,220\\,022\\,002\\); двести миллиардов двести двадцать миллионов двадцать две тысячи два"
+        }
+      }
+    },
+    {
+      "bank_item_id": "V-04",
+      "number": "★",
+      "max_score": 2,
+      "optional": true,
+      "criteria": [
+        {
+          "id": "correct_count",
+          "points": 1,
+          "rule": "Указано правильное количество чисел."
+        },
+        {
+          "id": "reasoning",
+          "points": 1,
+          "rule": "Разобраны два случая: первая цифра 2, остальные 0; либо первая цифра 1 и ровно одна из остальных цифр равна 1. Из этого получено общее количество."
+        }
+      ],
+      "diagnostic_codes": [
+        "incorrect_count",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ],
+      "instances": {
+        "01": {
+          "expected": {
+            "number": "8"
+          },
+          "answer_latex": "\\(8\\)"
+        },
+        "02": {
+          "expected": {
+            "number": "9"
+          },
+          "answer_latex": "\\(9\\)"
+        },
+        "03": {
+          "expected": {
+            "number": "10"
+          },
+          "answer_latex": "\\(10\\)"
+        },
+        "04": {
+          "expected": {
+            "number": "11"
+          },
+          "answer_latex": "\\(11\\)"
+        },
+        "05": {
+          "expected": {
+            "number": "12"
+          },
+          "answer_latex": "\\(12\\)"
+        },
+        "06": {
+          "expected": {
+            "number": "13"
+          },
+          "answer_latex": "\\(13\\)"
+        }
+      }
+    }
+  ]
+}

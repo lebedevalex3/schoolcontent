@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "rubric_version_id": "g5-natural-numbers-independent-v1",
+  "task_id": "TASK-G5-NATURAL-NUMBERS-INDEPENDENT-001",
+  "criteria": [
+    {
+      "id": "g5.natural.a-01.part-a-correct",
+      "title": "Первое число записано с верным значением и всеми нулевыми разрядами.",
+      "max_points": 1,
+      "evidence": [
+        "Первое число записано с верным значением и всеми нулевыми разрядами."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.a-01.part-b-correct",
+      "title": "Второе число записано с верным значением и всеми нулевыми разрядами.",
+      "max_points": 1,
+      "evidence": [
+        "Второе число записано с верным значением и всеми нулевыми разрядами."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.a-03.all-valid-numbers-present",
+      "title": "Приведены все допустимые числа; порядок перечисления не важен.",
+      "max_points": 1,
+      "evidence": [
+        "Приведены все допустимые числа; порядок перечисления не важен."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number"
+      ]
+    },
+    {
+      "id": "g5.natural.a-03.no-invalid-or-duplicate-numbers",
+      "title": "Нет лишних и повторно записанных чисел; ограничения задачи соблюдены.",
+      "max_points": 1,
+      "evidence": [
+        "Нет лишних и повторно записанных чисел; ограничения задачи соблюдены."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number"
+      ]
+    },
+    {
+      "id": "g5.natural.a-04.exact-number",
+      "title": "Получено точное числовое значение.",
+      "max_points": 1,
+      "evidence": [
+        "Получено точное числовое значение."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.b-02.numeric-record",
+      "title": "Цифровой блок повторён нужное число раз и полученная запись верна.",
+      "max_points": 1,
+      "evidence": [
+        "Цифровой блок повторён нужное число раз и полученная запись верна."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted",
+        "incorrect_number_name",
+        "class_name_error",
+        "grammatical_number_name_error"
+      ]
+    },
+    {
+      "id": "g5.natural.b-02.word-record",
+      "title": "То же число верно записано словами; регистр, пунктуация и е/ё не влияют на балл.",
+      "max_points": 1,
+      "evidence": [
+        "То же число верно записано словами; регистр, пунктуация и е/ё не влияют на балл."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted",
+        "incorrect_number_name",
+        "class_name_error",
+        "grammatical_number_name_error"
+      ]
+    },
+    {
+      "id": "g5.natural.b-05.all-valid-numbers-present",
+      "title": "Приведены все допустимые трёхзначные числа.",
+      "max_points": 1,
+      "evidence": [
+        "Приведены все допустимые трёхзначные числа."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "condition_reversed",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ]
+    },
+    {
+      "id": "g5.natural.b-05.no-invalid-or-duplicate-numbers",
+      "title": "Нет лишних или повторных чисел; каждое число удовлетворяет обоим условиям.",
+      "max_points": 1,
+      "evidence": [
+        "Нет лишних или повторных чисел; каждое число удовлетворяет обоим условиям."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "condition_reversed",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ]
+    },
+    {
+      "id": "g5.natural.b-05.completeness-explained",
+      "title": "Объяснение показывает полный перебор допустимых значений одной цифры и то, что две остальные цифры однозначно задаются условиями; недопустимые значения исключены границами 0–9 и требованием трёхзначности.",
+      "max_points": 1,
+      "evidence": [
+        "Объяснение показывает полный перебор допустимых значений одной цифры и то, что две остальные цифры однозначно задаются условиями; недопустимые значения исключены границами 0–9 и требованием трёхзначности."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "condition_reversed",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ]
+    },
+    {
+      "id": "g5.natural.b-01.part-a-correct",
+      "title": "Первое число записано с верным значением и всеми нулевыми разрядами.",
+      "max_points": 1,
+      "evidence": [
+        "Первое число записано с верным значением и всеми нулевыми разрядами."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.b-01.part-b-correct",
+      "title": "Второе число записано с верным значением и всеми нулевыми разрядами.",
+      "max_points": 1,
+      "evidence": [
+        "Второе число записано с верным значением и всеми нулевыми разрядами."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.b-03.all-valid-numbers-present",
+      "title": "Приведены все допустимые числа; порядок перечисления не важен.",
+      "max_points": 1,
+      "evidence": [
+        "Приведены все допустимые числа; порядок перечисления не важен."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "digit_repeated"
+      ]
+    },
+    {
+      "id": "g5.natural.b-03.no-invalid-or-duplicate-numbers",
+      "title": "Нет лишних и повторно записанных чисел; ограничения задачи соблюдены.",
+      "max_points": 1,
+      "evidence": [
+        "Нет лишних и повторно записанных чисел; ограничения задачи соблюдены."
+      ],
+      "review_triggers": [
+        "missing_valid_number",
+        "extra_invalid_number",
+        "duplicate_number",
+        "leading_zero",
+        "digit_repeated"
+      ]
+    },
+    {
+      "id": "g5.natural.b-04.exact-number",
+      "title": "Получено точное числовое значение.",
+      "max_points": 1,
+      "evidence": [
+        "Получено точное числовое значение."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted"
+      ]
+    },
+    {
+      "id": "g5.natural.v-02.numeric-record",
+      "title": "Цифровой блок повторён нужное число раз и полученная запись верна.",
+      "max_points": 1,
+      "evidence": [
+        "Цифровой блок повторён нужное число раз и полученная запись верна."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted",
+        "incorrect_number_name",
+        "class_name_error",
+        "grammatical_number_name_error"
+      ]
+    },
+    {
+      "id": "g5.natural.v-02.word-record",
+      "title": "То же число верно записано словами; регистр, пунктуация и е/ё не влияют на балл.",
+      "max_points": 1,
+      "evidence": [
+        "То же число верно записано словами; регистр, пунктуация и е/ё не влияют на балл."
+      ],
+      "review_triggers": [
+        "incorrect_numeric_value",
+        "place_value_error",
+        "zero_group_omitted",
+        "incorrect_number_name",
+        "class_name_error",
+        "grammatical_number_name_error"
+      ]
+    },
+    {
+      "id": "g5.natural.v-04.correct-count",
+      "title": "Указано правильное количество чисел.",
+      "max_points": 1,
+      "evidence": [
+        "Указано правильное количество чисел."
+      ],
+      "review_triggers": [
+        "incorrect_count",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ]
+    },
+    {
+      "id": "g5.natural.v-04.reasoning",
+      "title": "Разобраны два случая: первая цифра 2, остальные 0; либо первая цифра 1 и ровно одна из остальных цифр равна 1. Из этого получено общее количество.",
+      "max_points": 1,
+      "evidence": [
+        "Разобраны два случая: первая цифра 2, остальные 0; либо первая цифра 1 и ровно одна из остальных цифр равна 1. Из этого получено общее количество."
+      ],
+      "review_triggers": [
+        "incorrect_count",
+        "incomplete_exhaustion_argument",
+        "unsupported_answer"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "a-01-v1",
+      "assessment_item_id": "a-01",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.a-01.part-a-correct",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.a-01.part-b-correct",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "a-03-v1",
+      "assessment_item_id": "a-03",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.a-03.all-valid-numbers-present",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.a-03.no-invalid-or-duplicate-numbers",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "a-04-v1",
+      "assessment_item_id": "a-04",
+      "max_points": 1,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.a-04.exact-number",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "b-02-v1",
+      "assessment_item_id": "b-02",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.b-02.numeric-record",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.b-02.word-record",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "b-05-v1",
+      "assessment_item_id": "b-05",
+      "max_points": 3,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.b-05.all-valid-numbers-present",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.b-05.no-invalid-or-duplicate-numbers",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.b-05.completeness-explained",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "b-01-v1",
+      "assessment_item_id": "b-01",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.b-01.part-a-correct",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.b-01.part-b-correct",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "b-03-v1",
+      "assessment_item_id": "b-03",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.b-03.all-valid-numbers-present",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.b-03.no-invalid-or-duplicate-numbers",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "b-04-v1",
+      "assessment_item_id": "b-04",
+      "max_points": 1,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.b-04.exact-number",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "v-02-v1",
+      "assessment_item_id": "v-02",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.v-02.numeric-record",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.v-02.word-record",
+          "max_points": 1
+        }
+      ]
+    },
+    {
+      "id": "v-04-v1",
+      "assessment_item_id": "v-04",
+      "max_points": 2,
+      "criteria": [
+        {
+          "criterion_id": "g5.natural.v-04.correct-count",
+          "max_points": 1
+        },
+        {
+          "criterion_id": "g5.natural.v-04.reasoning",
+          "max_points": 1
+        }
+      ]
+    }
+  ]
+}

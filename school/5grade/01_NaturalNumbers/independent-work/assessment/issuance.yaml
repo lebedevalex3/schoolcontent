@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-G5-NATURAL-NUMBERS-INDEPENDENT-001",
+  "issuance_status": "ready",
+  "work_packages": [
+    {
+      "id": "G5-NATURAL-NUMBERS-INDEPENDENT-A-V1",
+      "title": "5 класс. Натуральные числа. Самостоятельная работа A",
+      "status": "ready",
+      "layout_id": "standard-2x3-v1",
+      "processing": "photo-upload-v1",
+      "variant_ids": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI"
+      ],
+      "item_sequence": [
+        {
+          "assessment_item_id": "a-01",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "a-03",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "a-04",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-02",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-05",
+          "answer_space": "compact"
+        }
+      ]
+    },
+    {
+      "id": "G5-NATURAL-NUMBERS-INDEPENDENT-B-V1",
+      "title": "5 класс. Натуральные числа. Самостоятельная работа B",
+      "status": "ready",
+      "layout_id": "standard-2x3-v1",
+      "processing": "photo-upload-v1",
+      "variant_ids": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI"
+      ],
+      "item_sequence": [
+        {
+          "assessment_item_id": "b-01",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-03",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-04",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-05",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "v-02",
+          "answer_space": "compact"
+        }
+      ]
+    },
+    {
+      "id": "G5-NATURAL-NUMBERS-INDEPENDENT-B-BONUS-V1",
+      "title": "5 класс. Натуральные числа. Самостоятельная работа B с бонусом",
+      "status": "draft",
+      "layout_id": "standard-2x3-v1",
+      "processing": "photo-upload-v1",
+      "variant_ids": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI"
+      ],
+      "item_sequence": [
+        {
+          "assessment_item_id": "b-01",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-03",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-04",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "b-05",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "v-02",
+          "answer_space": "compact"
+        },
+        {
+          "assessment_item_id": "v-04",
+          "answer_space": "compact"
+        }
+      ]
+    }
+  ]
+}
